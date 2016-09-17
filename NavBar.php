@@ -5,7 +5,8 @@ class NAV_OPTIONS
     const HOME          = 0;
     const CONTACT       = 1;
     const BLOG          = 2;             
-    const ITCH          = 3;           
+    const ITCH          = 3;          
+    const NOT_DEFINED   = -1;
     
     const HOME_NAME     = 'Home';
     const ITCH_NAME     = 'Itch.io';
@@ -24,10 +25,10 @@ function displayNavbar($option, $path)
     
     $navItems = array
     (
-       NAV_OPTIONS::HOME    => array($path  .NAV_OPTIONS::HOME_STR,     NAV_OPTIONS::HOME_NAME),
-       NAV_OPTIONS::ITCH    => array(NAV_OPTIONS::ITCH_STR,             NAV_OPTIONS::ITCH_NAME),
-       NAV_OPTIONS::BLOG    => array($path . $frontBlogPage,            NAV_OPTIONS::BLOG_NAME),
-       NAV_OPTIONS::CONTACT => array($path . NAV_OPTIONS::CONTACT_STR,  NAV_OPTIONS::CONTACT_NAME),
+       NAV_OPTIONS::HOME     => array($path  .NAV_OPTIONS::HOME_STR,     NAV_OPTIONS::HOME_NAME),
+       NAV_OPTIONS::ITCH     => array(NAV_OPTIONS::ITCH_STR,             NAV_OPTIONS::ITCH_NAME),
+       NAV_OPTIONS::BLOG     => array($path . $frontBlogPage,            NAV_OPTIONS::BLOG_NAME),
+       NAV_OPTIONS::CONTACT  => array($path . NAV_OPTIONS::CONTACT_STR,  NAV_OPTIONS::CONTACT_NAME)
     );
     
     
@@ -75,10 +76,7 @@ function displayNavbar($option, $path)
                     <a href="https://github.com/nanu2000">
                       <img class = "navBarIcon" src = "'.$path.'Images/GithubIcon.png"/>
                     </a>    
-
-                    <!--<a href="ErrorPage.html">
-                      <img class = "navBarIcon" src = "'.$path.'Images/FB_ICO.png"/>
-                    </a> -->
+                    
                 </div>
                 
             </ul>

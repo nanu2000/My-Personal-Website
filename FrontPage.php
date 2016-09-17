@@ -1,12 +1,13 @@
 <?php
 include('global.php');
-
-
-startContent("Styling/FrontPageStyle.css");
 include('Logo.php');
-startContainerStyle();
-
 include('NavBar.php');
+
+
+startContent(array("Styling/GlobalStyling.css", "Styling/FrontPageStyle.css"));
+
+outputLogo();
+startContainerStyle();
 displayNavbar(NAV_OPTIONS::HOME, "");
 
 include('FlexPortfolio.php');

@@ -1,35 +1,28 @@
 <?php
 include('global.php');
-
-startContent("Styling/BlogStyle.css");
 include('Logo.php');
-
-startContainerStyle();
-
 include('NavBar.php');
+
+
+startContent(array("Styling/GlobalStyling.css"));
+outputLogo();
+startContainerStyle();
 displayNavbar(NAV_OPTIONS::CONTACT, "");
 
 echo
 (
 '
+    <div class="nonFlexBG"">
+        <center>
+           <p style = "padding:10px;">The best way to contact me is through email; but if you message me on twitter or youtube I am still likey to answer, just not at a reasonable time.</p>
+                   </center>
+   </div>
     <div class="nonFlexBG">
         <center>
-            <br>
-            <br>
-            <br>
-            You may contact me through skype or email.
-            <br>
-            <br>
-            Email: richiesikra@gmail.com
-            <br>
-            <br>
-            You can also contact me through Facebook, Twitter, Youtube or itch.io, but I am less likely to answer at a reasonable time.
-            <br>
-            <br>
-            <br>
-            <br>
-       </center>
+             <p style = "padding:10px;">Email: richiesikra@gmail.com</p>
+        </center>
    </div>
+
 
 ');
 

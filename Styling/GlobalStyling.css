@@ -1,0 +1,422 @@
+
+/*
+@media only screen and (min-width : 1000px) 
+{    
+}
+
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{            
+}
+
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{          
+}
+
+@media only screen and (max-width : 449px) 
+{    
+}
+*/
+
+
+
+html 
+{
+  margin:0;
+  padding:0;
+}
+
+/************************************************************************
+For really normal window probably on desktop
+*************************************************************************/
+@media only screen and (min-width : 1000px) 
+{
+    .navBarItemsPositioning
+    {
+    }
+    body
+    {  
+        padding:0;      
+        margin: auto;
+        width: 88%;
+        background: url("../Images/WebBackground.png") repeat;
+    }
+    .navBarIcon
+    {
+        border-style: none;
+        padding-top: 5px;
+        margin-right : 5px;
+        width : 32px;
+        height : auto;
+    }
+    .navBarIcon:hover
+    {
+        position: relative; 
+        top: -1px;
+    }
+    .navBar li, .active
+    {
+        float: left;
+    }
+    .navBar li a 
+    {
+        display: block;
+        text-align: center;
+        padding: 14px 20px;
+    }
+    .navBarIconGroup
+    {        
+        float:right;
+        margin-right : 12px;
+    }
+    
+    #RichieTextWrapper
+    {
+        margin-top:25px;
+        margin-right:25px;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+}
+
+/************************************************************************
+For really small window probably on desktop
+*************************************************************************/
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{     
+    .navBarItemsPositioning
+    {
+    }
+    body
+    {        
+        padding:0; 
+        margin: auto;
+        width: 94%;
+        background: url("../Images/WebBackground.png") repeat;
+    }
+    .navBarIcon
+    {
+        border-style: none;
+        padding-top: 5px;
+        margin-right : 5px;
+        width : 32px;
+        height : auto;
+    }
+    .navBarIcon:hover
+    {
+        position: relative; 
+        top: -1px;
+    }
+    .navBar li, .active
+    {
+        display: inline-block;
+        float: left;
+    }
+    .navBar li a 
+    {
+        display: block;
+        text-align: center;
+        padding: 14px 20px;
+    }
+    .navBarIconGroup
+    {        
+        float:right;
+        margin-right : 12px;
+    }
+    #RichieTextWrapper
+    {
+        margin-top:30px;
+        margin-right:25px;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+}
+
+/************************************************************************
+For small windows probably on phone
+*************************************************************************/
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{
+    .navBarItemsPositioning
+    {
+        text-align: center;
+    }
+    body
+    {      
+        padding:0;   
+        margin: auto;
+        width: 100%;
+        background: url("../Images/WebBackground.png") repeat;
+    }
+    .navBarIcon
+    {
+        border-style: none;
+        padding-top: 5px;
+        margin-right : 5px;
+        width : 32px;
+        height : auto;
+    }
+    .navBarIcon:hover
+    {
+        position: relative; 
+        top: -1px;
+    }
+    .navBar li, .active
+    {
+        display: inline-block;
+    }
+    .navBar li a 
+    {
+        display:block;
+        text-align: center;
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .navBarIconGroup
+    {       
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #RichieTextWrapper
+    {
+        text-align: center;
+        margin-top:30px;
+        margin-right:auto;
+        margin-left:auto;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+}
+
+
+
+/************************************************************************
+For really small windows or devices.
+*************************************************************************/
+@media only screen and (max-width : 449px) 
+{   
+    .navBarItemsPositioning
+    {
+        text-align: center;
+    }
+    body
+    {       
+        padding:0;  
+        margin: auto;
+        width: 100%;
+        background: url("../Images/WebBackground.png") repeat;
+    }
+    .navBarIcon
+    {
+        border-style: none;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        width : 32px;
+        margin-right : 3px;
+        margin-left : 3px;
+        height : auto;
+    }
+    .navBarIcon:hover
+    {
+        position: relative; 
+        top: -1px;
+    }
+    .navBar li, .active
+    {
+        display: inline-block;
+    }
+    .navBar li a 
+    {
+        display:block;
+        text-align: center;
+        padding: 10px 10px;
+    }
+
+    .navBarIconGroup
+    {       
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #RichieTextWrapper
+    {
+        text-align: center;
+        margin-top:30px;
+        margin-right:auto;
+        margin-left:auto;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+}
+
+
+/************************************************************************
+Elements that wont change.
+*************************************************************************/
+
+a
+{
+    text-decoration: none;
+}
+
+#RichieTextSubtitle
+{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: .9em;
+    letter-spacing: .5px;
+    font-weight: bold;
+}
+
+#RichieText
+{     
+    font-family: 'Passion One', cursive;
+    color:white; 
+    margin : 0px;
+    padding : 0px;
+    padding-bottom: 10px;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+.MainBorder
+{      
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ContainerStyling
+{
+    border: 2px solid rgb(148,0,108);
+    border: 2px solid rgba(148,0,108, 0);
+    
+    background: url("../Images/BG.png") no-repeat center center fixed;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar
+{
+    border: 2px solid rgb(148,0,108);
+    border: 2px solid rgba(148,0,108, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+    background-color: #272727;  
+    
+    width: auto;
+    Height: auto;    
+    margin-bottom: 0px; 
+}
+.navBar li:hover:not(.active)       /*non active nav element on hover.*/
+{
+    background-color: #fff;
+    color: #ffffff;
+}
+.navBar li a:link:not(.active)      /*non active nav element not visited, not hover.*/
+{
+    color: #ffffff;
+}
+
+.navBar li a:active                 /*active nav element*/
+{
+    color: #ffffff;
+}
+.navBar li a:Hover:not(.active)
+{
+    color: #1F242E;
+}
+
+.navbar li a:not(.active)
+{
+    color: #ffffff;
+}
+
+.navBar li
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: .8em;
+}
+
+.navBar li, .active
+{
+    
+    text-decoration: none;
+    border-radius: 1px;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+    
+    -webkit-transition-property: background-color, color;
+    -moz-transition-property: background-color, color;
+    -ms-transition-property: background-color, color;
+    -o-transition-property: background-color, color;
+    transition-property: background-color, color;
+    
+}
+
+.navBar ul 
+{
+    background-color: black;  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0),rgba(64,64,128,.2),rgba(0,0,0,1)); 
+    background: -o-linear-gradient(bottom, rgba(0,0,0,0),rgba(64,64,128,.2),rgba(0,0,0,1)); 
+    background: -ms-linear-gradient(bottom, rgba(0,0,0,0),rgba(64,64,128,.2),rgba(0,0,0,1)); 
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,0),rgba(64,64,128,.2),rgba(0,0,0,1)); 
+    background: linear-gradient(to top, rgba(0,0,0,0),rgba(64,64,128,.2),rgba(0,0,0,1)); 
+}
+
+.active /*For the currently active page on the navBar*/
+{
+    background-color: #fff;
+    color: #000;
+}
+
+.VideoWrapper 
+{
+    position: relative;
+    padding-bottom: 40%; 
+    padding-top: 0px;
+    height: 0;
+}
+.VideoWrapper iframe 
+{
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+}
+
+.nonFlexBG
+{
+    position: relative; 
+    height: auto;
+    border: 2px solid rgb(148,0,108);
+    border: 2px solid rgba(148,0,108, .5);
+    background: white;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+}

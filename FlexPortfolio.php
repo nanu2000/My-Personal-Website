@@ -10,22 +10,22 @@ echo('
                         </div>
                         <div class = "textItemSmallText">
                             <center>
-                            This website currently supports mobile browsers, don\'t believe me? why not try resizing your browser window :D
+                            Why not try resizing your browser window? I support mobile browsers! :D
                             </center>
                         </div>
                     </li>
                 </div><!--
                     
-                --><li class="flexItemBig">
-                    <a href ="GamePages/ComingSoonPage.php">
+                --><li class="flexItemMed">
+                    <a href ="ProjectPages/ComingSoonPage.php">
 
                         <div class ="flexItemDescription">
                         <center>
                             <div class="bigTextBg">
                                 <div class="flexTextWrapper">
-                                    <h1>
-                                    Click here for more information about my current project(s).
-                                    </h1>
+                                    <span class="WrapperDescriptionText">
+                                    Read about my current project in my blog!
+                                    </span>
                                     <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
                                 </div>
                             </div>
@@ -33,22 +33,43 @@ echo('
 
                         </div>
 
-                        <img class = "flexBG" src ="Images/NextProject.png" alt="Link to Coming soon page"/>
+                        <img class = "flexBG" src ="Images/NextProjectMedium.png" alt="Link to Coming soon page"/>
                     </a>
 
                 </li><!--
-
+                
+            --><li class="flexItemMed">                        
+                    <a href ="ProjectPages/CustomerSubmitFormPage.php">
+                    
+                        <div class ="flexItemDescription">
+                            <center>
+                            <div class="bigTextBg">
+                                    <div class="flexTextWrapper">
+                                        <span class="WrapperDescriptionText">
+                                        This project was made in PHP! (it was my first time using that language)
+                                        <br>
+                                        The code for this project is viewable on my github :)
+                                        </span>
+                                        <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        
+                        <img class = "flexBG" src ="Images/MediumPortfolio.png" alt="Link to Customer Submit Form Page"/>
+                    </a>
+                </li><!--
                 
                 --><li class="flexItemNormal">                        
-                    <a href ="GamePages/StarDivePage.php">   
+                    <a href ="ProjectPages/StarDivePage.php">   
                     
                         <div class ="flexItemDescription">
                             <center>
                                 <div class="smallTextBg">
                                     <div class="flexTextWrapper">
-                                        <h1>
+                                        <span class="WrapperDescriptionText">
                                         Stardive is my favorite out of all the games I have made..<br>So far.
-                                        </h1>
+                                        </span>
                                         <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
                                     </div>
                                 </div>
@@ -61,15 +82,15 @@ echo('
 
                 
                 --><li class="flexItemNormal">                        
-                    <a href ="GamePages/LoloGamePage.php">
+                    <a href ="ProjectPages/LoloGamePage.php">
                     
                         <div class ="flexItemDescription">
                             <center>
                                 <div class="smallTextBg">
                                     <div class="flexTextWrapper">
-                                        <h1>
+                                        <span class="WrapperDescriptionText">
                                         I made this game for the NES Box art jam in 2015!
-                                        </h1>
+                                        </span>
                                         <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
                                     </div>
                                 </div>
@@ -82,15 +103,15 @@ echo('
                 
                 
                 --><li class="flexItemNormal">                        
-                    <a href ="GamePages/AeroFlightPage.php">      
+                    <a href ="ProjectPages/AeroFlightPage.php">      
                     
                         <div class ="flexItemDescription">
                             <center>
                                 <div class="smallTextBg">
                                     <div class="flexTextWrapper">
-                                        <h1>
+                                        <span class="WrapperDescriptionText">
                                         This the first game that I\'ve programmed! <br>Why not check it out?
-                                        </h1>
+                                        </span>
                                         <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
                                     </div>
                                 </div>
@@ -99,10 +120,8 @@ echo('
                         <img class = "flexBG" src ="Images/AeroFlightBanner.png" alt="Link to Aeroflight game page"/>
                     </a>    
                 </li>
+                
 
-
-               
-           
                 
             </ul>');
 ?>

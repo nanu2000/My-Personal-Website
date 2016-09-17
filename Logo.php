@@ -1,11 +1,14 @@
 <?php 
 
-echo
-('  
-<div class = "RichieTextWrapper">
-<h1 class ="RichieText">Richie Sikra</h1>  
-<span style="color: #fff">Developer | Designer | Creator</span>
-</div>  
-');
+function outputLogo()
+{
+    echo
+    ('  
+    <div id = "RichieTextWrapper">
+        <div id ="RichieText">Richie Sikra</div>  
+        <span id = "RichieTextSubtitle">Developer | Designer | Creator</span>
+    </div>  
+    ');
+}
 
 ?>
