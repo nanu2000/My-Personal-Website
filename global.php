@@ -84,7 +84,7 @@ function startContent($styleSheets)
         <head>
         
             <meta name="viewport" content="width=device-width">
-            <meta http-equiv="content-type" content="text/html; charset=utf-8">
+            <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
             <link rel = "shortcut icon" href = "http://www.devrichie.com/favicon.ico" type="image/x-icon" >
     ');

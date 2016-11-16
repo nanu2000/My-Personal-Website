@@ -173,6 +173,10 @@ a img
 {
     border-style: none;
 }
+ul, li, ol
+{ 
+    vertical-align: top;
+}
 
 
 

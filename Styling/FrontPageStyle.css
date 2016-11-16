@@ -291,6 +291,7 @@
 
 .flexItem .flexBG
 {
+    display: block;
     object-fit:cover;
     -webkit-transform: translateZ(0); /*used to fix any image displacement*/
     transform: translateZ(0);  
