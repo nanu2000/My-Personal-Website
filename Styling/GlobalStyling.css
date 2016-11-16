@@ -168,7 +168,10 @@ a
 {
     text-decoration: none;
 }
-
+img
+{
+    display: block;
+}
 a img
 {
     border-style: none;
