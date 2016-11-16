@@ -1,0 +1,445 @@
+
+/*
+@media only screen and (min-width : 1000px) 
+{    
+}
+
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{            
+}
+
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{          
+}
+
+@media only screen and (max-width : 449px) 
+{    
+}
+*/
+
+
+
+
+/************************************************************************
+For really normal window probably on desktop
+*************************************************************************/
+@media only screen and (min-width : 1000px) 
+{
+    body
+    {  
+        width: 90%;
+    }
+
+    #RichieTextWrapper
+    {
+        margin-top:25px;
+        margin-right:25px;
+        padding-bottom: 20px;
+    }
+
+}
+
+/************************************************************************
+For really small window probably on desktop
+*************************************************************************/
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{     
+   
+    body
+    {        
+        width: 94%;
+    }
+  
+    #RichieTextWrapper
+    {
+        margin-top:30px;
+        margin-right:25px;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width : 667px)
+{ 
+    #navbar_icon_links
+    {
+        float:right;
+        padding-right: 10px;
+    }
+    #navbar_text_links
+    {
+        float:left;
+    }
+    #navbar_text_links li a 
+    {    
+        display: block;
+        padding: 14px 20px;
+        text-decoration: none;
+    }   
+}
+
+
+/************************************************************************
+For really small windows, devices, and phones
+*************************************************************************/
+
+@media only screen and (max-width : 666px) 
+{
+    body
+    {      
+        width: 100%;
+    }
+    #navbar_icon_links
+    {
+        text-align: center;
+    }
+    #navbar_text_links
+    {
+        text-align: center;
+    }
+    #navbar_text_links li a 
+    {    
+        display: block;
+        padding: 12px 15px;
+        text-decoration: none;
+    }
+    #RichieTextWrapper
+    {
+        text-align: center;
+        margin-top:30px;
+        margin-right:auto;
+        margin-left:auto;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+/*For mobile nav bar*/
+/********************/
+@media only screen and (min-width : 450px)
+{     
+    #navbar_text_links li
+    {
+        display: inline-block;
+    }
+}
+@media only screen and (min-width : 300px) and (max-width : 449px)
+{ 
+    #navbar_text_links 
+    {
+        display: table;
+        width: 100%;
+    }
+
+    #navbar_text_links li
+    {
+        display: table-cell;
+    }
+}
+@media only screen and (max-width : 299px)
+{     
+    #navbar_text_links li
+    {
+        display: inline-block;
+    }
+}
+/**************/
+
+
+
+/**************************************************
+CSS Resets
+***************************************************/
+
+
+html 
+{
+    margin:0;
+    padding:0;
+}
+body
+{ 
+    padding:0;      
+    margin: auto;
+    background: url("../Images/WebBackground.png") repeat;
+}
+a
+{
+    text-decoration: none;
+}
+
+a img
+{
+    border-style: none;
+}
+
+
+
+/******************************************
+Used to create Logo type text above nav bar
+*******************************************/
+
+
+#RichieTextWrapper
+{
+    display: block;
+}
+
+#RichieTextSubtitle
+{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: .9em;
+    letter-spacing: .5px;
+    font-weight: bold;
+}
+
+#RichieText
+{     
+    font-family: 'Passion One', cursive;
+    color:white; 
+    margin : 0px;
+    padding : 0px;
+    padding-bottom: 10px;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+/********************************/
+
+
+
+
+/******************************
+Used to create gradient border.
+*******************************/
+
+
+.MainBorder
+{      
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ContainerStyling 
+{
+    border: 2px solid rgb(148,0,108);
+    border: 2px solid rgba(148,0,108, 0);
+    
+    background: url("../Images/BG.png") no-repeat center center fixed;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/******************************/
+
+
+/********************************
+Used For Icons
+*********************************/
+.sprite 
+{
+    background-image: url(../Images/Icons.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+.spriteGithubIcon 
+{
+    width: 32px;
+    height: 32px;
+    background-position: -2px 2px;
+}
+
+.spriteLinkArrow 
+{
+    width: 32px;
+    height: 32px;
+    background-position: -39px 2px;
+}
+
+.spriteTwitterIcon 
+{
+    width: 32px;
+    height: 32px;
+    background-position: -2px -35px;
+}
+
+.spriteYoutubeIcon 
+{
+    width: 32px;
+    height: 32px;
+    background-position: -39px -35px;
+}
+
+
+
+/******************************/
+
+
+
+
+/********************************
+Used to create the navagation bar
+*********************************/
+
+
+
+#nav_bar
+{
+    background-color: black;  
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    background: linear-gradient(to top, rgba(78, 0, 70,.9), rgba(30, 27, 39, .95), rgba(0, 0, 0,1), rgba(36, 39, 97,.9));
+
+    border: 2px solid rgb(148,0,108);
+    border: 2px solid rgba(148,0,108, .5);
+
+
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+    
+    width: auto;
+    height: auto;    
+    position: relative;
+
+}
+
+#navbar_icon_links, #navbar_text_links
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    vertical-align: top;
+}
+
+
+#navbar_text_links li
+{
+    word-wrap: break-word;
+}
+
+#navbar_icon_links li
+{
+    display: inline-block;
+}
+
+
+.active_nav_text_link
+{
+    color: black;
+    background-color: white;
+}
+
+#navbar_text_links li a 
+{
+
+    border-radius: 1px;
+
+    transition:            background-color, color, 0.2s linear;
+
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navbar_text_links li a:not(.active_nav_text_link) 
+{
+    color: white;
+}
+
+#navbar_text_links li a:hover:not(.active_nav_text_link) 
+{
+    color: black;
+    background-color: white;
+}
+
+#navbar_icon_links li i:hover
+{
+    position: relative;
+    top:-1px;
+}
+
+
+#navbar_icon_links li i
+{
+    padding: 5px 5px 0 0;
+    margin: 2px 0px 0 0;
+}
+
+
+/******************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************
+Additional CSS used for multiple pages
+*********************************/
+
+.textCenter
+{    
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+}
+
+.VideoWrapper 
+{
+    margin: 20px 0px 20px 0px;
+    position: relative;
+    padding-bottom: 40%; 
+    padding-top: 0px;
+    height: 0;
+}
+.VideoWrapper iframe 
+{
+    border: 2px solid rgb(148,0,108);
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+}
+
+/*used for simple text posts in blog*/
+.nonFlexBG
+{
+    position: relative; 
+    height: auto;
+    border: 2px solid rgb(148,0,108);
+    border: 2px solid rgba(148,0,108, .5);
+    background: white;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+}
+
+
+/************************************/

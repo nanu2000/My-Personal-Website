@@ -1,0 +1,18 @@
+1/20/2016
+Animation
+
+Remember that chest from January 7th? Well I was able to succesfully load the model as a dae file into my engine, and animate it! 
+
+
+The process was quite tricky, and I am still not close to being finished with it. I plan on creating my own engine tool that takes a 3d model, and exports it into a binary file that can then quickly be loaded.
+
+There are a few reasons I want to do that.
+reason #1. Decrease load times.
+reason #2. Binary files are TINY! (100kb turns into 1kb.)
+reason #3. I don't have to include assimp in my game at all, the engine tool will use assimp, but then export a binary file that doesn't include any information that you need assimp for.
+
+I think thats about it, but you can probably understand why it would be worth it, especially for a big project that could have numerous 3d models.
+
+I was thinking of creating a library that does exactly what I just said, it would probably be worth throwing together something like that, then making it open source, the only problem is I would want to decouple openGL from the library and GLM also, and that could take up some valuable time.
+
+Anyways, for next week, I plan on touching up my skeletal animation and creating the binary exporter. See you then!

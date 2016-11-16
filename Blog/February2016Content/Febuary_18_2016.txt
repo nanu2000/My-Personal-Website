@@ -1,0 +1,18 @@
+Upcoming events
+
+
+After completing the animation IO engine tool, I decided to clean it up a bit. I cleaned up all of the code and seperated the tool into multiple classes and functions. After I finished that, I modified my input system by adding on a function called "keyPressedOnce" that returns true if a key has been pressed once, but if the key is held it will stop returning true.
+
+Anyway, the title says, "Upcoming events" and not "Previous events", so I shall explain what I need to accomplish next.
+
+So first off, I want to have the capabilities of a simple game as soon as possible. Because of that, I will jump ahead and start implementing collision. Once I am done implementing collision into the engine, I shall add orthographic view capabilities so I can then start working on the gui. The main big hurdle in creating a gui system is the text rendering; I will be using bitmap rendering as a solution for that. Once I am done with the text rendering, I will add in simple clickable buttons. 
+
+After those main things, I will be able to make a game, but I still will hold back from that until I have implemented a few more things.
+
+1. Lighting
+2. multiple shaders
+3. particles
+
+Finally, once I am finished with all of that, I will start designing the engine architecture. Right now, I am used to using an entity component design, so that is just what I will create. Since this is the final task, I will then work on planning out the game.
+
+Overall, I have a few things I need before I can start working on the game, but once they are complete I shall have a good template for the next game in question.

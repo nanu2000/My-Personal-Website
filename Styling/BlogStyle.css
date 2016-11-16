@@ -1,0 +1,57 @@
+
+p
+{
+ text-indent: 0px;
+ padding-bottom:10px;
+ padding-top:10px;
+}
+.BlogHeader
+{
+    padding-top:25px;
+    padding-bottom:30px;
+    margin-bottom: 10px;
+    background-color:rgb(215, 226, 245);
+}
+
+.BlogTitle
+{   font-family: 'Lobster', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+.BlogSubTitle
+{   
+    color: rgb(70,70,70);
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    margin-top:15px;
+}
+.BigBlogImage
+{
+/*formula = remainder / 2 ||| IE: 70 / 100 = R30 = R30/2 = 15*/
+    margin-left:15%;
+    width : 70%; 
+    height:auto;
+}
+.SmallBlogImage
+{
+    margin-left:30%;
+    width : 35%; 
+    height:auto;
+}
+
+.BlogText
+{
+    color: rgb(50,50,50);
+    line-height: 1.4;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom: 50px;
+    font-family: 'Raleway', sans-serif;
+}

@@ -1,0 +1,21 @@
+Physics s??s??? Physics!
+
+In the last week, I have succesfully implemented <a href="#">Bullet Physics!</a>
+I created a simple wrapper that accepts a shape on initialization, and will create a collidable object according to whatever shape you specify! Along with that, I made sure to add on triangle mesh capabilities! (Triangle mesh and convex hull) 
+
+So far everything was pretty straight forward and easy to implement. I had it up and running in two days!
+
+One of the features that I really <b><u>needed was a debug drawing system. I did NOT want to deal with invisible collision shapes, and objects not colliding properly because of it.
+
+Luckily, bullet physics is very nice and does pretty much all of that for you! The only thing you have to do to implement debug drawing, is specify how to draw a single line in space. After that, bullet takes care of the rest.
+
+I made a short little demonstration of everything up and running.
+
+<vid>
+
+Everything is starting to come together, and I can definitely see all of the progress I have made in the past two (almost three) months.
+It's really an exiting process, and I believe that I will be able to start working on the actual game in about a month or so (that's my plan!) 
+
+
+Stay tuned!
+-Richie
