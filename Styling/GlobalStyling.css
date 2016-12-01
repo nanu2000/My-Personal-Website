@@ -158,9 +158,9 @@ html
 }
 body
 {       
-    background-color: rgb(0,16,24);
+    background-color: rgb(0,24,32);
     /*background: url('../Images/WebBackground.png') repeat;*/
-    animation: colorchange 30s 0s infinite;
+    animation: colorchange 20s 0s infinite;
     -webkit-animation: colorchange 30s 0s infinite;  /* Chrome and Safari */
     padding:0;      
     margin: auto;
@@ -186,20 +186,20 @@ ul, li, ol
 
 @keyframes colorchange
 {
-  0%  {background-color: rgb(0,16,24);}
-  25%  {background-color: rgb(0,0,40);}
-  50%   {background-color: rgb(24,0,16);}
-  750%  {background-color: rgb(0,0,40);}
-  100%  {background-color: rgb(0,16,24);}
+  0%  {background-color: rgb(0,24,32);}
+  25%  {background-color: rgb(0,0,32);}
+  50%   {background-color: rgb(32,0,24);}
+  75%  {background-color: rgb(0,0,32);}
+  100%  {background-color: rgb(0,24,32);}
 }
 
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+@-webkit-keyframes colorchange
 {
-  0%  {background-color: rgb(0,16,24);}
-  25%  {background-color: rgb(0,0,40);}
-  50%   {background-color: rgb(24,0,16);}
-  750%  {background-color: rgb(0,0,40);}
-  100%  {background-color: rgb(0,16,24);}
+  0%  {background-color: rgb(0,24,32);}
+  25%  {background-color: rgb(0,0,32);}
+  50%   {background-color: rgb(32,0,24);}
+  75%  {background-color: rgb(0,0,32);}
+  100%  {background-color: rgb(0,24,32);}
 }
 
 
