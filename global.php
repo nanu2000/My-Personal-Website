@@ -12,7 +12,7 @@ function startBlogContent()
             "https://fonts.googleapis.com/css?family=Lobster", 
             "../Styling/GlobalStyling.css", 
             "../Styling/BlogStyle.css"
-        ), array("../Javascript/global.js")
+        ), array(), '../'
     );
 }
 
@@ -25,7 +25,7 @@ function startProjectPageContent()
             "https://fonts.googleapis.com/css?family=Lobster", 
             "../Styling/GlobalStyling.css", 
             "../Styling/GamePageStyle.css"
-        ), array("../Javascript/global.js")
+        ), array(), '../'
     );
 }
 
@@ -71,10 +71,13 @@ function endContainerStyle()
     echo('</div>');
 }
 
-function startContent($styleSheets, $scripts)
+function startContent($styleSheets, $scripts, $prefix = '')
 {
     array_push($styleSheets,"https://fonts.googleapis.com/css?family=Passion+One:700");
     array_push($styleSheets, "https://fonts.googleapis.com/css?family=Raleway:500");
+    array_push($scripts, $prefix . "Javascript/global.js");
+    
+    
     
     global $pageTitle;
     
@@ -109,7 +112,8 @@ function startContent($styleSheets, $scripts)
     ('
     <title>'.$pageTitle.'</title>
     </head>
-    <body>    
+    <body>
+    <script> setBackgroundDelay(); </script>
     <div class ="MainBorder">
     ');
     

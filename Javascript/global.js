@@ -22,49 +22,34 @@ function getCookie(cname)
     
     return "";
 }
-
-(function(exports, d) 
+function createCookie(name, value, hours)
 {
-    function domReady(fn, context) 
+    if (hours)
     {
-
-        function onReady(event) 
-        {
-            d.removeEventListener("DOMContentLoaded", onReady);
-            fn.call(context || exports, event);
-        }
-
-        function onReadyIe(event) 
-        {
-            if (d.readyState === "complete") 
-            {
-                d.detachEvent("onreadystatechange", onReadyIe);
-                fn.call(context || exports, event);
-            }
-        }
-        
-        d.addEventListener && d.addEventListener("DOMContentLoaded", onReady) ||
-        d.attachEvent      && d.attachEvent("onreadystatechange", onReadyIe);
+        var date = new Date();
+        date.setTime(date.getTime()+(hours*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
     }
-    
-    exports.domReady = domReady;
-    
-})(window, document);
+    else
+    {
+        var expires = "";
+    }
 
-
-if(getCookie("startTime") === "")
-{
-    document.cookie = "startTime="+Date.now();    
+    document.cookie = name+"="+value+expires+"; path=/";
 }
-
 
 function setBackgroundDelay()
 {
-    document.getElementsByTagName("body")[0].style.WebkitAnimationDelay = -(Date.now() - getCookie("startTime"))+"ms";
-    document.getElementsByTagName("body")[0].style.animationDelay =  -(Date.now() - getCookie("startTime"))+"ms";
+    var time = -(Date.now() - getCookie("startTime"))+"ms";
+
+    if(document.body !== null)
+    {
+        document.body.style.WebkitAnimationDelay     =  time;
+        document.body.style.animationDelay           =  time;
+    }
 }
 
-
-domReady(function(event) {
-  setBackgroundDelay();
-});
+if(getCookie("startTime") === "")
+{
+   createCookie("startTime", Date.now(), 12);    
+}

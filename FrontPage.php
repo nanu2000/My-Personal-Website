@@ -5,7 +5,7 @@ include('NavBar.php');
 include('FlexPortfolio.php');
 
 
-startContent(array("Styling/GlobalStyling.css", "Styling/FrontPageStyle.css"), array("Javascript/global.js"));
+startContent(array("Styling/GlobalStyling.css", "Styling/FrontPageStyle.css"), array());
 
 outputLogo();
 startContainerStyle();

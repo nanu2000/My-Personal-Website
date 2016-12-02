@@ -4,7 +4,7 @@ include('Logo.php');
 include('NavBar.php');
 
 
-startContent(array("Styling/GlobalStyling.css"), array("Javascript/global.js"));
+startContent(array("Styling/GlobalStyling.css"), array());
 outputLogo();
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::CONTACT, "");
