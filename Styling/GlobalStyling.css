@@ -130,6 +130,7 @@ For really small windows, devices, and phones
     {
         display: table;
         width: 100%;
+        
     }
 
     #navbar_text_links li
@@ -160,8 +161,8 @@ body
 {       
     background-color: rgb(0,24,32);
     /*background: url('../Images/WebBackground.png') repeat;*/
-    animation: colorchange 20s 0s infinite;
-    -webkit-animation: colorchange 30s 0s infinite;  /* Chrome and Safari */
+    animation: colorchange 20s infinite;
+    -webkit-animation: colorchange 30s infinite;  /* Chrome and Safari */
     padding:0;      
     margin: auto;
 }
@@ -373,8 +374,9 @@ Used to create the navagation bar
 
     border-radius: 1px;
 
-    transition:            background-color, color, 0.2s linear;
-
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-property: ackground-color, color;
 
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
