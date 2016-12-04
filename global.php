@@ -113,7 +113,6 @@ function startContent($styleSheets, $scripts, $prefix = '')
     <title>'.$pageTitle.'</title>
     </head>
     <body>
-    <script> setBackgroundDelay(); </script>
     <div class ="MainBorder">
     ');
     

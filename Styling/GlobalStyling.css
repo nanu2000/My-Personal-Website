@@ -32,9 +32,9 @@ For really normal window probably on desktop
 
     #RichieTextWrapper
     {
-        margin-top:25px;
-        margin-right:25px;
-        padding-bottom: 20px;
+        margin-top: 15px;
+        margin-right: 25px;
+        padding-bottom: 15px;
     }
 
 }
@@ -159,12 +159,10 @@ html
 }
 body
 {       
-    background-color: rgb(0,24,32);
-    /*background: url('../Images/WebBackground.png') repeat;*/
-    animation: colorchange 20s infinite;
-    -webkit-animation: colorchange 20s infinite;  /* Chrome and Safari */
     padding:0;      
     margin: auto;
+    transition-timing-function: linear;
+    background-color: rgb(3, 7, 29);
 }
 a
 {
@@ -184,24 +182,6 @@ ul, li, ol
 }
 
 /*Used for color changing background*/
-
-@keyframes colorchange
-{
-  0%  {background-color: rgb(0,24,32);}
-  25%  {background-color: rgb(0,0,32);}
-  50%   {background-color: rgb(32,0,24);}
-  75%  {background-color: rgb(0,0,32);}
-  100%  {background-color: rgb(0,24,32);}
-}
-
-@-webkit-keyframes colorchange
-{
-  0%  {background-color: rgb(0,24,32);}
-  25%  {background-color: rgb(0,0,32);}
-  50%   {background-color: rgb(32,0,24);}
-  75%  {background-color: rgb(0,0,32);}
-  100%  {background-color: rgb(0,24,32);}
-}
 
 
 /******************************************
@@ -253,8 +233,8 @@ Used to create gradient border.
 
 .ContainerStyling 
 {
-    border: 2px solid rgb(148,0,108);
-    border: 2px solid rgba(148,0,108, 0);
+    border: 3px solid rgb(148,0,108);
+    border: 3px solid rgba(148,0,108, 0);
     
     background: url("../Images/BG.png") no-repeat center center fixed;
     
@@ -376,7 +356,7 @@ Used to create the navagation bar
 
     transition-duration: 0.2s;
     transition-timing-function: linear;
-    transition-property: ackground-color, color;
+    transition-property: background-color, color;
 
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
@@ -463,8 +443,8 @@ Additional CSS used for multiple pages
 {
     position: relative; 
     height: auto;
-    border: 2px solid rgb(148,0,108);
-    border: 2px solid rgba(148,0,108, .5);
+    border: 3px solid rgb(148,0,108);
+    border: 3px solid rgba(148,0,108, .5);
     background: white;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   

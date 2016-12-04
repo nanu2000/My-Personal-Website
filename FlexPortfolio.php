@@ -16,13 +16,13 @@ echo('
                     </div>
                 </li><!--
                     
-                --><li class="flexItem flexItemMed">
+                --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,40,70)">
                     <a href ="ProjectPages/ComingSoonPage.php">
                         <div class ="flexItemDescription">
                             <div class="textBg bigTextBg">
                                 <div class="textCenter flexTextWrapper">
                                     <span class="WrapperDescriptionText">
-                                    Read about my current project in my blog!
+                                    Read about the current project I\'m working on in my blog!
                                     </span>
                                     <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
                                 </div>
@@ -32,7 +32,7 @@ echo('
                     </a>
                 </li><!--
                 
-            --><li class="flexItem flexItemMed">                        
+            --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,50,0)">                        
                     <a href ="ProjectPages/CustomerSubmitFormPage.php">
                         <div class ="flexItemDescription">
                             <div class="textBg bigTextBg">
@@ -50,7 +50,7 @@ echo('
                     </a>
                 </li><!--
 
-                --><li class="flexItem flexItemNormal">                        
+                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(0,0,70)">                        
                     <a href ="ProjectPages/StarDivePage.php">   
                         <div class ="flexItemDescription">
                             <div class="textBg smallTextBg">
@@ -66,7 +66,7 @@ echo('
                     </a>
                 </li><!--
 
-                --><li class="flexItem flexItemNormal">                        
+                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(40,5,0)">                        
                     <a href ="ProjectPages/LoloGamePage.php">
                         <div class ="flexItemDescription">
                             <div class="textBg smallTextBg">
@@ -83,7 +83,7 @@ echo('
                 </li><!--
                 
                 
-                --><li class="flexItem flexItemNormal">                        
+                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(30,0,30)">                        
                     <a href ="ProjectPages/AeroFlightPage.php">      
                         <div class ="flexItemDescription">
                             <div class="textBg smallTextBg">
