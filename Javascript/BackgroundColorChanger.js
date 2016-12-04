@@ -5,7 +5,7 @@
  */
 
 
-ColorChanger.prototype.TIME_UNTIL_NEXT_COLOR    = 5;
+ColorChanger.prototype.TIME_UNTIL_NEXT_COLOR    = 7;
 ColorChanger.prototype.TIME_UNTIL_HOVER_COLOR   = 0.8;
 
 function ColorChanger(colorsToChange, backgroundColorElement)
@@ -84,13 +84,22 @@ function ColorChanger(colorsToChange, backgroundColorElement)
         };
     };
     
-    this.start = function()
+    this._initialize = function()
     {
+        
         this.bgColorChangeInterval = this._setBgColorChangeInterval(this.elementThatChangesBG);
 
         this.elementThatChangesBG.style.transitionProperty = "background-color";  
         this.elementThatChangesBG.style.transitionDuration = this.TIME_UNTIL_NEXT_COLOR + "s";  
 
+        this._bGColorChanger(this.elementThatChangesBG);         
+    
+    };
+    
+    this.start = function()
+    {
+        this._initialize();
+        
         var elements = document.getElementsByClassName("flexItem");
 
         for (var i = 0; i < elements.length; i++) 
@@ -103,19 +112,19 @@ function ColorChanger(colorsToChange, backgroundColorElement)
 
 }
 
-
-
-
-
 window.onload = function() 
-{    
+{        
     if ("transitionProperty" in document.body.style)
     {
         var colorsForBackground = ["rgb(10, 35, 44)", "rgb(28, 14, 23)", "rgb(3, 7, 29)"];
         var bGColorChange = new ColorChanger(colorsForBackground, document.body);
         bGColorChange.start();
     }
-    else
+};
+
+function setDefaultBackgroundColor()
+{
+    if (!("transitionProperty" in document.body.style))
     {
         document.body.style.backgroundColor = "rgb(0,40,70)";
     }

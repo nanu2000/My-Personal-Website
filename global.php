@@ -113,6 +113,7 @@ function startContent($styleSheets, $scripts, $prefix = '')
     <title>'.$pageTitle.'</title>
     </head>
     <body>
+    <script>setDefaultBackgroundColor();</script>
     <div class ="MainBorder">
     ');
     
