@@ -32,7 +32,7 @@ echo('
                     </a>
                 </li><!--
                 
-            --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,50,0)">                        
+            --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,60,0)">                        
                     <a href ="ProjectPages/CustomerSubmitFormPage.php">
                         <div class ="flexItemDescription">
                             <div class="textBg bigTextBg">
@@ -50,7 +50,7 @@ echo('
                     </a>
                 </li><!--
 
-                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(0,0,70)">                        
+                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(20,20,60)">                        
                     <a href ="ProjectPages/StarDivePage.php">   
                         <div class ="flexItemDescription">
                             <div class="textBg smallTextBg">

@@ -65,6 +65,7 @@ For really small window probably on desktop
     {
         float:right;
         padding-right: 10px;
+        margin: 0px;    
     }
     #navbar_text_links
     {
@@ -91,6 +92,7 @@ For really small windows, devices, and phones
     }
     #navbar_icon_links
     {
+        margin: 5px;    
         text-align: center;
     }
     #navbar_text_links
@@ -320,11 +322,14 @@ Used to create the navagation bar
     position: relative;
 
 }
+#navbar_text_links
+{
+    margin: 0;
+}
 
 #navbar_icon_links, #navbar_text_links
 {
     position: relative;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     list-style-type: none;
