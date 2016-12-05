@@ -3,7 +3,7 @@ include('../global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
-startContent(array("../Styling/GlobalStyling.css", "../Styling/GamePageStyle.css"));
+startProjectPageContent();
 outputLogo();
 
 startContainerStyle();
@@ -30,11 +30,9 @@ contentContainer
 contentContainer
 ('
 <div class="GamePageDescription">
-<br>
-<b><h2>About Aeroflight</h2></b>
-<br><p>Aeroflight was my first game, I put a lot of effort into making it and spent a grand total of <b>7 Months</b> creating it. I had some help from some of my friends <b>Patrick oliver</b> and <b>Chris Rasmussen</b> who created some of the images and helped brainstorm with the ideas.</p><p>This game was published on the IOS app store, the Android app store, and the Amazon app store. The target platform was IOS and android devices (Tablets and phones).</p><p>After creating this "small" game, I realized how tough it was to create a game, but I also realized how fun it was (for me) at the same time. I am very proud of this creation, because even though it might not be the best it is my first game and to me it is a huge accomplishment</p><br><p></p>
-<br>
-<h3>The description on the IOS app store</h3><br>
+<span class = "ProjectPageTitle">About Aeroflight</span>
+<p>Aeroflight was my first game, I put a lot of effort into making it and spent a grand total of <b>7 Months</b> creating it. I had some help from some of my friends <b>Patrick oliver</b> and <b>Chris Rasmussen</b> who created some of the images and helped brainstorm with the ideas.</p><p>This game was published on the IOS app store, the Android app store, and the Amazon app store. The target platform was IOS and android devices (Tablets and phones). After creating this "small" game, I realized how tough it was to create a game, but I also realized how fun it was (for me) at the same time. I am very proud of this creation, because even though it might not be the best it is my first game and to me it is a huge accomplishment</p>
+<h3>The description on the IOS app store</h3>
 <p>We don\'t want to make any of the players bored with content, so we didn\'t just stick to the plain and simple grasslands, desert, forest and beach.
 We have beautiful scenic mountains and waterfall landscapes, an exclusive glowing mushroom biome, a city map and scenic suburbs! and so much more.
 We also have boosts to keep you entertained! money magnet, fire resistance, a force field, and of course a speed boost!
@@ -45,8 +43,6 @@ A thief that steals your money mid-flight, annoying birds that get in the way, s
 </p><p>
 It\'s pretty simple to play, just tap the left and right side of the screen to move up and down!
 hit the boost located near the bottom center of the screen to boost! buy more fuel in the shop with money you collect in the air!</p>
-<br>
-<br>
 </div>
 ');
                 

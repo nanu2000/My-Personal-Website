@@ -13,7 +13,7 @@ include ('blogNavbar.php');
 
 
 
-startBlogPost( "December 30th 2015", "The end of the year and the start of a new blog.");
+startBlogPost( "December 30th, 2015", "The end of the year and the start of a new blog.");
 
 
 echo

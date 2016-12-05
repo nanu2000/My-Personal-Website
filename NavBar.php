@@ -1,26 +1,32 @@
 <?php
-
 class NAV_OPTIONS
 {
     const HOME          = 0;
     const CONTACT       = 1;
     const BLOG          = 2;             
-    const ITCH          = 3;          
+    const ITCH          = 3;            
+    const MORE          = 4;             
     const NOT_DEFINED   = -1;
     
     const HOME_NAME     = 'Home';
     const ITCH_NAME     = 'Itch.io';
     const CONTACT_NAME  = 'Contact';
     const BLOG_NAME     = 'Blog';
+    const MORE_NAME     = 'More...';
     
     const HOME_STR      = 'FrontPage.php';
     const ITCH_STR      = 'http://-nanu-.itch.io/';
     const CONTACT_STR   = "Contact.php";
+    const MORE_STR      = "More.php";
 }
 
 function displayNavbar($option, $path)
 {
-    
+
+
+
+
+
     global $frontBlogPage; // From global.php
     
     $navItems = array
@@ -32,54 +38,72 @@ function displayNavbar($option, $path)
     );
     
     
-    $navStr = '';
+
+
+
+
+
+    $navStr = '<!--';
     
     foreach ($navItems as $key => $value) 
     {
         if($key == $option)
         {
             $navStr .= 
-            '<li>
-                <a class= "active" href="'.$value[0].'">'.$value[1].'</a>
-            </li>';
+           '
+                --><li>
+                    <a class = "active_nav_text_link" href="'.$value[0].'">'.$value[1].'</a>
+                </li><!--
+           ';
         }
         else
         {
             
             $navStr .= 
-            '<li>
-                <a href="'.$value[0].'">'.$value[1].'</a>
-            </li>';
+            '
+                --><li>
+                    <a href="'.$value[0].'">'.$value[1].'</a>
+                </li><!--
+            ';
                 
         }
     }
-    
+
+    $navStr .= '-->';
+
     
     echo
     (
     '
-        <div class="navBar">
-            <ul>
-                <div class="navBarItemsPositioning">
-                   '.$navStr.'
-                </div>
-                
-                <div class ="navBarIconGroup">
-                    <a href="https://twitter.com/AlphaCollab">
-                      <img  class = "navBarIcon" src = "'.$path.'Images/twitterIcon.png"/>
-                    </a>
+        <div id = "nav_bar">
 
-                    <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
-                      <img class = "navBarIcon" src = "'.$path.'Images/youtubeIcon.png"/>
-                    </a>    
-                    
-                    <a href="https://github.com/nanu2000">
-                      <img class = "navBarIcon" src = "'.$path.'Images/GithubIcon.png"/>
-                    </a>    
-                    
-                </div>
-                
+            <ul id = "navbar_text_links">
+               '.$navStr.'
             </ul>
+            
+            <ul id = "navbar_icon_links">
+
+                <li>
+                    <a href="https://twitter.com/AlphaCollab" >
+                        <img src = "'.$path.'Images/TwitterIcon.png"/>
+                    </a>  
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
+                        <img src = "'.$path.'Images/YoutubeIcon.png"/>
+                    </a>    
+                </li>
+
+                <li>
+                    <a href="https://github.com/nanu2000">
+                        <img src = "'.$path.'Images/GithubIcon.png"/>
+                    </a>   
+                </li>  
+
+            </ul>
+
+                
         </div>
     '
     );

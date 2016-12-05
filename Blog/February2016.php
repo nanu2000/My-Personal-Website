@@ -13,7 +13,7 @@ include ('blogNavbar.php');
 
 
 
-startBlogPost( "Physics Physics Physics!", "" );
+startBlogPost( "February 25th, 2016", "Physics Physics Physics!" );
 
 echo
 ('

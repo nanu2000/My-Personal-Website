@@ -4,14 +4,14 @@ include('../global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
-startContent(array("../Styling/GlobalStyling.css", "../Styling/GamePageStyle.css"));
+startProjectPageContent();
 outputLogo();
 
 startContainerStyle();
 
 displayNavbar(NAV_OPTIONS::NOT_DEFINED, "../");
 
-contentContainer('<center><b><h2 style = "padding:10px;"> My Current Project </h2></b></center>');
+contentContainer('<center><div class = "ProjectPageTitle" style = "padding:10px;"> My Current Project </span></center>');
 
 contentContainer
 ('

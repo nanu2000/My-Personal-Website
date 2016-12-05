@@ -13,7 +13,7 @@ displayNavbar(NAV_OPTIONS::BLOG, "../");
 include ('blogNavbar.php');
 
 
-startBlogPost( "April 8th 2016", "Hidden Progress");
+startBlogPost( "April 8th, 2016", "Hidden Progress");
 
 
 echo

@@ -3,7 +3,7 @@ include('../global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
-startContent(array("../Styling/GlobalStyling.css", "../Styling/GamePageStyle.css"));
+startProjectPageContent();
 outputLogo();
 
 startContainerStyle();
@@ -29,7 +29,7 @@ contentContainer
 contentContainer
 ('
 <div class="GamePageDescription">
-<b><h2>About The Customer Support Form</h2></b>
+<span class = "ProjectPageTitle">About The Customer Support Form</span>
 <p class = "NormalTextStyling">
 This project was my first official project I have ever completed using PHP. This project is meant for a customer service department. The employees would recieve phone calls, 
 complaints and other forms of input, and then fill out the form for what product they where talking about, and if the input from the customer was good or bad.

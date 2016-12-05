@@ -1,0 +1,18 @@
+1/29/2016
+A Bug
+I was planning on starting the binary exporter mentioned on last weeks post, but I ran into a bug.
+Pretty much, for certain complex models (with big bone hierarchys) they would not animate exactly properly. for example, the whole model would be folded in half or something alike.
+
+I figured it was a missing bone, I was right.. But, it wasn't all that simple to fix, because when looking at Assimps "aiMesh::mNumBones", the number would be one or two bones short. 
+
+To resolve the bug, it turns out that I also need to check the aiNodes for transformations, and treat them like bones without weight.
+
+Here is an example of the bug.
+
+
+
+Needless to say, after fixing the 'Missing Bone Node' bug, I feel like I really understand how skeletal animation works and how Assimp is set up as a library. Even though I spent a good week (2-8 hours a day) trying to solve this problem, I cant say that I'm mad, because I did learn a few things along the way.
+
+Next week, I plan on adding to the animation system before I create the engine tool. I would like to have some modifier functions to change bones individually (scale, rotate, translate), a function to hide or show a mesh in a scene, and then do some cleaning of the existing code.
+
+Lets make this a productive week :D

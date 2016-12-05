@@ -3,7 +3,7 @@ include('../global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
-startContent(array("../Styling/GlobalStyling.css", "../Styling/GamePageStyle.css"));
+startProjectPageContent();
 outputLogo();
 
 startContainerStyle();
@@ -25,10 +25,9 @@ contentContainer
 contentContainer
 ('
 <div class="GamePageDescription">
-<h2>About The Adventures Lolo Recreated</h2><br><p>
-<p>This game was created and entered in the <a class = "TextLink" href="http://itch.io/jam/nes-box-art-jam">box art game jam of 2015</a>, it was submited with 3 hours and 24 minutes before the deadline. This game was created in about one month with a few limmitations such as only using 16 by 16 tiles with only 4 colors max on each tile (alpha, black and white count as colors too!). Overall I had a really fun time making this, and it was also my first game I have created using <b>my own engine.</b> I did a lot of planning for this game to be created, and used graph paper to rough draft all of the levels before they where implemented! This game was the first game I have ever entered in a game jam, and I think it turned out to be quite a success! :D</p>
-<br>
-<h3>The description on itch.io</h3><br>
+<span class = "ProjectPageTitle">About The Adventures Lolo Recreated</span><p>
+<p>This game was created and entered in the <a class = "TextLink" href="http://itch.io/jam/nes-box-art-jam">box art game jam of 2015</a>, it was submitted with 3 hours and 24 minutes before the deadline. This game was created in about one month with a few limmitations such as only using 16 by 16 tiles with only 4 colors max on each tile (alpha, black and white count as colors too!). Overall I had a really fun time making this, and it was also my first game I have created using <b>my own engine.</b> I did a lot of planning for this game to be created, and used graph paper to rough draft all of the levels before they where implemented! This game was the first game I have ever entered in a game jam, and I think it turned out to be quite a success! :D</p>
+<h3>The description on itch.io</h3>
 <p>
 This was created for the NES box art jam, I decided to use the box art from \'Adventures Of Lolo\' to create this game. I have not played that game before, so I thought it would be fun!
 It was my first game jam, and I have learned a lot from it. I still wish I could add on a little bit more to this game, but I think it is in a very complete form.</p><p>

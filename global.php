@@ -1,7 +1,6 @@
 <?php
-
 $pageTitle              = "★-Richie Sikra-★";
-$frontBlogPage          = "Blog/June2016.php";
+$frontBlogPage          = "Blog/November2016.php";
 
 
 function startBlogContent()
@@ -13,9 +12,23 @@ function startBlogContent()
             "https://fonts.googleapis.com/css?family=Lobster", 
             "../Styling/GlobalStyling.css", 
             "../Styling/BlogStyle.css"
-        )
+        ), array(), '../'
     );
 }
+
+function startProjectPageContent()
+{
+    startContent
+    (
+        array
+        (
+            "https://fonts.googleapis.com/css?family=Lobster", 
+            "../Styling/GlobalStyling.css", 
+            "../Styling/GamePageStyle.css"
+        ), array(), '../'
+    );
+}
+
 
 
 function contentContainer($content)
@@ -28,11 +41,13 @@ function startBlogPost($title, $subtitle)
     echo
     ('
     <div class="nonFlexBG">
-        <div class ="BlogTitle">
-        '.$title.'
-        </div>
-        <div class ="BlogSubTitle">
-        '.$subtitle.'
+        <div class = "BlogHeader">
+            <div class ="BlogTitle">
+            '.$title.'
+            </div>
+            <div class ="BlogSubTitle">
+            '.$subtitle.'
+            </div>
         </div>
         <div class = "BlogText">
     ');
@@ -56,34 +71,52 @@ function endContainerStyle()
     echo('</div>');
 }
 
-function startContent($styleSheets)
+function startContent($styleSheets, $scripts, $prefix = '')
 {
     array_push($styleSheets,"https://fonts.googleapis.com/css?family=Passion+One:700");
     array_push($styleSheets, "https://fonts.googleapis.com/css?family=Raleway:500");
+    array_push($scripts, $prefix . "Javascript/BackgroundColorChanger.js" );
+    
+    
     
     global $pageTitle;
+    
     echo
     ('
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <!DOCTYPE html>
     <html>
-        <head>
-            <meta name="viewport" content="width=device-width">
-            <meta http-equiv="content-type" content="text/html; charset=utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel = "shortcut icon" href = "http://www.devrichie.com/favicon.ico" type="image/x-icon" >
     ');
+    
+    for($i = 0; $i < count($scripts); $i++)
+    {
+        echo 
+        ('
+    <script src="'.$scripts[$i].'"></script>
+        ');
+    }
     
     for($i = 0; $i < count($styleSheets); $i++)
     {
-        echo ('<link rel="stylesheet" href="'.$styleSheets[$i].'">');
+        echo 
+        ('
+    <link rel="stylesheet" href="'.$styleSheets[$i].'">
+        ');
     }
     
     echo
     ('
-            <title>'.$pageTitle.'</title>
-        </head>
-        <body>    
-            <div class ="MainBorder">
+    <title>'.$pageTitle.'</title>
+    </head>
+    <body>
+    <script>setDefaultBackgroundColor();</script>
+    <div class ="MainBorder">
     ');
+    
 }
 
 function endContent()
@@ -95,7 +128,7 @@ function endContent()
             </body>
         </html>'
     );    
-}
 
+}
 
 ?>
