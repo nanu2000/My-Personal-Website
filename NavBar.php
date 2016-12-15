@@ -85,19 +85,19 @@ function displayNavbar($option, $path)
 
                 <li>
                     <a href="https://twitter.com/AlphaCollab" >
-                        <i class = "sprite spriteTwitterIcon"></i>
+                        <img src = "'.$path.'Images/TwitterIcon.png"/>
                     </a>  
                 </li>
 
                 <li>
                     <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
-                        <i class = "sprite spriteYoutubeIcon"></i>
+                        <img src = "'.$path.'Images/YoutubeIcon.png"/>
                     </a>    
                 </li>
 
                 <li>
                     <a href="https://github.com/nanu2000">
-                        <i class = "sprite spriteGithubIcon"></i>
+                        <img src = "'.$path.'Images/GithubIcon.png"/>
                     </a>   
                 </li>  
 

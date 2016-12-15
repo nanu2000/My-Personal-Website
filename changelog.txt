@@ -12,3 +12,6 @@
 #0.2 Cleaned GlobalStyling CSS file
 #0.1 Revised navigation bar code
 #0.0 Created Change Log
+
+
+Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc

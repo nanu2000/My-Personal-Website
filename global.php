@@ -75,7 +75,7 @@ function startContent($styleSheets, $scripts, $prefix = '')
 {
     array_push($styleSheets,"https://fonts.googleapis.com/css?family=Passion+One:700");
     array_push($styleSheets, "https://fonts.googleapis.com/css?family=Raleway:500");
-    array_push($scripts, $prefix . "Javascript/BackgroundColorChanger.js" );
+    array_push($scripts, $prefix . "Javascript/Global.js" );
     
     
     

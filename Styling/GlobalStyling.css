@@ -126,7 +126,7 @@ For really small windows, devices, and phones
         display: inline-block;
     }
 }
-@media only screen and (min-width : 300px) and (max-width : 449px)
+@media only screen and (min-width : 0px) and (max-width : 449px)
 { 
     #navbar_text_links 
     {
@@ -140,14 +140,10 @@ For really small windows, devices, and phones
         display: table-cell;
     }
 }
-@media only screen and (max-width : 299px)
-{     
-    #navbar_text_links li
-    {
-        display: inline-block;
-    }
-}
 /**************/
+
+
+
 
 
 
@@ -158,9 +154,12 @@ html
 {
     margin:0;
     padding:0;
+    
 }
 body
 {       
+    
+    min-width: 300px;
     padding:0;      
     margin: auto;
     transition-timing-function: linear;
@@ -251,65 +250,20 @@ Used to create gradient border.
 /******************************/
 
 
-/********************************
-Used For Icons
-*********************************/
-.sprite 
-{
-    background-image: url(../Images/Icons.png);
-    background-repeat: no-repeat;
-    display: block;
-}
-.spriteGithubIcon 
-{
-    width: 32px;
-    height: 32px;
-    background-position: -2px 2px;
-}
-
-.spriteLinkArrow 
-{
-    width: 32px;
-    height: 32px;
-    background-position: -39px 2px;
-}
-
-.spriteTwitterIcon 
-{
-    width: 32px;
-    height: 32px;
-    background-position: -2px -35px;
-}
-
-.spriteYoutubeIcon 
-{
-    width: 32px;
-    height: 32px;
-    background-position: -39px -35px;
-}
-
-
-
-/******************************/
-
-
 
 
 /********************************
 Used to create the navagation bar
 *********************************/
 
-
-
 #nav_bar
 {
-    background-color: black;  
+    background-color: rgb(3, 7, 29);
+    background-color: rgba(10, 20, 40, 0.78);
     margin: 0;
     padding: 0;
     overflow: hidden;
     
-    background: linear-gradient(to top, rgba(78, 0, 70,.9), rgba(30, 27, 39, .95), rgba(0, 0, 0,1), rgba(36, 39, 97,.9));
-
     border: 2px solid rgb(148,0,108);
     border: 2px solid rgba(148,0,108, .5);
 
@@ -320,6 +274,7 @@ Used to create the navagation bar
     width: auto;
     height: auto;    
     position: relative;
+
 
 }
 #navbar_text_links
@@ -365,7 +320,7 @@ Used to create the navagation bar
 
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
-    font-size: .8em;
+    font-size: .9em;
     text-align: center;
     text-decoration: none;
 }
@@ -381,17 +336,19 @@ Used to create the navagation bar
     background-color: white;
 }
 
-#navbar_icon_links li i:hover
+#navbar_icon_links li img:hover
 {
     position: relative;
     top:-1px;
 }
 
 
-#navbar_icon_links li i
+#navbar_icon_links li img
 {
     padding: 5px 5px 0 0;
     margin: 2px 0px 0 0;
+    width:32px;
+    height:32px;
 }
 
 

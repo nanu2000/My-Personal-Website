@@ -7,38 +7,24 @@ function echoPortfolio()
 
 echo('
             <ul class="flexItemContainter">
-                <li class="DesktopNotifier flexItemTextSnippet">
+            
+                <!--<li class="DesktopNotifier flexItemTextSnippet">
                     <div class = "textCenter textItemHeader">
-                        Hover over or click on some of the images below!
+                    SORT BY : (insert drop down menu here)
                     </div>
-                    <div class = "textCenter textItemSmallText">
-                        I support mobile browsers! •ᴗ•
+                </li>-->
+                <li class="DesktopNotifier flexItemTextSnippet">
+                    <div class="textCenter textItemHeader">
+                        Hover over or click on some of the images below for more information
                     </div>
                 </li><!--
-                    
-                --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,40,70)">
+                    --><li class="flexItem flexItemBig" data-hovercolor="rgb(0,60,90)">
                     <a href ="ProjectPages/ComingSoonPage.php">
                         <div class ="flexItemDescription">
                             <div class="textBg bigTextBg">
                                 <div class="textCenter flexTextWrapper">
                                     <span class="WrapperDescriptionText">
-                                    Read about the current project I\'m working on in my blog!
-                                    </span>
-                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <img class = "flexBG" src ="Images/NextProjectMedium.png" alt="Link to Coming soon page"/>
-                    </a>
-                </li><!--
-                
-            --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,60,0)">                        
-                    <a href ="ProjectPages/CustomerSubmitFormPage.php">
-                        <div class ="flexItemDescription">
-                            <div class="textBg bigTextBg">
-                                <div class="textCenter flexTextWrapper">
-                                    <span class="WrapperDescriptionText">
-                                    This project was made in PHP! (it was my first time using that language)
+                                    My custom handmade Game/Graphics Framework created with OpenGL and C++
                                     <br>
                                     The code for this project is viewable on my github :)
                                     </span>
@@ -46,10 +32,15 @@ echo('
                                 </div>
                             </div>
                         </div>
-                        <img class = "flexBG" src ="Images/MediumPortfolio.png" alt="Link to Customer Submit Form Page"/>
+                        <img class = "flexBG" src ="Images/LightShowBanner.png" alt="Light Show Graphics Engine"/>
                     </a>
                 </li><!--
 
+                --><li class="DesktopNotifier flexItemTextSnippet">
+                    <div class = "textCenter textItemHeader">
+                        Check out the games that I have developed!
+                    </div>
+                </li><!--
                 --><li class="flexItem flexItemNormal" data-hovercolor="rgb(20,20,60)">                        
                     <a href ="ProjectPages/StarDivePage.php">   
                         <div class ="flexItemDescription">
@@ -97,8 +88,45 @@ echo('
                         </div>
                         <img class = "flexBG" src ="Images/AeroFlightBanner.png" alt="Link to Aeroflight game page"/>
                     </a>    
-                </li>
+                </li><!--
+                                --><li class="DesktopNotifier flexItemTextSnippet">
+                    <div class = "textCenter textItemHeader">
+                    Miscellaneous Projects/Categories
+                    </div>
+                </li><!--
+                --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,70,0)">
+                    <a href ="ProjectPages/ComingSoonPage.php">
+                        <div class ="flexItemDescription">
+                            <div class="textBg bigTextBg">
+                                <div class="textCenter flexTextWrapper">
+                                    <span class="WrapperDescriptionText">
+                                    Read about the current project I\'m working on in my blog!
+                                    </span>
+                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <img class = "flexBG" src ="Images/NextProjectMedium.png" alt="Link to Coming soon page"/>
+                    </a>
+                </li><!--
                 
+            --><li class="flexItem flexItemMed" data-hovercolor="rgb(60,60,60)">                        
+                    <a href ="ProjectPages/CustomerSubmitFormPage.php">
+                        <div class ="flexItemDescription">
+                            <div class="textBg bigTextBg">
+                                <div class="textCenter flexTextWrapper">
+                                    <span class="WrapperDescriptionText">
+                                    This project was made in PHP! (it was my first time using that language)
+                                    <br>
+                                    The code for this project is viewable on my github :)
+                                    </span>
+                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <img class = "flexBG" src ="Images/MediumPortfolio.png" alt="Link to Customer Submit Form Page"/>
+                    </a>
+                </li>
                 
             </ul>');
 }
