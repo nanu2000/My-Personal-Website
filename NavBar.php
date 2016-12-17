@@ -23,10 +23,6 @@ class NAV_OPTIONS
 function displayNavbar($option, $path)
 {
 
-
-
-
-
     global $frontBlogPage; // From global.php
     
     $navItems = array
@@ -39,73 +35,48 @@ function displayNavbar($option, $path)
     
     
 
-
-
-
-
-    $navStr = '<!--';
+    $navStr = '';
     
     foreach ($navItems as $key => $value) 
     {
         if($key == $option)
         {
-            $navStr .= 
-           '
-                --><li>
-                    <a class = "active_nav_text_link" href="'.$value[0].'">'.$value[1].'</a>
-                </li><!--
-           ';
+            $navStr .= '<li><a class = "active_nav_text_link" href="'.$value[0].'">'.$value[1].'</a></li>';
         }
         else
         {
             
-            $navStr .= 
-            '
-                --><li>
-                    <a href="'.$value[0].'">'.$value[1].'</a>
-                </li><!--
-            ';
+            $navStr .= '<li><a href="'.$value[0].'">'.$value[1].'</a></li>';
                 
         }
     }
 
-    $navStr .= '-->';
-
-    
     echo
     (
-    '
+        '
         <div id = "nav_bar">
-
-            <ul id = "navbar_text_links">
-               '.$navStr.'
-            </ul>
-            
-            <ul id = "navbar_icon_links">
-
-                <li>
-                    <a href="https://twitter.com/AlphaCollab" >
-                        <img src = "'.$path.'Images/TwitterIcon.png"/>
-                    </a>  
-                </li>
-
-                <li>
-                    <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
-                        <img src = "'.$path.'Images/YoutubeIcon.png"/>
-                    </a>    
-                </li>
-
-                <li>
-                    <a href="https://github.com/nanu2000">
-                        <img src = "'.$path.'Images/GithubIcon.png"/>
-                    </a>   
-                </li>  
-
-            </ul>
-
-                
+        <ul id = "navbar_text_links">
+           '.$navStr.'
+        </ul>
+        <ul id = "navbar_icon_links">
+        <li>
+        <a href="https://twitter.com/AlphaCollab" >
+        <img src = "'.$path.'Images/TwitterIcon.png"/>
+        </a>  
+        </li>
+        <li>
+        <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
+        <img src = "'.$path.'Images/YoutubeIcon.png"/>
+        </a>    
+        </li>
+        <li>
+        <a href="https://github.com/nanu2000">
+        <img src = "'.$path.'Images/GithubIcon.png"/>
+        </a>   
+        </li>  
+        </ul>
         </div>
-    '
+        '
     );
 }
 

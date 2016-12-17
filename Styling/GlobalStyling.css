@@ -64,8 +64,8 @@ For really small window probably on desktop
     #navbar_icon_links
     {
         float:right;
-        padding-right: 10px;
-        margin: 0px;    
+        padding-right: 50px;
+        margin: 0px 10px 0px 0px;    
     }
     #navbar_text_links
     {
@@ -255,18 +255,16 @@ Used to create gradient border.
 /********************************
 Used to create the navagation bar
 *********************************/
-
 #nav_bar
 {
     background-color: rgb(3, 7, 29);
-    background-color: rgba(10, 20, 40, 0.78);
+    background-color: rgba(16, 25, 41, 0.86);
     margin: 0;
     padding: 0;
     overflow: hidden;
     
-    border: 2px solid rgb(148,0,108);
-    border: 2px solid rgba(148,0,108, .5);
-
+    border: 3px solid rgb(148,0,108);
+    border: 3px solid rgba(148,0,108, .5);
 
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
