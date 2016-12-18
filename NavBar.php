@@ -50,36 +50,37 @@ function displayNavbar($option, $path)
                 
         }
     }
-
-    echo
-    (
-        '
-        <div id = "nav_bar">
-        <ul id = "navbar_text_links">
-           '.$navStr.'
-        </ul>
-        <ul id = "navbar_icon_links">
-        <li>
-        <a href="https://twitter.com/AlphaCollab" >
-        <img src = "'.$path.'Images/TwitterIcon.png"/>
-        </a>  
-        </li>
-        <li>
-        <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
-        <img src = "'.$path.'Images/YoutubeIcon.png"/>
-        </a>    
-        </li>
-        <li>
-        <a href="https://github.com/nanu2000">
-        <img src = "'.$path.'Images/GithubIcon.png"/>
-        </a>   
-        </li>  
-        </ul>
-        </div>
-        '
-    );
-}
-
-
-
 ?>
+
+<div id = "nav_bar">
+    
+<ul id = "navbar_text_links">
+<?php echo $navStr ?>
+</ul>
+    
+<ul id = "navbar_icon_links">
+
+<li>
+<a href="https://twitter.com/AlphaCollab" >
+<img src = "<?php echo $path ?>Images/TwitterIcon.png"/>
+</a>  
+</li>
+
+<li>
+<a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
+<img src = "<?php echo $path ?>Images/YoutubeIcon.png"/>
+</a>    
+</li>
+
+<li>
+<a href="https://github.com/nanu2000">
+<img src = "<?php echo $path ?>Images/GithubIcon.png"/>
+</a>   
+</li>  
+
+</ul>
+    
+</div>
+
+
+<?php } ?>
