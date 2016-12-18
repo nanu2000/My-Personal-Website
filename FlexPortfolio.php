@@ -80,7 +80,7 @@ function echoPortfolio()
     createFlexItem
     (
         "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
-        "/ProjectPages/StardivePage.php", 
+        "ProjectPages/StarDivePage.php", 
         "rgb(50,20,100)", 
         "Stardive is my favorite out of all the games I have made..<br>So far.", 
         "flexItemNormal", 

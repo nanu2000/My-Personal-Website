@@ -17,11 +17,6 @@ contentContainer
         <img width="64px" alt="Android app store" src = "GamePageImages/GithubImage.png"/>
     </a>
 </div>
-<div class="AppStoreImages">
-    <a href="http://devrichie.com/SubmissionProject/front.php">
-        <div class = "AppItemText">Try It Out!</div>
-    </a> 
-</div>
 ');
 
 
@@ -38,10 +33,6 @@ complaints and other forms of input, and then fill out the form for what product
 The input that is recieved by the employee will then be submitted to a database. The employee/manager/other can then view all of the previous submissions and see which items have gotten negative reviews, or 
 reports of damaged parts.
 </p>
-<p>
-Since it is kind of fun to play around with, you can try it out <a href="http://devrichie.com/SubmissionProject/front.php">here!</a>
-</p>
-
 </div>
 ');        
       
