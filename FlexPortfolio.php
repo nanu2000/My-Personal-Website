@@ -3,52 +3,47 @@
 
 function createFlexItem($image, $imgAlt, $link, $color, $text, $size, $textBGSize)
 {
-    
-    
-return 
-'<li class="flexItem '.$size.'" data-hovercolor="'.$color.'">
-<a href ="'.$link.'">
-<div class ="flexItemDescription">
-<div class="textBg '.$textBGSize.'">
-<div class="textCenter flexTextWrapper">
-<span class="WrapperDescriptionText">
-'.$text.'
-</span>
-<img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-</div>
-</div>
-</div>
-<img class = "flexBG" src ="'.$image.'" alt="'.$imgAlt.'"/>
-</a>
-</li>';
-    
+    return 
+    '<li class="flexItem '.$size.'" data-hovercolor="'.$color.'">
+    <a href ="'.$link.'">
+    <div class ="flexItemDescription">
+    <div class="textBg '.$textBGSize.'">
+    <div class="textCenter flexTextWrapper">
+    <span class="WrapperDescriptionText">
+    '.$text.'
+    </span>
+    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
+    </div>
+    </div>
+    </div>
+    <img class = "flexBG" src ="'.$image.'" alt="'.$imgAlt.'"/>
+    </a>
+    </li>';
 }
 function desktopFlexHeader($header, $subheader = "")
 {
     if($subheader !== "")
     {
         
-return
-'<li class="DesktopNotifier flexItemTextSnippet">
-<div class = "textCenter textItemHeader">
-'.$header.'
-</div>
-<div class = "textCenter textItemSmallText">
-'.$subheader.'
-</div>
-</li>';
+        return
+        '<li class="DesktopNotifier flexItemTextSnippet">
+        <div class = "textCenter textItemHeader">
+        '.$header.'
+        </div>
+        <div class = "textCenter textItemSmallText">
+        '.$subheader.'
+        </div>
+        </li>';
 
     }
     else
     {
-        
-return
-'<li class="DesktopNotifier flexItemTextSnippet">
-<div class = "textCenter textItemHeader">
-'.$header.'
-</div>
-</li>';
-
+        return
+        '<li class="DesktopNotifier flexItemTextSnippet">
+        <div class = "textCenter textItemHeader">
+        '.$header.'
+        </div>
+        </li>';
     }
 }
 

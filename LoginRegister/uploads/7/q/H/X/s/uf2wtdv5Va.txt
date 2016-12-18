@@ -1,0 +1,14 @@
+#1.3 Removed margin -1px on .flexItem .flexbg
+#1.2 CSS Reset for img, li, and ul. (img is now set to display block, li and ul are set to vertical-align top)
+#1.1 Switched to HTML5
+#1.0 Added 404 and 403 pages for devrichie directory
+#0.9 Changed hosting to digital ocean
+#0.8 Changed line height to 1.4 for blog text and normal text styling class
+#0.7 Used spritesheet for navbar icons
+#0.6 Added icon sprite sheet 
+#0.5 Took away zoom for portfolio items on hover
+#0.4 Changed opacity on flexBG mobile elements
+#0.3 Made navbar gradient a bit more spiffy :)
+#0.2 Cleaned GlobalStyling CSS file
+#0.1 Revised navigation bar code
+#0.0 Created Change Log
