@@ -38,28 +38,34 @@ function contentContainer($content)
 
 function startBlogPost($title, $subtitle)
 {
-    echo
-    ('
-    <div class="nonFlexBG">
-        <div class = "BlogHeader">
-            <div class ="BlogTitle">
-            '.$title.'
-            </div>
-            <div class ="BlogSubTitle">
-            '.$subtitle.'
-            </div>
-        </div>
-        <div class = "BlogText">
-    ');
+?>
+
+
+<div class="nonFlexBG">
+<div class = "BlogHeader">
+<div class ="BlogTitle">
+<?php echo $title ?>
+</div>
+<div class ="BlogSubTitle">
+<?php echo $subtitle ?>
+</div>
+</div>
+<div class = "BlogText">
+    
+    
+<?php
 }
 
 function endBlogPost()
 {
-    echo
-    ('
-        </div>
-    </div>
-    ');
+    
+?>
+    
+</div>
+</div>
+
+<?php
+    
 }
 function startContainerStyle()
 {
@@ -81,54 +87,56 @@ function startContent($styleSheets, $scripts, $prefix = '')
     
     global $pageTitle;
     
-    echo
-    ('
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel = "shortcut icon" href = "http://www.devrichie.com/favicon.ico" type="image/x-icon" >
-    ');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<link rel = "shortcut icon" href = "http://www.devrichie.com/favicon.ico" type="image/x-icon" >
+    
+
+<?php
     
     for($i = 0; $i < count($scripts); $i++)
     {
-        echo 
-        ('
-    <script src="'.$scripts[$i].'"></script>
-        ');
+        echo('<script src="'.$scripts[$i].'"></script>');
     }
     
     for($i = 0; $i < count($styleSheets); $i++)
     {
-        echo 
-        ('
-    <link rel="stylesheet" href="'.$styleSheets[$i].'">
-        ');
+        echo('<link rel="stylesheet" href="'.$styleSheets[$i].'">');
     }
+   
+?>
     
-    echo
-    ('
-    <title>'.$pageTitle.'</title>
+
+
+    <title><?php echo $pageTitle ?></title>
     </head>
     <body>
     <script>setDefaultBackgroundColor();</script>
     <div class ="MainBorder">
-    ');
+    
+        
+        
+        
+<?php
     
 }
 
 function endContent()
 {
-    echo
-    (
-        '
-                </div>
-            </body>
-        </html>'
-    );    
+?>
+        
+        
+</div>
+</body>
+</html>
 
+    
+<?php
 }
-
 ?>
