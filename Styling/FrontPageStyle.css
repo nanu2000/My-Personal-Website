@@ -117,7 +117,7 @@
         min-width: 101%;
         
         min-height:300px;
-        filter: alpha(opacity=30);
+        filter: alpha(opacity=20);
         opacity: 0.2;
     }
 

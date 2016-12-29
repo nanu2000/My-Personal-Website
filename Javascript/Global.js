@@ -114,6 +114,7 @@ function ColorChanger(colorsToChange, backgroundColorElement)
             elements[i].onmouseover    = this._onMouseOverHandler(elements[i]);
             elements[i].onmouseout     = this._onMouseOutHandler();
         }
+        
 
     };
 
@@ -144,8 +145,41 @@ window.onload = function()
     }  
     
     
-};
 
+    // media query event handler
+    if (matchMedia) 
+    {
+      var mq = window.matchMedia("(max-width: 999px)");
+      mq.addListener(WidthChange);
+      WidthChange(mq);
+    }
+
+
+
+    
+    
+};
+// media query change
+function WidthChange(mq) {
+
+    var elements = document.getElementsByClassName("flexItem");
+
+    if (mq.matches) 
+    {
+        for (var i = 0; i < elements.length; i++) 
+        {
+            elements[i].style.backgroundColor = "black";
+        }
+    } 
+    else 
+    {        
+        for (var i = 0; i < elements.length; i++) 
+        {
+            elements[i].style.backgroundColor = shadeColor(elements[i].getAttribute('data-hovercolor'), .3);
+        }
+    }
+
+}
 function setDefaultBackgroundColor()
 {
     if (!("transitionProperty" in document.body.style))
