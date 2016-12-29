@@ -92,7 +92,7 @@ For really small windows, devices, and phones
     }
     #navbar_icon_links
     {
-        margin: 15px 0px 15px 0px;    
+        margin: 8px 0px 15px 0px;    
         text-align: center;
     }
     #navbar_text_links
@@ -343,7 +343,7 @@ Used to create the navagation bar
 
 #navbar_icon_links li img
 {
-    padding: 0px 5px 0px 5px;
+    padding: 7px 5px 0px 5px;
     width:32px;
     height:32px;
 }
