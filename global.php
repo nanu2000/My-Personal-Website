@@ -9,7 +9,6 @@ function startBlogContent()
     (
         array
         (
-            "https://fonts.googleapis.com/css?family=Lobster", 
             "../Styling/GlobalStyling.css", 
             "../Styling/BlogStyle.css"
         ), array(), '../'
@@ -22,7 +21,6 @@ function startProjectPageContent()
     (
         array
         (
-            "https://fonts.googleapis.com/css?family=Lobster", 
             "../Styling/GlobalStyling.css", 
             "../Styling/GamePageStyle.css"
         ), array(), '../'
@@ -73,8 +71,7 @@ function endContainerStyle()
 
 function startContent($styleSheets, $scripts, $prefix = '')
 {
-    array_push($styleSheets,"https://fonts.googleapis.com/css?family=Passion+One:700");
-    array_push($styleSheets, "https://fonts.googleapis.com/css?family=Raleway:500");
+    array_push($styleSheets,$prefix . "Styling/Fonts.css");
     array_push($scripts, $prefix . "Javascript/Global.js" );
     
     

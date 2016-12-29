@@ -67,7 +67,7 @@ function echoPortfolio()
     (
         "Images/LightShowBanner.png", "Light Show Graphics Engine", 
         "/ProjectPages/LightShowPage.php", 
-        "rgb(0,30,90)", 
+        "#001E5A", 
         "LightShow is a custom handmade Game/Graphics Framework that I created with OpenGL and C++.<br>The code for this project is viewable on my GitHub account. :)", 
         "flexItemBig", 
         "bigTextBg"
@@ -81,7 +81,7 @@ function echoPortfolio()
     (
         "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
         "ProjectPages/StarDivePage.php", 
-        "rgb(50,20,100)", 
+        "#321464", 
         "Stardive is my favorite out of all the games I have made..<br>So far.", 
         "flexItemNormal", 
         "smallTextBg"
@@ -92,7 +92,7 @@ function echoPortfolio()
     (
         "Images/lolo.png", "Link to adventures of lolo game page", 
         "ProjectPages/LoloGamePage.php", 
-        "rgb(80,5,0)", 
+        "#500500", 
         "LoLo is a game that I made for the NES Box art jam in 2015!", 
         "flexItemNormal", 
         "smallTextBg"
@@ -103,7 +103,7 @@ function echoPortfolio()
     (
         "Images/AeroFlightBanner.png", "Link to Aeroflight game page", 
         "ProjectPages/AeroFlightPage.php", 
-        "rgb(0,45,90)", 
+        "#002D5A", 
         "Aeroflight is the first game that I have published.", 
         "flexItemNormal", 
         "smallTextBg"
@@ -117,7 +117,7 @@ function echoPortfolio()
     (
         "Images/NextProjectMedium.png", "Link to Coming Blog Page", 
         "ProjectPages/ComingSoonPage.php", 
-        "rgb(0,70,0)", 
+        "#004600", 
         "My blog contains consistent updates regarding the current project I'm developing.", 
         "flexItemMed", 
         "bigTextBg"
@@ -128,7 +128,7 @@ function echoPortfolio()
     (
         "Images/MediumPortfolio.png", "Link to Customer Submit Form Page", 
         "ProjectPages/CustomerSubmitFormPage.php", 
-        "rgb(60,60,60)", 
+        "#3C3C3C", 
         "A Customer submission form made in PHP!<br>The code for this project is viewable on my github. :)", 
         "flexItemMed", 
         "bigTextBg"

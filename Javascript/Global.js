@@ -57,7 +57,7 @@ function ColorChanger(colorsToChange, backgroundColorElement)
             if(colorChanger.bgColorChangeInterval !== null)
             {
                 colorChanger.elementThatChangesBG.style.transitionDuration = colorChanger.TIME_UNTIL_HOVER_COLOR + "s";  
-                colorChanger.elementThatChangesBG.style.backgroundColor = element.getAttribute('data-hovercolor');                
+                colorChanger.elementThatChangesBG.style.backgroundColor = element.getAttribute('data-hovercolor');
                 clearInterval(colorChanger.bgColorChangeInterval);
                 colorChanger.bgColorChangeInterval = null;
             }
@@ -105,7 +105,11 @@ function ColorChanger(colorsToChange, backgroundColorElement)
         {
             
             var textWrapper = elements[i].querySelector('.textBg');
-            textWrapper.style.backgroundColor = elements[i].getAttribute('data-hovercolor');
+            
+            textWrapper.style.backgroundColor   = elements[i].getAttribute('data-hovercolor');
+            
+            textWrapper.style.borderTopColor    = shadeColor(elements[i].getAttribute('data-hovercolor'), .2);
+            textWrapper.style.borderBottomColor = shadeColor(elements[i].getAttribute('data-hovercolor'), -.4);
                         
             elements[i].onmouseover    = this._onMouseOverHandler(elements[i]);
             elements[i].onmouseout     = this._onMouseOutHandler();
@@ -115,6 +119,11 @@ function ColorChanger(colorsToChange, backgroundColorElement)
 
 }
 
+function shadeColor(color, percent) 
+{   
+    var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+    return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+}
 window.onload = function() 
 {        
     if ("transitionProperty" in document.body.style)
