@@ -108,7 +108,7 @@ function ColorChanger(colorsToChange, backgroundColorElement)
             
             textWrapper.style.backgroundColor   = elements[i].getAttribute('data-hovercolor');
             
-            textWrapper.style.borderTopColor    = ColorLuminance(elements[i].getAttribute('data-hovercolor'), .5);
+            textWrapper.style.borderTopColor    = ColorLuminance(elements[i].getAttribute('data-hovercolor'), .6);
             textWrapper.style.borderBottomColor = ColorLuminance(elements[i].getAttribute('data-hovercolor'), -.3);
                         
             elements[i].onmouseover    = this._onMouseOverHandler(elements[i]);
