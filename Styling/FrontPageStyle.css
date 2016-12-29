@@ -277,7 +277,9 @@
     font-family: 'Raleway', sans-serif;
     display: table-cell; 
     text-align: center;
-    vertical-align: middle; 
+    vertical-align: middle;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .flexItemDescription
