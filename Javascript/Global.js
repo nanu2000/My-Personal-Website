@@ -108,8 +108,8 @@ function ColorChanger(colorsToChange, backgroundColorElement)
             
             textWrapper.style.backgroundColor   = elements[i].getAttribute('data-hovercolor');
             
-            textWrapper.style.borderTopColor    = shadeColor(elements[i].getAttribute('data-hovercolor'), .2);
-            textWrapper.style.borderBottomColor = shadeColor(elements[i].getAttribute('data-hovercolor'), -.4);
+            textWrapper.style.borderTopColor    = ColorLuminance(elements[i].getAttribute('data-hovercolor'), .5);
+            textWrapper.style.borderBottomColor = ColorLuminance(elements[i].getAttribute('data-hovercolor'), -.3);
                         
             elements[i].onmouseover    = this._onMouseOverHandler(elements[i]);
             elements[i].onmouseout     = this._onMouseOutHandler();
@@ -119,12 +119,33 @@ function ColorChanger(colorsToChange, backgroundColorElement)
     };
 
 }
+function ColorLuminance(hex, lum) 
+{
+
+	// validate hex string
+	hex = String(hex).replace(/[^0-9a-f]/gi, '');
+	if (hex.length < 6) {
+		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+	}
+	lum = lum || 0;
+
+	// convert to decimal and change luminosity
+	var rgb = "#", c, i;
+	for (i = 0; i < 3; i++) {
+		c = parseInt(hex.substr(i*2,2), 16);
+		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+		rgb += ("00"+c).substr(c.length);
+	}
+
+	return rgb;
+}
 
 function shadeColor(color, percent) 
 {   
     var f=parseInt(color.slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
     return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
 }
+
 window.onload = function() 
 {        
     if ("transitionProperty" in document.body.style)

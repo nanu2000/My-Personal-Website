@@ -117,7 +117,7 @@ function echoPortfolio()
     (
         "Images/NextProjectMedium.png", "Link to Coming Blog Page", 
         "ProjectPages/ComingSoonPage.php", 
-        "#004600", 
+        "#003a00", 
         "My blog contains consistent updates regarding the current project I'm developing.", 
         "flexItemMed", 
         "bigTextBg"
