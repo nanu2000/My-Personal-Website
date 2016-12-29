@@ -88,6 +88,13 @@ function startContent($styleSheets, $scripts, $prefix = '')
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link rel = "shortcut icon" href = "http://www.devrichie.com/favicon.ico" type="image/x-icon" >
     ');
+    for($i = 0; $i < count($styleSheets); $i++)
+    {
+        echo 
+        ('
+    <link rel="stylesheet" href="'.$styleSheets[$i].'">
+        ');
+    }
     
     for($i = 0; $i < count($scripts); $i++)
     {
@@ -97,13 +104,6 @@ function startContent($styleSheets, $scripts, $prefix = '')
         ');
     }
     
-    for($i = 0; $i < count($styleSheets); $i++)
-    {
-        echo 
-        ('
-    <link rel="stylesheet" href="'.$styleSheets[$i].'">
-        ');
-    }
     
     echo
     ('
