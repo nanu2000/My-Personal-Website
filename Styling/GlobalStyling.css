@@ -202,7 +202,6 @@ Used to create Logo type text above nav bar
     font-size: .9em;
     letter-spacing: .5px;
     font-weight: bold;
-    text-shadow: -2px -2px 10px rgb(150,150,150);
 }
 
 #RichieText
@@ -214,7 +213,6 @@ Used to create Logo type text above nav bar
     padding-bottom: 10px;
     font-size: 2.2em;
     letter-spacing: 2px;
-    text-shadow: -2px -2px 10px rgb(110,110,110);
 }
 
 /********************************/

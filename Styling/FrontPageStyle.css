@@ -266,8 +266,17 @@
 {
   position:absolute;
   width:100%;
-  overflow: hidden;
   box-shadow: 0px 10px 50px 0px rgb(0, 0, 0);
+
+}
+.textBg:before /*fix for IE11 transparent pixel on box shadow*/
+{
+    position:absolute;
+    content: " ";
+    bottom:-7px;
+    height:1px;
+    width:100%;
+    background:rgb(0, 0, 0);
 }
 
 .flexTextWrapper
