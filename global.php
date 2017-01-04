@@ -86,7 +86,7 @@ function startContent($styleSheets, $scripts, $prefix = '')
     <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel = "shortcut icon" href = "http://www.devrichie.com/favicon.ico" type="image/x-icon" >
+    <link rel = "shortcut icon" href = "'. $prefix . 'favicon.ico" type="image/x-icon" >
     ');
     for($i = 0; $i < count($styleSheets); $i++)
     {
