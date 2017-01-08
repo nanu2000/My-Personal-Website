@@ -9,9 +9,8 @@ function startBlogContent()
     (
         array
         (
-            "../Styling/GlobalStyling.css", 
             "../Styling/BlogStyle.css"
-        ), array(), '../'
+        ), array(), array(), '../'
     );
 }
 
@@ -21,9 +20,8 @@ function startProjectPageContent()
     (
         array
         (
-            "../Styling/GlobalStyling.css", 
             "../Styling/GamePageStyle.css"
-        ), array(), '../'
+        ), array(), array(), '../'
     );
 }
 
@@ -69,11 +67,12 @@ function endContainerStyle()
     echo('</div>');
 }
 
-function startContent($styleSheets, $scripts, $prefix = '')
+function startContent($styleSheets, $scripts, $noScripts, $prefix = '')
 {
+    array_push($styleSheets,$prefix . "Styling/GlobalStyling.css");
     array_push($styleSheets,$prefix . "Styling/Fonts.css");
     array_push($scripts, $prefix . "Javascript/Global.js" );
-    
+    array_push($noScripts, $prefix . "Styling/GlobalNoScript.css" );
     
     
     global $pageTitle;
@@ -95,6 +94,18 @@ function startContent($styleSheets, $scripts, $prefix = '')
     <link rel="stylesheet" href="'.$styleSheets[$i].'">
         ');
     }
+    
+    echo("<noscript>");
+    
+    for($i = 0; $i < count($noScripts); $i++)
+    {
+        echo 
+        ('
+    <link rel="stylesheet" href="'.$noScripts[$i].'">
+        ');
+    }
+    
+    echo("</noscript>");
     
     for($i = 0; $i < count($scripts); $i++)
     {

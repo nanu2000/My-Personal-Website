@@ -175,7 +175,7 @@ window.onload = function()
       WidthChange(mq);
     }
 
-
+setupMoreMenu();
 
     
     
@@ -207,4 +207,26 @@ function setDefaultBackgroundColor()
     {
         document.body.style.backgroundColor = "rgb(0,40,70)";
     }
+};
+
+function setupMoreMenu()
+{
+    
+    var moreMenu = document.getElementById("show_navbar");
+    
+    document.getElementById("navbar_more").style.display = "none";
+    
+    moreMenu.onclick = function()
+    {
+        if(document.getElementById("navbar_more").style.display !== "none")
+        {
+            document.getElementById("navbar_more").style.display = "none";
+        }
+        else
+        {
+            document.getElementById("navbar_more").style.display = "block";
+        }
+    };
+    
+    
 };
