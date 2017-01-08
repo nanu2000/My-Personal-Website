@@ -134,12 +134,6 @@ For really small windows, devices, and phones
     {
         text-align: center;
     }
-    .navbar_text_links .text_link a, #navbar_more li a
-    {    
-        display: block;
-        padding: 12px 15px;
-        text-decoration: none;
-    }
     #RichieTextWrapper
     {
         text-align: center;
@@ -149,6 +143,12 @@ For really small windows, devices, and phones
         padding-bottom: 20px;
     }
     
+    #navbar_more li a
+    {    
+        display: block;
+        padding: 12px 15px;
+        text-decoration: none;
+    }
     #navbar_more
     {
         text-align: center;
@@ -161,10 +161,51 @@ For really small windows, devices, and phones
 /*For mobile nav bar*/
 /********************/
 
+
+@media only screen and (min-width : 450px) 
+{
+    .navbar_text_links .text_link a, #navbar_more li a
+    {    
+        display: block;
+        padding: 12px 15px;
+        text-decoration: none;
+    }
     .navbar_text_links .text_link
     {
         display: inline-block;
+        width:auto;
     }
+}
+@media only screen  and (min-width : 300px)  and (max-width : 449px) 
+{
+    .navbar_text_links .text_link a
+    {    
+        display: block;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-decoration: none;
+    }
+    .navbar_text_links .text_link
+    {
+        display: inline-block;
+        width:25%;
+    white-space: nowrap;
+    }
+}
+@media only screen  and (max-width : 299px) 
+{
+    .navbar_text_links .text_link a, #navbar_more li a
+    {    
+        display: block;
+        padding: 12px 15px;
+        text-decoration: none;
+    }
+    .navbar_text_links .text_link
+    {
+        display: inline-block;
+        width:auto;
+    }
+}
 /**************/
 
 
