@@ -159,10 +159,12 @@ window.onload = function()
     {        
         var elements = document.getElementsByClassName("flexItem");
         
-        var moreMenu = document.getElementById("show_navbar");
+        var navElements = document.getElementsByClassName("text_link");
 
-        moreMenu.className += " mobile";
-        
+        for (var i = 0; i < navElements.length; i++) 
+        {
+             navElements[i].className += " mobile";
+        }
         for (var i = 0; i < elements.length; i++) 
         {
             elements[i].querySelector('a').className += " hover";

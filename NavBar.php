@@ -57,7 +57,7 @@ function displayNavbar($option, $path)
     
     foreach ($moreNavItems as $key => $value) 
     {
-        $moreNavStr .= '<li><a class = "noselect" href="'.$value[0].'">'.$value[1].'</a></li>';
+        $moreNavStr .= '<li class = "text_link"><a class = "noselect" href="'.$value[0].'">'.$value[1].'</a></li>';
     }
     
     echo

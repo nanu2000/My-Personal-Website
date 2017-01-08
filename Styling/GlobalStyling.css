@@ -388,7 +388,7 @@ Used to create the navagation bar
     color: white;
 }
 
-.navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a, #navbar_more li:hover a
+.navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a, #navbar_more .text_link:hover:not(.mobile) a
 {
     color: black;
     background-color: white;
