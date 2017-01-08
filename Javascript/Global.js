@@ -168,8 +168,8 @@ window.onload = function()
     
 
     // media query event handler
-    if (matchMedia) 
-    {
+    if (typeof window.matchMedia == 'function') 
+    { 
       var mq = window.matchMedia("(max-width: 999px)");
       mq.addListener(WidthChange);
       WidthChange(mq);
