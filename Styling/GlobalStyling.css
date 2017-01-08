@@ -24,6 +24,10 @@
     display:none;
 }
 
+#navbar_more ul
+{
+    padding:0;
+}
 #show_navbar:hover 
 {
     cursor:pointer;
