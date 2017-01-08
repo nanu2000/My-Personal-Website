@@ -156,7 +156,7 @@ window.onload = function()
     }
     
     if ('ontouchstart' in window) 
-    {
+    {        
         var elements = document.getElementsByClassName("flexItem");
 
         for (var i = 0; i < elements.length; i++) 

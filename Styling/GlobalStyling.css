@@ -176,7 +176,7 @@ For really small windows, devices, and phones
         width:auto;
     }
 }
-@media only screen  and (min-width : 300px)  and (max-width : 449px) 
+@media only screen and (max-width : 449px) 
 {
     .navbar_text_links .text_link a
     {    
@@ -189,21 +189,7 @@ For really small windows, devices, and phones
     {
         display: inline-block;
         width:25%;
-    white-space: nowrap;
-    }
-}
-@media only screen  and (max-width : 299px) 
-{
-    .navbar_text_links .text_link a, #navbar_more li a
-    {    
-        display: block;
-        padding: 12px 15px;
-        text-decoration: none;
-    }
-    .navbar_text_links .text_link
-    {
-        display: inline-block;
-        width:auto;
+        white-space: nowrap;
     }
 }
 /**************/
