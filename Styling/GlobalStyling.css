@@ -359,7 +359,8 @@ Used to create the navagation bar
 
 #navbar_more li a, .navbar_text_links .text_link a 
 {
-
+    
+    border-radius:2px;
     transition-duration: 0.2s;
     transition-timing-function: linear;
     transition-property: background-color, color;
@@ -387,7 +388,7 @@ Used to create the navagation bar
     color: white;
 }
 
-.navbar_text_links .text_link:hover:not(.active_nav_text_link) a, #navbar_more li:hover a
+.navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a, #navbar_more li:hover a
 {
     color: black;
     background-color: white;

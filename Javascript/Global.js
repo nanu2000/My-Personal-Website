@@ -158,7 +158,11 @@ window.onload = function()
     if ('ontouchstart' in window) 
     {        
         var elements = document.getElementsByClassName("flexItem");
+        
+        var moreMenu = document.getElementById("show_navbar");
 
+        moreMenu.className += " mobile";
+        
         for (var i = 0; i < elements.length; i++) 
         {
             elements[i].querySelector('a').className += " hover";
@@ -215,18 +219,23 @@ function setupMoreMenu()
     var moreMenu = document.getElementById("show_navbar");
     
     document.getElementById("navbar_more").style.display = "none";
-    
-    moreMenu.onclick = function()
-    {
-        if(document.getElementById("navbar_more").style.display !== "none")
+     
+        moreMenu.onclick = function()
         {
-            document.getElementById("navbar_more").style.display = "none";
-        }
-        else
-        {
-            document.getElementById("navbar_more").style.display = "block";
-        }
-    };
+            if(document.getElementById("navbar_more").style.display !== "none")
+            {
+                document.getElementById("show_navbar").querySelector('a').style.color = "";
+                document.getElementById("show_navbar").querySelector('a').style.backgroundColor = "";
+                document.getElementById("navbar_more").style.display = "none";
+            }
+            else
+            {
+                document.getElementById("show_navbar").querySelector('a').style.color = "black";
+                document.getElementById("show_navbar").querySelector('a').style.backgroundColor = "white";
+                document.getElementById("navbar_more").style.display = "block";
+            }
+        };
+
     
     
 };

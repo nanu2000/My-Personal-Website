@@ -31,7 +31,6 @@ function displayNavbar($option, $path)
     
     $moreNavItems = array
     (
-      NAV_OPTIONS::NOT_DEFINED  => array("#",                            "List of Projects"),
       NAV_OPTIONS::ITCH         => array(NAV_OPTIONS::ITCH_STR,             NAV_OPTIONS::ITCH_NAME)
     );
     
