@@ -31,7 +31,10 @@ function contentContainer($content)
 {
     echo('<div class="nonFlexBG">' .$content. '</div>' );
 }
-
+function contentContainerHideSmallScreen($content)
+{
+    echo('<div class="nonFlexBG HideMobile">' .$content. '</div>' );
+}
 function startBlogPost($title, $subtitle)
 {
     echo

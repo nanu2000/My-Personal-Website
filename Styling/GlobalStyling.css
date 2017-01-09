@@ -17,8 +17,6 @@
 }
 */
 
-
-
 #navbar_more 
 {
     display:none;
@@ -112,6 +110,7 @@ For really small window probably on desktop
         padding: 14px 20px;
         text-decoration: none;
     }   
+    
 }
 
 
@@ -154,6 +153,11 @@ For really small windows, devices, and phones
         text-align: center;
     }
     
+    .HideMobile
+    {
+        display:none;
+    }
+
 }
 
 
