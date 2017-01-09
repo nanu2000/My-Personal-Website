@@ -40,7 +40,7 @@ A lot has happened, but do I even need to say that? It's been two months since m
     <li>Got a personal home server</li>
     <li>Setup a professional email address (richie@devrichie.com)</li>
     <li>Got a little sidetracked while working on this website...
-    <li>And finally : it's 2017! (actually it's been 2017 for 9 days...)</li>
+    <li>And finally : it's 2017! (Actually it's been 2017 for 9 days...)</li>
 </ol>
 <p><b>And on top of all of that, this whole site can function 100% without javascript enabled! (yes, even the more button)</b></p>
 <p>There's a lot on that list, but you may notice that there are some things that I planned to do that never got done.. I'm caught in the moment. Whenever I add new content to my website,
