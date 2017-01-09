@@ -1,6 +1,8 @@
 
 TODO / IDEAS
 
+-Maybe even merge contactPageStyle with GlobalStyling???
+-Probably can merge #ContactPageTitle with .ProjectPageTitle &/or .blogTitle
 -FORCE NAMING STYLE FOR CSS CLASSES AND IDS (CapitalizeFirstLetterOfEachWord ? or_use_underscores)
 -CLEAN CSS AND JAVASCRIPT!!!!
 -Create new StarDive Banner for GamePage

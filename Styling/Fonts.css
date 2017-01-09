@@ -1,61 +1,20 @@
-/* latin-ext */
+
 @font-face {
   font-family: 'Passion One';
-  font-style: normal;
   font-weight: 700;
-  src: local('Passion One Bold'), local('PassionOne-Bold'), url(../Fonts/LatinExt_Passion_One.woff2) format('woff2');
-  
-}
-/* latin */
-@font-face {
-  font-family: 'Passion One';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Passion One Bold'), local('PassionOne-Bold'), url(../Fonts/Latin_Passion_One.woff2) format('woff2');
-  
+  src: url(../Fonts/Latin_Passion_One.ttf);
 }
 
-/* latin-ext */
-@font-face {
+@font-face 
+{
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 500;
-  src: local('Raleway Medium'), local('Raleway-Medium'), url(../Fonts/LatinExt_Raleway.woff2) format('woff2');
-}
-/* latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Raleway Medium'), local('Raleway-Medium'), url(../Fonts/Latin_Raleway.woff2) format('woff2');
+  src: url(../Fonts/Latin_Raleway.ttf)
 }
 
-/* cyrillic */
-@font-face {
+@font-face 
+{
   font-family: 'Lobster';
-  font-style: normal;
   font-weight: 400;
-  src: local('Lobster'), local('Lobster-Regular'), url(../Fonts/Cyrillic_Lobster.woff2) format('woff2');
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lobster'), local('Lobster-Regular'), url(../Fonts/Vietnamese_Lobster.woff2) format('woff2');
-
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lobster'), local('Lobster-Regular'), url(../Fonts/LatinExt_Lobster.woff2) format('woff2');
-}
-/* latin */
-@font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lobster'), local('Lobster-Regular'), url(../Fonts/Latin_Lobster.woff2) format('woff2');
+  src: url(../Fonts/Latin_Lobster.ttf);
 }
