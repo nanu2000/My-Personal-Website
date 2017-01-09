@@ -40,7 +40,7 @@ but the game being made from/with this framework has not been completed.
 <p>
     <b>Here is a list of some of the frameworks current features :</b>
 </p>
-<ol type="i">
+<ol class = "FeatureList">
 <li>3D skeletal animation with a custom binary exporter that reads .dae and .obj file types and exports my own custom binary file. (written in little endianness)</li>
 <li>Directional shadow mapping</li>
 <li>Runtime GLSL modifications</li>
