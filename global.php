@@ -1,6 +1,6 @@
 <?php
 $pageTitle              = "★-Richie Sikra-★";
-$frontBlogPage          = "Blog/November2016.php";
+$frontBlogPage          = "Blog/January2017.php";
 
 
 function startBlogContent()
