@@ -10,7 +10,7 @@ startContainerStyle();
 
 displayNavbar(NAV_OPTIONS::NOT_DEFINED, "../");
 
-contentContainer('<img src = "GamePageImages/aeroflightbigBanner.png" class ="GamePageBanner" />');
+contentContainerHideSmallScreen('<img src = "GamePageImages/aeroflightbigBanner.png" class ="GamePageBanner" />');
 
 contentContainer
 (' 
