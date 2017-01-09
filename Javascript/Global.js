@@ -150,15 +150,13 @@ window.onload = function()
 {        
     if ("transitionProperty" in document.body.style)
     {
-        var colorsForBackground = ["rgb(10, 35, 44)", "rgb(28, 14, 23)", "rgb(3, 7, 29)"];
+        colorsForBackground = ["rgb(10, 35, 44)", "rgb(28, 14, 23)", "rgb(3, 7, 29)"];
         var bGColorChange = new ColorChanger(colorsForBackground, document.body);
         bGColorChange.start();
     }
         
     if ('ontouchstart' in window) 
     {     
-        
-    
         var elements = document.getElementsByClassName("flexItem");
         
         var navElements = document.getElementsByClassName("text_link");
@@ -183,7 +181,8 @@ window.onload = function()
         elements[i].style.backgroundColor = shadeColor(elements[i].getAttribute('data-hovercolor'), -.6);
     }
 
-setupMoreMenu();
+
+    setupMoreMenu();
 
     
     
@@ -204,21 +203,21 @@ function setupMoreMenu()
     
     document.getElementById("navbar_more").style.display = "none";
      
-        moreMenu.onclick = function()
+    moreMenu.onclick = function()
+    {
+        if(document.getElementById("navbar_more").style.display !== "none")
         {
-            if(document.getElementById("navbar_more").style.display !== "none")
-            {
-                document.getElementById("show_navbar").querySelector('a').style.color = "";
-                document.getElementById("show_navbar").querySelector('a').style.backgroundColor = "";
-                document.getElementById("navbar_more").style.display = "none";
-            }
-            else
-            {
-                document.getElementById("show_navbar").querySelector('a').style.color = "black";
-                document.getElementById("show_navbar").querySelector('a').style.backgroundColor = "white";
-                document.getElementById("navbar_more").style.display = "block";
-            }
-        };
+            document.getElementById("show_navbar").querySelector('a').style.color = "";
+            document.getElementById("show_navbar").querySelector('a').style.backgroundColor = "";
+            document.getElementById("navbar_more").style.display = "none";
+        }
+        else
+        {
+            document.getElementById("show_navbar").querySelector('a').style.color = "black";
+            document.getElementById("show_navbar").querySelector('a').style.backgroundColor = "white";
+            document.getElementById("navbar_more").style.display = "block";
+        }
+    };
 
     
     

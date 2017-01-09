@@ -81,7 +81,7 @@ For really small window probably on desktop
   
     #RichieTextWrapper
     {
-        margin-top:30px;
+        padding-top:30px;
         margin-right:25px;
         padding-bottom: 20px;
     }
@@ -136,7 +136,7 @@ For really small windows, devices, and phones
     #RichieTextWrapper
     {
         text-align: center;
-        margin-top:30px;
+        padding-top:30px;
         margin-right:auto;
         margin-left:auto;
         padding-bottom: 20px;
