@@ -11,7 +11,7 @@ TODO / IDEAS
 
 
 Last Updated 1/8/2017
-#3.6 
+#3.6 Added Padding and removed centering from project pages
 #3.5 Added Blue BG for Project Page Title
 #3.4 Made GamePageDescription not automatically center content
 #3.3 Added Ol + li styling in GamePageStyle.css
