@@ -8,7 +8,8 @@ TODO / IDEAS
 -Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
 ----
 
-#4.0 moved FeatureList to Global Styling
+#4.1 Updated Contact Page Styling
+#4.0 Moved FeatureList to Global Styling
 #3.9 Posted to Blog
 #3.8 Fixed December 0'15 Blog Post, changed coloring on hover of flexItems, added media queries to blog styling
 #3.7 Added Media Queries To Project Page OL and P
