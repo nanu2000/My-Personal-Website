@@ -5,7 +5,7 @@
  */
 
 
-ColorChanger.prototype.TIME_UNTIL_NEXT_COLOR    = 3;
+ColorChanger.prototype.TIME_UNTIL_NEXT_COLOR    = 7;
 ColorChanger.prototype.TIME_UNTIL_HOVER_COLOR   = 0.8;
 
 function ColorChanger(colorsToChange, backgroundColorElement)
@@ -57,7 +57,7 @@ function ColorChanger(colorsToChange, backgroundColorElement)
             if(colorChanger.bgColorChangeInterval !== null)
             {
                 colorChanger.elementThatChangesBG.style.transitionDuration = colorChanger.TIME_UNTIL_HOVER_COLOR + "s";  
-                colorChanger.elementThatChangesBG.style.backgroundColor = element.getAttribute('data-hovercolor');
+                colorChanger.elementThatChangesBG.style.backgroundColor = ColorLuminance(element.getAttribute('data-hovercolor'), -.3);
                 clearInterval(colorChanger.bgColorChangeInterval);
                 colorChanger.bgColorChangeInterval = null;
             }
@@ -154,9 +154,11 @@ window.onload = function()
         var bGColorChange = new ColorChanger(colorsForBackground, document.body);
         bGColorChange.start();
     }
-    
+        
     if ('ontouchstart' in window) 
-    {        
+    {     
+        
+    
         var elements = document.getElementsByClassName("flexItem");
         
         var navElements = document.getElementsByClassName("text_link");
@@ -169,16 +171,16 @@ window.onload = function()
         {
             elements[i].querySelector('a').className += " hover";
         }
-    }  
     
-    
+    }
 
-    // media query event handler
-    if (typeof window.matchMedia == 'function') 
-    { 
-      var mq = window.matchMedia("(max-width: 999px)");
-      mq.addListener(WidthChange);
-      WidthChange(mq);
+    
+    
+    var elements = document.getElementsByClassName("flexItem");
+  
+    for (var i = 0; i < elements.length; i++) 
+    {
+        elements[i].style.backgroundColor = shadeColor(elements[i].getAttribute('data-hovercolor'), -.6);
     }
 
 setupMoreMenu();
@@ -187,26 +189,6 @@ setupMoreMenu();
     
 };
 // media query change
-function WidthChange(mq) {
-
-    var elements = document.getElementsByClassName("flexItem");
-
-    if (mq.matches) 
-    {
-        for (var i = 0; i < elements.length; i++) 
-        {
-            elements[i].style.backgroundColor = shadeColor(elements[i].getAttribute('data-hovercolor'), -.5);
-        }
-    } 
-    else 
-    {        
-        for (var i = 0; i < elements.length; i++) 
-        {
-            elements[i].style.backgroundColor = shadeColor(elements[i].getAttribute('data-hovercolor'), .3);
-        }
-    }
-
-}
 function setDefaultBackgroundColor()
 {
     if (!("transitionProperty" in document.body.style))

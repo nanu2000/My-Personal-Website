@@ -67,7 +67,7 @@ function echoPortfolio()
     (
         "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
         "ProjectPages/LightShowPage.php", 
-        "#001E5A", 
+        "#004b94", 
         "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++.", 
         "flexItemBig", 
         "bigTextBg"
@@ -81,7 +81,7 @@ function echoPortfolio()
     (
         "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
         "ProjectPages/StarDivePage.php", 
-        "#321464", 
+        "#522898", 
         "Stardive is my favorite out of all the games I have made..<br>So far.", 
         "flexItemNormal", 
         "smallTextBg"
@@ -92,7 +92,7 @@ function echoPortfolio()
     (
         "Images/lolo.png", "Link to adventures of lolo game page", 
         "ProjectPages/LoloGamePage.php", 
-        "#500500", 
+        "#651b16", 
         "LoLo is a game that I made for the NES Box art jam in 2015!", 
         "flexItemNormal", 
         "smallTextBg"
@@ -103,7 +103,7 @@ function echoPortfolio()
     (
         "Images/AeroFlightBanner.png", "Link to Aeroflight game page", 
         "ProjectPages/AeroFlightPage.php", 
-        "#002D5A", 
+        "#0f3684", 
         "Aeroflight is the first game that I have published.", 
         "flexItemNormal", 
         "smallTextBg"
@@ -117,7 +117,7 @@ function echoPortfolio()
     (
         "Images/NextProjectMedium.png", "Link to Coming Blog Page", 
         "ProjectPages/ComingSoonPage.php", 
-        "#003a00", 
+        "#005200", 
         "My blog contains consistent updates regarding the current project I'm developing.", 
         "flexItemMed", 
         "bigTextBg"
@@ -128,7 +128,7 @@ function echoPortfolio()
     (
         "Images/MediumPortfolio.png", "Link to Customer Submit Form Page", 
         "ProjectPages/CustomerSubmitFormPage.php", 
-        "#3C3C3C", 
+        "#5d5d5d", 
         "A Customer submission form made in PHP!", 
         "flexItemMed", 
         "bigTextBg"
