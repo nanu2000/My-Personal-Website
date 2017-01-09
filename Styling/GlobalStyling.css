@@ -106,7 +106,7 @@ For really small window probably on desktop
     {
         float:left;
     }
-    .navbar_text_links .text_link a, #navbar_more li a
+    .navbar_text_links .text_link a, #navbar_more .text_link a
     {    
         display: block;
         padding: 14px 20px;
@@ -143,7 +143,7 @@ For really small windows, devices, and phones
         padding-bottom: 20px;
     }
     
-    #navbar_more li a
+    #navbar_more .text_link a
     {    
         display: block;
         padding: 12px 15px;
@@ -164,7 +164,7 @@ For really small windows, devices, and phones
 
 @media only screen and (min-width : 450px) 
 {
-    .navbar_text_links .text_link a, #navbar_more li a
+    .navbar_text_links .text_link a, #navbar_more .text_link a
     {    
         display: block;
         padding: 12px 15px;
@@ -340,7 +340,7 @@ Used to create the navagation bar
 }
 
 
-.navbar_text_links .text_link , #navbar_more li
+.navbar_text_links .text_link , #navbar_more .text_link
 {
     word-wrap: break-word;
 }
@@ -357,7 +357,7 @@ Used to create the navagation bar
     background-color: white;
 }
 
-#navbar_more li a, .navbar_text_links .text_link a 
+#navbar_more .text_link a, .navbar_text_links .text_link a 
 {
     
     border-radius:2px;
@@ -371,10 +371,10 @@ Used to create the navagation bar
     
 }
 
-#navbar_more li a
+#navbar_more .text_link a
 {
     font-weight: bolder;
-    font-size: .8em;
+    font-size: .75em;
 }
 
 .navbar_text_links .text_link a 
@@ -383,7 +383,7 @@ Used to create the navagation bar
     font-size: .9em;
 }
 
-.navbar_text_links .text_link a:not(.active_nav_text_link), #navbar_more li a
+.navbar_text_links .text_link a:not(.active_nav_text_link), #navbar_more .text_link a
 {
     color: white;
 }
@@ -408,7 +408,7 @@ Used to create the navagation bar
     height:32px;
 }
 
-#navbar_more li
+#navbar_more .text_link
 {
     display: inline-block;
 }

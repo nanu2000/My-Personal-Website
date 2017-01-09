@@ -66,7 +66,7 @@ function echoPortfolio()
     createFlexItem
     (
         "Images/LightShowBanner.png", "Light Show Graphics Engine", 
-        "/ProjectPages/LightShowPage.php", 
+        "ProjectPages/LightShowPage.php", 
         "#001E5A", 
         "LightShow is a custom handmade Game/Graphics Framework that I created with OpenGL and C++.<br>The code for this project is viewable on my GitHub account. :)", 
         "flexItemBig", 

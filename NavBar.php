@@ -11,10 +11,12 @@ class NAV_OPTIONS
     const ITCH_NAME     = 'Itch.io';
     const CONTACT_NAME  = 'Contact';
     const BLOG_NAME     = 'Blog';
+    const CHANGE_LOG_NAME = 'Change Log';
     
     const HOME_STR      = 'FrontPage.php';
     const ITCH_STR      = 'https://-nanu-.itch.io/';
     const CONTACT_STR   = "Contact.php";
+    const CHANGE_LOG_STR = 'changelog.txt';
 }
 
 function displayNavbar($option, $path)
@@ -31,7 +33,8 @@ function displayNavbar($option, $path)
     
     $moreNavItems = array
     (
-      NAV_OPTIONS::ITCH         => array(NAV_OPTIONS::ITCH_STR,             NAV_OPTIONS::ITCH_NAME)
+      NAV_OPTIONS::ITCH         => array(NAV_OPTIONS::ITCH_STR,         NAV_OPTIONS::ITCH_NAME),
+      NAV_OPTIONS::NOT_DEFINED  => array(NAV_OPTIONS::CHANGE_LOG_STR,   NAV_OPTIONS::CHANGE_LOG_NAME)
     );
     
 
