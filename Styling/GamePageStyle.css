@@ -34,6 +34,9 @@
 }
 .ProjectPageTitle
 {
+    
+    background-color:rgb(215, 226, 245);
+    padding:50px;
     margin-top:0;
     margin-bottom:0;
     font-family: 'Lobster', cursive;
@@ -55,7 +58,7 @@
 {
     color: rgb(50,50,50);
     line-height: 1.4;
-    padding : 40px;
+    padding : 20px 40px 20px 40px;
 }
 .GamePageBanner
 {

@@ -27,8 +27,8 @@ contentContainer
 
 contentContainer
 ('
+<div class = "ProjectPageTitle textCenter">About StarDive</div>
 <div class="GamePageDescription textCenter">
-<span class = "ProjectPageTitle">About StarDive</span>
 <p>
 StarDive was my first game that I created <b>completely by myself.</b> It took a total of <b>3 months</b> to complete. To me this game is a lot better than my very first game <a class ="TextLink" href= "AeroFlightPage.html">Aeroflight</a>, the developement process went very well because I planned everthing out 100% and made a prototype to make sure everything would work properly and be fun.</p><p>When I started this game, I actually knew how to program and establish a great workflow, so as an end result I was able to create a great game, probably my favorite game I have created so far. (As of 12/27/15)
 </p>

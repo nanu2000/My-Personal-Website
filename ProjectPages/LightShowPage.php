@@ -23,9 +23,9 @@ contentContainer
 
 contentContainer
 ('
-    
+  
+<div class = "ProjectPageTitle textCenter">About the Lightshow Framework</div>  
 <div class="GamePageDescription">
-<div class = "ProjectPageTitle textCenter">About the Lightshow Framework</div>
 
 <p class = "textCenter">
     The creation of this framework was started on the <b>23rd of December 2015</b>. The development came to a complete stop in <b>May, 2016</b> (~5 total months of development).
