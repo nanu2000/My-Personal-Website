@@ -65,10 +65,10 @@ function echoPortfolio()
     $flexItems .=
     createFlexItem
     (
-        "Images/LightShowBanner.png", "Light Show Graphics Engine", 
+        "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
         "ProjectPages/LightShowPage.php", 
         "#001E5A", 
-        "LightShow is a custom handmade Game/Graphics Framework that I created with OpenGL and C++.<br>The code for this project is viewable on my GitHub account. :)", 
+        "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++.", 
         "flexItemBig", 
         "bigTextBg"
     );
@@ -129,7 +129,7 @@ function echoPortfolio()
         "Images/MediumPortfolio.png", "Link to Customer Submit Form Page", 
         "ProjectPages/CustomerSubmitFormPage.php", 
         "#3C3C3C", 
-        "A Customer submission form made in PHP!<br>The code for this project is viewable on my github. :)", 
+        "A Customer submission form made in PHP!", 
         "flexItemMed", 
         "bigTextBg"
     );

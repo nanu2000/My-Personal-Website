@@ -106,7 +106,7 @@ For really small window probably on desktop
     {
         float:left;
     }
-    .navbar_text_links .text_link a, #navbar_more .text_link a
+    .navbar_text_links .text_link a
     {    
         display: block;
         padding: 14px 20px;
@@ -164,7 +164,7 @@ For really small windows, devices, and phones
 
 @media only screen and (min-width : 450px) 
 {
-    .navbar_text_links .text_link a, #navbar_more .text_link a
+    .navbar_text_links .text_link a
     {    
         display: block;
         padding: 12px 15px;
@@ -185,11 +185,16 @@ For really small windows, devices, and phones
         padding-bottom: 12px;
         text-decoration: none;
     }
-    .navbar_text_links .text_link
+    .navbar_text_links > .text_link
     {
         display: inline-block;
         width:25%;
         white-space: nowrap;
+    }
+    #navbar_more .text_link
+    {
+        display: inline-block;
+        width:auto;
     }
 }
 /**************/
@@ -340,7 +345,7 @@ Used to create the navagation bar
 }
 
 
-.navbar_text_links .text_link , #navbar_more .text_link
+.navbar_text_links .text_link
 {
     word-wrap: break-word;
 }
@@ -357,7 +362,7 @@ Used to create the navagation bar
     background-color: white;
 }
 
-#navbar_more .text_link a, .navbar_text_links .text_link a 
+.navbar_text_links .text_link a 
 {
     
     border-radius:2px;
@@ -383,12 +388,12 @@ Used to create the navagation bar
     font-size: .9em;
 }
 
-.navbar_text_links .text_link a:not(.active_nav_text_link), #navbar_more .text_link a
+.navbar_text_links .text_link a:not(.active_nav_text_link)
 {
     color: white;
 }
 
-.navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a, #navbar_more .text_link:hover:not(.mobile) a
+.navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a
 {
     color: black;
     background-color: white;

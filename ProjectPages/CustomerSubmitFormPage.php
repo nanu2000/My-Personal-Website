@@ -23,7 +23,7 @@ contentContainer
 
 contentContainer
 ('
-<div class="GamePageDescription">
+<div class="GamePageDescription textCenter">
 <span class = "ProjectPageTitle">About The Customer Support Form</span>
 <p class = "NormalTextStyling">
 This project was my first official project I have ever completed using PHP. This project is meant for a customer service department. The employees would recieve phone calls, 

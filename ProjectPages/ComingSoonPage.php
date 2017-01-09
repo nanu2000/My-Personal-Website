@@ -15,7 +15,7 @@ contentContainer('<center><div class = "ProjectPageTitle" style = "padding:10px;
 
 contentContainer
 ('
-    <div class="GamePageDescription">
+    <div class="GamePageDescription textCenter">
     <p  style = "padding:10px;"> 
     You can follow my 
     <a class ="TextLink" href="../'.$frontBlogPage.'">blog</a> 

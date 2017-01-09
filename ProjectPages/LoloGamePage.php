@@ -24,8 +24,8 @@ contentContainer
 
 contentContainer
 ('
-<div class="GamePageDescription">
-<span class = "ProjectPageTitle">About The Adventures Lolo Recreated</span><p>
+<div class="GamePageDescription textCenter">
+<span class = "ProjectPageTitle">About The Adventures Lolo Recreated</span>
 <p>This game was created and entered in the <a class = "TextLink" href="http://itch.io/jam/nes-box-art-jam">box art game jam of 2015</a>, it was submitted with 3 hours and 24 minutes before the deadline. This game was created in about one month with a few limmitations such as only using 16 by 16 tiles with only 4 colors max on each tile (alpha, black and white count as colors too!). Overall I had a really fun time making this, and it was also my first game I have created using <b>my own engine.</b> I did a lot of planning for this game to be created, and used graph paper to rough draft all of the levels before they where implemented! This game was the first game I have ever entered in a game jam, and I think it turned out to be quite a success! :D</p>
 <h3>The description on itch.io</h3>
 <p>
