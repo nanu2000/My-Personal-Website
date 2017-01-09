@@ -52,6 +52,7 @@
 }
 .FeatureList
 {
+  counter-reset: section;
   list-style: none;
 }
  
@@ -66,7 +67,8 @@
 .FeatureList li:before 
 {
    margin-right: 10px;
-   content: counter(item) ". ";
+    counter-increment: section;
+    content: counters(section, ".") ". ";
    color: black;
    font-family: 'Raleway', sans-serif;
    font-size: 1.1em;

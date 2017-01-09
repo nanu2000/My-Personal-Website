@@ -29,6 +29,10 @@
     padding-bottom: 50px;
     font-family: 'Raleway', sans-serif;
 }
+.BlogText a
+{
+    color: rgb(0,0,200);
+}
 p
 {
  text-indent: 0px;
