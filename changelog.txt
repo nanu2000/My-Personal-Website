@@ -8,8 +8,8 @@ TODO / IDEAS
 -Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
 ----
 
-
-
+#4.0 moved FeatureList to Global Styling
+#3.9 Posted to Blog
 #3.8 Fixed December 0'15 Blog Post, changed coloring on hover of flexItems, added media queries to blog styling
 #3.7 Added Media Queries To Project Page OL and P
 #3.6 Added Padding and removed centering from project pages
@@ -49,4 +49,4 @@ TODO / IDEAS
 #0.2 Cleaned GlobalStyling CSS file
 #0.1 Revised navigation bar code
 #0.0 Created Change Log
-
+#-0.1 Created Website in ~November 2015
