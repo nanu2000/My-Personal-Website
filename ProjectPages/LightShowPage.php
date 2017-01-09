@@ -27,12 +27,12 @@ contentContainer
 <div class = "ProjectPageTitle textCenter">About the Lightshow Framework</div>  
 <div class="GamePageDescription">
 
-<p class = "textCenter">
+<p>
     The creation of this framework was started on the <b>23rd of December 2015</b>. The development came to a complete stop in <b>May, 2016</b> (~5 total months of development).
     The development of this project was halted due to the fact that I wanted to focus on creating a game, and not a framework. 
 </p>
 
-<p class = "textCenter">
+<p>
 In short form: the Lightshow framework has been completed,
 but the game being made from/with this framework has not been completed.
 </p>
@@ -54,7 +54,7 @@ but the game being made from/with this framework has not been completed.
 <li>Omnidirectional shadow mapping</li>
 <li>Particle systems with instanced rendering</li>
 </ol>
-<p class = "textCenter">
+<p>
    Make sure to check out my <a class ="TextLink" href="../'.$frontBlogPage.'">blog</a>  for more information regarding the game that I\'m going to create with this framework.
 </p>
 </div>
