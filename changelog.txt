@@ -1,4 +1,19 @@
+
+TODO / IDEAS
+
+-FORCE NAMING STYLE FOR CSS CLASSES AND IDS (CapitalizeFirstLetterOfEachWord ? or_use_underscores)
+-CLEAN CSS AND JAVASCRIPT!!!!
+-Create new StarDive Banner for GamePage
+-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
+
+----
+
+
+
 Last Updated 1/8/2017
+#3.4 Made GamePageDescription not automatically center content
+#3.3 Added Ol + li styling in GamePageStyle.css
+#3.2 Added Lightshow Page
 #3.1 HTTPS!
 #3.0 Updated to PHP 7
 #2.9 Added Changelog Link to more button
@@ -32,9 +47,3 @@ Last Updated 1/8/2017
 #0.1 Revised navigation bar code
 #0.0 Created Change Log
 
-
-TODO / IDEAS
-
--CLEAN CSS AND JAVASCRIPT!!!!
--Create new StarDive Banner for GamePage
--Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
