@@ -5,7 +5,7 @@
  */
 
 
-ColorChanger.prototype.TIME_UNTIL_NEXT_COLOR    = 7;
+ColorChanger.prototype.TIME_UNTIL_NEXT_COLOR    = 3;
 ColorChanger.prototype.TIME_UNTIL_HOVER_COLOR   = 0.8;
 
 function ColorChanger(colorsToChange, backgroundColorElement)
