@@ -1,0 +1,32 @@
+#ContactPageTitle
+{
+    background-color:rgb(215, 226, 245);
+    margin-top:0;
+    margin-bottom:0;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+
+.ContactPageText
+{
+    color: rgb(50,50,50);
+    line-height: 1.4;
+    font-family: 'Raleway', sans-serif;    
+    padding: 15px 10% 15px 10%;
+}
+@media only screen and (min-width : 667px) 
+{     
+    #ContactPageTitle
+    {
+        padding:40px 10px 40px 10px;
+    }    
+}
+@media only screen and (max-width : 666px) 
+{      
+    #ContactPageTitle
+    {
+        padding:40px 10px 40px 10px;
+    }      
+}
