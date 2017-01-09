@@ -11,6 +11,8 @@ TODO / IDEAS
 
 
 Last Updated 1/8/2017
+#3.8
+#3.7 Added Media Queries To Project Page OL and P
 #3.6 Added Padding and removed centering from project pages
 #3.5 Added Blue BG for Project Page Title
 #3.4 Made GamePageDescription not automatically center content
