@@ -49,4 +49,4 @@ TODO / IDEAS
 #0.2 Cleaned GlobalStyling CSS file
 #0.1 Revised navigation bar code
 #0.0 Created Change Log
-#-0.1 Created Website in ~November 2015
+#--- Created Website in ~November 2015
