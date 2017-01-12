@@ -1,8 +1,4 @@
-<?php 
-
-echo
-('                            
-<div class="textCenter nonFlexBG" style = "padding:12px;">
+<div class="textCenter nonFlexBG" id="BlogNavbar">
 
     <a href="December2015.php"  class = "TextLink">December 2015</a> 
     | 
@@ -21,6 +17,3 @@ echo
     <a href="January2017.php"   class = "TextLink">January 2017</a>
     
 </div>
-');
-
-?>

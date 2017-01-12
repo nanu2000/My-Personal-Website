@@ -7,7 +7,7 @@ startBlogContent();
 
 outputLogo();
 startContainerStyle();
-displayNavbar(NAV_OPTIONS::BLOG, "../");
+displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
 include ('blogNavbar.php');
