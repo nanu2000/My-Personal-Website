@@ -5,34 +5,36 @@
  */
 
 ColorChanger.prototype.HIGHLIGHT_COLOR_PERCENT          = .6;
-ColorChanger.prototype.SHADOW_COLOR_PERCENT             = -.1;
+ColorChanger.prototype.SHADOW_COLOR_PERCENT             = -.3;
 ColorChanger.prototype.TIME_UNTIL_HOVER_OVER_COLOR      = 1;
 ColorChanger.prototype.TIME_UNTIL_HOVER_OUT_COLOR       = 3;
 
 function ColorChanger(backgroundColorElement)
 {
     this.defaultColor           = "black";
-    this.elementThatChangesBG   = backgroundColorElement;
+    this.backgroundColorElement   = backgroundColorElement;
  
     this._onMouseOverHandler = function(element) 
     {
         var colorChanger = this;
+        var backgroundColorElementStyle = this.backgroundColorElement.style;
 
         return function() 
         {
-            colorChanger.elementThatChangesBG.style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
-            colorChanger.elementThatChangesBG.style.backgroundColor     = element.shadowHoverColor;
+            backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
+            backgroundColorElementStyle.backgroundColor     = element.shadowHoverColor;
         };
     };
     
     this._onMouseOutHandler = function() 
     {
         var colorChanger = this;
+        var backgroundColorElementStyle = this.backgroundColorElement.style;
 
         return function() 
         {
-            colorChanger.elementThatChangesBG.style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
-            colorChanger.elementThatChangesBG.style.backgroundColor     = colorChanger.defaultColor;
+            backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
+            backgroundColorElementStyle.backgroundColor     = colorChanger.defaultColor;
         };
     };
     
@@ -40,28 +42,25 @@ function ColorChanger(backgroundColorElement)
     {
         
         currentFlexItem.hoverColor              = currentFlexItem.getAttribute('data-hovercolor');
-        currentFlexItem.highlightHoverColor     = ColorLuminance(currentFlexItem.hoverColor, this.HIGHLIGHT_COLOR_PERCENT);
-        currentFlexItem.shadowHoverColor        = ColorLuminance(currentFlexItem.hoverColor, this.SHADOW_COLOR_PERCENT);
+        currentFlexItem.highlightHoverColor     = colorLuminance(currentFlexItem.hoverColor, this.HIGHLIGHT_COLOR_PERCENT);
+        currentFlexItem.shadowHoverColor        = colorLuminance(currentFlexItem.hoverColor, this.SHADOW_COLOR_PERCENT);
         
         currentFlexItem.style.backgroundColor   = currentFlexItem.shadowHoverColor;
 
+        var textWrapperStyle = currentFlexItem.querySelector('.textBg').style;
 
-        var textWrapper = currentFlexItem.querySelector('.textBg');
-
-        textWrapper.style.backgroundColor   = currentFlexItem.hoverColor;
-        textWrapper.style.borderTopColor    = currentFlexItem.highlightHoverColor;
-        textWrapper.style.borderBottomColor = currentFlexItem.shadowHoverColor;
+        textWrapperStyle.backgroundColor   = currentFlexItem.hoverColor;
+        textWrapperStyle.borderTopColor    = currentFlexItem.highlightHoverColor;
+        textWrapperStyle.borderBottomColor = currentFlexItem.shadowHoverColor;
 
         currentFlexItem.onmouseover    = this._onMouseOverHandler(currentFlexItem);
         currentFlexItem.onmouseout     = this._onMouseOutHandler();
         
     };
     
-    
     this.start = function()
     {
-        
-        this.defaultColor = this.elementThatChangesBG.style.backgroundColor;
+        this.defaultColor = this.backgroundColorElement.style.backgroundColor;
         
         var elements = document.getElementsByClassName("flexItem");
         
@@ -73,10 +72,7 @@ function ColorChanger(backgroundColorElement)
 
 }
 
-
-
-
-function ColorLuminance(hex, lum) 
+function colorLuminance(hex, lum) 
 {
     // validate hex string
     hex = String(hex).replace(/[^0-9a-f]/gi, '');
@@ -124,7 +120,7 @@ moreMenuOnclickHandler = function(showNavbarAStyle, navbarMoreStyle)
         {
             showNavbarAStyle.color              = "";
             showNavbarAStyle.backgroundColor    = "";
-            navbarMoreStyle.display                  = "none";
+            navbarMoreStyle.display             = "none";
         }
         else
         {
