@@ -38,7 +38,7 @@ A lot has happened, but do I even need to say that? It's been two months since m
         </ol>
     </li>
     <li>Got a personal home server</li>
-    <li>Setup a professional email address (richie@devrichie.com)</li>
+    <li>Set up a professional email address (richie@devrichie.com)</li>
     <li>Got a little sidetracked while working on this website...
     <li>And finally : it's 2017! (Actually it's been 2017 for 9 days...)</li>
 </ol>

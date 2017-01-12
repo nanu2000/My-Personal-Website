@@ -14,12 +14,12 @@ include ('blogNavbar.php');
 
 startBlogPost( "post" , "subtitle");
 
+?>
+
+
+<?php
 
 endBlogPost();
-
-
-
-
 
 
 endContainerStyle();

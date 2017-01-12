@@ -15,14 +15,12 @@ include ('blogNavbar.php');
 
 startBlogPost( "April 8th, 2016", "Hidden Progress");
 
-
-echo
-('
+?>
 <p>
-Today I realized that I haven\'t posted at all during March. I would first like to declare that my absense of posts was not an accident. I have worked very hard over the past month, and I am finally ready to announce the completion of my engine (as far as preperation for my next game goes). In short form: I am now ready to create my next game.
+Today I realized that I haven't posted at all during March. I would first like to declare that my absense of posts was not an accident. I have worked very hard over the past month, and I am finally ready to announce the completion of my engine (as far as preperation for my next game goes). In short form: I am now ready to create my next game.
 </p>
 
-<center>
+<div class ="textCenter">
 <p>
 Here is a video showing off what I have implemented so far.
 </p>
@@ -30,11 +28,12 @@ Here is a video showing off what I have implemented so far.
 <div class="VideoWrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QvlZNNJJk0s?list=PLjHGIYMiOFmVr-xtssDJnLLw612cipUou" frameborder="0" allowfullscreen></iframe>      
 </div>
-</center>
+</div>
+
 <p>
 Here is a current list of features that I have implemented. (I may have missed a few things)
 </p>
-<ol>
+<ol class = "FeatureList">
 <li>Omnidirectional Shadow Mapping</li>
 <li>Directional Shadow Mapping</li>
 <li>Runtime shader modification</li>
@@ -52,7 +51,7 @@ Thanks for the support! The next post will be about the game thats going to be c
 <br>
 -Richie
 </p>     
-');
+<?php
 
 endBlogPost();
 endContainerStyle();

@@ -13,9 +13,10 @@ include ('blogNavbar.php');
 
 startBlogPost( "June 17th, 2016", "-Before the Prototype-" );
 
-echo('
+?>
+
 <p>
-The current state of my game\'s development would best be described as the decision making, drafting, and planning phase. The content embedded inside of the game so far is nothing more than a template, but that template will be the foundation of my game so it is something that I must spend time working really hard to polish and prepare. 
+The current state of my game's development would best be described as the decision making, drafting, and planning phase. The content embedded inside of the game so far is nothing more than a template, but that template will be the foundation of my game so it is something that I must spend time working really hard to polish and prepare. 
 </p>
 <p>
 So far the template for this project is currently composed of a character controller along with a simple animation controller.
@@ -28,19 +29,16 @@ The template will only include the most basic and important components that will
 furthermore, here is a video that I have created to show off the newest additions to the game. There is still a lot to do, but I definitely think that I am on the right path to a great game.
 </p>
 
-<center>
-<div class="VideoWrapper">
+<div class="TextCenter VideoWrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/QcjZ9rkDvV8" frameborder="0" allowfullscreen></iframe>   
 </div> 
-
-</center>
 <p>
 Thank you very much for reading, hopefully I will get another blog post out sooner next time :)
 <br>
 -Richie
 </p>     
-</center>
-');
+
+<?php
 
 endBlogPost();
 endContainerStyle();
