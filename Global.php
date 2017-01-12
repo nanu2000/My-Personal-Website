@@ -76,7 +76,6 @@ function endContainerStyle()
 function startContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = '★-Richie Sikra-★')
 {
     array_push($styleSheets,$prefix . "Styling/GlobalStyling.css");
-    array_push($styleSheets,$prefix . "Styling/Fonts.css");
     array_push($scripts, $prefix . "Javascript/Global.js" );
     array_push($noScripts, $prefix . "Styling/GlobalNoScript.css" );
     

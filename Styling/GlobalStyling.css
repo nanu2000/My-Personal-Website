@@ -18,6 +18,26 @@
 */
 
 
+@font-face {
+  font-family: 'Passion One';
+  font-weight: 700;
+  src: url(../Fonts/Latin_Passion_One.ttf);
+}
+
+@font-face 
+{
+  font-family: 'Raleway';
+  font-weight: 500;
+  src: url(../Fonts/Latin_Raleway.ttf)
+}
+
+@font-face 
+{
+  font-family: 'Lobster';
+  font-weight: 400;
+  src: url(../Fonts/Latin_Lobster.ttf);
+}
+
 #navbar_more 
 {
     display:none;

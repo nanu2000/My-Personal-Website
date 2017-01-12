@@ -1,13 +1,15 @@
 
 TODO / IDEAS
 
--Maybe even merge contactPageStyle with GlobalStyling???
--Probably can merge #ContactPageTitle with .ProjectPageTitle &/or .blogTitle
--FORCE NAMING STYLE FOR CSS CLASSES AND IDS (CapitalizeFirstLetterOfEachWord ? or_use_underscores)
+
 -CLEAN CSS AND JAVASCRIPT!!!!
--Create new StarDive Banner for GamePage
--Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
--Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
+-----Maybe even merge contactPageStyle with GlobalStyling???
+-----Probably can merge #ContactPageTitle with .ProjectPageTitle &/or .blogTitle
+-----FORCE NAMING STYLE FOR CSS CLASSES AND IDS (CapitalizeFirstLetterOfEachWord ? or_use_underscores)
+-----Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
+
+?-Create new StarDive Banner for GamePage
+?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----
 #4.6 Added Options.php
 #4.5 Cleaned up Navbar code
