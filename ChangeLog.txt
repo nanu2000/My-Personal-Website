@@ -9,7 +9,9 @@ TODO / IDEAS
 -Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 -Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
 ----
-
+#4.6 Added Options.php
+#4.5 Cleaned up Navbar code
+#4.4 Cleaned Project Pages code.
 #4.3 Renamed index to FrontPage.php (in blog Directory) to promote good naming patterns.
 #4.2 Cleaned All Blog Post's. 
 #4.1 Updated Contact Page Styling
