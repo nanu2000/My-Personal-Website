@@ -30,12 +30,11 @@ class NAV_OPTIONS
     
     const MORE_NAV_ITEMS = array
     (
-      self::ITCH_NAV_ID         => array('!https://-nanu-.itch.io/','Itch.io'),
-      self::NOT_DEFINED_NAV_ID  => array('ChangeLog.txt',   'Change Log')
+      self::ITCH_NAV_ID         => array('!https://-nanu-.itch.io/','Itch.io'),     //Add ! in front of external URLs
+      self::NOT_DEFINED_NAV_ID  => array('ChangeLog.txt',           'Change Log')
     );
     
     /************************************************************************************************************/
-    
     
 }
 

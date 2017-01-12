@@ -1,5 +1,4 @@
 <?php
-require_once 'Options.php';
 
 
 /* Checks for ! as first character of path. if ! exists, then remove it. else, return href with path appended before it.*/

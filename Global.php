@@ -1,5 +1,5 @@
 <?php
-require_once ('Options.php');
+include('Options.php');
 
 
 function startBlogContent()
