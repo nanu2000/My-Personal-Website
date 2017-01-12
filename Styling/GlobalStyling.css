@@ -1,5 +1,17 @@
 
 /*
+
+FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
+FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
+
+FOR IMPORTANT BLACK COLOR, USE rgb(0,0,0);
+FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
+
+*/
+
+
+
+/*
 @media only screen and (min-width : 1000px) 
 {    
 }
@@ -332,7 +344,7 @@ Used to create Logo type text above nav bar
 #RichieTextSubtitle
 {
     font-family: 'Raleway', sans-serif;
-    color: #fff;
+    color: rgb(235,235,235);
     font-size: .9em;
     letter-spacing: .5px;
     font-weight: bold;
@@ -467,12 +479,12 @@ Used to create the navagation bar
 
 .navbar_text_links .text_link a:not(.active_nav_text_link)
 {
-    color: white;
+    color:rgb(235,235,235);
 }
 
 .navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a
 {
-    color: black;
+    color: rgb(70,70,70);
     background-color: white;
 }
 
