@@ -13,6 +13,11 @@ function startBlogContent()
     );
 }
 
+function endBlogContent()
+{
+    endContent(array(), '../');
+}
+
 function startProjectPageContent()
 {
     startContent
@@ -23,6 +28,12 @@ function startProjectPageContent()
         ), array(), array(), '../'
     );
 }
+
+function endProjectPageContent()
+{
+    endContent(array(), '../');
+}
+
 
 function startContentContainer()
 {
