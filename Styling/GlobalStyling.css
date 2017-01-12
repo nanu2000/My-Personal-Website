@@ -296,6 +296,7 @@ body
     padding:0;      
     margin: auto;
     transition-timing-function: linear;
+    transition-property: background-color;
     background-color: #001125;
 }
 a
