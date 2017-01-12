@@ -11,6 +11,7 @@ TODO / IDEAS
 ?-Create new StarDive Banner for GamePage
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----
+#4.8 Minified ALL JS and CSS
 #4.7 Cleaned some Javascript
 #4.6 Added Options.php
 #4.5 Cleaned up Navbar code
