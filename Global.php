@@ -119,7 +119,7 @@ function startContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTit
     <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link rel = "shortcut icon" href = "'. $prefix . 'Images/Favicon.ico" type="image/x-icon">
+    <link rel = "shortcut icon" href = "<?php echo($prefix)?>Images/Favicon.ico" type="image/x-icon">
     
     <?php outputExternalFileIncludes($styleSheets, $noScripts, $scripts); ?>
     
