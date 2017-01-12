@@ -28,7 +28,7 @@ function startContentContainer()
 {
     echo('<div class="nonFlexBG">');
 }
-function startContentContainerHideSmallScreen($content)
+function startContentContainerHideSmallScreen()
 {
     echo('<div class="nonFlexBG HideMobile">');
 }
