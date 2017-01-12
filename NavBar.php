@@ -25,7 +25,7 @@ function parseNavArray($navItems, $currentSelectionID, $path)
     foreach ($navItems as $key => $value) 
     {
         $href = getPathForNavItem($value[0], $path);
-        if($key === $currentSelectionID)
+        if($key === $currentSelectionID && $key !== NAV_OPTIONS::NOT_DEFINED_NAV_ID)
         {
             $navStr .= '<li class = "text_link"><a class = "active_nav_text_link noselect" href="'. $href .'">'. $value[1] .'</a></li>';
         }
