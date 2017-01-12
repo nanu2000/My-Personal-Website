@@ -60,7 +60,7 @@ function writeMarkup($navStr, $moreNavStr, $path)
         
         <?php echo($navStr)?><li class = "text_link" id = "show_navbar" tabindex="0"><a class = "noselect">More</a></li> 
         
-        <li id = "navbar_more">
+        <li id = "navbar_more" >
         <ul>
         <?php echo($moreNavStr)?>
         </ul>
