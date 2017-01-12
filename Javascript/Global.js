@@ -45,7 +45,7 @@ function ColorChanger(backgroundColorElement)
         currentFlexItem.highlightHoverColor     = colorLuminance(currentFlexItem.hoverColor, this.HIGHLIGHT_COLOR_PERCENT);
         currentFlexItem.shadowHoverColor        = colorLuminance(currentFlexItem.hoverColor, this.SHADOW_COLOR_PERCENT);
         
-        currentFlexItem.style.backgroundColor   = colorLuminance(currentFlexItem.hoverColor, -.5);
+        currentFlexItem.style.backgroundColor   = colorLuminance(currentFlexItem.hoverColor, this.SHADOW_COLOR_PERCENT * 2);
 
         var textWrapperStyle = currentFlexItem.querySelector('.textBg').style;
 
@@ -74,26 +74,15 @@ function ColorChanger(backgroundColorElement)
 
 function colorLuminance(hex, lum) 
 {
-    // validate hex string
     hex = String(hex).replace(/[^0-9a-f]/gi, '');
-
-    if (hex.length < 6)
-    {
-            hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-    }
-
-    lum = lum || 0;
-
-    // convert to decimal and change luminosity
-    var rgb = "#", c, i;
-
+    var rgb = "#";
+    var color;
     for (i = 0; i < 3; i++) 
     {
-        c = parseInt(hex.substr(i*2,2), 16);
-        c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
-        rgb += ("00"+c).substr(c.length);
+        color = parseInt(hex.substr(i*2,2), 16);
+        color = Math.round(Math.min(Math.max(0, color + (color * lum)), 255)).toString(16);
+        rgb += ("00" + color).substr(color.length);
     }
-
     return rgb;
 }
 
@@ -134,6 +123,7 @@ moreMenuOnclickHandler = function(showNavbarAStyle, navbarMoreStyle)
 function setupMoreMenu()
 {
     document.getElementById("navbar_more").style.display = "none";
+    
     document.getElementById("show_navbar").onclick = moreMenuOnclickHandler
     (
         document.getElementById("show_navbar").querySelector('a').style,
@@ -156,7 +146,3 @@ window.onload = function()
     
     setupMoreMenu();
 };
-
-
-
-
