@@ -1,5 +1,5 @@
 <?php
-include('global.php');
+require_once('Global.php');
 include('Logo.php');
 include('NavBar.php');
 include('FlexPortfolio.php');
