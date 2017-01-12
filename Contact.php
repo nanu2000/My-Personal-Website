@@ -7,7 +7,7 @@ include('NavBar.php');
 startContent(array("Styling/ContactPageStyle.css"), array(), array());
 outputLogo();
 startContainerStyle();
-displayNavbar(NAV_OPTIONS::CONTACT_NAV_ID, "");
+displayNavbar(NAV_OPTIONS::CONTACT, "");
 
 echo
 (

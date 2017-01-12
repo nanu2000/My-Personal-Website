@@ -1,4 +1,8 @@
-<div class="textCenter nonFlexBG" id="BlogNavbar">
+<?php 
+
+echo
+('                            
+<div class="textCenter nonFlexBG" style = "padding:12px;">
 
     <a href="December2015.php"  class = "TextLink">December 2015</a> 
     | 
@@ -17,3 +21,6 @@
     <a href="January2017.php"   class = "TextLink">January 2017</a>
     
 </div>
+');
+
+?>

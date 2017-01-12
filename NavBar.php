@@ -1,94 +1,89 @@
 <?php
 require_once 'Options.php';
 
-
-/* Checks for ! as first character of path. if ! exists, then remove it. else, return href with path appended before it.*/
-function getPathForNavItem($href, $path)
+function displayNavbar($option, $path)
 {
-    if($href[0] === '!')
-    {
-        return substr($href, 1);    
-    }
+
+    global $frontBlogPage; // From global.php
     
-    return $path . $href;            
-}
+    $navItems = array
+    (
+       NAV_OPTIONS::HOME     => array($path  .NAV_OPTIONS::HOME_STR,     NAV_OPTIONS::HOME_NAME),
+       NAV_OPTIONS::BLOG     => array($path . NAV_OPTIONS::BLOG_STR,     NAV_OPTIONS::BLOG_NAME),
+       NAV_OPTIONS::CONTACT  => array($path . NAV_OPTIONS::CONTACT_STR,  NAV_OPTIONS::CONTACT_NAME)
+    );
+    
+    $moreNavItems = array
+    (
+      NAV_OPTIONS::ITCH         => array(NAV_OPTIONS::ITCH_STR,                 NAV_OPTIONS::ITCH_NAME),
+      NAV_OPTIONS::NOT_DEFINED  => array($path . NAV_OPTIONS::CHANGE_LOG_STR,   NAV_OPTIONS::CHANGE_LOG_NAME)
+    );
+    
 
-
-/*********************************************************
-Parses a navigation array and returns a string of HTML. 
-A navagation array has the format for each element in it:
-ID => array(PATH, NAME)
-**********************************************************/
-function parseNavArray($navItems, $currentSelectionID, $path)
-{
     $navStr = '';
     
     foreach ($navItems as $key => $value) 
     {
-        $href = getPathForNavItem($value[0], $path);
-        if($key === $currentSelectionID)
+        if($key == $option)
         {
-            $navStr .= '<li class = "text_link"><a class = "active_nav_text_link noselect" href="'. $href .'">'. $value[1] .'</a></li>';
+            $navStr .= '<li class = "text_link"><a class = "active_nav_text_link noselect" href="'.$value[0].'">'.$value[1].'</a></li>';
         }
         else
         {
-            $navStr .= '<li class = "text_link"><a class = "noselect" href="'. $href .'">'. $value[1] .'</a></li>';
+            
+            $navStr .= '<li class = "text_link"><a class = "noselect" href="'.$value[0].'">'.$value[1].'</a></li>';
+                
         }
     }
     
-    return $navStr;
-}
-
-/*Outputs HTML for navbar and highlights the selected nav item.*/
-function displayNavbar($currentSelectionID, $path)
-{    
-    writeMarkup
+    
+    $moreNavStr = '';
+    
+    
+    foreach ($moreNavItems as $key => $value) 
+    {
+        $moreNavStr .= '<li class = "text_link"><a class = "noselect" href="'.$value[0].'">'.$value[1].'</a></li>';
+    }
+    
+    echo
     (
-        parseNavArray(NAV_OPTIONS::NAV_ITEMS,        $currentSelectionID, $path),
-        parseNavArray(NAV_OPTIONS::MORE_NAV_ITEMS,    $currentSelectionID, $path),
-        $path
-    );
-}
+        '
+        <div id = "nav_bar">
+        <ul class = "navbar_text_links">
+           
 
-/*outputs the HTML for the navbar.*/
-function writeMarkup($navStr, $moreNavStr, $path)
-{
-?>
+        '.$navStr.'<li class = "text_link" id = "show_navbar" tabindex="0"><a class = "noselect">More</a></li> 
+        
 
-    <div id = "nav_bar">
-        
-    <ul class = "navbar_text_links">
-        
-        <?php echo($navStr)?><li class = "text_link" id = "show_navbar" tabindex="0"><a class = "noselect">More</a></li> 
-        
         <li id = "navbar_more">
         <ul>
-        <?php echo($moreNavStr)?>
+        '.$moreNavStr.'
         </ul>
         </li>
 
-    </ul>
-        
-    <ul class = "navbar_icon_links">
+        </ul>
+        <ul class = "navbar_icon_links">
         <li>
         <a href="https://twitter.com/AlphaCollab" >
-        <img src = "<?php echo($path);?>Images/TwitterIcon.png"/>
+        <img src = "'.$path.'Images/TwitterIcon.png"/>
         </a>  
         </li>
         <li>
         <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
-        <img src = "<?php echo($path);?>Images/YoutubeIcon.png"/>
+        <img src = "'.$path.'Images/YoutubeIcon.png"/>
         </a>    
         </li>
         <li>
         <a href="https://github.com/nanu2000">
-        <img src = "<?php echo($path);?>Images/GithubIcon.png"/>
+        <img src = "'.$path.'Images/GithubIcon.png"/>
         </a>   
         </li>  
-    </ul>
-        
-    </div>
-
-<?php
+        </ul>
+        </div>
+        '
+    );
 }
+
+
+
 ?>

@@ -1,5 +1,6 @@
 <?php 
 
+
 function createFlexItem($image, $imgAlt, $link, $color, $text, $size, $textBGSize)
 {
     return 
@@ -19,7 +20,6 @@ function createFlexItem($image, $imgAlt, $link, $color, $text, $size, $textBGSiz
     </a>
     </li>';
 }
-
 function desktopFlexHeader($header, $subheader = "")
 {
     if($subheader !== "")

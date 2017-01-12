@@ -5,7 +5,7 @@ include('../NavBar.php');
 startBlogContent();
 outputLogo();
 startContainerStyle();
-displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
+displayNavbar(NAV_OPTIONS::BLOG, "../");
 include ('blogNavbar.php');
 startBlogPost( "January 9th" , "A New Year? + Caught in the Moment");
 ?>
