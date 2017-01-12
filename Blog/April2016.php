@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
@@ -52,10 +52,8 @@ Thanks for the support! The next post will be about the game thats going to be c
 -Richie
 </p>     
 <?php
-
 endBlogPost();
 endContainerStyle();
-endContent();
-
+endBlogContent();
 ?>
                                

@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
@@ -33,10 +33,8 @@ The year 2015 is coming to an end, and I have completed my new years goal of cre
 <img class="NoFade BigBlogImage" src ="December2015Content/LightShowEngineRevision_1.png" alt ="LightShowEngineRevision_1" />
 
 <?php
-
 endBlogPost();
 endContainerStyle();
-endContent();
-
+endBlogContent();
 ?>
                                

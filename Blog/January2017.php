@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 startBlogContent();
@@ -77,5 +77,5 @@ Science degree.</p>
 <?php
 endBlogPost();
 endContainerStyle();
-endContent();
+endBlogContent();
 ?>

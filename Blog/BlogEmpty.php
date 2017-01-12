@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
@@ -18,11 +18,7 @@ startBlogPost( "post" , "subtitle");
 
 
 <?php
-
 endBlogPost();
-
-
 endContainerStyle();
-endContent();
-
+endBlogContent();
 ?>

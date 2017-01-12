@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
@@ -59,9 +59,7 @@ to complete all of my current side projects.
 </p>
 
 <?php
-
 endBlogPost();
 endContainerStyle();
-endContent();
-
+endBlogContent();
 ?>

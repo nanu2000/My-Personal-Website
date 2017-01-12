@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
@@ -39,9 +39,7 @@ Thank you very much for reading, hopefully I will get another blog post out soon
 </p>     
 
 <?php
-
 endBlogPost();
 endContainerStyle();
-endContent();
-
+endBlogContent();
 ?>

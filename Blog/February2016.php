@@ -1,5 +1,5 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
@@ -83,11 +83,7 @@ Finally, once I am finished with all of that, I will start designing the engine 
 Overall, I have a few things I need before I can start working on the game, but once they are complete I shall have a good template for the next game in question.</p>
 
 <?php
-
 endBlogPost();
-
-
 endContainerStyle();
-endContent();
-
+endBlogContent();
 ?>
