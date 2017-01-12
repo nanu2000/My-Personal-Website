@@ -6,7 +6,7 @@ include('../NavBar.php');
 startBlogContent();
 outputLogo();
 startContainerStyle();
-displayNavbar(NAV_OPTIONS::BLOG, "../");
+displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
 include ('blogNavbar.php');
@@ -95,7 +95,7 @@ So for the past week I have erased my old rendering code from my 2D engine, and 
 To elaborate on that, I have implemented GLSL shaders, changed from orthographic view to perspective view, added the <a class ="TextLink" href = "http://glm.g-truc.net/0.9.7/index.html">openGL math library</a> for matrix math and vector math, and made a simple textured cube class to demonstrate that everything works!
 </p>
 
-<h5 class = "TextCenter">A few textured cubes being rendered</h5>
+<h5 class = "textCenter">A few textured cubes being rendered</h5>
 
 <br>
 
@@ -139,7 +139,7 @@ laziness (which I do not agree with), but I would describe it as <b>reusability<
 <p>
 The best thing about the method I chose is that when I actually start programming the game, I can use dependency injection if I want to. I am not limiting myself by using the service locator. All I would do is just use the audio class like normal (using dependency injection when needed) and never worry about the service locator and just remove it.
 </p>
-<h4 class = "TextCenter">On another note...</h4>
+<h4 class = "textCenter">On another note...</h4>
 <p>
 I am planning on adding more images and possibly videos(?) in the future, it's probably a little bit boring to just be reading text and I want to be as entertaining and informative as possible, so the best I can do is promise to add some more content other than text in the future. Please stay tuned :)
 </p>
