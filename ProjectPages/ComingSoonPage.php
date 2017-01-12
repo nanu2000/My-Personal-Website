@@ -28,5 +28,5 @@ for more information regarding the development of this project.
 <?php
 endContentContainer();
 endContainerStyle();
-endContent();
+endProjectPageContent();
 ?>

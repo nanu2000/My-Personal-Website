@@ -41,5 +41,5 @@ reports of damaged parts.
 <?php
 endContentContainer();      
 endContainerStyle();
-endContent();
+endProjectPageContent();
 ?>

@@ -51,6 +51,5 @@ It was a lot of work and dedication, and I really had a great time making it, so
 <?php
 endContentContainer();
 endContainerStyle();
-endContent();
-
+endProjectPageContent();
 ?>

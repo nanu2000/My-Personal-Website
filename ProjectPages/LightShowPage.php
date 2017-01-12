@@ -78,5 +78,5 @@ Make sure to check out my <a class ="TextLink" href="../'.$NEWEST_BLOG_POST_URL.
 <?php
 endContentContainer();
 endContainerStyle();
-endContent();
+endProjectPageContent();
 ?>
