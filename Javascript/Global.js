@@ -59,7 +59,7 @@ function ColorChanger(backgroundColorElement)
         
         currentFlexItem.style.backgroundColor   = colorLuminance(currentFlexItem.hoverColor, this.SHADOW_COLOR_PERCENT * 2);
 
-        var textWrapperStyle = currentFlexItem.querySelector('.text_bg').style;
+        var textWrapperStyle = currentFlexItem.querySelector('text_bg').style;
 
         textWrapperStyle.backgroundColor   = currentFlexItem.hoverColor;
         textWrapperStyle.borderTopColor    = currentFlexItem.highlightHoverColor;
