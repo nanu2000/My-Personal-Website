@@ -19,7 +19,7 @@ My Current Project
 </div>
 <div class="project_page_description">
 <p> 
-You can follow my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::NEWEST_BLOG_POST_URL)?>.">blog</a> (which will have weekly/monthly posts starting 12/30/15)
+You can follow my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::NEWEST_BLOG_POST_URL);?>">blog</a> (which will have weekly/monthly posts starting 12/30/15)
 for more information regarding the development of this project.
 </p>
 </div>

@@ -68,7 +68,7 @@ but the game being made from/with this framework has not been completed.
 </ol>
 
 <p>
-Make sure to check out my <a class ="TextLink" href="../'.$NEWEST_BLOG_POST_URL.'">blog</a>  for more information regarding the game that I'm going to create with this framework.
+Make sure to check out my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::NEWEST_BLOG_POST_URL);?>">blog</a>  for more information regarding the game that I'm going to create with this framework.
 </p>
 
 </div>

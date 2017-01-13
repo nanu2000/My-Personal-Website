@@ -15,7 +15,7 @@ A lot has happened, but do I even need to say that? It's been two months since m
 </p>
 
 <ol class = "feature_list">
-    <li>Added a <a href = "../changelog.txt">change log</a> to this website</li>
+    <li>Added a <a href = "../ChangeLog.txt">change log</a> to this website</li>
     <li>Added a more button to this website's navigation bar</li>
     <li><b>Decided to add Javascript!</b>
         <ol class = "feature_list">
