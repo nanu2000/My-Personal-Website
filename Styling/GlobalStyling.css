@@ -10,8 +10,10 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 */
 
 
+/*********************************************
+*Media Queries That are in use.
+**********************************************
 
-/*
 @media only screen and (min-width : 1000px) 
 {    
 }
@@ -28,109 +30,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {    
 }
 */
-
-
-@font-face {
-  font-family: 'Passion One';
-  font-weight: 700;
-  src: url(../Fonts/Latin_Passion_One.ttf);
-}
-
-@font-face 
-{
-  font-family: 'Raleway';
-  font-weight: 500;
-  src: url(../Fonts/Latin_Raleway.ttf)
-}
-
-@font-face 
-{
-  font-family: 'Lobster';
-  font-weight: 400;
-  src: url(../Fonts/Latin_Lobster.ttf);
-}
-
-#navbar_more 
-{
-    display:none;
-}
-
-#navbar_more ul
-{
-    padding:0;
-}
-#show_navbar:hover 
-{
-    cursor:pointer;
-}
-
-#show_navbar:focus
-{
-  outline: none;
-}
-
-@media only screen and (min-width : 667px) 
-{    
-    .FeatureList
-    {
-        padding: auto; 
-    }
-}
-@media only screen and (max-width : 666px) 
-{      
-    .FeatureList
-    {
-        padding-left: 10px;
-    }
-    .FeatureList .FeatureList
-    {
-        padding-left: 20px;
-    }
-}
-
-.FeatureList
-{
-  counter-reset: section;
-  list-style: none;
-}
-
-.FeatureList .FeatureList
-{
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-.FeatureList li 
-{
-   counter-increment: item;
-   margin-bottom: 10px;
-   font-family: 'Raleway', sans-serif;
-   font-size: .9em;
-}
- 
-.FeatureList li:before 
-{
-   margin-right: 10px;
-    counter-increment: section;
-    content: counters(section, ".") ". ";
-   color: black;
-   font-family: 'Raleway', sans-serif;
-   font-size: 1.1em;
-   font-weight: bolder;
-   text-align: center;
-   display: inline-block;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 /************************************************************************
@@ -174,6 +73,10 @@ For really small window probably on desktop
 
 @media only screen and (min-width : 667px)
 { 
+    .FeatureList
+    {
+        padding: auto; 
+    }
     .navbar_icon_links
     {
         position: absolute;
@@ -241,6 +144,14 @@ For really small windows, devices, and phones
     {
         display:none;
     }
+    .FeatureList
+    {
+        padding-left: 10px;
+    }
+    .FeatureList .FeatureList
+    {
+        padding-left: 20px;
+    }
 
 }
 
@@ -248,8 +159,6 @@ For really small windows, devices, and phones
 
 /*For mobile nav bar*/
 /********************/
-
-
 @media only screen and (min-width : 450px) 
 {
     .navbar_text_links .text_link a
@@ -281,7 +190,6 @@ For really small windows, devices, and phones
     }
     #navbar_more .text_link
     {
-        display: inline-block;
         width:auto;
     }
 }
@@ -328,38 +236,60 @@ ul, li, ol
     vertical-align: top;
 }
 
-/*Used for color changing background*/
+/************************************************************************
+Font Includes
+*************************************************************************/
+@font-face {
+  font-family: 'Passion One';
+  font-weight: 700;
+  src: url(../Fonts/Latin_Passion_One.ttf);
+}
+
+@font-face 
+{
+  font-family: 'Raleway';
+  font-weight: 500;
+  src: url(../Fonts/Latin_Raleway.ttf)
+}
+
+@font-face 
+{
+  font-family: 'Lobster';
+  font-weight: 400;
+  src: url(../Fonts/Latin_Lobster.ttf);
+}
+
+
 
 
 /******************************************
 Used to create Logo type text above nav bar
 *******************************************/
 
+    #RichieTextWrapper
+    {
+        display: block;
+    }
 
-#RichieTextWrapper
-{
-    display: block;
-}
+    #RichieTextSubtitle
+    {
+        font-family: 'Raleway', sans-serif;
+        color: rgb(235,235,235);
+        font-size: .9em;
+        letter-spacing: .5px;
+        font-weight: bold;
+    }
 
-#RichieTextSubtitle
-{
-    font-family: 'Raleway', sans-serif;
-    color: rgb(235,235,235);
-    font-size: .9em;
-    letter-spacing: .5px;
-    font-weight: bold;
-}
-
-#RichieText
-{     
-    font-family: 'Passion One', cursive;
-    color:white; 
-    margin : 0px;
-    padding : 0px;
-    padding-bottom: 10px;
-    font-size: 2.2em;
-    letter-spacing: 2px;
-}
+    #RichieText
+    {     
+        font-family: 'Passion One', cursive;
+        color:white; 
+        margin : 0px;
+        padding : 0px;
+        padding-bottom: 10px;
+        font-size: 2.2em;
+        letter-spacing: 2px;
+    }
 
 /********************************/
 
@@ -370,27 +300,25 @@ Used to create Logo type text above nav bar
 Used to create gradient border.
 *******************************/
 
+    .MainBorder
+    {      
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 
-.MainBorder
-{      
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.ContainerStyling 
-{
-    border: 3px solid rgb(148,0,108);
-    border: 3px solid rgba(148,0,108, 0);
-    box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
-    background: url("../Images/BG.png") no-repeat center center fixed;
-    
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+    .ContainerStyling 
+    {
+        border: 3px solid rgb(148,0,108);
+        border: 3px solid rgba(148,0,108, 0);
+        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
+        background: url("../Images/BG.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 
 
 /******************************/
@@ -401,125 +329,127 @@ Used to create gradient border.
 /********************************
 Used to create the navagation bar
 *********************************/
-#nav_bar
-{
-    background-color: rgb(3, 7, 29);
-    background-color: rgba(16, 25, 41, 0.86);
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    #nav_bar
+    {
+        background-color: rgb(3, 7, 29);
+        background-color: rgba(16, 25, 41, 0.86);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        border: 3px solid rgb(148,0,108);
+        border: 3px solid rgba(148,0,108, .5);
+
+        -webkit-background-clip: padding-box; /* for Safari */
+        background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+
+        width: auto;
+        height: auto;    
+        position: relative;
+    }
+
+    .navbar_text_links, #navbar_more
+    {
+        margin: 0;
+        position: relative;
+    }
+    .navbar_icon_links, .navbar_text_links, #navbar_more
+    {
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+        vertical-align: top;
+    }
+
+/*Navbar Text Links*/
+
+    .active_nav_text_link
+    {
+        color: black;
+        background-color: white;
+    }
+    .navbar_text_links .text_link
+    {
+        word-wrap: break-word;
+    }
+    .navbar_text_links .text_link a 
+    {
+
+        border-radius:2px;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        transition-property: background-color, color;
+
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    .navbar_text_links .text_link a 
+    {
+        font-weight: bolder;
+        font-size: .9em;
+    }
+    .navbar_text_links .text_link a:not(.active_nav_text_link)
+    {
+        color:rgb(235,235,235);
+    }
+    .navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a
+    {
+        color: rgb(70,70,70);
+        background-color: white;
+    }
     
-    border: 3px solid rgb(148,0,108);
-    border: 3px solid rgba(148,0,108, .5);
+/*Navbar Icon Styling*/
 
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+    .navbar_icon_links li
+    {
+        display: inline-block;
+    }
+    .navbar_icon_links li img:hover
+    {
+        position: relative;
+        top:-1px;
+    }
+    .navbar_icon_links li img
+    {
+        padding: 5px 5px 0px 5px;
+        width:32px;
+        height:32px;
+    }
     
-    width: auto;
-    height: auto;    
-    position: relative;
+/*Navbar More Button Styling*/
 
-}
-.navbar_text_links, #navbar_more
-{
-    margin: 0;
-    position: relative;
-}
-.navbar_icon_links, .navbar_text_links, #navbar_more
-{
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-    vertical-align: top;
-}
+    #navbar_more .text_link a
+    {
+        font-weight: bolder;
+        font-size: .75em;
+    }
 
+    #navbar_more .text_link
+    {
+        display: inline-block;
+    }
 
-.navbar_text_links .text_link
-{
-    word-wrap: break-word;
-}
-
-.navbar_icon_links li
-{
-    display: inline-block;
-}
-
-
-.active_nav_text_link
-{
-    color: black;
-    background-color: white;
-}
-
-.navbar_text_links .text_link a 
-{
-    
-    border-radius:2px;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-property: background-color, color;
-
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    text-decoration: none;
-    
-}
-
-#navbar_more .text_link a
-{
-    font-weight: bolder;
-    font-size: .75em;
-}
-
-.navbar_text_links .text_link a 
-{
-    font-weight: bolder;
-    font-size: .9em;
-}
-
-.navbar_text_links .text_link a:not(.active_nav_text_link)
-{
-    color:rgb(235,235,235);
-}
-
-.navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a
-{
-    color: rgb(70,70,70);
-    background-color: white;
-}
-
-.navbar_icon_links li img:hover
-{
-    position: relative;
-    top:-1px;
-}
-
-
-.navbar_icon_links li img
-{
-    padding: 5px 5px 0px 5px;
-    width:32px;
-    height:32px;
-}
-
-#navbar_more .text_link
-{
-    display: inline-block;
-}
-
+    #navbar_more 
+    {
+        display:none;
+    }
+    #navbar_more ul
+    {
+        padding:0;
+    }
+    #show_navbar:hover 
+    {
+        cursor:pointer;
+    }
+    #show_navbar:focus
+    {
+      outline: none;
+    }
 
 /******************************/
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -536,44 +466,86 @@ Additional CSS used for multiple pages
     margin-left: auto;
     text-align: center;
 }
-.noselect 
-{
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
-}
-.VideoWrapper 
-{
-    margin: 20px 0px 20px 0px;
-    position: relative;
-    padding-bottom: 40%; 
-    padding-top: 0px;
-    height: 0;
-}
-.VideoWrapper iframe 
-{
-    border: 2px solid rgb(148,0,108);
-    position: absolute;
-    top: 0;
-    left: 15%;
-    width: 70%;
-    height: 100%;
-}
 
-/*used for simple text posts in blog*/
-.nonFlexBG
-{
-    position: relative; 
-    height: auto;
-    border: 3px solid rgb(148,0,108);
-    border: 3px solid rgba(148,0,108, .5);
-    background: white;
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
-}
+/*Makes user not able to highlight text. Browser support isn't very good so dont rely on it.'*/
+
+    .noselect 
+    {
+        -webkit-touch-callout:  none; 
+        -webkit-user-select:    none; 
+        -khtml-user-select:     none; 
+        -moz-user-select:       none; 
+        -ms-user-select:        none;
+        user-select:            none;
+    }
+
+/*Used to wrap Youtube videos.*/
+
+    .VideoWrapper 
+    {
+        margin: 20px 0px 20px 0px;
+        position: relative;
+        padding-bottom: 40%; 
+        padding-top: 0px;
+        height: 0;
+    }
+    .VideoWrapper iframe 
+    {
+        border: 2px solid rgb(148,0,108);
+        position: absolute;
+        top: 0;
+        left: 15%;
+        width: 70%;
+        height: 100%;
+    }
+
+/*used for simple text posts or other.*/
+
+    .nonFlexBG
+    {
+        position: relative; 
+        height: auto;
+        border: 3px solid rgb(148,0,108);
+        border: 3px solid rgba(148,0,108, .5);
+        background: white;
+        -webkit-background-clip: padding-box; /* for Safari */
+        background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+    }
+
+/*For An OL.*/
+
+    .FeatureList
+    {
+      counter-reset: section;
+      list-style: none;
+    }
+
+    .FeatureList .FeatureList
+    {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .FeatureList li 
+    {
+        counter-increment: item;
+        margin-bottom: 10px;
+        font-family: 'Raleway', sans-serif;
+        font-size: .9em;
+    }
+
+    .FeatureList li:before 
+    {
+        margin-right: 10px;
+        counter-increment: section;
+        content: counters(section, ".") ". ";
+        color: black;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.1em;
+        font-weight: bolder;
+        text-align: center;
+        display: inline-block;
+    }
 
 
 /************************************/
