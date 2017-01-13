@@ -13,7 +13,6 @@ ColorChanger.prototype.TIME_UNTIL_HOVER_OUT_COLOR       = 3;
 function ColorChanger(backgroundColorElement)
 {
     /*Default Background color when no flex_item is hovered. This is set to the backgroundColorElement's initial background color in the start function.*/
-    this.defaultColor           = "black";
     this.backgroundColorElement   = backgroundColorElement;
  
     /*******************************************************************************************************
@@ -46,7 +45,7 @@ function ColorChanger(backgroundColorElement)
         return function() 
         {
             backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
-            backgroundColorElementStyle.backgroundColor     = colorChanger.defaultColor;
+            backgroundColorElementStyle.backgroundColor     = '';
         };
     };
     
@@ -80,8 +79,6 @@ function ColorChanger(backgroundColorElement)
     *******************************************************************************************************/
     this.start = function()
     {
-        this.defaultColor = this.backgroundColorElement.style.backgroundColor;
-        
         var elements = document.getElementsByClassName("flex_item");
         
         for (var i = 0; i < elements.length; i++) 
