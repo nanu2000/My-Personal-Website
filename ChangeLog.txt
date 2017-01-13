@@ -1,16 +1,11 @@
 
 TODO / IDEAS
 
-
--CLEAN CSS AND JAVASCRIPT!!!!
------Maybe even merge contactPageStyle with GlobalStyling???
------Probably can merge #contact_page_title with .project_page_title &/or .blogTitle
------FORCE NAMING STYLE FOR CSS CLASSES AND IDS (CapitalizeFirstLetterOfEachWord ? or_use_underscores)
------Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
-
 ?-Create new StarDive Banner for GamePage
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----
+
+#5.0 CLEANED ALL CODE! AND FORCED UNDERSCORE NAMING!
 #4.9 Changed Certain Colors to pop out less (correlation between importance)
 #4.8 Minified ALL JS and CSS
 #4.7 Cleaned some Javascript

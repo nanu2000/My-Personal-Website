@@ -1,4 +1,22 @@
 /*
+
+
+************************************************
+USE lower_case_underline_naming FOR CSS STYLING!
+************************************************
+
+
+FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
+FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
+
+FOR IMPORTANT BLACK COLOR, USE rgb(0,0,0);
+FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
+
+
+/*********************************************
+*Media Queries That are in use.
+**********************************************
+
 @media only screen and (min-width : 1000px) 
 {    
 }

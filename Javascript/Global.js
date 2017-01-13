@@ -1,3 +1,8 @@
+/*******************************************************************************************************
+* NAMING CONVENTION: UpperCamelCase for classed and namespaces, lowerCamel for variables and other.
+* Use common sense.
+*******************************************************************************************************/
+
 /*Settings for flex items on hover.*/
 ColorChanger.prototype.HIGHLIGHT_COLOR_PERCENT          = .6;
 ColorChanger.prototype.SHADOW_COLOR_PERCENT             = -.3;
