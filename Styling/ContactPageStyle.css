@@ -1,4 +1,36 @@
-#ContactPageTitle
+/*
+
+FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
+FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
+
+FOR IMPORTANT BLACK COLOR, USE rgb(0,0,0);
+FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
+
+*/
+
+
+/*********************************************
+*Media Queries That are in use.
+**********************************************
+
+@media only screen and (min-width : 1000px) 
+{    
+}
+
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{            
+}
+
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{          
+}
+
+@media only screen and (max-width : 449px) 
+{    
+}
+*/
+
+#contact_page_title
 {
     background-color:rgb(215, 226, 245);
     margin-top:0;
@@ -10,7 +42,7 @@
     padding:40px 10px 40px 10px;
 }
 
-.ContactPageText
+.contact_page_text
 {
     color: rgb(50,50,50);
     line-height: 1.4;

@@ -4,10 +4,10 @@ ColorChanger.prototype.SHADOW_COLOR_PERCENT             = -.3;
 ColorChanger.prototype.TIME_UNTIL_HOVER_OVER_COLOR      = 1;
 ColorChanger.prototype.TIME_UNTIL_HOVER_OUT_COLOR       = 3;
 
-/*Changes backgroundColorElement's background color based on flexItems data-hovercolor when flexItem is hovered*/
+/*Changes backgroundColorElement's background color based on flexItems data-hovercolor when flex_item is hovered*/
 function ColorChanger(backgroundColorElement)
 {
-    /*Default Background color when no flexItem is hovered. This is set to the backgroundColorElement's initial background color in the start function.*/
+    /*Default Background color when no flex_item is hovered. This is set to the backgroundColorElement's initial background color in the start function.*/
     this.defaultColor           = "black";
     this.backgroundColorElement   = backgroundColorElement;
  
@@ -47,7 +47,7 @@ function ColorChanger(backgroundColorElement)
     
     
     /*******************************************************************************************************
-     * Takes a single flexItem, reads it's data-hovercolor and highlights + shadows it's textBg borders + background.
+     * Takes a single flex_item, reads it's data-hovercolor and highlights + shadows it's text_bg borders + background.
      * Also set's onMouseOver and onMouseOut functions
     *******************************************************************************************************/
     this._processFlexItem = function(currentFlexItem)
@@ -59,7 +59,7 @@ function ColorChanger(backgroundColorElement)
         
         currentFlexItem.style.backgroundColor   = colorLuminance(currentFlexItem.hoverColor, this.SHADOW_COLOR_PERCENT * 2);
 
-        var textWrapperStyle = currentFlexItem.querySelector('.textBg').style;
+        var textWrapperStyle = currentFlexItem.querySelector('.text_bg').style;
 
         textWrapperStyle.backgroundColor   = currentFlexItem.hoverColor;
         textWrapperStyle.borderTopColor    = currentFlexItem.highlightHoverColor;
@@ -77,7 +77,7 @@ function ColorChanger(backgroundColorElement)
     {
         this.defaultColor = this.backgroundColorElement.style.backgroundColor;
         
-        var elements = document.getElementsByClassName("flexItem");
+        var elements = document.getElementsByClassName("flex_item");
         
         for (var i = 0; i < elements.length; i++) 
         {
@@ -107,7 +107,7 @@ function colorLuminance(hex, lum)
  *******************************************************************************************************/
 function executeMobileJavascript()
 {
-    var elements    = document.getElementsByClassName("flexItem");
+    var elements    = document.getElementsByClassName("flex_item");
     var navElements = document.getElementsByClassName("text_link");
 
     for (var i = 0; i < navElements.length; i++) 

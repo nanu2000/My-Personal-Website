@@ -42,7 +42,7 @@ For really normal window probably on desktop
         width: 90%;
     }
 
-    #RichieTextWrapper
+    #richie_text_wrapper
     {
         margin-top: 15px;
         margin-right: 25px;
@@ -62,7 +62,7 @@ For really small window probably on desktop
         width: 94%;
     }
   
-    #RichieTextWrapper
+    #richie_text_wrapper
     {
         padding-top:30px;
         margin-right:25px;
@@ -73,7 +73,7 @@ For really small window probably on desktop
 
 @media only screen and (min-width : 667px)
 { 
-    .FeatureList
+    .feature_list
     {
         padding: auto; 
     }
@@ -111,16 +111,19 @@ For really small windows, devices, and phones
     {      
         width: 100%;
     }
+    
     .navbar_icon_links
     {
         margin: 8px 0px 15px 0px;    
         text-align: center;
     }
+    
     .navbar_text_links
     {
         text-align: center;
     }
-    #RichieTextWrapper
+    
+    #richie_text_wrapper
     {
         text-align: center;
         padding-top:30px;
@@ -135,6 +138,7 @@ For really small windows, devices, and phones
         padding: 12px 15px;
         text-decoration: none;
     }
+    
     #navbar_more
     {
         text-align: center;
@@ -144,11 +148,13 @@ For really small windows, devices, and phones
     {
         display:none;
     }
-    .FeatureList
+    
+    .feature_list
     {
         padding-left: 10px;
     }
-    .FeatureList .FeatureList
+    
+    .feature_list .feature_list
     {
         padding-left: 20px;
     }
@@ -266,12 +272,12 @@ Font Includes
 Used to create Logo type text above nav bar
 *******************************************/
 
-    #RichieTextWrapper
+    #richie_text_wrapper
     {
         display: block;
     }
 
-    #RichieTextSubtitle
+    #richie_text_subtitle
     {
         font-family: 'Raleway', sans-serif;
         color: rgb(235,235,235);
@@ -280,7 +286,7 @@ Used to create Logo type text above nav bar
         font-weight: bold;
     }
 
-    #RichieText
+    #richie_text
     {     
         font-family: 'Passion One', cursive;
         color:white; 
@@ -300,14 +306,14 @@ Used to create Logo type text above nav bar
 Used to create gradient border.
 *******************************/
 
-    .MainBorder
+    .main_border
     {      
         display: block;
         margin-top: 0px;
         margin-bottom: 0px;
     }
 
-    .ContainerStyling 
+    .container_styling
     {
         border: 3px solid rgb(148,0,108);
         border: 3px solid rgba(148,0,108, 0);
@@ -460,7 +466,7 @@ Used to create the navagation bar
 Additional CSS used for multiple pages
 *********************************/
 
-.textCenter
+.text_center
 {    
     margin-right: auto;
     margin-left: auto;
@@ -469,7 +475,7 @@ Additional CSS used for multiple pages
 
 /*Makes user not able to highlight text. Browser support isn't very good so dont rely on it.'*/
 
-    .noselect 
+    .no_select 
     {
         -webkit-touch-callout:  none; 
         -webkit-user-select:    none; 
@@ -481,7 +487,7 @@ Additional CSS used for multiple pages
 
 /*Used to wrap Youtube videos.*/
 
-    .VideoWrapper 
+    .video_wrapper 
     {
         margin: 20px 0px 20px 0px;
         position: relative;
@@ -489,7 +495,7 @@ Additional CSS used for multiple pages
         padding-top: 0px;
         height: 0;
     }
-    .VideoWrapper iframe 
+    .video_wrapper iframe 
     {
         border: 2px solid rgb(148,0,108);
         position: absolute;
@@ -501,7 +507,7 @@ Additional CSS used for multiple pages
 
 /*used for simple text posts or other.*/
 
-    .nonFlexBG
+    .non_flex_bg
     {
         position: relative; 
         height: auto;
@@ -514,19 +520,19 @@ Additional CSS used for multiple pages
 
 /*For An OL.*/
 
-    .FeatureList
+    .feature_list
     {
       counter-reset: section;
       list-style: none;
     }
 
-    .FeatureList .FeatureList
+    .feature_list .feature_list
     {
         padding-bottom: 5px;
         padding-top: 5px;
     }
 
-    .FeatureList li 
+    .feature_list li 
     {
         counter-increment: item;
         margin-bottom: 10px;
@@ -534,7 +540,7 @@ Additional CSS used for multiple pages
         font-size: .9em;
     }
 
-    .FeatureList li:before 
+    .feature_list li:before 
     {
         margin-right: 10px;
         counter-increment: section;

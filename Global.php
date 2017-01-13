@@ -37,11 +37,11 @@ function endProjectPageContent()
 
 function startContentContainer()
 {
-    echo('<div class="nonFlexBG">');
+    echo('<div class="non_flex_bg">');
 }
 function startContentContainerHideSmallScreen()
 {
-    echo('<div class="nonFlexBG HideMobile">');
+    echo('<div class="non_flex_bg HideMobile">');
 }
 function endContentContainer()
 {
@@ -53,7 +53,7 @@ function startBlogPost($title, $subtitle)
 {
     echo
     ('
-    <div class="nonFlexBG">
+    <div class="non_flex_bg">
         <div class = "BlogHeader">
             <div class ="BlogTitle">
             '.$title.'
@@ -76,7 +76,7 @@ function endBlogPost()
 }
 function startContainerStyle()
 {
-    echo('<div class = "ContainerStyling">');    
+    echo('<div class = "container_styling">');    
 }
 
 function endContainerStyle()
@@ -138,7 +138,7 @@ function startContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTit
     
     </head>
     <body>
-    <div class ="MainBorder">
+    <div class ="main_border">
     
         
 <?php

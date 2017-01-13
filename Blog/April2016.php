@@ -20,12 +20,12 @@ startBlogPost( "April 8th, 2016", "Hidden Progress");
 Today I realized that I haven't posted at all during March. I would first like to declare that my absense of posts was not an accident. I have worked very hard over the past month, and I am finally ready to announce the completion of my engine (as far as preperation for my next game goes). In short form: I am now ready to create my next game.
 </p>
 
-<div class ="textCenter">
+<div class ="text_center">
 <p>
 Here is a video showing off what I have implemented so far.
 </p>
 
-<div class="VideoWrapper">
+<div class="video_wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QvlZNNJJk0s?list=PLjHGIYMiOFmVr-xtssDJnLLw612cipUou" frameborder="0" allowfullscreen></iframe>      
 </div>
 </div>
@@ -33,7 +33,7 @@ Here is a video showing off what I have implemented so far.
 <p>
 Here is a current list of features that I have implemented. (I may have missed a few things)
 </p>
-<ol class = "FeatureList">
+<ol class = "feature_list">
 <li>Omnidirectional Shadow Mapping</li>
 <li>Directional Shadow Mapping</li>
 <li>Runtime shader modification</li>

@@ -14,7 +14,7 @@ startContentContainer();
 
 ?>
 
-<div class="AppStoreImages">                              
+<div class="app_store_images">                              
 <a href="https://github.com/nanu2000/Customer-Support-Form">
 <img width="64" alt="Android app store" src = "GamePageImages/GithubImage.png"/>
 </a>
@@ -25,8 +25,8 @@ endContentContainer();
 startContentContainer();
 ?>
 
-<div class = "ProjectPageTitle textCenter">About The Customer Support Form</div>
-<div class="GamePageDescription">
+<div class = "project_page_title text_center">About The Customer Support Form</div>
+<div class="project_page_description">
 <p class = "NormalTextStyling">
 This project was my first official project I have ever completed using PHP. This project is meant for a customer service department. The employees would recieve phone calls, 
 complaints and other forms of input, and then fill out the form for what product they where talking about, and if the input from the customer was good or bad.

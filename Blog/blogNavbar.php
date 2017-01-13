@@ -1,4 +1,4 @@
-<div class="textCenter nonFlexBG" id="BlogNavbar">
+<div class="text_center non_flex_bg" id="BlogNavbar">
 
     <a href="December2015.php"  class = "TextLink">December 2015</a> 
     | 

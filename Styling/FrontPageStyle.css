@@ -1,44 +1,91 @@
 
+/*
+
+FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
+FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
+
+FOR IMPORTANT BLACK COLOR, USE rgb(0,0,0);
+FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
+
+*/
+
+
+/*********************************************
+*Media Queries That are in use.
+**********************************************
+
+@media only screen and (max-width : 1250px) and (min-width : 1000px) 
+{ 
+}
+
+@media only screen and (min-width : 1000px) 
+{    
+}
+
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{            
+}
+
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{          
+}
+
+@media only screen and (max-width : 449px) 
+{    
+}
+
+@media only screen and (max-width : 400px)
+{ 
+}
+
+*/
+
+
 @media only screen and (min-width : 1000px) 
 {    
     
-    .MobileNotifier, .MobileLinkArrow
+    .flex_text_wrapper .wrapper_description_text
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .mobile_notifier, .mobile_link_arrow
     {
         display:none;    
     }
-    .DesktopNotifier
+    .desktop_notifier
     {
         width:100%;
         display:inline-block;
         box-sizing:border-box;
     }
 
-    .flexItem
+    .flex_item
     {
         display:inline-block;
         box-sizing:border-box;
         background: white;
     }
 
-    .flexItemBig
+    .flex_item_big
     {
         width:100%;
     }
-    .flexItemMed
+    .flex_item_med
     {
         width:50%;
     }
-    .flexItemNormal 
+    .flex_item_normal 
     {
         width:33.3333%;
     }
 
-    .smallTextBg
+    .small_text_bg
     {
         height: 40%;
         top:0;
     }
-    .bigTextBg
+    .big_text_bg
     {
         
         height: 40%;
@@ -49,14 +96,14 @@
         right: 0;
     }
 
-    .flexItemDescription
+    .flex_item_description
     {
         color:white; /*Text Color*/   
         visibility: hidden;
         filter: alpha(opacity=0);
         opacity: 0;
     }
-    .textBg
+    .text_bg
     {
         background-color : rgb(0, 0, 0); 
         background-color : rgba(0,60,120, .95); 
@@ -64,15 +111,15 @@
         border-top: 6px solid rgb(20,80,140);
         border-bottom: 6px solid rgb(0,40,100);
     }
-    .flexItem .flexBG
+    .flex_item .flex_bg
     {
         width:101%;
         filter: alpha(opacity=100);
         opacity: 1.0;
     }
 
-    .flexItem:hover .flexBG,
-    .flexItem .hover .flexBG
+    .flex_item:hover .flex_bg,
+    .flex_item .hover .flex_bg
     {
         filter: alpha(opacity=50);
         opacity: 0.5;
@@ -81,15 +128,22 @@
 
 @media only screen and (max-width : 999px) 
 { 
-    .MobileNotifier, .MobileLinkArrow
+    
+    .flex_text_wrapper .wrapper_description_text
+    {
+        padding-left: 10px;
+        padding-right: 40px;
+        font-size: 1em;
+    }
+    .mobile_notifier, .mobile_link_arrow
     {
         display: inherit;
     }
-    .DesktopNotifier
+    .desktop_notifier
     {
         display:none;
     }
-    .textBg
+    .text_bg
     {        
         height: 45%;
         margin: auto;
@@ -103,7 +157,7 @@
         border-bottom: 6px solid rgb(0,40,100);
     }
 
-    .flexItemDescription
+    .flex_item_description
     {
         color:white; /*Text Color*/  
         visibility: visible;
@@ -111,7 +165,7 @@
         opacity: 1;
     }
 
-    .flexItem .flexBG
+    .flex_item .flex_bg
     {
         flex-shrink: 0;
         min-width: 101%;
@@ -121,7 +175,7 @@
         opacity: 0.2;
     }
 
-    .flexItem a
+    .flex_item a
     {
         width:100%;
         list-style: none;
@@ -140,7 +194,7 @@
         overflow: hidden;
     }
 
-    .flexItem
+    .flex_item
     {
         
         box-shadow: inset 2px 7px 50px 20px rgb(0, 0, 0);
@@ -166,39 +220,22 @@
 }
 
 
-@media only screen and (min-width : 1000px) 
-{ 
-    .flexTextWrapper .WrapperDescriptionText
-    {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
 @media only screen and (max-width : 1250px) and (min-width : 1000px) 
 { 
-    .flexTextWrapper .WrapperDescriptionText
+    .flex_text_wrapper .wrapper_description_text
     {
         font-size: .8em;
     }
 }
-@media only screen  and (max-width : 999px)
-{ 
-    .flexTextWrapper .WrapperDescriptionText
-    {
-        padding-left: 10px;
-        padding-right: 40px;
-        font-size: 1em;
-    }
-}
 @media only screen and (max-width : 400px)
 { 
-    .flexTextWrapper .WrapperDescriptionText
+    .flex_text_wrapper .wrapper_description_text
     {
         font-size: .9em;
     }
 }
 
-.MobileLinkArrow
+.mobile_link_arrow
 { 
     text-align: right;
     width:20px;
@@ -207,14 +244,14 @@
     top:60px; /*height / 2 - img height / 2*/
 }
 
-.flexItemContainter
+.flex_item_container
 {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.flexItemTextSnippet
+.flex_item_text_snippet
 {    
     font-family: 'Raleway', sans-serif;
     margin: 0px;
@@ -222,18 +259,18 @@
     padding:10px;
 }
 
-.flexItemTextSnippet .textItemHeader
+.flex_item_text_snippet .text_item_header
 {
   padding: 2px;
   font-size: 1.2em;
   font-weight: 700;
 }
-.flexItemTextSnippet .textItemText
+.flex_item_text_snippet .text_item_text
 {
   padding: 0px;
   font-size: 1em;
 }
-.flexItemTextSnippet .textItemSmallText
+.flex_item_text_snippet .text_item_small_text
 {
     padding-top:3px; 
     color:rgb(100,100,100);
@@ -242,8 +279,8 @@
 }
 
 
-.flexItemTextSnippet,
-.flexItem
+.flex_item_text_snippet,
+.flex_item
 {
     overflow:hidden;
     flex-grow: 1;    
@@ -256,20 +293,20 @@
     position:relative;
 }
 
-.flexItemDescription, 
-.flexItem .flexBG
+.flex_item_description, 
+.flex_item .flex_bg
 {
     transition: opacity .5s  ease;
 }
 
-.textBg
+.text_bg
 {
   position:absolute;
   width:100%;
   box-shadow: 0px 10px 50px 0px rgb(0, 0, 0);
 
 }
-.textBg:before /*fix for IE11 transparent pixel on box shadow*/
+.text_bg:before /*fix for IE11 transparent pixel on box shadow*/
 {
     position:absolute;
     content: " ";
@@ -279,13 +316,13 @@
     background:rgb(0, 0, 0);
 }
 
-.flexTextWrapper
+.flex_text_wrapper
 {
     height:100%;
     display: table; 
 }
 
-.flexTextWrapper .WrapperDescriptionText
+.flex_text_wrapper .wrapper_description_text
 {
     font-family: 'Raleway', sans-serif;
     display: table-cell; 
@@ -295,7 +332,7 @@
     line-height: 1.4;
 }
 
-.flexItemDescription
+.flex_item_description
 {
     position: absolute; 
     left: 0;
@@ -305,8 +342,8 @@
     z-index: 1;
 }
 
-.flexItem:hover .flexItemDescription,
-.flexItem .hover .flexItemDescription
+.flex_item:hover .flex_item_description,
+.flex_item .hover .flex_item_description
 {
     visibility: visible;
     display: inherit;
@@ -314,7 +351,7 @@
     opacity: 1.0;
 }
 
-.flexItem .flexBG
+.flex_item .flex_bg
 {
     object-fit:cover;
     -webkit-transform: translateZ(0); /*used to fix any image displacement*/

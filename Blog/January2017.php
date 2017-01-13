@@ -14,15 +14,15 @@ startBlogPost( "January 9th" , "A New Year? + Caught in the Moment");
 A lot has happened, but do I even need to say that? It's been two months since my last blog post. Of course a lot has happened!
 </p>
 
-<ol class = "FeatureList">
+<ol class = "feature_list">
     <li>Added a <a href = "../changelog.txt">change log</a> to this website</li>
     <li>Added a more button to this website's navigation bar</li>
     <li><b>Decided to add Javascript!</b>
-        <ol class = "FeatureList">
+        <ol class = "feature_list">
             <li>The 'More' buttons functionality utilizes JS</li>
             <li>Background color changes</li>
-            <li>Custom .flexItem textBG color defined with data-hovercolor</li>
-            <li>Custom background color on .flexItem hover based on data-hovercolor</li>
+            <li>Custom .flex_item text_bg color defined with data-hovercolor</li>
+            <li>Custom background color on .flex_item hover based on data-hovercolor</li>
         </ol>
     </li>
     <li><b>Moved this website to a digital ocean droplet running <a href = "https://en.wikipedia.org/wiki/LAMP_(software_bundle)">LAMP!</a></b></li>
@@ -30,7 +30,7 @@ A lot has happened, but do I even need to say that? It's been two months since m
     <li>Added the Lightshow Framework to the front page</li>
     <li>Started another semester of college .-.</li>
     <li><b>Improved my backup</b>
-        <ol class = "FeatureList">
+        <ol class = "feature_list">
             <li>Utilizing GIT for version control</li>
             <li>Automated backup to home server</li>
             <li>Automated backup to Google Docs (non private data)</li>
@@ -52,7 +52,7 @@ I always see something new that could be added or revised and I end up spending 
     I have decided that instead of starting anything new, I'm going to finish everything I have already started. The sooner I can do that, the sooner I will be able to start my next big project.
 </p>
 <p>Here's a list of some of the things that I need to do:</p>
-<ol class = "FeatureList">
+<ol class = "feature_list">
     <li>Clean the code for this website</li>
     <li>Get a complete working prototype of my <a href="https://www.youtube.com/watch?v=cjxDBaDKaFY">GPS Application</a></li>
     <li>Publish my GPS application. (As secure and basic as it can be.) I need to publish another app, I'm not paying the apple developer fee for nothing.</li>

@@ -4,13 +4,14 @@ TODO / IDEAS
 
 -CLEAN CSS AND JAVASCRIPT!!!!
 -----Maybe even merge contactPageStyle with GlobalStyling???
------Probably can merge #ContactPageTitle with .ProjectPageTitle &/or .blogTitle
+-----Probably can merge #contact_page_title with .project_page_title &/or .blogTitle
 -----FORCE NAMING STYLE FOR CSS CLASSES AND IDS (CapitalizeFirstLetterOfEachWord ? or_use_underscores)
 -----Desktop notifier in frontpagestyle.css could be more generic like .HideMobile in global.css
 
 ?-Create new StarDive Banner for GamePage
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----
+#4.9 Changed Certain Colors to pop out less (correlation between importance)
 #4.8 Minified ALL JS and CSS
 #4.7 Cleaned some Javascript
 #4.6 Added Options.php
@@ -19,13 +20,13 @@ TODO / IDEAS
 #4.3 Renamed index to FrontPage.php (in blog Directory) to promote good naming patterns.
 #4.2 Cleaned All Blog Post's. 
 #4.1 Updated Contact Page Styling
-#4.0 Moved FeatureList to Global Styling
+#4.0 Moved feature_list to Global Styling
 #3.9 Posted to Blog
 #3.8 Fixed December 0'15 Blog Post, changed coloring on hover of flexItems, added media queries to blog styling
 #3.7 Added Media Queries To Project Page OL and P
 #3.6 Added Padding and removed centering from project pages
 #3.5 Added Blue BG for Project Page Title
-#3.4 Made GamePageDescription not automatically center content
+#3.4 Made project_page_description not automatically center content
 #3.3 Added Ol + li styling in GamePageStyle.css
 #3.2 Added Lightshow Page
 #3.1 HTTPS!
@@ -43,10 +44,10 @@ TODO / IDEAS
 #1.9 Added color luminance function to global.js
 #1.8 Added custom background color to flexitems with attrib specified in html
 #1.7 Added spacing to navbar icon links
-#1.6 Added font weight and line height to textbg description
-#1.5 added borders to textbg
+#1.6 Added font weight and line height to text_bg description
+#1.5 added borders to text_bg
 #1.4 Added Fonts.css instead of using google fonts files
-#1.3 Removed margin -1px on .flexItem .flexbg
+#1.3 Removed margin -1px on .flex_item .flex_bg
 #1.2 CSS Reset for img, li, and ul. (img is now set to display block, li and ul are set to vertical-align top)
 #1.1 Switched to HTML5
 #1.0 Added 404 and 403 pages for devrichie directory
@@ -55,7 +56,7 @@ TODO / IDEAS
 #0.7 Used spritesheet for navbar icons
 #0.6 Added icon sprite sheet 
 #0.5 Took away zoom for portfolio items on hover
-#0.4 Changed opacity on flexBG mobile elements
+#0.4 Changed opacity on flex_bg mobile elements
 #0.3 Made navbar gradient a bit more spiffy :)
 #0.2 Cleaned GlobalStyling CSS file
 #0.1 Revised navigation bar code

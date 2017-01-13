@@ -14,7 +14,7 @@ startContentContainerHideSmallScreen();
 
 ?>
 
-<img src = "GamePageImages/lolobigBanner.png" class ="GamePageBanner" />
+<img src = "GamePageImages/lolobigBanner.png" class ="project_page_banner" />
 
 
 <?php
@@ -22,8 +22,8 @@ endContentContainer();
 startContentContainer();
 ?>
 
-<div class="AppStoreImages">
-<div class="ItchWrapper">
+<div class="app_store_images">
+<div class="itch_io_wrapper">
 <iframe src="https://itch.io/embed/45347" width="552" height="167" frameborder="0"></iframe>
 </div>
 </div>
@@ -33,8 +33,8 @@ endContentContainer();
 startContentContainer();
 ?>
 
-<div class = "ProjectPageTitle textCenter">About The Adventures Lolo Recreated</div>
-<div class="GamePageDescription">
+<div class = "project_page_title text_center">About The Adventures Lolo Recreated</div>
+<div class="project_page_description">
 <p>This game was created and entered in the <a class = "TextLink" href="http://itch.io/jam/nes-box-art-jam">box art game jam of 2015</a>, it was submitted with 3 hours and 24 minutes before the deadline. This game was created in about one month with a few limitations such as only using 16 by 16 tiles with only 4 colors max on each tile (alpha, black and white count as colors too!). Overall I had a really fun time making this, and it was also my first game I have created using <b>my own engine.</b> I did a lot of planning for this game to be created, and used graph paper to rough draft all of the levels before they where implemented! This game was the first game I have ever entered in a game jam, and I think it turned out to be quite a success! :D</p>
 <h3>The description on itch.io</h3>
 <p>

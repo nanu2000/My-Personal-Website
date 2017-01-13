@@ -20,7 +20,7 @@ startBlogPost( "December 30th, 2015", "The end of the year and the start of a ne
 <p>
 The year 2015 is coming to an end, and I have completed my new years goal of creating three whole games this year.<br>
 </p>
-<div class ="textCenter">
+<div class ="text_center">
 <a class ="TextLink" href = "../GamePages/AeroFlightPage.html">Aeroflight</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class ="TextLink" href = "../GamePages/StarDivePage.html">Stardive</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class ="TextLink" href = "../GamePages/LoloGamePage.html">Adventures of lolo</a><br>

@@ -38,7 +38,7 @@ Luckily, bullet physics is very nice and does pretty much all of that for you! T
 I made a short little demonstration of everything up and running.
 </p>
 
-<div class="textCenter VideoWrapper">
+<div class="text_center video_wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fm1RG-u-rPQ" frameborder="0" allowfullscreen></iframe> 
 </div>   
 
@@ -71,7 +71,7 @@ So first off, I want to be able to create a simple game as soon as possible. Bec
 After those main tasks are complete, I will be able to make a game, but I still will hold back from that until I have implemented a few more things.
 </p>
 <p>
-<ol class = "FeatureList">
+<ol class = "feature_list">
 <li>Lighting (flat shading, phong shading, normal maps, specular maps, Shadow mapping, bloom, and maybe more)</li>
 <li>multiple shaders (just to test out different things)</li>
 <li>particles</li>

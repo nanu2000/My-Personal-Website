@@ -14,7 +14,7 @@ startContentContainerHideSmallScreen();
 
 ?>
 
-<img src = "GamePageImages/LightShowBanner.png" class ="GamePageBanner" />
+<img src = "GamePageImages/LightShowBanner.png" class ="project_page_banner" />
 
 <?php
 endContentContainer();
@@ -22,7 +22,7 @@ startContentContainer();
 ?>
 
 
-<div class="AppStoreImages">                              
+<div class="app_store_images">                              
 <a href="https://github.com/nanu2000/Light-Show-Engine">
     <img width="64" alt="Android app store" src = "GamePageImages/GithubImage.png"/>
 </a>
@@ -35,8 +35,8 @@ startContentContainer();
 ?>
 
 
-<div class = "ProjectPageTitle textCenter">About the Lightshow Framework</div>  
-<div class="GamePageDescription">
+<div class = "project_page_title text_center">About the Lightshow Framework</div>  
+<div class="project_page_description">
 
 <p>
 The creation of this framework was started on the <b>23rd of December 2015</b>. The development came to a complete stop in <b>May, 2016</b> (~5 total months of development).
@@ -52,7 +52,7 @@ but the game being made from/with this framework has not been completed.
 <b>Here is a list of some of the frameworks current features :</b>
 </p>
 
-<ol class = "FeatureList">
+<ol class = "feature_list">
 <li>3D skeletal animation with a custom binary exporter that reads .dae and .obj file types and exports my own custom binary file. (written in little endianness)</li>
 <li>Directional shadow mapping</li>
 <li>Runtime GLSL modifications</li>

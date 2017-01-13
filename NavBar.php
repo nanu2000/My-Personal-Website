@@ -27,11 +27,11 @@ function parseNavArray($navItems, $currentSelectionID, $path)
         $href = getPathForNavItem($value[0], $path);
         if($key === $currentSelectionID && $key !== NAV_OPTIONS::NOT_DEFINED_NAV_ID)
         {
-            $navStr .= '<li class = "text_link"><a class = "active_nav_text_link noselect" href="'. $href .'">'. $value[1] .'</a></li>';
+            $navStr .= '<li class = "text_link"><a class = "active_nav_text_link no_select" href="'. $href .'">'. $value[1] .'</a></li>';
         }
         else
         {
-            $navStr .= '<li class = "text_link"><a class = "noselect" href="'. $href .'">'. $value[1] .'</a></li>';
+            $navStr .= '<li class = "text_link"><a class = "no_select" href="'. $href .'">'. $value[1] .'</a></li>';
         }
     }
     
@@ -58,7 +58,7 @@ function writeMarkup($navStr, $moreNavStr, $path)
         
     <ul class = "navbar_text_links">
         
-        <?php echo($navStr)?><li class = "text_link" id = "show_navbar" tabindex="0"><a class = "noselect">More</a></li> 
+        <?php echo($navStr)?><li class = "text_link" id = "show_navbar" tabindex="0"><a class = "no_select">More</a></li> 
         
         <li id = "navbar_more" >
         <ul>

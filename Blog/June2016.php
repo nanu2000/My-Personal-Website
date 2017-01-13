@@ -29,7 +29,7 @@ The template will only include the most basic and important components that will
 furthermore, here is a video that I have created to show off the newest additions to the game. There is still a lot to do, but I definitely think that I am on the right path to a great game.
 </p>
 
-<div class="textCenter VideoWrapper">
+<div class="text_center video_wrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/QcjZ9rkDvV8" frameborder="0" allowfullscreen></iframe>   
 </div> 
 <p>

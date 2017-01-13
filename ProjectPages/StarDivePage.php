@@ -14,14 +14,14 @@ startContentContainerHideSmallScreen();
 
 ?>
 
-<img src = "GamePageImages/StarDiveBigBanner.png" class ="GamePageBanner" />
+<img src = "GamePageImages/StarDiveBigBanner.png" class ="project_page_banner" />
 
 <?php
 endContentContainer();
 startContentContainer();
 ?>
 
-<div class="AppStoreImages">                              
+<div class="app_store_images">                              
 <a href="https://play.google.com/store/apps/details?id=com.AlphaCollab.StarDive&hl=en">
 <img width="64" alt="Android app store" src = "GamePageImages/AndroidAppStore.png"/>
 </a> 
@@ -35,8 +35,8 @@ endContentContainer();
 startContentContainer();
 ?>
 
-<div class = "ProjectPageTitle textCenter">About StarDive</div>
-<div class="GamePageDescription">
+<div class = "project_page_title text_center">About StarDive</div>
+<div class="project_page_description">
 <p>
 StarDive was my first game that I created <b>completely by myself.</b> It took a total of <b>3 months</b> to complete. To me this game is a lot better than my very first game <a class ="TextLink" href= "AeroFlightPage.html">Aeroflight</a>, the development process went very well because I planned everything out 100% and made a prototype to make sure everything would work properly and be fun.</p>
 <p>When I started this game, I actually knew how to program and establish a great work-flow, so as an end result I was able to create a great game, probably my favorite game I have created so far. (As of 12/27/15)

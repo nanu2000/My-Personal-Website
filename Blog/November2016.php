@@ -44,9 +44,9 @@ You may view the task project <a href="http://www.devrichie.com/TaskProj/">here<
 On another topic, I have been working on a GPS application targeted for IOS devices! If I remember correctly, I did mention it briefly in my last blog post. The GPS Application
 now has an up and running GPS map that tracks your location. Additionally, the login and registration pages have been working very well so far.
 </p>
-<div class ="textCenter">
+<div class ="text_center">
 Here is a short demonstration that I recorded of the GPS application.
-<div class="VideoWrapper">
+<div class="video_wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cjxDBaDKaFY" frameborder="0" allowfullscreen></iframe> 
 </div> 
 </div>
