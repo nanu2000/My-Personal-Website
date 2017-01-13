@@ -1,12 +1,12 @@
 <?php 
 
-function createFlexItem($image, $imgAlt, $link, $color, $text, $size, $text_bgSize)
+function createFlexItem($image, $imgAlt, $link, $color, $text, $size, $textbgSize)
 {
     return 
     '<li class="flex_item '.$size.'" data-hovercolor="'.$color.'">
     <a href ="'.$link.'">
     <div class ="flex_item_description">
-    <div class="text_bg '.$text_bgSize.'">
+    <div class="text_bg '.$textbgSize.'">
     <div class="text_center flex_text_wrapper">
     <span class="wrapper_description_text">
     '.$text.'
