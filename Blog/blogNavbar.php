@@ -1,3 +1,8 @@
+<?php
+function outputBlogNavbar()
+{
+?>
+
 <div class="text_center non_flex_bg" id="BlogNavbar">
 
     <a href="December2015.php"  class = "TextLink">December 2015</a> 
@@ -17,3 +22,7 @@
     <a href="January2017.php"   class = "TextLink">January 2017</a>
     
 </div>
+
+<?php
+}
+?>

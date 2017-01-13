@@ -1,6 +1,30 @@
 
 TODO / IDEAS
 
+!-CLEAN PHP SOME MORE! maybe combine functions and use constants for start content? IE:
+    
+    startContent(type = CONTENT_TYPE::BLOG)
+    {
+        switch(type)
+        {
+            case BLOG:
+                startBlogContent();
+                
+                startContainerStyle();
+                displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
+
+            break;
+
+         etc.... 
+
+        }
+    }
+!-Also move include for navbar and logo into global php file 
+    (since they're used in pretty much every page) or even better, make a 
+    MainIncludes file which has all of the default includes. The idea is to make each file only need one
+    include.
+
+
 ?-Create new StarDive Banner for GamePage
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----

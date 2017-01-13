@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 
 
@@ -84,6 +85,6 @@ Overall, I have a few things I need before I can start working on the game, but 
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>

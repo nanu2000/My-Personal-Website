@@ -1,10 +1,10 @@
 <?php
 require_once('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+
+
 
 startProjectPageContent();
-outputLogo();
+
 
 startContainerStyle();
 
@@ -62,6 +62,6 @@ hit the boost located near the bottom center of the screen to boost! buy more fu
 
 <?php
 endContentContainer();  
-endContainerStyle();
+;
 endProjectPageContent();
 ?>

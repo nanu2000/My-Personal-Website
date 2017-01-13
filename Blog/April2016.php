@@ -1,16 +1,17 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
 
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 
 startBlogPost( "April 8th, 2016", "Hidden Progress");
@@ -53,7 +54,7 @@ Thanks for the support! The next post will be about the game thats going to be c
 </p>     
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>
                                

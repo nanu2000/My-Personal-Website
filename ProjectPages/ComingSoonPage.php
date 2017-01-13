@@ -1,11 +1,11 @@
 <?php
 require_once('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+
+
 
 startProjectPageContent();
 
-outputLogo();
+
 
 startContainerStyle();
 
@@ -27,6 +27,6 @@ for more information regarding the development of this project.
 
 <?php
 endContentContainer();
-endContainerStyle();
+;
 endProjectPageContent();
 ?>

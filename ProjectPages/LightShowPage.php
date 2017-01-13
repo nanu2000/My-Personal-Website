@@ -1,10 +1,10 @@
 <?php
 require_once('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+
+
 
 startProjectPageContent();
-outputLogo();
+
 
 startContainerStyle();
 
@@ -77,6 +77,6 @@ Make sure to check out my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::
 
 <?php
 endContentContainer();
-endContainerStyle();
+;
 endProjectPageContent();
 ?>

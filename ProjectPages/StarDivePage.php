@@ -1,10 +1,10 @@
 <?php
 require_once('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+
+
 
 startProjectPageContent();
-outputLogo();
+
 
 startContainerStyle();
 
@@ -56,6 +56,6 @@ By playing this game you are supporting my hobby and my future.
 
 <?php
 endContentContainer();
-endContainerStyle();
+;
 endProjectPageContent();
 ?>

@@ -1,10 +1,10 @@
 <?php
 require_once('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+
+
 
 startProjectPageContent();
-outputLogo();
+
 
 startContainerStyle();
 
@@ -40,6 +40,6 @@ reports of damaged parts.
 
 <?php
 endContentContainer();      
-endContainerStyle();
+;
 endProjectPageContent();
 ?>

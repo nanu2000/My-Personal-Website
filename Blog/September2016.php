@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 startBlogPost( "September 17th, 2016", "Web Development - Design theory - and my current plans" );
 
@@ -47,6 +48,6 @@ Anyway, I hope you enjoyed reading this! (if you did lol, it's quite a bit of te
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>

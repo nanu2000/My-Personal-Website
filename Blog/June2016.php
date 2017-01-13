@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 startBlogPost( "June 17th, 2016", "-Before the Prototype-" );
 
@@ -40,6 +41,6 @@ Thank you very much for reading, hopefully I will get another blog post out soon
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>

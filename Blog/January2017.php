@@ -1,13 +1,13 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
-startBlogContent();
-outputLogo();
-startContainerStyle();
-displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 include ('blogNavbar.php');
+
+startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+
+outputBlogNavbar();
+
 startBlogPost( "January 9th" , "A New Year? + Caught in the Moment");
+
 ?>
 
 <p>
@@ -76,6 +76,6 @@ Science degree.</p>
 
 <?php
 endBlogPost();
-endContainerStyle();
-endBlogContent();
+;
+endDefaultContent('../');
 ?>

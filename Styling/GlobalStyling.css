@@ -147,7 +147,7 @@ For really small windows, devices, and phones
         text-align: center;
     }
     
-    .HideMobile
+    .hide_mobile
     {
         display:none;
     }

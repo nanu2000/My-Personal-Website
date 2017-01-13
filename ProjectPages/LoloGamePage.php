@@ -1,10 +1,10 @@
 <?php
 require_once('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+
+
 
 startProjectPageContent();
-outputLogo();
+
 
 startContainerStyle();
 
@@ -50,6 +50,6 @@ It was a lot of work and dedication, and I really had a great time making it, so
 
 <?php
 endContentContainer();
-endContainerStyle();
+;
 endProjectPageContent();
 ?>

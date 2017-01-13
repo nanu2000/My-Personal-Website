@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 
 
@@ -34,7 +35,7 @@ The year 2015 is coming to an end, and I have completed my new years goal of cre
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>
                                

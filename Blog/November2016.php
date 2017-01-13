@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 startBlogPost( "November 8th, 2016", "Side Projects" );
 ?>
@@ -60,6 +61,6 @@ to complete all of my current side projects.
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>

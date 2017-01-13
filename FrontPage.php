@@ -1,19 +1,10 @@
 <?php
 include('Global.php');
-include('Logo.php');
-include('NavBar.php');
 include('FlexPortfolio.php');
 
-
-startContent(array("Styling/FrontPageStyle.min.css"), array(), array());
-
-outputLogo();
-startContainerStyle();
-displayNavbar(NAV_OPTIONS::HOME_NAV_ID, "");
+startContentType(PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::HOME_NAV_ID, '', array("Styling/FrontPageStyle.min.css"));
 
 echoPortfolio();
 
-endContainerStyle();
-endContent();
-
+endDefaultContent();
 ?>

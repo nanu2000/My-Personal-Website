@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 
 startBlogPost( "January 29th, 2016", "A Bug" );
@@ -146,6 +147,6 @@ I am planning on adding more images and possibly videos(?) in the future, it's p
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>

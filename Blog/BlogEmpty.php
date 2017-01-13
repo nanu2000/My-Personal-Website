@@ -1,15 +1,16 @@
 <?php
 include('../Global.php');
-include('../Logo.php');
-include('../NavBar.php');
+include ('blogNavbar.php');
+
+
 
 startBlogContent();
-outputLogo();
+
 startContainerStyle();
 displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
 
 
-include ('blogNavbar.php');
+outputBlogNavbar();
 
 
 startBlogPost( "post" , "subtitle");
@@ -19,6 +20,6 @@ startBlogPost( "post" , "subtitle");
 
 <?php
 endBlogPost();
-endContainerStyle();
+;
 endBlogContent();
 ?>
