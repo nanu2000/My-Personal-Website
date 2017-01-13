@@ -1,114 +1,93 @@
 <?php
-class NAV_OPTIONS
+
+
+/* Checks for ! as first character of path. if ! exists, then remove it. else, return href with path appended before it.*/
+function getPathForNavItem($href, $path)
 {
-    const HOME          = 0;
-    const CONTACT       = 1;
-    const BLOG          = 2;             
-    const ITCH          = 3;            
-    const MORE          = 4;             
-    const NOT_DEFINED   = -1;
+    if($href[0] === '!')
+    {
+        return substr($href, 1);    
+    }
     
-    const HOME_NAME     = 'Home';
-    const ITCH_NAME     = 'Itch.io';
-    const CONTACT_NAME  = 'Contact';
-    const BLOG_NAME     = 'Blog';
-    const MORE_NAME     = 'More...';
-    
-    const HOME_STR      = 'FrontPage.php';
-    const ITCH_STR      = 'http://-nanu-.itch.io/';
-    const CONTACT_STR   = "Contact.php";
-    const MORE_STR      = "More.php";
+    return $path . $href;            
 }
 
-function displayNavbar($option, $path)
+
+/*********************************************************
+Parses a navigation array and returns a string of HTML. 
+A navagation array has the format for each element in it:
+ID => array(PATH, NAME)
+**********************************************************/
+function parseNavArray($navItems, $currentSelectionID, $path)
 {
-
-
-
-
-
-    global $frontBlogPage; // From global.php
-    
-    $navItems = array
-    (
-       NAV_OPTIONS::HOME     => array($path  .NAV_OPTIONS::HOME_STR,     NAV_OPTIONS::HOME_NAME),
-       NAV_OPTIONS::ITCH     => array(NAV_OPTIONS::ITCH_STR,             NAV_OPTIONS::ITCH_NAME),
-       NAV_OPTIONS::BLOG     => array($path . $frontBlogPage,            NAV_OPTIONS::BLOG_NAME),
-       NAV_OPTIONS::CONTACT  => array($path . NAV_OPTIONS::CONTACT_STR,  NAV_OPTIONS::CONTACT_NAME)
-    );
-    
-    
-
-
-
-
-
-    $navStr = '<!--';
+    $navStr = '';
     
     foreach ($navItems as $key => $value) 
     {
-        if($key == $option)
+        $href = getPathForNavItem($value[0], $path);
+        if($key === $currentSelectionID && $key !== NAV_OPTIONS::NOT_DEFINED_NAV_ID)
         {
-            $navStr .= 
-           '
-                --><li>
-                    <a class = "active_nav_text_link" href="'.$value[0].'">'.$value[1].'</a>
-                </li><!--
-           ';
+            $navStr .= '<li class = "text_link"><a class = "active_nav_text_link no_select" href="'. $href .'">'. $value[1] .'</a></li>';
         }
         else
         {
-            
-            $navStr .= 
-            '
-                --><li>
-                    <a href="'.$value[0].'">'.$value[1].'</a>
-                </li><!--
-            ';
-                
+            $navStr .= '<li class = "text_link"><a class = "no_select" href="'. $href .'">'. $value[1] .'</a></li>';
         }
     }
-
-    $navStr .= '-->';
-
     
-    echo
+    return $navStr;
+}
+
+/*Outputs HTML for navbar and highlights the selected nav item.*/
+function displayNavbar($currentSelectionID, $path)
+{    
+    writeMarkup
     (
-    '
-        <div id = "nav_bar">
-
-            <ul id = "navbar_text_links">
-               '.$navStr.'
-            </ul>
-            
-            <ul id = "navbar_icon_links">
-
-                <li>
-                    <a href="https://twitter.com/AlphaCollab" >
-                        <img src = "'.$path.'Images/TwitterIcon.png"/>
-                    </a>  
-                </li>
-
-                <li>
-                    <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
-                        <img src = "'.$path.'Images/YoutubeIcon.png"/>
-                    </a>    
-                </li>
-
-                <li>
-                    <a href="https://github.com/nanu2000">
-                        <img src = "'.$path.'Images/GithubIcon.png"/>
-                    </a>   
-                </li>  
-
-            </ul>
-
-                
-        </div>
-    '
+        parseNavArray(NAV_OPTIONS::NAV_ITEMS,        $currentSelectionID, $path),
+        parseNavArray(NAV_OPTIONS::MORE_NAV_ITEMS,    $currentSelectionID, $path),
+        $path
     );
 }
 
+/*outputs the HTML for the navbar.*/
+function writeMarkup($navStr, $moreNavStr, $path)
+{
+?>
 
+    <div id = "nav_bar">
+        
+    <ul class = "navbar_text_links">
+        
+        <?php echo($navStr)?><li class = "text_link" id = "show_navbar" tabindex="0"><a class = "no_select">More</a></li> 
+        
+        <li id = "navbar_more" >
+        <ul>
+        <?php echo($moreNavStr)?>
+        </ul>
+        </li>
 
+    </ul>
+        
+    <ul class = "navbar_icon_links">
+        <li>
+        <a href="https://twitter.com/AlphaCollab" >
+        <img src = "<?php echo($path);?>Images/TwitterIcon.png"/>
+        </a>  
+        </li>
+        <li>
+        <a href="https://www.youtube.com/channel/UCLhTqg04xF9MtMbZfFTRsYw">
+        <img src = "<?php echo($path);?>Images/YoutubeIcon.png"/>
+        </a>    
+        </li>
+        <li>
+        <a href="https://github.com/nanu2000">
+        <img src = "<?php echo($path);?>Images/GithubIcon.png"/>
+        </a>   
+        </li>  
+    </ul>
+        
+    </div>
+
+<?php
+}
 ?>

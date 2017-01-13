@@ -1,15 +1,15 @@
 <?php
-include('global.php');
+include('Global.php');
 include('Logo.php');
 include('NavBar.php');
 include('FlexPortfolio.php');
 
 
-startContent(array("Styling/GlobalStyling.css", "Styling/FrontPageStyle.css"), array());
+startContent(array("Styling/FrontPageStyle.min.css"), array(), array());
 
 outputLogo();
 startContainerStyle();
-displayNavbar(NAV_OPTIONS::HOME, "");
+displayNavbar(NAV_OPTIONS::HOME_NAV_ID, "");
 
 echoPortfolio();
 

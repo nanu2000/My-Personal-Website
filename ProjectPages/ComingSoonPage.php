@@ -1,32 +1,32 @@
 <?php
-      
-include('../global.php');
+require_once('../Global.php');
 include('../Logo.php');
 include('../NavBar.php');
 
 startProjectPageContent();
+
 outputLogo();
 
 startContainerStyle();
 
-displayNavbar(NAV_OPTIONS::NOT_DEFINED, "../");
+displayNavbar(NAV_OPTIONS::NOT_DEFINED_NAV_ID, "../");
 
-contentContainer('<center><div class = "ProjectPageTitle" style = "padding:10px;"> My Current Project </span></center>');
+startContentContainer();
+?>
 
-contentContainer
-('
-    <div class="GamePageDescription">
-    <p  style = "padding:10px;"> 
-    You can follow my 
-    <a class ="TextLink" href="../'.$frontBlogPage.'">blog</a> 
-    (which will have weekly/monthly posts starting 12/30/15)
-    for more information regarding the developement of this project.
-    </p>
-    </div>
-');
-          
-      
+<div class = "text_center project_page_title"> 
+My Current Project 
+</div>
+<div class="project_page_description">
+<p> 
+You can follow my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::NEWEST_BLOG_POST_URL);?>">blog</a> (which will have weekly/monthly posts starting 12/30/15)
+for more information regarding the development of this project.
+</p>
+</div>
+
+
+<?php
+endContentContainer();
 endContainerStyle();
-endContent();
-
+endProjectPageContent();
 ?>

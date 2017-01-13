@@ -1,20 +1,94 @@
+/*
 
-p
+
+************************************************
+USE lower_case_underline_naming FOR CSS STYLING!
+************************************************
+
+
+FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
+FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
+
+FOR IMPORTANT BLACK COLOR, USE rgb(0,0,0);
+FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
+
+
+/*********************************************
+*Media Queries That are in use.
+**********************************************
+
+@media only screen and (min-width : 1000px) 
+{    
+}
+
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{            
+}
+
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{          
+}
+
+@media only screen and (max-width : 449px) 
+{    
+}
+*/
+
+@media only screen and (min-width : 667px) 
+{     
+    .BlogText
+    {
+        font-size: 1em;
+        padding-left:12%;
+        padding-right:12%;
+    }
+}
+
+@media only screen and (max-width : 666px) 
+{      
+    .BlogText
+    {
+        font-size: .9em;
+        padding-left:5%;
+        padding-right:5%;
+    }
+}
+
+#BlogNavbar
 {
- text-indent: 0px;
- padding-bottom:10px;
- padding-top:10px;
+    padding:12px;
+    background-color: rgb(235,235,235);
+}
+
+.BlogText
+{
+    color: rgb(50,50,50);
+    line-height: 1.4;
+    padding-bottom: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+.BlogText a
+{
+    color: rgb(0,0,200);
+}
+.BlogText p
+{
+    text-indent: 0px;
+    padding-bottom:10px;
+    padding-top:10px;
 }
 .BlogHeader
 {
     padding-top:25px;
     padding-bottom:30px;
     margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     background-color:rgb(215, 226, 245);
 }
-
 .BlogTitle
-{   font-family: 'Lobster', cursive;
+{   
+    font-family: 'Lobster', cursive;
     margin-left: auto;
     margin-right: auto;
     text-align:center;
@@ -44,14 +118,4 @@ p
     margin-left:30%;
     width : 35%; 
     height:auto;
-}
-
-.BlogText
-{
-    color: rgb(50,50,50);
-    line-height: 1.4;
-    padding-left:10%;
-    padding-right:10%;
-    padding-bottom: 50px;
-    font-family: 'Raleway', sans-serif;
 }

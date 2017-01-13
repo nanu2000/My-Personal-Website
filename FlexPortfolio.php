@@ -1,105 +1,140 @@
 <?php 
 
+function createFlexItem($image, $imgAlt, $link, $color, $text, $size, $textbgSize)
+{
+    return 
+    '<li class="flex_item '.$size.'" data-hovercolor="'.$color.'">
+    <a href ="'.$link.'">
+    <div class ="flex_item_description">
+    <div class="text_bg '.$textbgSize.'">
+    <div class="text_center flex_text_wrapper">
+    <span class="wrapper_description_text">
+    '.$text.'
+    </span>
+    <img class = "mobile_link_arrow" src = "Images/LinkArrow.png"/>
+    </div>
+    </div>
+    </div>
+    <img class = "flex_bg" src ="'.$image.'" alt="'.$imgAlt.'"/>
+    </a>
+    </li>';
+}
+
+function desktopFlexHeader($header, $subheader = "")
+{
+    if($subheader !== "")
+    {
+        
+        return
+        '<li class="desktop_notifier flex_item_text_snippet">
+        <div class = "text_center text_item_header">
+        '.$header.'
+        </div>
+        <div class = "text_center text_item_small_text">
+        '.$subheader.'
+        </div>
+        </li>';
+
+    }
+    else
+    {
+        return
+        '<li class="desktop_notifier flex_item_text_snippet">
+        <div class = "text_center text_item_header">
+        '.$header.'
+        </div>
+        </li>';
+    }
+}
+
+function createFlexPageFromStringOfItems($items)
+{
+    return '<ul class="flex_item_container">'. $items . '</ul>';
+}
 
 
 function echoPortfolio()
 {
+    
+    
+    $flexItems = "";
+    
+    $flexItems .=
+    desktopFlexHeader("Hover Over or Click on Some of the Images Below for More Information");
+    
+    $flexItems .=
+    createFlexItem
+    (
+        "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
+        "ProjectPages/LightShowPage.php", 
+        "#004b94", 
+        "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++.", 
+        "flex_item_big", 
+        "big_text_bg"
+    );
+    
+    $flexItems .=
+    desktopFlexHeader("Games That I Have Developed");
+    
+    $flexItems .=
+    createFlexItem
+    (
+        "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
+        "ProjectPages/StarDivePage.php", 
+        "#522898", 
+        "Stardive is my favorite out of all the games I have made..<br>So far.", 
+        "flex_item_normal", 
+        "small_text_bg"
+    );
+    
+    $flexItems .=
+    createFlexItem
+    (
+        "Images/lolo.png", "Link to adventures of lolo game page", 
+        "ProjectPages/LoloGamePage.php", 
+        "#651b16", 
+        "LoLo is a game that I made for the NES Box art jam in 2015!", 
+        "flex_item_normal", 
+        "small_text_bg"
+    );
+    
+    $flexItems .=
+    createFlexItem
+    (
+        "Images/AeroFlightBanner.png", "Link to Aeroflight game page", 
+        "ProjectPages/AeroFlightPage.php", 
+        "#0f3684", 
+        "Aeroflight is the first game that I have published.", 
+        "flex_item_normal", 
+        "small_text_bg"
+    ); 
+    
+    $flexItems .=
+    desktopFlexHeader("Miscellaneous Projects");
 
-echo('
-            <ul class="flexItemContainter">
-                <li class="DesktopNotifier flexItemTextSnippet">
-                    <div class = "textCenter textItemHeader">
-                        Hover over or click on some of the images below!
-                    </div>
-                    <div class = "textCenter textItemSmallText">
-                        I support mobile browsers! •ᴗ•
-                    </div>
-                </li><!--
-                    
-                --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,40,70)">
-                    <a href ="ProjectPages/ComingSoonPage.php">
-                        <div class ="flexItemDescription">
-                            <div class="textBg bigTextBg">
-                                <div class="textCenter flexTextWrapper">
-                                    <span class="WrapperDescriptionText">
-                                    Read about the current project I\'m working on in my blog!
-                                    </span>
-                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <img class = "flexBG" src ="Images/NextProjectMedium.png" alt="Link to Coming soon page"/>
-                    </a>
-                </li><!--
-                
-            --><li class="flexItem flexItemMed" data-hovercolor="rgb(0,60,0)">                        
-                    <a href ="ProjectPages/CustomerSubmitFormPage.php">
-                        <div class ="flexItemDescription">
-                            <div class="textBg bigTextBg">
-                                <div class="textCenter flexTextWrapper">
-                                    <span class="WrapperDescriptionText">
-                                    This project was made in PHP! (it was my first time using that language)
-                                    <br>
-                                    The code for this project is viewable on my github :)
-                                    </span>
-                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <img class = "flexBG" src ="Images/MediumPortfolio.png" alt="Link to Customer Submit Form Page"/>
-                    </a>
-                </li><!--
+    $flexItems .=
+    createFlexItem
+    (
+        "Images/NextProjectMedium.png", "Link to Coming Blog Page", 
+        "ProjectPages/ComingSoonPage.php", 
+        "#005200", 
+        "My blog contains consistent updates regarding the current project I'm developing.", 
+        "flex_item_med", 
+        "big_text_bg"
+    );           
+       
+    $flexItems .=
+    createFlexItem
+    (
+        "Images/MediumPortfolio.png", "Link to Customer Submit Form Page", 
+        "ProjectPages/CustomerSubmitFormPage.php", 
+        "#5d5d5d", 
+        "A Customer submission form made in PHP!", 
+        "flex_item_med", 
+        "big_text_bg"
+    );
+    
+    echo createFlexPageFromStringOfItems($flexItems);
 
-                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(20,20,60)">                        
-                    <a href ="ProjectPages/StarDivePage.php">   
-                        <div class ="flexItemDescription">
-                            <div class="textBg smallTextBg">
-                                <div class="textCenter flexTextWrapper">
-                                    <span class="WrapperDescriptionText">
-                                    Stardive is my favorite out of all the games I have made..<br>So far.
-                                    </span>
-                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <img class = "flexBG" src ="Images/StarDiveWebBanner.png" alt="Link to StarDive game page"/>
-                    </a>
-                </li><!--
-
-                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(40,5,0)">                        
-                    <a href ="ProjectPages/LoloGamePage.php">
-                        <div class ="flexItemDescription">
-                            <div class="textBg smallTextBg">
-                                <div class="textCenter flexTextWrapper">
-                                    <span class="WrapperDescriptionText">
-                                    I made this game for the NES Box art jam in 2015!
-                                    </span>
-                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <img class = "flexBG" src ="Images/lolo.png" alt="Link to adventures of lolo game page"/>
-                    </a>
-                </li><!--
-                
-                
-                --><li class="flexItem flexItemNormal" data-hovercolor="rgb(30,0,30)">                        
-                    <a href ="ProjectPages/AeroFlightPage.php">      
-                        <div class ="flexItemDescription">
-                            <div class="textBg smallTextBg">
-                                <div class="textCenter flexTextWrapper">
-                                    <span class="WrapperDescriptionText">
-                                    This the first game that I\'ve programmed! <br>Why not check it out?
-                                    </span>
-                                    <img class = "MobileLinkArrow" src = "Images/LinkArrow.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <img class = "flexBG" src ="Images/AeroFlightBanner.png" alt="Link to Aeroflight game page"/>
-                    </a>    
-                </li>
-                
-                
-            </ul>');
 }
 ?>
