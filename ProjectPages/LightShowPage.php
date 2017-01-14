@@ -70,6 +70,5 @@ Make sure to check out my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::
 
 <?php
 endContentContainer();
-;
-endProjectPageContent();
+endDefaultContent('../');
 ?>

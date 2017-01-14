@@ -49,6 +49,5 @@ By playing this game you are supporting my hobby and my future.
 
 <?php
 endContentContainer();
-;
-endProjectPageContent();
+endDefaultContent('../');
 ?>

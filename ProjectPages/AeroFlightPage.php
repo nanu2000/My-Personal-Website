@@ -54,6 +54,5 @@ hit the boost located near the bottom center of the screen to boost! buy more fu
 
 <?php
 endContentContainer();  
-;
-endProjectPageContent();
+endDefaultContent('../');
 ?>

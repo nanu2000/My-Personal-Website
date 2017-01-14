@@ -33,7 +33,6 @@ reports of damaged parts.
 
 
 <?php
-endContentContainer();      
-;
-endProjectPageContent();
+endContentContainer();  
+endDefaultContent('../');
 ?>
