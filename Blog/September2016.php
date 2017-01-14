@@ -44,6 +44,5 @@ Anyway, I hope you enjoyed reading this! (if you did lol, it's quite a bit of te
 
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>

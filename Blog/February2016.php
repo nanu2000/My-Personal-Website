@@ -80,6 +80,5 @@ Overall, I have a few things I need before I can start working on the game, but 
 
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>

@@ -27,5 +27,5 @@ The year 2015 is coming to an end, and I have completed my new years goal of cre
 
 <?php
 endBlogPost();
-endBlogContent();
+endDefaultContent('../');
 ?>

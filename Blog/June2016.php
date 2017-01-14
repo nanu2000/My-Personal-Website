@@ -37,6 +37,5 @@ Thank you very much for reading, hopefully I will get another blog post out soon
 
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>

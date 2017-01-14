@@ -16,6 +16,5 @@ startBlogPost( "post" , "subtitle");
 
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>

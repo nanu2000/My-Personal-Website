@@ -57,6 +57,5 @@ to complete all of my current side projects.
 
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>

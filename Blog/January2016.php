@@ -143,6 +143,5 @@ I am planning on adding more images and possibly videos(?) in the future, it's p
 
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>

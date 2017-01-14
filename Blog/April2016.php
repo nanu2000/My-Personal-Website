@@ -48,7 +48,6 @@ Thanks for the support! The next post will be about the game thats going to be c
 </p>     
 <?php
 endBlogPost();
-;
-endBlogContent();
+endDefaultContent('../');
 ?>
                                
