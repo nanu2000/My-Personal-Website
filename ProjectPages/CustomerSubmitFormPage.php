@@ -1,14 +1,8 @@
 <?php
-require_once('../Global.php');
+include('../Global.php');
 
+startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_ID, '../');
 
-
-startProjectPageContent();
-
-
-startContainerStyle();
-
-displayNavbar(NAV_OPTIONS::NOT_DEFINED_NAV_ID, "../");
 
 startContentContainer();
 
