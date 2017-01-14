@@ -2,16 +2,10 @@
 include('../Global.php');
 include ('blogNavbar.php');
 
-
-
-startBlogContent();
-
-
-startContainerStyle();
-displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
-
+startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
 
 outputBlogNavbar();
+
 
 
 startBlogPost( "April 8th, 2016", "Hidden Progress");

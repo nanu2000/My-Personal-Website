@@ -2,17 +2,9 @@
 include('../Global.php');
 include ('blogNavbar.php');
 
-
-
-startBlogContent();
-
-startContainerStyle();
-displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
-
+startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
 
 outputBlogNavbar();
-
-
 
 startBlogPost( "December 30th, 2015", "The end of the year and the start of a new blog.");
 
@@ -35,6 +27,5 @@ The year 2015 is coming to an end, and I have completed my new years goal of cre
 
 <?php
 endBlogPost();
-;
 endBlogContent();
 ?>
