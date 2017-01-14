@@ -87,6 +87,7 @@ MAKE WHOLE WEBSITE WORK AGAIN - TEST
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----
 
+#5.2 Change gradient image to actual css3 gradient
 #5.1 Started using triad and complimentary colors
 #5.0 CLEANED ALL CODE! AND FORCED UNDERSCORE NAMING!
 #4.9 Changed Certain Colors to pop out less (correlation between importance)
