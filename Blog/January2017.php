@@ -76,6 +76,5 @@ Science degree.</p>
 
 <?php
 endBlogPost();
-;
 endDefaultContent('../');
 ?>
