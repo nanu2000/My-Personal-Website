@@ -289,8 +289,8 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     flex-grow: 1;    
     
     border: 3px solid rgb(148,0,108);
-    border: 3px solid rgba(148,0,108, .5);
-    
+    border: 3px solid rgba(0,0,0,0);
+
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */  
     position:relative;

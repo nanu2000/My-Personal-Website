@@ -67,7 +67,7 @@ function echoPortfolio()
     (
         "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
         "ProjectPages/LightShowPage.php", 
-        "#004b94", 
+        "#2A50A3", 
         "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++.", 
         "flex_item_big", 
         "big_text_bg"
@@ -81,7 +81,7 @@ function echoPortfolio()
     (
         "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
         "ProjectPages/StarDivePage.php", 
-        "#522898", 
+        "#3F2696", 
         "Stardive is my favorite out of all the games I have made..<br>So far.", 
         "flex_item_normal", 
         "small_text_bg"
@@ -92,7 +92,7 @@ function echoPortfolio()
     (
         "Images/lolo.png", "Link to adventures of lolo game page", 
         "ProjectPages/LoloGamePage.php", 
-        "#651b16", 
+        "#732718", 
         "LoLo is a game that I made for the NES Box art jam in 2015!", 
         "flex_item_normal", 
         "small_text_bg"
@@ -103,7 +103,7 @@ function echoPortfolio()
     (
         "Images/AeroFlightBanner.png", "Link to Aeroflight game page", 
         "ProjectPages/AeroFlightPage.php", 
-        "#0f3684", 
+        "#19517A", 
         "Aeroflight is the first game that I have published.", 
         "flex_item_normal", 
         "small_text_bg"
@@ -117,7 +117,7 @@ function echoPortfolio()
     (
         "Images/NextProjectMedium.png", "Link to Coming Blog Page", 
         "ProjectPages/ComingSoonPage.php", 
-        "#005200", 
+        "#01573F", 
         "My blog contains consistent updates regarding the current project I'm developing.", 
         "flex_item_med", 
         "big_text_bg"
@@ -128,7 +128,7 @@ function echoPortfolio()
     (
         "Images/MediumPortfolio.png", "Link to Customer Submit Form Page", 
         "ProjectPages/CustomerSubmitFormPage.php", 
-        "#5d5d5d", 
+        "#656565", 
         "A Customer submission form made in PHP!", 
         "flex_item_med", 
         "big_text_bg"

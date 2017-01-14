@@ -117,7 +117,7 @@ For really small windows, devices, and phones
     
     .navbar_icon_links
     {
-        margin: 8px 0px 15px 0px;    
+        margin: 12px 0px 12px 0px;    
         text-align: center;
     }
     
@@ -221,12 +221,12 @@ html
 body
 {       
     
-    min-width: 300px;
+    min-width: 275px;
     padding:0;      
     margin: auto;
     transition-timing-function: linear;
     transition-property: background-color;
-    background-color: #001125;
+    background-color: #0d1327;
 }
 a
 {
@@ -316,20 +316,20 @@ Used to create gradient border.
         margin-bottom: 0px;
     }
 
-    .container_styling
+    .gradient_background
     {
-        border: 3px solid rgb(148,0,108);
-        border: 3px solid rgba(148,0,108, 0);
         box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
-        background: url("../Images/BG.png") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        padding:3px;
+        
+        background: rgba(214,99,76,1);
+        background: -moz-linear-gradient    (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: -webkit-gradient        (left top, right bottom, color-stop(0%, rgba(214,99,76,1)), color-stop(100%, rgba(128,25,164,1)));
+        background: -webkit-linear-gradient (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: -o-linear-gradient      (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: -ms-linear-gradient     (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: linear-gradient         (135deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
     }
-
-
+    
 /******************************/
 
 
@@ -340,14 +340,14 @@ Used to create the navagation bar
 *********************************/
     #nav_bar
     {
-        background-color: rgb(3, 7, 29);
-        background-color: rgba(16, 25, 41, 0.86);
+        background-color: #07133e;
         margin: 0;
         padding: 0;
         overflow: hidden;
 
+            
         border: 3px solid rgb(148,0,108);
-        border: 3px solid rgba(148,0,108, .5);
+        border: 3px solid rgba(0,0,0,0);
 
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
@@ -515,7 +515,7 @@ Additional CSS used for multiple pages
         position: relative; 
         height: auto;
         border: 3px solid rgb(148,0,108);
-        border: 3px solid rgba(148,0,108, .5);
+        border: 3px solid rgba(0,0,0,0);
         background: white;
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   

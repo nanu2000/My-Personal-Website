@@ -1,24 +1,82 @@
 
 TODO / IDEAS
 
-!-CLEAN PHP SOME MORE! maybe combine functions and use constants for start content? IE:
+
+MAKE WHOLE WEBSITE WORK AGAIN - TEST
+    change endContent for each page
+    change startContent for each page
+
+!Turn website into OOP instead of procedural.
     
-    startContent(type = CONTENT_TYPE::BLOG)
-    {
-        switch(type)
+    Add page base class to inherit from.
+    IE
+
+    class Page
+    { 
+        $relativePath = '';
+
+        construct($relPath = ''){$relativePath = $relpath}
+
+        virtual function startContent(){//Default startContent}
+
+        pure virtual function content();
+
+        virtual function endContent(){//Default endContent}
+
+        function displayPage()
         {
-            case BLOG:
-                startBlogContent();
-                
-                startContainerStyle();
-                displayNavbar(NAV_OPTIONS::BLOG_NAV_ID, "../");
+            startContent();
+            content();
+            endContent();
+        }
 
-            break;
+    }
 
-         etc.... 
+    class BlogPage : Page
+    { 
+        $posts = array();
 
+        function addPost($post){push($posts, $post);}
+        
+        override function content()
+        {
+            for ..
+                $post[$i].display();
         }
     }
+
+
+    //in blog
+    
+
+    $x = new BlogPost(functor(){?>
+
+        <html>
+        <goes>
+        <here>
+
+    <?php});
+
+
+
+    $y = new BlogPost(functor(){?>
+
+        <html>
+        <goes>
+        <here>
+
+    <?php});
+
+
+    
+    page = new BlogPage();
+    page.addPost($x);
+    page.addPost($y);
+    page.displayPage();
+
+
+
+
 !-Also move include for navbar and logo into global php file 
     (since they're used in pretty much every page) or even better, make a 
     MainIncludes file which has all of the default includes. The idea is to make each file only need one
@@ -29,6 +87,7 @@ TODO / IDEAS
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
 ----
 
+#5.1 Started using triad and complimentary colors
 #5.0 CLEANED ALL CODE! AND FORCED UNDERSCORE NAMING!
 #4.9 Changed Certain Colors to pop out less (correlation between importance)
 #4.8 Minified ALL JS and CSS

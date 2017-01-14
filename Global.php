@@ -132,7 +132,7 @@ function startDefaultContent($styleSheets, $scripts, $noScripts, $prefix = '', $
         
     outputLogo();
 
-    echo('<div class = "container_styling">');   
+    echo('<div class = "gradient_background">');   
 }
 
 function endDefaultContent($prefix = '', $scripts = array())

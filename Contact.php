@@ -1,14 +1,8 @@
 <?php
 include('Global.php');
 
-
-
-startDefaultContent(array("Styling/ContactPageStyle.min.css"), array(), array());
-startContainerStyle();
-displayNavbar(NAV_OPTIONS::CONTACT_NAV_ID, "");
+startContentType(PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::CONTACT_NAV_ID, '', array("Styling/ContactPageStyle.min.css"));
 ?>
-
-
 
 <div class="non_flex_bg">
 <div class = "text_center" id ="contact_page_title">Contact</div>
@@ -18,9 +12,6 @@ displayNavbar(NAV_OPTIONS::CONTACT_NAV_ID, "");
 <b>Email</b>: richie@devrichie.com</p>
 </div>
 
-
-
 <?php
-;
 endDefaultContent();
 ?>
