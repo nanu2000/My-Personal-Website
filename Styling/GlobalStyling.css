@@ -103,10 +103,10 @@ For really small window probably on desktop
         
     .gradient_background
     {
-        background: #F5562D; /* Anagolous based on navbar color */
-        background: -moz-linear-gradient        (-45deg,  #F5562D 0%, #a83531 10%, #F5562D 100%);
-        background: -webkit-linear-gradient     (-45deg,  #F5562D 0%, #a83531 10%, #F5562D 100%);
-        background: linear-gradient             (135deg,  #F5562D 0%, #a83531 10%, #F5562D 100%);
+        background: #f5462e;
+        background: -moz-linear-gradient    (-45deg,  #f5462e 0%,      #6e1736    90%);
+        background: -webkit-linear-gradient (-45deg,  #f5462e 0%,      #6e1736    90%);
+        background: linear-gradient         (135deg,  #f5462e 0%,      #6e1736    90%); 
     }
 }
 
@@ -170,7 +170,7 @@ For really small windows, devices, and phones
     }
     .gradient_background /*no gradient borders on mobile*/
     {
-        background: #F5562D;
+        background: #f5462e;
     }
 }
 
