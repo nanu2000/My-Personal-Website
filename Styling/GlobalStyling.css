@@ -101,6 +101,25 @@ For really small window probably on desktop
         text-decoration: none;
     }   
     
+    
+    /******************************
+    Used to create gradient border.
+    *******************************/
+
+    .gradient_background
+    {
+        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
+        padding:3px;
+        background: rgba(214,99,76,1);
+        background: -moz-linear-gradient    (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: -webkit-gradient        (left top, right bottom, color-stop(0%, rgba(214,99,76,1)), color-stop(100%, rgba(128,25,164,1)));
+        background: -webkit-linear-gradient (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: -o-linear-gradient      (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: -ms-linear-gradient     (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: linear-gradient         (135deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+    }
+
+    /******************************/
 }
 
 
@@ -161,7 +180,20 @@ For really small windows, devices, and phones
     {
         padding-left: 20px;
     }
+    
+    
+    /******************************
+    Used to create gradient border.
+    *******************************/
+    /*No Gradient On Mobile.*/
+    .gradient_background
+    {
+        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
+        padding:3px;
+        background: rgba(214,99,76,1);
+    }
 
+    /******************************/
 }
 
 
@@ -315,22 +347,9 @@ Used to create gradient border.
         margin-top: 0px;
         margin-bottom: 0px;
     }
-
-    .gradient_background
-    {
-        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
-        padding:3px;
-        
-        background: rgba(214,99,76,1);
-        background: -moz-linear-gradient    (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: -webkit-gradient        (left top, right bottom, color-stop(0%, rgba(214,99,76,1)), color-stop(100%, rgba(128,25,164,1)));
-        background: -webkit-linear-gradient (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: -o-linear-gradient      (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: -ms-linear-gradient     (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: linear-gradient         (135deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-    }
     
 /******************************/
+
 
 
 
