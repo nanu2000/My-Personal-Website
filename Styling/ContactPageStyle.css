@@ -9,7 +9,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
 FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
 FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
 
-FOR IMPORTANT BLACK COLOR, USE rgb(0,0,0);
+FOR IMPORTANT BLACK COLOR, USE #232323 or #111111;
 FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 
@@ -41,7 +41,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     margin-bottom:0;
     font-family: 'Lobster', cursive;
     font-size: 35px;
-    color: black;
+    color: #111111;
     font-weight: bold;
     padding:40px 10px 40px 10px;
 }
