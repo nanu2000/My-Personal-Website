@@ -100,26 +100,14 @@ For really small window probably on desktop
         padding: 14px 20px;
         text-decoration: none;
     }   
-    
-    
-    /******************************
-    Used to create gradient border.
-    *******************************/
-
+        
     .gradient_background
     {
-        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
-        padding:3px;
-        background: rgba(214,99,76,1);
-        background: -moz-linear-gradient    (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: -webkit-gradient        (left top, right bottom, color-stop(0%, rgba(214,99,76,1)), color-stop(100%, rgba(128,25,164,1)));
-        background: -webkit-linear-gradient (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: -o-linear-gradient      (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: -ms-linear-gradient     (-45deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
-        background: linear-gradient         (135deg, rgba(214,99,76,1) 0%, rgba(128,25,164,1) 100%);
+        background: #F5562D; /* Anagolous based on navbar color */
+        background: -moz-linear-gradient        (-45deg,  #F5562D 0%, #a83531 10%, #F5562D 100%);
+        background: -webkit-linear-gradient     (-45deg,  #F5562D 0%, #a83531 10%, #F5562D 100%);
+        background: linear-gradient             (135deg,  #F5562D 0%, #a83531 10%, #F5562D 100%);
     }
-
-    /******************************/
 }
 
 
@@ -180,20 +168,10 @@ For really small windows, devices, and phones
     {
         padding-left: 20px;
     }
-    
-    
-    /******************************
-    Used to create gradient border.
-    *******************************/
-    /*No Gradient On Mobile.*/
-    .gradient_background
+    .gradient_background /*no gradient borders on mobile*/
     {
-        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
-        padding:3px;
-        background: rgba(214,99,76,1);
+        background: #F5562D;
     }
-
-    /******************************/
 }
 
 
@@ -258,7 +236,7 @@ body
     margin: auto;
     transition-timing-function: linear;
     transition-property: background-color;
-    background-color: #0d1327;
+    background-color: #040B25;
 }
 a
 {
@@ -347,9 +325,14 @@ Used to create gradient border.
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    
-/******************************/
 
+    .gradient_background
+    {
+        box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
+        padding:3px;
+    }
+
+/******************************/
 
 
 

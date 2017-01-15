@@ -67,7 +67,7 @@ function echoPortfolio()
     (
         "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
         "ProjectPages/LightShowPage.php", 
-        "#2A50A3", 
+        "#1D358A", //Complimentary to 07133E(navbar Color)
         "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++.", 
         "flex_item_big", 
         "big_text_bg"
@@ -81,7 +81,7 @@ function echoPortfolio()
     (
         "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
         "ProjectPages/StarDivePage.php", 
-        "#3F2696", 
+        "#490261",  //Analogous to 02134A(darker lightshow Color)
         "Stardive is my favorite out of all the games I have made..<br>So far.", 
         "flex_item_normal", 
         "small_text_bg"
@@ -92,7 +92,7 @@ function echoPortfolio()
     (
         "Images/lolo.png", "Link to adventures of lolo game page", 
         "ProjectPages/LoloGamePage.php", 
-        "#732718", 
+        "#570A01", //Analogous to 02134A(darker lightshow Color)
         "LoLo is a game that I made for the NES Box art jam in 2015!", 
         "flex_item_normal", 
         "small_text_bg"
@@ -103,7 +103,7 @@ function echoPortfolio()
     (
         "Images/AeroFlightBanner.png", "Link to Aeroflight game page", 
         "ProjectPages/AeroFlightPage.php", 
-        "#19517A", 
+        "#02614D", //Analogous to 02134A(darker lightshow Color)
         "Aeroflight is the first game that I have published.", 
         "flex_item_normal", 
         "small_text_bg"
@@ -116,8 +116,8 @@ function echoPortfolio()
     createFlexItem
     (
         "Images/NextProjectMedium.png", "Link to Coming Blog Page", 
-        "ProjectPages/ComingSoonPage.php", 
-        "#01573F", 
+        "ProjectPages/ComingSoonPage.php",
+        "#1D358A", //Complimentary to 07133E(navbar Color)
         "My blog contains consistent updates regarding the current project I'm developing.", 
         "flex_item_med", 
         "big_text_bg"
