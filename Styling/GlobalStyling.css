@@ -86,7 +86,6 @@ For really small window probably on desktop
         right: 0;
         top:0;
         float:right;
-        padding-right: 50px;
         margin: 0px 5px 0px 0px;    
     }
     
@@ -97,16 +96,15 @@ For really small window probably on desktop
     .navbar_text_links .text_link a
     {    
         display: block;
-        padding: 14px 20px;
         text-decoration: none;
     }   
         
     .gradient_background
     {
-        background: #f5462e;
-        background: -moz-linear-gradient    (-45deg,  #f5462e 0%,      #6e1736    90%);
-        background: -webkit-linear-gradient (-45deg,  #f5462e 0%,      #6e1736    90%);
-        background: linear-gradient         (135deg,  #f5462e 0%,      #6e1736    90%); 
+        background: #FF6236;
+        background: -moz-linear-gradient    (-45deg,  #FF6236 0%,      #6e1736    90%);
+        background: -webkit-linear-gradient (-45deg,  #FF6236 0%,      #6e1736    90%);
+        background: linear-gradient         (135deg,  #FF6236 0%,      #6e1736    90%); 
     }
 }
 
@@ -142,12 +140,6 @@ For really small windows, devices, and phones
         padding-bottom: 20px;
     }
     
-    #navbar_more .text_link a
-    {    
-        display: block;
-        padding: 12px 15px;
-        text-decoration: none;
-    }
     
     #navbar_more
     {
@@ -170,7 +162,7 @@ For really small windows, devices, and phones
     }
     .gradient_background /*no gradient borders on mobile*/
     {
-        background: #f5462e;
+        background: #FF6236;
     }
 }
 
@@ -207,9 +199,9 @@ For really small windows, devices, and phones
         width:25%;
         white-space: nowrap;
     }
-    #navbar_more .text_link
+    #navbar_more .text_link a
     {
-        width:auto;
+        padding: 12px 12px;
     }
 }
 /**************/
@@ -376,7 +368,7 @@ Used to create the navagation bar
 
     .active_nav_text_link
     {
-        color : #232323;
+        color : #111111;
         background-color: white;
     }
     .navbar_text_links .text_link
@@ -406,9 +398,9 @@ Used to create the navagation bar
     {
         color:rgb(235,235,235);
     }
-    .navbar_text_links .text_link:hover:not(.active_nav_text_link):not(.mobile) a
+    .navbar_text_links .text_link:hover:not(.mobile) a:not(.active_nav_text_link)
     {
-        color: rgb(70,70,70);
+        color: #232323;
         background-color: white;
     }
     
