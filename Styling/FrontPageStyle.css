@@ -172,8 +172,8 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
         min-width: 101%;
         
         min-height:300px;
-        filter: alpha(opacity=20);
-        opacity: 0.2;
+        filter: alpha(opacity=40);
+        opacity: 0.4;
     }
 
     .flex_item a

@@ -5,7 +5,7 @@
 
 /*Settings for flex items on hover.*/
 ColorChanger.prototype.HIGHLIGHT_COLOR_PERCENT          = .6;
-ColorChanger.prototype.SHADOW_COLOR_PERCENT             = -.3;
+ColorChanger.prototype.SHADOW_COLOR_PERCENT             = -.4;
 ColorChanger.prototype.TIME_UNTIL_HOVER_OVER_COLOR      = 1;
 ColorChanger.prototype.TIME_UNTIL_HOVER_OUT_COLOR       = 3;
 
