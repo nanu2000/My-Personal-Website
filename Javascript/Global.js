@@ -27,8 +27,6 @@ function ColorChanger(backgroundColorElement)
 
         return function() 
         {
-            document.getElementById("nav_bar").style.backgroundColor = this.hoverColor;
-            document.getElementById("nav_bar").style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
             backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
             backgroundColorElementStyle.backgroundColor     = this.shadowHoverColor;
         };
@@ -46,8 +44,6 @@ function ColorChanger(backgroundColorElement)
 
         return function() 
         {
-            document.getElementById("nav_bar").style.backgroundColor = '';
-            document.getElementById("nav_bar").style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
             backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
             backgroundColorElementStyle.backgroundColor     = '';
         };
