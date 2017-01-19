@@ -2,6 +2,9 @@
 TODO / IDEAS
 
 
+Support Array of elements that can change to hoverColor in global.js
+
+
 MAKE WHOLE WEBSITE WORK AGAIN - TEST
     change endContent for each page
     change startContent for each page
