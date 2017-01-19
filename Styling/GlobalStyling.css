@@ -101,10 +101,10 @@ For really small window probably on desktop
         
     .gradient_background
     {
-        background: #FF6236;
-        background: -moz-linear-gradient    (-45deg,  #FF6236 0%,      #6e1736    90%);
+        background: rgba(255, 255, 255, 0.51);
+     /* background: -moz-linear-gradient    (-45deg,  #FF6236 0%,      #6e1736    90%);
         background: -webkit-linear-gradient (-45deg,  #FF6236 0%,      #6e1736    90%);
-        background: linear-gradient         (135deg,  #FF6236 0%,      #6e1736    90%); 
+        background: linear-gradient         (135deg,  #FF6236 0%,      #6e1736    90%); */
     }
 }
 
@@ -162,7 +162,7 @@ For really small windows, devices, and phones
     }
     .gradient_background /*no gradient borders on mobile*/
     {
-        background: #FF6236;
+        background: #b4b6be;
     }
 }
 
