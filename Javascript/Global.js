@@ -27,8 +27,11 @@ function ColorChanger(backgroundColorElement)
 
         return function() 
         {
-            document.getElementById("nav_bar").style.backgroundColor = this.hoverColor;
-            document.getElementById("nav_bar").style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
+            document.getElementsByClassName("gradient_background")[0].style.backgroundColor = convertHex(blendColors(this.highlightHoverColor, '#ffffff', .5), .4);
+            document.getElementsByClassName("gradient_background")[0].style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
+            
+            //document.getElementById("nav_bar").style.backgroundColor = this.hoverColor;
+           // document.getElementById("nav_bar").style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
             backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OVER_COLOR + "s";  
             backgroundColorElementStyle.backgroundColor     = this.shadowHoverColor;
         };
@@ -46,8 +49,10 @@ function ColorChanger(backgroundColorElement)
 
         return function() 
         {
-            document.getElementById("nav_bar").style.backgroundColor = '';
-            document.getElementById("nav_bar").style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
+            document.getElementsByClassName("gradient_background")[0].style.backgroundColor = '';
+            document.getElementsByClassName("gradient_background")[0].style.transitionDuration = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s"; 
+         //   document.getElementById("nav_bar").style.backgroundColor = '';
+         //   document.getElementById("nav_bar").style.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
             backgroundColorElementStyle.transitionDuration  = colorChanger.TIME_UNTIL_HOVER_OUT_COLOR + "s";  
             backgroundColorElementStyle.backgroundColor     = '';
         };
@@ -92,7 +97,20 @@ function ColorChanger(backgroundColorElement)
     };
 
 }
+function convertHex(hex,opacity)
+{
+    hex = hex.replace('#','');
+    r = parseInt(hex.substring(0,2), 16);
+    g = parseInt(hex.substring(2,4), 16);
+    b = parseInt(hex.substring(4,6), 16);
 
+    result = 'rgba('+r+','+g+','+b+','+opacity+')';
+    return result;
+}
+function blendColors(c0, c1, p) {
+    var f=parseInt(c0.slice(1),16),t=parseInt(c1.slice(1),16),R1=f>>16,G1=f>>8&0x00FF,B1=f&0x0000FF,R2=t>>16,G2=t>>8&0x00FF,B2=t&0x0000FF;
+    return "#"+(0x1000000+(Math.round((R2-R1)*p)+R1)*0x10000+(Math.round((G2-G1)*p)+G1)*0x100+(Math.round((B2-B1)*p)+B1)).toString(16).slice(1);
+}
 function colorLuminance(hex, lum) 
 {
     hex = String(hex).replace(/[^0-9a-f]/gi, '');
