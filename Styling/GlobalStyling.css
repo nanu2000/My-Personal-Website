@@ -35,6 +35,18 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 */
 
 
+.copyright_footer
+{
+    
+    color: #232323;
+    background-color:#ebebeb;
+    line-height: 1.7;
+    font-family: 'Raleway', sans-serif;    
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+
+
 /************************************************************************
 For really normal window probably on desktop
 *************************************************************************/
@@ -51,21 +63,7 @@ For really normal window probably on desktop
         margin-right: 25px;
         padding-bottom: 15px;
     }
-    .gradient_background
-    {
-        background: rgba(255, 255, 255, 0.51);
-     /* background: -moz-linear-gradient    (-45deg,  #FF6236 0%,      #6e1736    90%);
-        background: -webkit-linear-gradient (-45deg,  #FF6236 0%,      #6e1736    90%);
-        background: linear-gradient         (135deg,  #FF6236 0%,      #6e1736    90%); */
-    }
 
-}
-@media only screen and (max-width : 999px) 
-{
-    .gradient_background /*no gradient borders on mobile*/
-    {
-        background: #b4b6be;
-    }
 }
 /************************************************************************
 For really small window probably on desktop
@@ -322,6 +320,7 @@ Used to create gradient border.
 
     .gradient_background
     {
+        background: #c1c1c1;
         box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
         padding:3px;
     }
@@ -463,6 +462,39 @@ Used to create the navagation bar
 /********************************
 Additional CSS used for multiple pages
 *********************************/
+
+.generic_header_wrapper
+{
+    padding:40px 10px 40px 10px;    
+    background-color:#ebebeb;
+}
+.generic_header_title
+{    
+    margin-top:0;
+    margin-bottom:0;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    color: #111111;
+    font-weight: bold;
+}
+.generic_header_subtitle
+{
+    color: #444444;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    margin-top:15px;
+}
+
+.generic_page_text
+{
+    color:#232323;
+    line-height: 1.7;
+    font-family: 'Raleway', sans-serif;    
+    padding: 15px 10% 15px 10%;
+}
 
 .text_center
 {    

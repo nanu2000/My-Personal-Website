@@ -21,13 +21,13 @@ function startContentType($contentType, $navbarID, $prefix = '', $styleSheets = 
     {
         case PAGE_CONTENT_TYPE::BLOG_PAGE:
             
-            array_push($styleSheets, "../Styling/BlogStyle.min.css");      
+            array_push($styleSheets, $prefix .  "Styling/BlogStyle.min.css");      
             
         break;
     
         case PAGE_CONTENT_TYPE::PROJECT_PAGE:
             
-            array_push($styleSheets, "../Styling/GamePageStyle.min.css");            
+            array_push($styleSheets, $prefix .  "Styling/GamePageStyle.min.css");            
             
         break;
     }
@@ -55,13 +55,13 @@ function startBlogPost($title, $subtitle)
 {
 ?>
     <div class="non_flex_bg">
-    <div class = "BlogHeader">
-    <div class ="BlogTitle">
+    <div class = "text_center generic_header_wrapper">
+    <div class ="generic_header_title">
 
     <?php echo($title); ?>
 
     </div>
-    <div class ="BlogSubTitle">
+    <div class ="generic_header_subtitle">
 
     <?php echo($subtitle); ?>
 
@@ -139,6 +139,15 @@ function endDefaultContent($prefix = '', $scripts = array())
 {
     
     array_push($scripts,    $prefix . "Javascript/Global.min.js");
+    
+    startContentContainer();
+?>
+    <div class ="text_center copyright_footer">
+    Copyright 2015-<?php echo date("Y")?> Richard Sikra
+    </div>
+<?php
+
+    endContentContainer();
     
 ?>
     </div>

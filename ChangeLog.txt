@@ -1,10 +1,11 @@
 
 TODO / IDEAS
 
+Remove data-hovercolor and replacte with html style.
+Clean unused CSS and styling again
+Maybe add Gifs? idk
+Maybe remove background changing js
 
-MAKE WHOLE WEBSITE WORK AGAIN - TEST
-    change endContent for each page
-    change startContent for each page
 
 !Turn website into OOP instead of procedural.
     
