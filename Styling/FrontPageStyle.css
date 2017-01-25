@@ -100,14 +100,14 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 { 
     .flex_text_wrapper .wrapper_description_text
     {
-        font-size: .8em;
+        font-size: .8rem;
     }
 }
 @media only screen and (max-width : 400px)
 { 
     .flex_text_wrapper .wrapper_description_text
     {
-        font-size: .9em;
+        font-size: .9rem;
     }
 }
 .front_page_text
@@ -176,7 +176,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {
     padding:4px;
     color:#444444;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 700;
 }
 

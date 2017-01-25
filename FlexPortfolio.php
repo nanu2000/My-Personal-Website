@@ -57,7 +57,7 @@ function echoPortfolio()
     $flexItems = "";
     
     $flexItems .=
-    desktopFlexHeader("My Projects", "Hover the images below for more information");
+    desktopFlexHeader("My Projects");
     
     $flexItems .=
     createFlexItem
