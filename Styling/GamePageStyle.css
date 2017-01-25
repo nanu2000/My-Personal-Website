@@ -34,48 +34,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 }
 */
 
-@media only screen and (min-width : 667px) 
-{     
-
-    
-    .project_page_description p
-    {
-       font-size: 1rem;
-    }
-    
-    .project_page_description
-    {
-        color: rgb(50,50,50);
-        line-height: 1.4;
-        padding : 20px 12% 20px 12%;
-    } 
-    
-}
-
-@media only screen and (max-width : 666px) 
-{      
-    
-    .project_page_description p
-    {
-       font-size: .9rem;
-    }
-    
-    .project_page_description
-    {
-        color: rgb(50,50,50);
-        line-height: 1.4;
-        padding : 20px 5% 20px 5%;
-    }
-}
-
-.project_page_description p
-{
-    text-indent: 0px;
-    padding-bottom:10px;
-    padding-top:10px;
-    font-family: 'Raleway', sans-serif;
-}
-
 
 .project_page_banner
 {

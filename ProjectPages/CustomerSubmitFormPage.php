@@ -20,7 +20,7 @@ startContentContainer();
 ?>
 
 <div class = "text_center generic_header_wrapper generic_header_title">About The Customer Support Form</div>
-<div class="project_page_description">
+<div class="generic_page_text">
 <p class = "NormalTextStyling">
 This project was my first official project I have ever completed using PHP. This project is meant for a customer service department. The employees would recieve phone calls, 
 complaints and other forms of input, and then fill out the form for what product they where talking about, and if the input from the customer was good or bad.

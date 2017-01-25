@@ -29,7 +29,7 @@ startContentContainer();
 
 
 <div class = "text_center generic_header_wrapper generic_header_title">About the Lightshow Framework</div>  
-<div class="project_page_description">
+<div class="generic_page_text">
 
 <p>
 The creation of this framework was started on the <b>23rd of December 2015</b>. The development came to a complete stop in <b>May, 2016</b> (~5 total months of development).
