@@ -1,67 +1,10 @@
-Changes
-----
-#5.5 Updated front page styling.
-#5.4 Changed flex items to only be one size, and made them smaller.
-#5.3 Removed background color changer on flex item hover
-#5.2 Change gradient image to actual css3 gradient
-#5.1 Started using triad and complimentary colors
-#5.0 CLEANED ALL CODE! AND FORCED UNDERSCORE NAMING!
-#4.9 Changed Certain Colors to pop out less (correlation between importance)
-#4.8 Minified ALL JS and CSS
-#4.7 Cleaned some Javascript
-#4.6 Added Options.php
-#4.5 Cleaned up Navbar code
-#4.4 Cleaned Project Pages code.
-#4.3 Renamed index to FrontPage.php (in blog Directory) to promote good naming patterns.
-#4.2 Cleaned All Blog Post's. 
-#4.1 Updated Contact Page Styling
-#4.0 Moved feature_list to Global Styling
-#3.9 Posted to Blog
-#3.8 Fixed December 0'15 Blog Post, changed coloring on hover of flexItems, added media queries to blog styling
-#3.7 Added Media Queries To Project Page OL and P
-#3.6 Added Padding and removed centering from project pages
-#3.5 Added Blue BG for Project Page Title
-#3.4 Made project_page_description not automatically center content
-#3.3 Added Ol + li styling in GamePageStyle.css
-#3.2 Added Lightshow Page
-#3.1 HTTPS!
-#3.0 Updated to PHP 7
-#2.9 Added Changelog Link to more button
-#2.8 Made Navbar resize better on mobile
-#2.7 Added check for MatchMedia function for IE9
-#2.6 Added 'More' option to navbar
-#2.5 Changed favicon path to local (not absolute)
-#2.4 Fixed IE11 Box Shadow Glitch by adding 1px after border
-#2.3 Removed unicode range from fonts.css styles
-#2.2 Added box shadows to flex items and body
-#2.1 Switched order of css and scripts files in global.php
-#2.0 Compressed images on front page
-#1.9 Added color luminance function to global.js
-#1.8 Added custom background color to flexitems with attrib specified in html
-#1.7 Added spacing to navbar icon links
-#1.6 Added font weight and line height to text_bg description
-#1.5 added borders to text_bg
-#1.4 Added Fonts.css instead of using google fonts files
-#1.3 Removed margin -1px on .flex_item .flex_bg
-#1.2 CSS Reset for img, li, and ul. (img is now set to display block, li and ul are set to vertical-align top)
-#1.1 Switched to HTML5
-#1.0 Added 404 and 403 pages for devrichie directory
-#0.9 Changed hosting to digital ocean
-#0.8 Changed line height to 1.4 for blog text and normal text styling class
-#0.7 Used spritesheet for navbar icons
-#0.6 Added icon sprite sheet 
-#0.5 Took away zoom for portfolio items on hover
-#0.4 Changed opacity on flex_bg mobile elements
-#0.3 Made navbar gradient a bit more spiffy :)
-#0.2 Cleaned GlobalStyling CSS file
-#0.1 Revised navigation bar code
-#0.0 Created Change Log
-#--- Created Website in ~November 2015
-
 
 TODO / IDEAS
 
+Remove data-hovercolor and replacte with html style.
+Clean unused CSS and styling again
 Maybe add Gifs? idk
+Maybe remove background changing js
 
 
 !Turn website into OOP instead of procedural.
@@ -143,3 +86,59 @@ Maybe add Gifs? idk
 
 ?-Create new StarDive Banner for GamePage
 ?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc
+----
+
+#5.2 Change gradient image to actual css3 gradient
+#5.1 Started using triad and complimentary colors
+#5.0 CLEANED ALL CODE! AND FORCED UNDERSCORE NAMING!
+#4.9 Changed Certain Colors to pop out less (correlation between importance)
+#4.8 Minified ALL JS and CSS
+#4.7 Cleaned some Javascript
+#4.6 Added Options.php
+#4.5 Cleaned up Navbar code
+#4.4 Cleaned Project Pages code.
+#4.3 Renamed index to FrontPage.php (in blog Directory) to promote good naming patterns.
+#4.2 Cleaned All Blog Post's. 
+#4.1 Updated Contact Page Styling
+#4.0 Moved feature_list to Global Styling
+#3.9 Posted to Blog
+#3.8 Fixed December 0'15 Blog Post, changed coloring on hover of flexItems, added media queries to blog styling
+#3.7 Added Media Queries To Project Page OL and P
+#3.6 Added Padding and removed centering from project pages
+#3.5 Added Blue BG for Project Page Title
+#3.4 Made project_page_description not automatically center content
+#3.3 Added Ol + li styling in GamePageStyle.css
+#3.2 Added Lightshow Page
+#3.1 HTTPS!
+#3.0 Updated to PHP 7
+#2.9 Added Changelog Link to more button
+#2.8 Made Navbar resize better on mobile
+#2.7 Added check for MatchMedia function for IE9
+#2.6 Added 'More' option to navbar
+#2.5 Changed favicon path to local (not absolute)
+#2.4 Fixed IE11 Box Shadow Glitch by adding 1px after border
+#2.3 Removed unicode range from fonts.css styles
+#2.2 Added box shadows to flex items and body
+#2.1 Switched order of css and scripts files in global.php
+#2.0 Compressed images on front page
+#1.9 Added color luminance function to global.js
+#1.8 Added custom background color to flexitems with attrib specified in html
+#1.7 Added spacing to navbar icon links
+#1.6 Added font weight and line height to text_bg description
+#1.5 added borders to text_bg
+#1.4 Added Fonts.css instead of using google fonts files
+#1.3 Removed margin -1px on .flex_item .flex_bg
+#1.2 CSS Reset for img, li, and ul. (img is now set to display block, li and ul are set to vertical-align top)
+#1.1 Switched to HTML5
+#1.0 Added 404 and 403 pages for devrichie directory
+#0.9 Changed hosting to digital ocean
+#0.8 Changed line height to 1.4 for blog text and normal text styling class
+#0.7 Used spritesheet for navbar icons
+#0.6 Added icon sprite sheet 
+#0.5 Took away zoom for portfolio items on hover
+#0.4 Changed opacity on flex_bg mobile elements
+#0.3 Made navbar gradient a bit more spiffy :)
+#0.2 Cleaned GlobalStyling CSS file
+#0.1 Revised navigation bar code
+#0.0 Created Change Log
+#--- Created Website in ~November 2015

@@ -6,7 +6,7 @@ startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_I
 startContentContainer();
 ?>
 
-<div class = "text_center generic_header_wrapper generic_header_title"> 
+<div class = "text_center project_page_title"> 
 My Current Project 
 </div>
 <div class="project_page_description">

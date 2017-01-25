@@ -39,7 +39,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {
     
     color: #232323;
-    background-color:#eeeeee;
+    background-color:#ebebeb;
     line-height: 1.7;
     font-family: 'Raleway', sans-serif;    
     padding-top:15px;
@@ -218,9 +218,11 @@ html
 {
     margin:0;
     padding:0;
+    
 }
 body
 {       
+    
     min-width: 275px;
     padding:0;      
     margin: auto;
@@ -268,30 +270,8 @@ Font Includes
   src: url(../Fonts/Latin_Lobster.ttf);
 }
 
-/************************************************************************
-Font resizing on big screens
-*************************************************************************/
-@media only screen and (min-width : 4001px) 
-{
-    html
-    {
-        font-size: 300%;
-    }
-}
-@media only screen and (min-width : 3001px)  and (max-width : 4000px) 
-{
-    html
-    {
-        font-size: 200%;
-    }
-}
-@media only screen and (max-width : 3000px) 
-{
-    html
-    {
-        font-size: 100%;
-    }
-}
+
+
 
 /******************************************
 Used to create Logo type text above nav bar
@@ -306,7 +286,7 @@ Used to create Logo type text above nav bar
     {
         font-family: 'Raleway', sans-serif;
         color: rgb(235,235,235);
-        font-size: .9rem;
+        font-size: .9em;
         letter-spacing: .5px;
         font-weight: bold;
     }
@@ -318,7 +298,7 @@ Used to create Logo type text above nav bar
         margin : 0px;
         padding : 0px;
         padding-bottom: 10px;
-        font-size: 2.2rem;
+        font-size: 2.2em;
         letter-spacing: 2px;
     }
 
@@ -340,7 +320,7 @@ Used to create gradient border.
 
     .gradient_background
     {
-        background: #cccccc;
+        background: #c1c1c1;
         box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
         padding:3px;
     }
@@ -412,7 +392,7 @@ Used to create the navagation bar
     .navbar_text_links .text_link a 
     {
         font-weight: bolder;
-        font-size: .9rem;
+        font-size: .9em;
     }
     .navbar_text_links .text_link a:not(.active_nav_text_link)
     {
@@ -447,7 +427,7 @@ Used to create the navagation bar
     #navbar_more .text_link a
     {
         font-weight: bolder;
-        font-size: .75rem;
+        font-size: .75em;
     }
 
     #navbar_more .text_link
@@ -486,26 +466,26 @@ Additional CSS used for multiple pages
 .generic_header_wrapper
 {
     padding:40px 10px 40px 10px;    
-    background-color:#eeeeee;
+    background-color:#ebebeb;
 }
 .generic_header_title
 {    
     margin-top:0;
     margin-bottom:0;
     font-family: 'Lobster', cursive;
-    font-size: 2.2rem;
+    font-size: 35px;
     color: #111111;
     font-weight: bold;
 }
 .generic_header_subtitle
 {
     color: #444444;
-    font-size: 1.3rem;
+    font-size: 20px;
     font-family: 'Lobster', cursive;
     margin-left: auto;
     margin-right: auto;
     text-align:center;
-    padding-top:15px;
+    margin-top:15px;
 }
 
 .generic_page_text
@@ -587,7 +567,7 @@ Additional CSS used for multiple pages
         counter-increment: item;
         margin-bottom: 10px;
         font-family: 'Raleway', sans-serif;
-        font-size: .9rem;
+        font-size: .9em;
     }
 
     .feature_list li:before 
@@ -597,7 +577,7 @@ Additional CSS used for multiple pages
         content: counters(section, ".") ". ";
         color: black;
         font-family: 'Raleway', sans-serif;
-        font-size: 1.1rem;
+        font-size: 1.1em;
         font-weight: bolder;
         text-align: center;
         display: inline-block;

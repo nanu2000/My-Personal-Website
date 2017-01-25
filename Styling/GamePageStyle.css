@@ -37,10 +37,14 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 @media only screen and (min-width : 667px) 
 {     
 
+    .project_page_title
+    {
+        padding:50px 10px 50px 10px;
+    }    
     
     .project_page_description p
     {
-       font-size: 1rem;
+       font-size: 1em;
     }
     
     .project_page_description
@@ -54,10 +58,14 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 @media only screen and (max-width : 666px) 
 {      
+    .project_page_title
+    {
+        padding:40px 10px 40px 10px;
+    }     
     
     .project_page_description p
     {
-       font-size: .9rem;
+       font-size: .9em;
     }
     
     .project_page_description
@@ -76,6 +84,16 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     font-family: 'Raleway', sans-serif;
 }
 
+.project_page_title
+{
+    background-color:#ebebeb;
+    margin-top:0;
+    margin-bottom:0;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    color: #111111;
+    font-weight: bold;
+}
 
 .project_page_banner
 {
@@ -95,7 +113,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     margin: 0 auto;
     color: rgb(50,50,50);
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 25px;
     margin-bottom:10px;
 }
   

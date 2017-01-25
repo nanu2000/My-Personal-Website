@@ -35,7 +35,7 @@ startContentContainer();
 ?>
 
 
-<div class = "text_center generic_header_wrapper generic_header_title">About Aeroflight</div>
+<div class = "project_page_title text_center">About Aeroflight</div>
 <div class="project_page_description">
 <p>Aeroflight was my first game, I put a lot of effort into making it and spent a grand total of <b>7 Months</b> creating it. I had some help from some of my friends <b>Patrick oliver</b> and <b>Chris Rasmussen</b> who created some of the images and helped brainstorm with the ideas.</p><p>This game was published on the IOS app store, the Android app store, and the Amazon app store. The target platform was IOS and android devices (Tablets and phones). After creating this "small" game, I realized how tough it was to create a game, but I also realized how fun it was (for me) at the same time. I am very proud of this creation, because even though it might not be the best it is my first game and to me it is a huge accomplishment</p>
 <h3>The description on the IOS app store</h3>
