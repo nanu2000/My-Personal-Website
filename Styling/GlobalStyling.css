@@ -87,6 +87,10 @@ For really small window probably on desktop
 
 @media only screen and (min-width : 667px)
 { 
+    html 
+    {
+        font-size: 100%;
+    }
     .feature_list
     {
         padding: auto; 
@@ -119,6 +123,10 @@ For really small windows, devices, and phones
 
 @media only screen and (max-width : 666px) 
 {
+    html 
+    {
+        font-size: 90%;
+    }
     body
     {      
         width: 100%;
@@ -216,7 +224,6 @@ CSS Resets
 ***************************************************/
 html 
 {
-    font-size: 100%;
     margin:0;
     padding:0;
 }
