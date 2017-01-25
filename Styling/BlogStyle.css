@@ -34,25 +34,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 }
 */
 
-@media only screen and (min-width : 667px) 
-{     
-    .BlogText
-    {
-        font-size: 1rem;
-        padding-left:12%;
-        padding-right:12%;
-    }
-}
-
-@media only screen and (max-width : 666px) 
-{      
-    .BlogText
-    {
-        font-size: .9rem;
-        padding-left:5%;
-        padding-right:5%;
-    }
-}
 
 #BlogNavbar
 {
@@ -60,23 +41,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     background-color: white;
 }
 
-.BlogText
-{
-    color: rgb(50,50,50);
-    line-height: 1.4;
-    padding-bottom: 50px;
-    font-family: 'Raleway', sans-serif;
-}
-.BlogText a
-{
-    color: rgb(0,0,200);
-}
-.BlogText p
-{
-    text-indent: 0px;
-    padding-bottom:10px;
-    padding-top:10px;
-}
 .BigBlogImage
 {
 /*formula = remainder / 2 ||| IE: 70 / 100 = R30 = R30/2 = 15*/

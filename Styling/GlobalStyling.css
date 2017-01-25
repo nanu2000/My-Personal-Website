@@ -492,6 +492,18 @@ Additional CSS used for multiple pages
     padding: 15px 10% 15px 10%;
 }
 
+.generic_page_text a
+{
+    color: rgb(0,0,200);
+}
+
+.generic_page_text p
+{
+    text-indent: 0px;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
 .text_center
 {    
     margin-right: auto;

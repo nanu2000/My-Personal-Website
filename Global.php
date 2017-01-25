@@ -67,7 +67,7 @@ function startBlogPost($title, $subtitle)
 
     </div>
     </div>
-    <div class = "BlogText">
+    <div class = "generic_page_text">
     
 <?php
 }

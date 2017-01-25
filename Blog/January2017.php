@@ -11,7 +11,7 @@ startBlogPost( "January 9th" , "A New Year? + Caught in the Moment");
 ?>
 
 <p>
-A lot has happened, but do I even need to say that? It's been two months since my last blog post. Of course a lot has happened!
+A lot has happened, but do I even need to say that? It's been two months since my last blog post.
 </p>
 
 <ol class = "feature_list">
@@ -60,12 +60,9 @@ I always see something new that could be added or revised and I end up spending 
 </ol>
 <p>The first thing on that list is pretty important, and possibly even a bigger task than one might expect. I love clean code, but potential employers may like it even better.
 If my own website's code isn't clean, then that would be a little sad.
-</p>
-
-<p>The second and third item on that list are both pretty important. I started the GPS project in May of 2016 (?) and I will finish it this year, even if it is in it's most basic form when I release it. (I can always
-    make it better in the future :) )</p>
-
-<p>Now the last item on that list may be unexpected, but it is definitely ranked as one of (if not) the highest on my priority list. I want the security and privilege of having a Computer
+The second and third item on that list are both pretty important. I started the GPS project in May of 2016 (?) and I will finish it this year, even if it is in it's most basic form when I release it. (I can always
+make it better in the future :) )
+Now the last item on that list may be unexpected, but it is definitely ranked as one of (if not) the highest on my priority list. I want the security and privilege of having a Computer
 Science degree.</p>
 
 <p>This whole post should give you a reasonable idea on where I am right now and what I plan on doing before I start the development on my next game. It may be awhile, but please be patient :)</p>
