@@ -63,7 +63,10 @@ For really normal window probably on desktop
         margin-right: 25px;
         padding-bottom: 15px;
     }
-
+    .generic_page_text
+    { 
+        padding: 15px 15% 15px 15%;
+    }
 }
 /************************************************************************
 For really small window probably on desktop
@@ -82,7 +85,10 @@ For really small window probably on desktop
         margin-right:25px;
         padding-bottom: 20px;
     }
-
+    .generic_page_text
+    { 
+        padding: 15px 10% 15px 10%;
+    }
 }
 
 @media only screen and (min-width : 667px)
@@ -171,6 +177,10 @@ For really small windows, devices, and phones
     .feature_list .feature_list
     {
         padding-left: 20px;
+    }
+    .generic_page_text
+    { 
+        padding: 15px 5% 15px 5%;
     }
 }
 
@@ -323,7 +333,7 @@ Used to create gradient border.
 
     .gradient_background
     {
-        background: #cccccc;
+        background: #d5d5d5;
         box-shadow: 5px 20px 50px 2px rgb(0, 0, 10);
         padding:3px;
     }
@@ -495,8 +505,7 @@ Additional CSS used for multiple pages
 {
     color:#232323;
     line-height: 1.7;
-    font-family: 'Raleway', sans-serif;    
-    padding: 15px 10% 15px 10%;
+    font-family: 'Raleway', sans-serif;   
 }
 
 .generic_page_text a
