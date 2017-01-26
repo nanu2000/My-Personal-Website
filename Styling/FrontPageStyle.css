@@ -9,7 +9,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
 FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
 FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
 
-FOR IMPORTANT BLACK COLOR, USE #232323 or #111111;
+FOR IMPORTANT BLACK COLOR, USE #1d2235 or #040b25;
 FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 
@@ -168,7 +168,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 .flex_item_text_snippet .text_item_header
 {
     padding:4px;
-    color : #232323;
+    color : #1d2235;
     font-size: 1.2em;
     font-weight: 700;
 }

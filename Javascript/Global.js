@@ -2,7 +2,7 @@
 /*toggles more button to be selected. white with black text for button and children are set to block display.*/
 function moreButtonOn(showNavbarAStyle, navbarMoreStyle)
 {
-    showNavbarAStyle.color              = "black";
+    showNavbarAStyle.color              = "#040b25";
     showNavbarAStyle.backgroundColor    = "white";
     navbarMoreStyle.display             = "block";
 }

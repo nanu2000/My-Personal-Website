@@ -9,7 +9,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
 FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
 FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
 
-FOR IMPORTANT BLACK COLOR, USE #232323 or #111111;
+FOR IMPORTANT BLACK COLOR, USE #232323 or #040b25;
 FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 
@@ -38,7 +38,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 .copyright_footer
 {
     
-    color: #232323;
+    color: #1d2235;
     background-color:#eeeeee;
     line-height: 1.7;
     font-family: 'Raleway', sans-serif;    
@@ -383,7 +383,7 @@ Used to create the navagation bar
 
     .active_nav_text_link
     {
-        color : #111111;
+        color : #040b25;
         background-color: white;
     }
     .navbar_text_links .text_link
@@ -414,7 +414,7 @@ Used to create the navagation bar
     }
     .navbar_text_links .text_link:hover:not(.mobile) a:not(.active_nav_text_link)
     {
-        color: #232323;
+        color: #040b25;
         background-color: white;
     }
     
@@ -488,7 +488,7 @@ Additional CSS used for multiple pages
     margin-bottom:0;
     font-family: 'Lobster', cursive;
     font-size: 2.2rem;
-    color: #111111;
+    color: #040b25;
     font-weight: bold;
 }
 .generic_header_subtitle
@@ -600,7 +600,7 @@ Additional CSS used for multiple pages
         margin-right: 10px;
         counter-increment: section;
         content: counters(section, ".") ". ";
-        color: black;
+        color: #040b25;
         font-family: 'Raleway', sans-serif;
         font-size: 1.1rem;
         font-weight: bolder;

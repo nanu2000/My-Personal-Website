@@ -9,7 +9,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
 FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
 FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
 
-FOR IMPORTANT BLACK COLOR, USE #232323 or #111111;
+FOR IMPORTANT BLACK COLOR, USE #1d2235 or #040b25;
 FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 
@@ -48,5 +48,5 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 #show_navbar:focus a, #show_navbar:hover a
 {
     background-color: white;
-    color:black;
+    color:#040b25;
 }
