@@ -107,7 +107,7 @@ For really small window probably on desktop
         right: 0;
         top:0;
         float:right;
-        margin: 0px 5px 0px 0px;    
+        margin: 0px 10px 0px 0px;    
     }
     
     .navbar_text_links
@@ -351,7 +351,7 @@ Used to create the navagation bar
     {
         background-color: #07133e;
         margin: 0;
-        padding: 0;
+        padding: 6px;
         overflow: hidden;
 
             
@@ -374,6 +374,7 @@ Used to create the navagation bar
     .navbar_icon_links, .navbar_text_links, #navbar_more
     {
         padding: 0;
+        
         overflow: hidden;
         list-style-type: none;
         vertical-align: top;
@@ -406,7 +407,7 @@ Used to create the navagation bar
     .navbar_text_links .text_link a 
     {
         font-weight: bolder;
-        font-size: .9rem;
+        font-size: 1rem;
     }
     .navbar_text_links .text_link a:not(.active_nav_text_link)
     {
@@ -431,7 +432,7 @@ Used to create the navagation bar
     }
     .navbar_icon_links li img
     {
-        padding: 5px 5px 0px 5px;
+        padding: 10px 5px 0px 5px;
         width:32px;
         height:32px;
     }
