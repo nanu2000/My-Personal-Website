@@ -45,16 +45,18 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     padding-top:15px;
     padding-bottom: 15px;
 }
-
-
-/************************************************************************
-For really normal window probably on desktop
-*************************************************************************/
-@media only screen and (min-width : 1000px) 
+@media only screen and (min-width : 1200px) 
+{
+    .generic_page_text
+    { 
+        padding: 15px 25% 15px 25%;
+    }
+}
+@media only screen and (min-width : 1000px) and (max-width : 1199px) 
 {
     body
     {  
-        width: 90%;
+        width: 85%;
     }
 
     #richie_text_wrapper
@@ -67,6 +69,24 @@ For really normal window probably on desktop
     { 
         padding: 15px 15% 15px 15%;
     }
+}
+/************************************************************************
+For really normal window probably on desktop
+*************************************************************************/
+@media only screen and (min-width : 1000px)
+{
+    body
+    {  
+        width: 85%;
+    }
+
+    #richie_text_wrapper
+    {
+        margin-top: 15px;
+        margin-right: 25px;
+        padding-bottom: 15px;
+    }
+
 }
 /************************************************************************
 For really small window probably on desktop
@@ -488,14 +508,14 @@ Additional CSS used for multiple pages
     margin-top:0;
     margin-bottom:0;
     font-family: 'Lobster', cursive;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #040b25;
     font-weight: bold;
 }
 .generic_header_subtitle
 {
     color: #1d2235;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: 'Lobster', cursive;
     margin-left: auto;
     margin-right: auto;
@@ -506,6 +526,7 @@ Additional CSS used for multiple pages
 .generic_page_text
 {
     color:#232323;
+    font-size: 1rem;
     line-height: 1.7;
     font-family: 'Raleway', sans-serif;   
 }
