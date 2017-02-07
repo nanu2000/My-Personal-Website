@@ -1,4 +1,4 @@
-Changes
+Changes (TODO is at bottom)
 ----
 #5.5 Updated front page styling.
 #5.4 Changed flex items to only be one size, and made them smaller.
@@ -61,8 +61,10 @@ Changes
 
 TODO / IDEAS
 
-Maybe add Gifs? idk
 
+!Revise CSS and combine certain classes into one.
+
+?-Create new StarDive Banner for GamePage
 
 !Turn website into OOP instead of procedural.
     
@@ -139,7 +141,3 @@ Maybe add Gifs? idk
     (since they're used in pretty much every page) or even better, make a 
     MainIncludes file which has all of the default includes. The idea is to make each file only need one
     include.
-
-
-?-Create new StarDive Banner for GamePage
-?-Maybe add a filter option for front page (project types) IE: games, webdev, misc, etc

@@ -11,7 +11,7 @@ class PAGE_CONTENT_TYPE
     
 }
 
-function startContentType($contentType, $navbarID, $prefix = '', $styleSheets = array(), $scripts = array(), $noScripts = array(), $pageTitle = '★-Richie Sikra-★')
+function startContentType($contentType, $navbarID, $prefix = '', $styleSheets = array(), $scripts = array(), $noScripts = array(), $pageTitle = '-Richie Sikra-')
 {
     /*every page will have these files*/
     array_push($styleSheets, $prefix . "Styling/GlobalStyling.min.css"   );
@@ -124,7 +124,7 @@ function outputExternalFileIncludes($styleSheets, $noScripts, $scripts)
 
 
 
-function startDefaultContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = '★-Richie Sikra-★')
+function startDefaultContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = 'Richie Sikra')
 {
     outputHeader($styleSheets, $scripts, $noScripts, $prefix, $pageTitle);
 
@@ -160,7 +160,7 @@ function endDefaultContent($prefix = '', $scripts = array())
 
 }
 
-function outputHeader($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = '★-Richie Sikra-★')
+function outputHeader($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = 'Richie Sikra')
 {
     ?>
     <!DOCTYPE html>
