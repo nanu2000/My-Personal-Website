@@ -500,12 +500,12 @@ Additional CSS used for multiple pages
     margin-bottom:0;
     font-family: 'Lobster', cursive;
     font-size: 2.5rem;
-    color: #040b25;
+    color: #222;
     font-weight: bold;
 }
 .generic_header_subtitle
 {
-    color: #1d2235;
+    color: #333;
     font-size: 1.4rem;
     font-family: 'Lobster', cursive;
     margin-left: auto;
