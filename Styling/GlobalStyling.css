@@ -102,47 +102,13 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 }
 
 
-@media only screen and (min-width : 1281px)
-{ 
-    .navbar_icon_links
-    {
-        margin: 0px 10px 0px 0px;    
-    }
-    .navbar_text_links
-    {
-        padding: 0;
-    }
-}
-@media only screen and (min-width : 1000px) and (max-width : 1280px)
-{
-    .navbar_icon_links
-    {
-        margin: 0px 20% 0px 0px;    
-    }
-    
-    .navbar_text_links
-    {
-        padding-left: 20%;
-    }
-}
-
-@media only screen and (max-width : 999px)
-{ 
-    .navbar_text_links
-    {
-        padding: 0;
-    }
-}
 
 /************************************************************************
 For really small window probably on desktop
 *************************************************************************/
 @media only screen and (min-width : 667px) and (max-width : 999px)
 {     
-    .navbar_icon_links
-    {
-        margin: 0px 10px 0px 0px;    
-    }
+    
     .generic_page_text
     { 
         padding: 20px 15% 20px 15%;
@@ -165,6 +131,7 @@ For really small window probably on desktop
         right: 0;
         top:0;
         float:right;
+        margin: 0px 10px 0px 0px;    
     }
     
     .navbar_text_links
@@ -418,7 +385,7 @@ Used to create the navagation bar
     }
     .navbar_icon_links, .navbar_text_links, #navbar_more
     {
-        
+        padding:0;
         overflow: hidden;
         list-style-type: none;
         vertical-align: top;
