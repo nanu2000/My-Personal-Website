@@ -256,7 +256,7 @@ body
     margin: auto;
     transition-timing-function: linear;
     transition-property: background-color;
-    background-color: #11384c;
+    background-color: #07364e;
 }
 a
 {
@@ -361,7 +361,7 @@ Used to create the navagation bar
 *********************************/
     #nav_bar
     {
-        background-color: #11384c;
+        background-color: #07364e;
         margin: 0;
         padding: 6px;
         overflow: hidden;
