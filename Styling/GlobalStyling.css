@@ -335,7 +335,7 @@ Used to create Logo type text above nav bar
 
 
 /******************************
-Used to create gradient border.
+Used to create gradient border. 
 *******************************/
 
     .main_border
@@ -347,7 +347,7 @@ Used to create gradient border.
 
     .gradient_background
     {
-        background: #c5c5c5;
+        background: #d2d6da;
         box-shadow: 1px 3px 20px 0px rgba(0, 0, 10, 0.5);
     }
 
