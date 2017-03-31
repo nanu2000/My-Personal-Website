@@ -17,36 +17,20 @@ function createFlexItem($image, $imgAlt, $link, $color, $text)
     </li>';
 }
 
-function desktopFlexHeader($header, $subheader = "")
-{
-    if($subheader !== "")
-    {
-        
-        return
-        '<li class="desktop_notifier flex_item_text_snippet">
-        <div class = "text_center text_item_header">
-        '.$header.'
-        </div>
-        <div class = "text_center text_item_small_text">
-        '.$subheader.'
-        </div>
-        </li>';
-
-    }
-    else
-    {
-        return
-        '<li class="desktop_notifier flex_item_text_snippet">
-        <div class = "text_center text_item_header">
-        '.$header.'
-        </div>
-        </li>';
-    }
-}
-
 function createFlexPageFromStringOfItems($items)
 {
-    return '<ul class="flex_item_container">'. $items . '</ul>';
+    ?>
+
+    <ul id="flex_item_container">  
+        
+        <li><div id = "carousel_left"></div></li>
+        <li><div id = "carousel_right"></div></li>
+        
+        <?php echo($items); ?>
+        
+    </ul>
+
+    <?php
 }
 
 
@@ -55,9 +39,6 @@ function echoPortfolio()
     
     
     $flexItems = "";
-    
-    $flexItems .=
-    desktopFlexHeader("My Projects");
     
     $flexItems .=
     createFlexItem

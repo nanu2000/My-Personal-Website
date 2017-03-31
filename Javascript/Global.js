@@ -64,18 +64,152 @@ function executeMobileJavascript()
 }
 
 
+
+    
+var flexItems;
+
+var resizeFunction = function()
+{
+    resetFlexItemPositions();
+};
+
+window.addEventListener("resize", resizeFunction);
+
+function rotateFlexItems(deltaTime)
+{
+    
+    var itemContainer = document.getElementById('flex_item_container');
+    
+    var box = itemContainer.getBoundingClientRect();
+        
+    
+    for(var i = 0; i < flexItems.length; i++)
+    {
+        
+        flexItems[i].style.left = parseFloat(flexItems[i].style.left, 10) + 3 + "px";
+       
+        
+        var carouselRightRect = document.getElementById('carousel_right').getBoundingClientRect();
+        var carouselLeftRect  = document.getElementById('carousel_left').getBoundingClientRect();
+        
+        if( (parseFloat(flexItems[i].getBoundingClientRect().left) > carouselRightRect.left) || 
+            (parseFloat(flexItems[i].getBoundingClientRect().right) < carouselLeftRect.right))
+        {
+            //flexItems[i].style.visibility = "hidden";
+        }
+        else
+        {
+            flexItems[i].style.visibility = "visible";            
+        }
+        
+        
+        
+        
+        
+    
+        if(parseFloat(flexItems[i].getBoundingClientRect().left) > box.right )
+        {
+            
+            flexItems[i].style.left = 
+            (
+            //-(box.width) (0-flexItems[i].startPosition.left = absolute left of screen)
+           -flexItems[i].startPosition.left + box.left
+                 
+            ) + "px"; 
+//          
+//                
+//                flexItems[i].style.left = 
+//               -flexItems[i].startPosition.left + 
+//                (flexItems[(i + 1) % flexItems.length].getBoundingClientRect().left - 
+//                flexItems[i].getBoundingClientRect().width ) + "px";
+        
+        }      
+        
+       // flexItems[i].style.left = box.left - (flexItems[i].startPosition.left * itemContainer.percentComparedToStartWidth);
+        
+        
+        
+    }
+    
+    
+    
+}
+function resetFlexItemPositions()
+{
+    for(var i = 0; i < flexItems.length; i++)
+    {
+        flexItems[i].style.left = "0px";
+        flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
+    }
+}
+function initFlexItems()
+{
+    var items = document.getElementsByClassName("flex_item");
+    
+    flexItems = Array.prototype.slice.call(items, 0);
+    
+    flexItems.sort(function(a,b) 
+    {
+        return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
+    });
+    resetFlexItemPositions();
+    window.requestAnimFrame(step);
+}
+
+window.requestAnimFrame = 
+(
+    function()
+    {
+        return      window.requestAnimationFrame        ||
+                    window.webkitRequestAnimationFrame  ||
+                    window.mozRequestAnimationFrame     ||
+                    function( callback )
+                    {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+})();
+
+
+
+
+var deltaTime = 0;
+var lastTime = 0;
+
+function step(timestamp) 
+{
+    if(lastTime === null)
+    {
+        lastTime = timestamp;
+    }
+
+    deltaTime = (timestamp - lastTime) / 1000;
+    rotateFlexItems(deltaTime);
+    window.requestAnimFrame(step);  
+    lastTime = timestamp;
+}
+
+
+
+
+
 /**************************
  *Runs when file is loaded.
  *This is the entry function.
  **************************/
 function runJavascript()
 {
+    
     if ('ontouchstart' in window) 
     {     
         executeMobileJavascript();
     }
     
-    setupMoreMenu();    
+    
+    
+    setupMoreMenu();  
+    initFlexItems();
+    
+    
 }
 
 /*self explanatory*/

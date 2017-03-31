@@ -78,21 +78,21 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 { 
     .flex_item
     {
-        width:33.33333%;
+        width:16.666667%;
     }
 }
 @media only screen and  (min-width : 450px) and (max-width : 699px) 
 { 
     .flex_item
     {
-        width:50%;
+        width:16.666667%;
     }
 }
 @media only screen and (max-width : 449px) 
 { 
     .flex_item
     {
-        width:100%;
+        width:16.666667%;
     }
 }
 
@@ -150,11 +150,13 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     opacity: 1.0;
 }
 
-.flex_item_container
+#flex_item_container
 {
+  position: relative;
   padding: 0;
   margin: 0;
   list-style: none;
+  overflow:hidden;
 }
 
 .flex_item_text_snippet
@@ -233,3 +235,28 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     text-decoration: none; 
 }
 
+
+
+
+#carousel_right, #carousel_left
+{
+    
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    z-index: 7;
+    top:3px;
+    bottom:3px;
+}
+
+#carousel_right
+{
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    right: 3px;
+}
+#carousel_left
+{
+    background: rgba(255,255,255,.5);
+    position: absolute;
+    left: 3px;
+}
