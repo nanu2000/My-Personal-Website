@@ -95,7 +95,7 @@ function rotateFlexItems(deltaTime)
         if( (parseFloat(flexItems[i].getBoundingClientRect().right) >= carouselRightRect.right) || 
             (parseFloat(flexItems[i].getBoundingClientRect().left) <= carouselLeftRect.left))
         {
-            flexItems[i].style.opacity = "0";
+            //flexItems[i].style.opacity = "0";
         }
         else
         {
@@ -103,24 +103,25 @@ function rotateFlexItems(deltaTime)
         }
     
     
+    
+    
         var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
         
         var sidePadding = (box.width - lengthOfSlides) / 2;
         
         //-(box.width) (0-flexItems[i].startPosition.left = absolute left of screen)
-        var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding;
+        var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding + (flexItems[i].getBoundingClientRect().width / 2);
+        
+        
+        var additor = 
         
     
         console.log(sidePadding + " " + startOfContainer);
-    
-        if(flexItems[i].getBoundingClientRect().right >= box.right - sidePadding)
+        
+        if(flexItems[i].getBoundingClientRect().right > box.width - sidePadding + (flexItems[i].getBoundingClientRect().width / 2))
         {
             
             flexItems[i].style.left = startOfContainer + "px"; 
-//                flexItems[i].style.left = 
-//               -flexItems[i].startPosition.left + 
-//                (flexItems[(i + 1) % flexItems.length].getBoundingClientRect().left - 
-//                flexItems[i].getBoundingClientRect().width ) + "px";
         
         }      
         
@@ -135,11 +136,26 @@ function rotateFlexItems(deltaTime)
 }
 function resetFlexItemPositions()
 {
+        
+    var itemContainer = document.getElementById('flex_item_container');
+
+    var box = itemContainer.getBoundingClientRect();
+
+
+        
     for(var i = 0; i < flexItems.length; i++)
     {
-        flexItems[i].style.left = "0px";
+        
+        var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
+
+        var sidePadding = (box.width - lengthOfSlides) / 2;
+    
+        flexItems[i].style.left = sidePadding + "px";
         flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
     }
+    
+    
+    
 }
 function initFlexItems()
 {
@@ -147,11 +163,12 @@ function initFlexItems()
     
     flexItems = Array.prototype.slice.call(items, 0);
     
+    resetFlexItemPositions();
+    
     flexItems.sort(function(a,b) 
     {
         return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
     });
-    resetFlexItemPositions();
     window.requestAnimFrame(step);
 }
 
