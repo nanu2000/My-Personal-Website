@@ -40,14 +40,6 @@ function echoPortfolio()
     
     $flexItems = "";
     
-    $flexItems .=
-    createFlexItem
-    (
-        "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
-        "ProjectPages/LightShowPage.php", 
-        "#0C216E", //Complimentary to 07133E(navbar Color)
-        "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++."
-    );
     
     //$flexItems .=
     //desktopFlexHeader("Games That I Have Developed");

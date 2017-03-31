@@ -86,38 +86,37 @@ function rotateFlexItems(deltaTime)
     for(var i = 0; i < flexItems.length; i++)
     {
         
-        flexItems[i].style.left = parseFloat(flexItems[i].style.left, 10) + 3 + "px";
+        flexItems[i].style.left = parseFloat(flexItems[i].style.left, 10) + 1 + "px";
        
         
         var carouselRightRect = document.getElementById('carousel_right').getBoundingClientRect();
         var carouselLeftRect  = document.getElementById('carousel_left').getBoundingClientRect();
         
-        if( (parseFloat(flexItems[i].getBoundingClientRect().left) > carouselRightRect.left) || 
-            (parseFloat(flexItems[i].getBoundingClientRect().right) < carouselLeftRect.right))
+        if( (parseFloat(flexItems[i].getBoundingClientRect().right) >= carouselRightRect.right) || 
+            (parseFloat(flexItems[i].getBoundingClientRect().left) <= carouselLeftRect.left))
         {
-            //flexItems[i].style.visibility = "hidden";
+            flexItems[i].style.opacity = "0";
         }
         else
         {
-            flexItems[i].style.visibility = "visible";            
+            flexItems[i].style.opacity = "1";        
         }
+    
+    
+        var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
         
+        var sidePadding = (box.width - lengthOfSlides) / 2;
         
-        
-        
+        //-(box.width) (0-flexItems[i].startPosition.left = absolute left of screen)
+        var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding;
         
     
-        if(parseFloat(flexItems[i].getBoundingClientRect().left) > box.right )
+        console.log(sidePadding + " " + startOfContainer);
+    
+        if(flexItems[i].getBoundingClientRect().right >= box.right - sidePadding)
         {
             
-            flexItems[i].style.left = 
-            (
-            //-(box.width) (0-flexItems[i].startPosition.left = absolute left of screen)
-           -flexItems[i].startPosition.left + box.left
-                 
-            ) + "px"; 
-//          
-//                
+            flexItems[i].style.left = startOfContainer + "px"; 
 //                flexItems[i].style.left = 
 //               -flexItems[i].startPosition.left + 
 //                (flexItems[(i + 1) % flexItems.length].getBoundingClientRect().left - 
