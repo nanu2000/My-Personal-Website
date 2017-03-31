@@ -140,8 +140,8 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     visibility: hidden;
     filter: alpha(opacity=0);
     opacity: 0;
-  position:absolute;
-  width:100%;
+    position:absolute;
+    width:100%;
 }
 .flex_item .flex_bg
 {
@@ -186,7 +186,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     overflow:hidden;
     flex-grow: 1;    
     
-    border: 3px solid rgb(148,0,108);
+    border: 3px solid #d2d6da;
     border: 3px solid rgba(0,0,0,0);
 
     -webkit-background-clip: padding-box; /* for Safari */

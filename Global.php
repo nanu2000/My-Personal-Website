@@ -67,7 +67,7 @@ function startBlogPost($title, $subtitle)
 
     </div>
     </div>
-    <div class = "generic_page_text">
+    <div class = "generic_page_text generic_page_text_end">
     
 <?php
 }
@@ -128,11 +128,10 @@ function startDefaultContent($styleSheets, $scripts, $noScripts, $prefix = '', $
 {
     outputHeader($styleSheets, $scripts, $noScripts, $prefix, $pageTitle);
 
-    echo('<body><div class ="main_border">');
-        
+    echo('<body><div class ="main_border"><div class = "gradient_background">');   
+    
     outputLogo();
 
-    echo('<div class = "gradient_background">');   
 }
 
 function endDefaultContent($prefix = '', $scripts = array())
@@ -173,19 +172,20 @@ function outputHeader($styleSheets, $scripts, $noScripts, $prefix = '', $pageTit
     <?php outputExternalFileIncludes($styleSheets, $noScripts, $scripts); ?>
     <title><?php echo($pageTitle); ?></title>
     </head>
-    
     <?php
 }
 
 function outputLogo()
 {
+    startContentContainer();
+    
 ?>
-
-    <div id = "richie_text_wrapper">
+    <div class = "text_center generic_header_wrapper generic_header_wrapper_end">
     <div id ="richie_text">Richie Sikra</div>  
-    <span id = "richie_text_subtitle">Developer | Designer | Creator</span>
+    <div id = "richie_text_subtitle">Developer | Designer | Creator</div>
     </div>
-
 <?php
+
+    endContentContainer(); 
 }
 ?>

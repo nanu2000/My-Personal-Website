@@ -49,55 +49,45 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {
     .generic_page_text
     { 
-        padding: 30px 25% 30px 25%;
+        padding: 30px 25% 0px 25%;
+    }
+    .generic_page_text_end
+    {
+        padding-bottom: 30px;
     }
 }
 
 @media only screen and (min-width : 1500px) 
 {
-    .gradient_background
+    body
     {
         padding:3px 15% 3px 15%;
     }
     
-    #richie_text_wrapper
-    {
-        margin-left: 15%;
-    }
 }
 
 @media only screen and (min-width : 1281px) and (max-width : 1499px) 
 {
-    .gradient_background
+    body
     {
         padding:3px 7% 3px 7%;
     }
     
-    #richie_text_wrapper
-    {
-        margin-left: 7%;
-    }
 }
 @media only screen and (max-width : 1280px) 
 {
-    .gradient_background
+    body
     {
         padding:3px;
     }
     
-    
-    #richie_text_wrapper
-    {
-        text-align: center;
-        padding-top:30px;
-        margin-right:auto;
-        margin-left:auto;
-        padding-bottom: 30px;
-    }
-
     .generic_page_text
     { 
-        padding: 20px 20% 20px 20%;
+        padding: 20px 20% 0px 20%;
+    }
+    .generic_page_text_end
+    {
+        padding-bottom: 20px;
     }
 }
 
@@ -111,7 +101,11 @@ For really small window probably on desktop
     
     .generic_page_text
     { 
-        padding: 20px 15% 20px 15%;
+        padding: 20px 15% 0px 15%;
+    }
+    .generic_page_text_end
+    {
+        padding-bottom: 20px;
     }
 }
 
@@ -157,7 +151,6 @@ For really small windows, devices, and phones
     {
         font-size: 90%;
     }
-    
     .navbar_icon_links
     {
         margin: 12px 0px 12px 0px;    
@@ -191,7 +184,11 @@ For really small windows, devices, and phones
     }
     .generic_page_text
     { 
-        padding: 15px 5% 15px 5%;
+        padding: 15px 5% 0px 5%;
+    }
+    .generic_page_text_end
+    {
+        padding-bottom: 15px;
     }
 }
 
@@ -252,11 +249,8 @@ html
 body
 {       
     min-width: 275px;
-    padding:0;      
     margin: auto;
-    transition-timing-function: linear;
-    transition-property: background-color;
-    background-color: #2E538A;
+    background-color: #eeeeee;
 }
 a
 {
@@ -301,18 +295,11 @@ Font Includes
 /**************************
 Used to create Logo type text above nav bar
 *******************************************/
-
-    #richie_text_wrapper
-    {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        display: block;
-    }
-
-    #richie_text_subtitle
+/*FOR IMPORTANT BLACK COLOR, USE #232323 or #040b25;
+ */   #richie_text_subtitle
     {
         font-family: 'Raleway', sans-serif;
-        color: rgb(235,235,235);
+        color: #444;
         font-size: 1rem;
         letter-spacing: .5px;
         font-weight: bold;
@@ -320,12 +307,14 @@ Used to create Logo type text above nav bar
 
     #richie_text
     {     
-        font-family: 'Passion One', cursive;
-        color:white; 
+        
+        font-weight: bold;
+        font-family: 'Lobster', cursive;
+        color: #333; 
         margin : 0px;
         padding : 0px;
         padding-bottom: 10px;
-        font-size: 2.4rem;
+        font-size: 2.7rem;
         letter-spacing: 2px;
     }
 
@@ -347,7 +336,8 @@ Used to create gradient border.
 
     .gradient_background
     {
-        background: #d2d6da;
+        background-color:#d2d6da;
+        padding:2px;
         box-shadow: 1px 3px 20px 0px rgba(0, 0, 10, 0.5);
     }
 
@@ -362,12 +352,10 @@ Used to create the navagation bar
     #nav_bar
     {
         background-color: #3661a2;
-        margin: 0;
         padding: 6px;
         overflow: hidden;
-
-            
-        border: 3px solid rgb(148,0,108);
+        
+        border: 3px solid #d2d6da;
         border: 3px solid rgba(0,0,0,0);
 
         -webkit-background-clip: padding-box; /* for Safari */
@@ -491,23 +479,27 @@ Additional CSS used for multiple pages
 
 .generic_header_wrapper
 {
-    padding:40px 10px 40px 10px;    
+    padding:40px 10px 0px 10px;    
     background-color:#f9f9f9;
+}
+.generic_header_wrapper_end
+{
+    padding-bottom: 40px;
 }
 .generic_header_title
 {    
+    color: #383838;
     margin-top:0;
     margin-bottom:0;
-    font-family: 'Lobster', cursive;
-    font-size: 2.5rem;
-    color: #222;
+    font-size: 2.4rem;
     font-weight: bold;
+    font-family: serif;
 }
 .generic_header_subtitle
 {
-    color: #333;
+    color: #444444;
     font-size: 1.4rem;
-    font-family: 'Lobster', cursive;
+    font-family: serif;
     margin-left: auto;
     margin-right: auto;
     text-align:center;
@@ -516,7 +508,7 @@ Additional CSS used for multiple pages
 
 .generic_page_text
 {
-    color:#232323;
+    color:#333333;
     font-size: 1.05rem;
     line-height: 1.7;
     font-family: 'Raleway', sans-serif;   
@@ -529,10 +521,12 @@ Additional CSS used for multiple pages
 
 .generic_page_text p
 {
+    margin: 0px;
     text-indent: 0px;
-    padding-bottom:10px;
-    padding-top:10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
+
 
 .text_center
 {    
@@ -579,9 +573,11 @@ Additional CSS used for multiple pages
     {
         position: relative; 
         height: auto;
-        border: 3px solid rgb(148,0,108);
-        border: 3px solid rgba(0,0,0,0);
         background: #f8f8f8;
+        
+        border: 3px solid #d2d6da;
+        border: 3px solid rgba(0,0,0,0);
+
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
     }

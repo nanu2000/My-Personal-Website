@@ -3,19 +3,10 @@ include('Global.php');
 include('FlexPortfolio.php');
 
 startContentType(PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::HOME_NAV_ID, '', array("Styling/FrontPageStyle.min.css"));
-
 startContentContainer();
 ?>
 
-
-<div class = "text_center generic_header_wrapper generic_header_title">Welcome!</div>
-
-<?php
-endContentContainer(); 
-startContentContainer();
-?>
-
-<div class ="front_page_text generic_page_text">
+<div class ="front_page_text generic_page_text generic_page_text_end">
     
 <p class = "text_center">
     <b>The text below is meant to test the layout of this page. It is temporary and will be replaced soon.</b>
