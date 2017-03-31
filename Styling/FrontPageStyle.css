@@ -250,13 +250,13 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 #carousel_right
 {
-    background: rgba(255,255,255,0);
+    background: rgba(255,255,255,.50);
     position: absolute;
     right: 3px;
 }
 #carousel_left
 {
-    background: rgba(255,255,255,0);
+    background: rgba(255,255,255,.50);
     position: absolute;
     left: 3px;
 }

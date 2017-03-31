@@ -65,8 +65,36 @@ function executeMobileJavascript()
 
 
 
+function resetFlexItemPositions()
+{
+        
+    var itemContainer = document.getElementById('flex_item_container');
+
+    var box = itemContainer.getBoundingClientRect();
+
+
+        
+    for(var i = 0; i < flexItems.length; i++)
+    {
+        
+        var lengthOfSlides      = flexItems[i].getBoundingClientRect().width * flexItems.length;
+
+        var sidePadding         = (box.width - lengthOfSlides) / 2;
+        
+        var flexItemHalfWidth = flexItems[i].getBoundingClientRect().width / 2;
+        
+        var startOfContainer    = sidePadding;
+ 
+
+        flexItems[i].style.transform = "translate(" +startOfContainer + "px)";
+        flexItems[i].style.left = 0 + "px";
+        flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
+    }
     
-var flexItems;
+    
+    
+}
+
 
 var resizeFunction = function()
 {
@@ -74,14 +102,16 @@ var resizeFunction = function()
 };
 
 window.addEventListener("resize", resizeFunction);
+    
+    
+    
+    
+    
+var flexItems;
 
 function rotateFlexItems(deltaTime)
 {
     
-    var itemContainer = document.getElementById('flex_item_container');
-    
-    var box = itemContainer.getBoundingClientRect();
-        
     
     for(var i = 0; i < flexItems.length; i++)
     {
@@ -103,55 +133,31 @@ function rotateFlexItems(deltaTime)
         }
     
     
-    
+        var itemContainer = document.getElementById('flex_item_container');
+
+        var box = itemContainer.getBoundingClientRect();
     
         var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
+        
+        var flexItemHalfWidth = flexItems[i].getBoundingClientRect().width / 2;
         
         var sidePadding = (box.width - lengthOfSlides) / 2;
         
         //-(box.width) (0-flexItems[i].startPosition.left = absolute left of screen)
-        var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding + (flexItems[i].getBoundingClientRect().width / 2);
+        var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding - flexItemHalfWidth;
         
         
-        var additor = 
+        console.log(sidePadding);
         
-    
-        console.log(sidePadding + " " + startOfContainer);
-        
-        if(flexItems[i].getBoundingClientRect().right > box.width - sidePadding + (flexItems[i].getBoundingClientRect().width / 2))
+        if(flexItems[i].getBoundingClientRect().left > box.right - sidePadding - flexItemHalfWidth)
         {
             
             flexItems[i].style.left = startOfContainer + "px"; 
         
         }      
         
-       // flexItems[i].style.left = box.left - (flexItems[i].startPosition.left * itemContainer.percentComparedToStartWidth);
         
         
-        
-    }
-    
-    
-    
-}
-function resetFlexItemPositions()
-{
-        
-    var itemContainer = document.getElementById('flex_item_container');
-
-    var box = itemContainer.getBoundingClientRect();
-
-
-        
-    for(var i = 0; i < flexItems.length; i++)
-    {
-        
-        var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
-
-        var sidePadding = (box.width - lengthOfSlides) / 2;
-    
-        flexItems[i].style.left = sidePadding + "px";
-        flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
     }
     
     
@@ -159,16 +165,10 @@ function resetFlexItemPositions()
 }
 function initFlexItems()
 {
-    var items = document.getElementsByClassName("flex_item");
-    
-    flexItems = Array.prototype.slice.call(items, 0);
-    
-    resetFlexItemPositions();
-    
-    flexItems.sort(function(a,b) 
-    {
-        return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
-    });
+    flexItems = document.getElementsByClassName("flex_item");
+ 
+    resetFlexItemPositions();   
+
     window.requestAnimFrame(step);
 }
 
