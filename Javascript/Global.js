@@ -85,11 +85,9 @@ function resetFlexItemPositions()
  
  
  
-
-        flexItems[i].style.transform = "translate(" + startOfContainer + "px)";
-        flexItems[i].style.left = 0 + "px";
+        flexItems[i].centerAdditor = startOfContainer;
+        flexItems[i].style.left = startOfContainer + "px";
         flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
-        
         flexItems[i].accumulator = 0;
     }
     
@@ -116,21 +114,11 @@ function rotateFlexItems(deltaTime)
     {
         
         
-        flexItems[i].style.left = Math.round(parseFloat(flexItems[i].style.left, 10) + deltaTime * 50) + "px";
+        var leftAdditionFloat = parseFloat(flexItems[i].style.left, 10) + deltaTime * 50;
+        
+        var finalTransformation = Math.round(leftAdditionFloat);
        
-        
-        var carouselRightRect = document.getElementById('carousel_right').getBoundingClientRect();
-        var carouselLeftRect  = document.getElementById('carousel_left').getBoundingClientRect();
-        
-        if( (flexItems[i].getBoundingClientRect().right >= carouselRightRect.right) || 
-            (flexItems[i].getBoundingClientRect().left <= carouselLeftRect.left))
-        {
-          flexItems[i].style.opacity = "0";
-        }
-        else
-        {
-            flexItems[i].style.opacity = "1";        
-        }
+    
     
     
         var itemContainer = document.getElementById('flex_item_container');
@@ -152,34 +140,26 @@ function rotateFlexItems(deltaTime)
             flexItems[i].accumulator += overlapDistance;
             
             
-            
-            
             var brother = flexItems[(i + 1) % flexItems.length];
             
-            var dist = -flexItems[i].startPosition.left;
-            
+            var dist = -(flexItems[i].startPosition.left - flexItems[i].centerAdditor);
             dist += (brother.getBoundingClientRect().left);
             dist -= brother.getBoundingClientRect().width;
             
             
-            if(flexItems[i].accumulator >= 1.0)
-            {
-                console.log(flexItems[i].accumulator);
-                
-                dist -= Math.floor(flexItems[i].accumulator);
-                
-                flexItems[i].accumulator -= Math.floor(flexItems[i].accumulator);            
-            
-            
-            }
-            
-            
-            flexItems[i].style.left = dist + "px";
+            finalTransformation = dist;
         
-     
         }      
         
-        
+            
+        if(flexItems[i].accumulator >= 1.0)
+        {
+            finalTransformation += Math.floor(flexItems[i].accumulator);
+           
+            flexItems[i].accumulator -= Math.floor(flexItems[i].accumulator);    
+        }
+            
+        flexItems[i].style.left = finalTransformation + "px";
         
     }
     
@@ -249,13 +229,14 @@ function runJavascript()
         executeMobileJavascript();
     }
     
-    initFlexItems();
     
     
     setupMoreMenu();  
     
     
 }
-
+window.addEventListener("DOMContentLoaded", function() {
+    initFlexItems();
+    });
 /*self explanatory*/
 runJavascript();
