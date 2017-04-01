@@ -81,8 +81,6 @@ function resetFlexItemPositions()
 
         var sidePadding         = (box.width - lengthOfSlides) / 2;
         
-        var flexItemHalfWidth = flexItems[i].getBoundingClientRect().width / 2;
-        
         var startOfContainer    = sidePadding;
  
 
@@ -108,6 +106,7 @@ window.addEventListener("resize", resizeFunction);
     
     
 var flexItems;
+var accumulator = 0;
 
 function rotateFlexItems(deltaTime)
 {
@@ -116,16 +115,16 @@ function rotateFlexItems(deltaTime)
     for(var i = 0; i < flexItems.length; i++)
     {
         
-        flexItems[i].style.left = parseFloat(flexItems[i].style.left, 10) + 1 + "px";
+        flexItems[i].style.left = parseFloat(flexItems[i].style.left, 10) + 2 + "px";
        
         
         var carouselRightRect = document.getElementById('carousel_right').getBoundingClientRect();
         var carouselLeftRect  = document.getElementById('carousel_left').getBoundingClientRect();
         
-        if( (parseFloat(flexItems[i].getBoundingClientRect().right) >= carouselRightRect.right) || 
-            (parseFloat(flexItems[i].getBoundingClientRect().left) <= carouselLeftRect.left))
+        if( (flexItems[i].getBoundingClientRect().right >= carouselRightRect.right) || 
+            (flexItems[i].getBoundingClientRect().left <= carouselLeftRect.left))
         {
-            //flexItems[i].style.opacity = "0";
+           flexItems[i].style.opacity = "0";
         }
         else
         {
@@ -147,13 +146,24 @@ function rotateFlexItems(deltaTime)
         var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding - flexItemHalfWidth;
         
         
-        console.log(sidePadding);
-        
-        if(flexItems[i].getBoundingClientRect().left > box.right - sidePadding - flexItemHalfWidth)
+        if(flexItems[i].getBoundingClientRect().left >= box.right - sidePadding - flexItemHalfWidth)
         {
+            
+            var overlapDistance = flexItems[i].getBoundingClientRect().left - (box.right - sidePadding - flexItemHalfWidth);
+            
+            accumulator += overlapDistance;
+            
+            if(accumulator > 1)
+            {
+                console.log(accumulator);
+                
+                startOfContainer += accumulator;
+                accumulator -= Math.floor(accumulator);            
+            }
             
             flexItems[i].style.left = startOfContainer + "px"; 
         
+     
         }      
         
         
@@ -166,7 +176,7 @@ function rotateFlexItems(deltaTime)
 function initFlexItems()
 {
     flexItems = document.getElementsByClassName("flex_item");
- 
+
     resetFlexItemPositions();   
 
     window.requestAnimFrame(step);
