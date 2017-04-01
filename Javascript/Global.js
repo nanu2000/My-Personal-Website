@@ -118,14 +118,14 @@ window.addEventListener("resize", resizeFunction);
     
     
 var flexItems;
-
-function rotateFlexItems()
+function rotateFlexItems(deltaTime)
 {
     
     for(var i = 0; i < flexItems.length; i++)
     {
         
-        flexItems[i].style.left = parseInt(flexItems[i].style.left, 10) + 1 + "px";
+        
+        flexItems[i].style.left = Math.round(parseFloat(flexItems[i].style.left, 10) + deltaTime * 50) + "px";
        
         
         var carouselRightRect = document.getElementById('carousel_right').getBoundingClientRect();
@@ -224,23 +224,24 @@ window.requestAnimFrame =
                     };
 })();
 
-
-
-
-var deltaTime = 0;
-var lastTime = 0;
-
+var time;
 function step(timestamp) 
 {
-    if(lastTime === null)
+    
+    var now = timestamp;
+    var dt = (now - (time || now)) / 1000;
+ 
+    //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
+    if(dt > .03)
     {
-        lastTime = timestamp;
-    }
-
-    deltaTime = (timestamp - lastTime) / 1000;
-    rotateFlexItems(deltaTime);
+        dt = .016;
+    }    
+ 
+    time = now;
+    
+    
+    rotateFlexItems(dt);
     window.requestAnimFrame(step);  
-    lastTime = timestamp;
 }
 
 

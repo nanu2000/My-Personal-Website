@@ -29,8 +29,6 @@ startContentContainer();
     font-weight: 700;    font-family: 'Raleway',sans-serif;">
 My Projects
 </div>
-
-
 <?php
 endContentContainer();
 echoPortfolio();
