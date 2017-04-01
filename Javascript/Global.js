@@ -107,23 +107,25 @@ window.addEventListener("resize", resizeFunction);
     
     
 var flexItems;
+var pxPerSecond = 100;
 function rotateFlexItems(deltaTime)
 {
+    
+    var flexItemToBeLooped = -1;
     
     for(var i = 0; i < flexItems.length; i++)
     {
         
         
-        var leftAdditionFloat = parseFloat(flexItems[i].style.left, 10) + deltaTime * 50;
+        var leftAdditionFloat = parseFloat(flexItems[i].style.left, 10) + deltaTime * pxPerSecond;
         
         var finalTransformation = Math.round(leftAdditionFloat);
        
-    
-    
-    
+       
         var itemContainer = document.getElementById('flex_item_container');
 
         var box = itemContainer.getBoundingClientRect();
+        
     
         var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
         
@@ -135,35 +137,30 @@ function rotateFlexItems(deltaTime)
         if(flexItems[i].getBoundingClientRect().left >= box.right - sidePadding - flexItemHalfWidth) 
         {
             
-            var overlapDistance = flexItems[i].getBoundingClientRect().left - (box.right - sidePadding - flexItemHalfWidth);
-            
-            flexItems[i].accumulator += overlapDistance;
-            
-            
-            var brother = flexItems[(i + 1) % flexItems.length];
-            
-            var dist = -(flexItems[i].startPosition.left - flexItems[i].centerAdditor);
-            dist += (brother.getBoundingClientRect().left);
-            dist -= brother.getBoundingClientRect().width;
-            
-            
-            finalTransformation = dist;
+            flexItemToBeLooped = i; // we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them.
+                    
+        }    
         
-        }      
-        
-            
-        if(flexItems[i].accumulator >= 1.0)
-        {
-            finalTransformation += Math.floor(flexItems[i].accumulator);
-           
-            flexItems[i].accumulator -= Math.floor(flexItems[i].accumulator);    
-        }
             
         flexItems[i].style.left = finalTransformation + "px";
         
     }
     
     
+    
+    if(flexItemToBeLooped !== -1)
+    {
+        var brother = flexItems[(flexItemToBeLooped + 1) % flexItems.length];
+
+        var dist = -(flexItems[flexItemToBeLooped].startPosition.left - flexItems[flexItemToBeLooped].centerAdditor);
+
+        dist += brother.getBoundingClientRect().left;
+
+        dist -= brother.getBoundingClientRect().width;
+
+        flexItems[flexItemToBeLooped].style.left = dist + "px";
+
+    }
     
 }
 function initFlexItems()
@@ -228,8 +225,6 @@ function runJavascript()
     {     
         executeMobileJavascript();
     }
-    
-    
     
     setupMoreMenu();  
     

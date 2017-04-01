@@ -21,14 +21,7 @@ function createFlexPageFromStringOfItems($items)
 {
     ?>
 
-    <ul id="flex_item_container">  
-        
-        <li><div id = "carousel_left"></div></li>
-        <li><div id = "carousel_right"></div></li>
-        
-        <?php echo($items); ?>
-        
-    </ul>
+    <ul id="flex_item_container"><?php echo($items); ?></ul>
 
     <?php
 }
