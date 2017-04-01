@@ -119,12 +119,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     padding-left: 10px;
     padding-right: 10px;
 }
-.desktop_notifier
-{
-    width:100%;
-    display:inline-block;
-    box-sizing:border-box;
-}
 
 .flex_item
 {
@@ -186,10 +180,11 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 .flex_item
 {
     overflow:hidden;
-    flex-grow: 1;    
     
-    border: 3px solid #d2d6da;
+    left:0px;
+    
     border: 3px solid rgba(0,0,0,0);
+    
 
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */  

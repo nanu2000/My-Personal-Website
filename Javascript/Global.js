@@ -81,21 +81,33 @@ function resetFlexItemPositions()
 
         var sidePadding         = (box.width - lengthOfSlides) / 2;
         
-        var startOfContainer    = sidePadding;
+        var startOfContainer    = Math.round(sidePadding);
+ 
+ 
  
 
-        flexItems[i].style.transform = "translate(" +startOfContainer + "px)";
+        flexItems[i].style.transform = "translate(" + startOfContainer + "px)";
         flexItems[i].style.left = 0 + "px";
         flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
+        
+        flexItems[i].accumulator = 0;
     }
     
     
     
 }
 
-
+var originalWindowWidth = -1;
+var currentPercentOfOriginalWindowWidth = 1;
 var resizeFunction = function()
 {
+    if(originalWindowWidth === -1)
+    {
+        originalWindowWidth = window.innerWidth;
+    }
+    
+    currentPercentOfOriginalWindowWidth = window.innerWidth / originalWindowWidth;
+    
     resetFlexItemPositions();
 };
 
@@ -106,16 +118,14 @@ window.addEventListener("resize", resizeFunction);
     
     
 var flexItems;
-var accumulator = 0;
 
-function rotateFlexItems(deltaTime)
+function rotateFlexItems()
 {
-    
     
     for(var i = 0; i < flexItems.length; i++)
     {
         
-        flexItems[i].style.left = parseFloat(flexItems[i].style.left, 10) + 2 + "px";
+        flexItems[i].style.left = parseInt(flexItems[i].style.left, 10) + 1 + "px";
        
         
         var carouselRightRect = document.getElementById('carousel_right').getBoundingClientRect();
@@ -124,7 +134,7 @@ function rotateFlexItems(deltaTime)
         if( (flexItems[i].getBoundingClientRect().right >= carouselRightRect.right) || 
             (flexItems[i].getBoundingClientRect().left <= carouselLeftRect.left))
         {
-           flexItems[i].style.opacity = "0";
+          //flexItems[i].style.opacity = "0";
         }
         else
         {
@@ -142,26 +152,38 @@ function rotateFlexItems(deltaTime)
         
         var sidePadding = (box.width - lengthOfSlides) / 2;
         
-        //-(box.width) (0-flexItems[i].startPosition.left = absolute left of screen)
-        var startOfContainer = -flexItems[i].startPosition.left + box.left + sidePadding - flexItemHalfWidth;
         
-        
-        if(flexItems[i].getBoundingClientRect().left >= box.right - sidePadding - flexItemHalfWidth)
+        if(flexItems[i].getBoundingClientRect().left >= box.right - sidePadding - flexItemHalfWidth) 
         {
             
             var overlapDistance = flexItems[i].getBoundingClientRect().left - (box.right - sidePadding - flexItemHalfWidth);
             
-            accumulator += overlapDistance;
+            flexItems[i].accumulator += overlapDistance;
             
-            if(accumulator > 1)
+            
+            
+            
+            var brother = flexItems[(i + 1) % flexItems.length];
+            
+            var dist = -flexItems[i].startPosition.left;
+            
+            dist += (brother.getBoundingClientRect().left);
+            dist -= brother.getBoundingClientRect().width;
+            
+            
+            if(flexItems[i].accumulator >= 1.0)
             {
-                console.log(accumulator);
+                console.log(flexItems[i].accumulator);
                 
-                startOfContainer += accumulator;
-                accumulator -= Math.floor(accumulator);            
+                dist -= Math.floor(flexItems[i].accumulator);
+                
+                flexItems[i].accumulator -= Math.floor(flexItems[i].accumulator);            
+            
+            
             }
             
-            flexItems[i].style.left = startOfContainer + "px"; 
+            
+            flexItems[i].style.left = dist + "px";
         
      
         }      
@@ -174,9 +196,16 @@ function rotateFlexItems(deltaTime)
     
 }
 function initFlexItems()
-{
-    flexItems = document.getElementsByClassName("flex_item");
-
+{ 
+    var items = document.getElementsByClassName("flex_item");
+    
+    flexItems = Array.prototype.slice.call(items, 0);
+    
+    flexItems.sort(function(a,b) 
+    {
+        return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
+    });
+    
     resetFlexItemPositions();   
 
     window.requestAnimFrame(step);
@@ -216,8 +245,6 @@ function step(timestamp)
 
 
 
-
-
 /**************************
  *Runs when file is loaded.
  *This is the entry function.
@@ -230,10 +257,10 @@ function runJavascript()
         executeMobileJavascript();
     }
     
+    initFlexItems();
     
     
     setupMoreMenu();  
-    initFlexItems();
     
     
 }

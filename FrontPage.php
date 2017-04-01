@@ -20,17 +20,6 @@ startContentContainer();
 
 <?php
 endContentContainer();
-startContentContainer();
-?>
-
-<div class="desktop_notifier flex_item_text_snippet">
-<div class = "text_center text_item_header">
-My Projects
-</div>
-</div>
-        
-<?php
-endContentContainer();
 echoPortfolio();
 endDefaultContent();
 ?>
