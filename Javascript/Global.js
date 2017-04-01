@@ -97,17 +97,8 @@ function resetFlexItemPositions()
     
 }
 
-var originalWindowWidth = -1;
-var currentPercentOfOriginalWindowWidth = 1;
 var resizeFunction = function()
 {
-    if(originalWindowWidth === -1)
-    {
-        originalWindowWidth = window.innerWidth;
-    }
-    
-    currentPercentOfOriginalWindowWidth = window.innerWidth / originalWindowWidth;
-    
     resetFlexItemPositions();
 };
 
