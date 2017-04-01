@@ -235,8 +235,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 #carousel_right, #carousel_left
 {
-    
-    background-color: rgb(255, 255, 255);
     width: 30%;
     z-index: 7;
     top:3px;
@@ -245,13 +243,13 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 #carousel_right
 {
-    background: rgba(255,255,255,.50);
+    background: linear-gradient(to left, rgba(255,255,255,1) 49%,rgba(255,255,255,0.57) 71%,rgba(255,255,255,0) 100%);
     position: absolute;
     right: 3px;
 }
 #carousel_left
 {
-    background: rgba(255,255,255,.50);
+    background: linear-gradient(to right, rgba(255,255,255,1) 49%,rgba(255,255,255,0.57) 71%,rgba(255,255,255,0) 100%);
     position: absolute;
     left: 3px;
 }

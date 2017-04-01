@@ -134,7 +134,7 @@ function rotateFlexItems()
         if( (flexItems[i].getBoundingClientRect().right >= carouselRightRect.right) || 
             (flexItems[i].getBoundingClientRect().left <= carouselLeftRect.left))
         {
-          //flexItems[i].style.opacity = "0";
+          flexItems[i].style.opacity = "0";
         }
         else
         {

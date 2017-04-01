@@ -20,6 +20,19 @@ startContentContainer();
 
 <?php
 endContentContainer();
+startContentContainer();
+?>
+<div class ="text_center" style = "
+    padding: 18px;
+    color: #1d2235;
+    font-size: 1.2rem;
+    font-weight: 700;    font-family: 'Raleway',sans-serif;">
+My Projects
+</div>
+
+
+<?php
+endContentContainer();
 echoPortfolio();
 endDefaultContent();
 ?>
