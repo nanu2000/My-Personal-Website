@@ -63,16 +63,12 @@ function executeMobileJavascript()
     }
 }
 
-
-
 function resetFlexItemPositions()
 {
         
     var itemContainer = document.getElementById('flex_item_container');
 
     var box = itemContainer.getBoundingClientRect();
-
-
         
     for(var i = 0; i < flexItems.length; i++)
     {
@@ -93,19 +89,11 @@ function resetFlexItemPositions()
     
     
     
-}
-
-var resizeFunction = function()
-{
-    resetFlexItemPositions();
-};
-
-window.addEventListener("resize", resizeFunction);
+}  
     
     
     
-    
-    
+var boxWidth = 0;
 var flexItems;
 var pxPerSecond = 100;
 function rotateFlexItems(deltaTime)
@@ -113,19 +101,24 @@ function rotateFlexItems(deltaTime)
     
     var flexItemToBeLooped = -1;
     
+    var itemContainer = document.getElementById('flex_item_container');
+
+    var box = itemContainer.getBoundingClientRect();
+        
+    if(boxWidth !== box.width)
+    {
+        resetFlexItemPositions();
+        boxWidth = box.width;
+    }
+    
+    
     for(var i = 0; i < flexItems.length; i++)
     {
-        
         
         var leftAdditionFloat = parseFloat(flexItems[i].style.left, 10) + deltaTime * pxPerSecond;
         
         var finalTransformation = Math.round(leftAdditionFloat);
        
-       
-        var itemContainer = document.getElementById('flex_item_container');
-
-        var box = itemContainer.getBoundingClientRect();
-        
     
         var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
         
@@ -174,6 +167,13 @@ function initFlexItems()
         return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
     });
     
+        
+    var itemContainer = document.getElementById('flex_item_container');
+
+    var box = itemContainer.getBoundingClientRect();
+    
+    boxWidth = box.width;
+
     resetFlexItemPositions();   
 
     window.requestAnimFrame(step);
@@ -226,12 +226,10 @@ function runJavascript()
         executeMobileJavascript();
     }
     
+    initFlexItems();
+    
     setupMoreMenu();  
     
-    
 }
-window.addEventListener("DOMContentLoaded", function() {
-    initFlexItems();
-    });
 /*self explanatory*/
 runJavascript();
