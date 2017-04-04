@@ -63,6 +63,8 @@ function executeMobileJavascript()
     }
 }
 
+
+
 function resetFlexItemPositions()
 {
         
@@ -73,18 +75,17 @@ function resetFlexItemPositions()
     for(var i = 0; i < flexItems.length; i++)
     {
         
-        var lengthOfSlides      = flexItems[i].getBoundingClientRect().width * flexItems.length;
+        var lengthOfSlides          = flexItems[i].getBoundingClientRect().width * flexItems.length;
 
-        var sidePadding         = (box.width - lengthOfSlides) / 2;
+        var startOfContainer         = (box.width - lengthOfSlides) / 2;
         
-        var startOfContainer    = Math.round(sidePadding);
  
  
  
         flexItems[i].centerAdditor = startOfContainer;
-        flexItems[i].style.left = startOfContainer + "px";
+        flexItems[i].updateXPosition(startOfContainer);
         flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
-        flexItems[i].accumulator = 0;
+        
     }
     
     
@@ -92,10 +93,9 @@ function resetFlexItemPositions()
 }  
     
     
-    
 var boxWidth = 0;
 var flexItems;
-var pxPerSecond = 100;
+var pxPerSecond = 30;
 function rotateFlexItems(deltaTime)
 {
     
@@ -114,10 +114,6 @@ function rotateFlexItems(deltaTime)
     
     for(var i = 0; i < flexItems.length; i++)
     {
-        
-        var leftAdditionFloat = parseFloat(flexItems[i].style.left, 10) + deltaTime * pxPerSecond;
-        
-        var finalTransformation = Math.round(leftAdditionFloat);
        
     
         var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
@@ -129,14 +125,12 @@ function rotateFlexItems(deltaTime)
         
         if(flexItems[i].getBoundingClientRect().left >= box.right - sidePadding - flexItemHalfWidth) 
         {
-            
             flexItemToBeLooped = i; // we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them.
-                    
         }    
         
             
-        flexItems[i].style.left = finalTransformation + "px";
-        
+        var finalTransformation = flexItems[i].lastTranslateX + deltaTime * pxPerSecond;
+        flexItems[i].updateXPosition(finalTransformation);
     }
     
     
@@ -151,7 +145,7 @@ function rotateFlexItems(deltaTime)
 
         dist -= brother.getBoundingClientRect().width;
 
-        flexItems[flexItemToBeLooped].style.left = dist + "px";
+        flexItems[flexItemToBeLooped].updateXPosition(dist);
 
     }
     
@@ -167,6 +161,15 @@ function initFlexItems()
         return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
     });
     
+    for(var i = 0; i < flexItems.length; i++)
+    {
+        flexItems[i].updateXPosition = function(newXPosition)
+        {
+            this.lastTranslateX = newXPosition;
+            this.style.transform = "translateX(" + newXPosition + "px)";
+        };
+    }
+
         
     var itemContainer = document.getElementById('flex_item_container');
 
