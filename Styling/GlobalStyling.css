@@ -61,16 +61,15 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {
     body
     {
-        padding:3px 15% 3px 15%;
+        width:70%;
     }
-    
 }
 
 @media only screen and (min-width : 1281px) and (max-width : 1499px) 
 {
     body
     {
-        padding:3px 7% 3px 7%;
+        width:80%;
     }
     
 }
@@ -80,7 +79,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     {
         padding:3px;
     }
-    
     .generic_page_text
     { 
         padding: 20px 20% 0px 20%;
@@ -90,7 +88,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
         padding-bottom: 20px;
     }
 }
-
 
 
 /************************************************************************
