@@ -142,31 +142,30 @@ function CarouselItem(element)
 function Caurousel(containerAlias, itemAlias, pxPerSecond)
 {
     
-    this.container;
-    this.items = Array();
-
-    this.currentContainerOrientation;
-    
+    this._container;
+    this._items;
+    this._currentContainerOrientation;
     this._pxPerSecond = pxPerSecond;
     
     
     this.initialise = function()
     {
         var domItems    = document.getElementsByClassName(itemAlias);
-        this.container  = document.getElementById(containerAlias);
+        this._container  = document.getElementById(containerAlias);
 
+        this._items = Array();
 
         for(var i = 0; i < domItems.length; i++)
         {
-            this.items.push(new CarouselItem(domItems[i]));
+            this._items.push(new CarouselItem(domItems[i]));
         }
 
-        this.items.sort(function(a,b) 
+        this._items.sort(function(a,b) 
         {
             return a.getRect().left > b.getRect().left;
         });
 
-        this.currentContainerOrientation = this.container.getBoundingClientRect();
+        this._currentContainerOrientation = this._container.getBoundingClientRect();
 
         this.resetAllItemPositions();   
     };
@@ -174,24 +173,24 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
     
     this.resetAllItemPositions = function()
     {
-        for(var i = 0; i < this.items.length; i++)
+        for(var i = 0; i < this._items.length; i++)
         {
-            this.items[i].recalculateAndResetToNewPosition(this.currentContainerOrientation.width, this.items.length);
+            this._items[i].recalculateAndResetToNewPosition(this._currentContainerOrientation.width, this._items.length);
         }
     };
     
     
-    this.containerOrientationHasChanged = function()
+    this._containerOrientationHasChanged = function()
     {
-        var newRect = this.container.getBoundingClientRect();
+        var newRect = this._container.getBoundingClientRect();
         if
         (
-            this.currentContainerOrientation.width  !== newRect.width || 
-            this.currentContainerOrientation.left   !== newRect.left || 
-            this.currentContainerOrientation.top    !== newRect.top 
+            this._currentContainerOrientation.width  !== newRect.width || 
+            this._currentContainerOrientation.left   !== newRect.left || 
+            this._currentContainerOrientation.top    !== newRect.top 
         )
         {
-            this.currentContainerOrientation = newRect;
+            this._currentContainerOrientation = newRect;
             return true;
         }
         
@@ -201,48 +200,48 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
     
     this.getContainerCenter = function()
     {
-        return this.currentContainerOrientation.left + this.currentContainerOrientation.width / 2;
+        return this._currentContainerOrientation.left + this._currentContainerOrientation.width / 2;
     };
     
     
-    this.loopItem = function(flexItemToBeLooped)
+    this._loopItem = function(flexItemToBeLooped)
     {
         
-        var brother = this.items[(flexItemToBeLooped + 1) % this.items.length];
+        var brother = this._items[(flexItemToBeLooped + 1) % this._items.length];
 
         var positionBehindBrother   = 
-            this.items[flexItemToBeLooped].getZeroPosition()    + 
-            (brother.getRect().left - this.items[flexItemToBeLooped].getRect().width);
+            this._items[flexItemToBeLooped].getZeroPosition()    + 
+            (brother.getRect().left - this._items[flexItemToBeLooped].getRect().width);
         
-        this.items[flexItemToBeLooped].updateXPosition(positionBehindBrother);       
+        this._items[flexItemToBeLooped].updateXPosition(positionBehindBrother);       
         
     };
     
     
-    this.updateItem = function(index, deltaTime)
+    this._updateItem = function(index, deltaTime)
     {
-        var itemRect = this.items[index].getRect();
+        var itemRect = this._items[index].getRect();
 
-        if(itemRect.left >= this.items[index].getLoopPosition(this.currentContainerOrientation, this.items.length)) 
+        if(itemRect.left >= this._items[index].getLoopPosition(this._currentContainerOrientation, this._items.length)) 
         {
             // we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them. 
             // We return the index to notify the caller that this item needs to be looped
             return index;         
         }    
 
-        if(this.items[index].getCenter() > this.getContainerCenter() - itemRect.width &&
-           this.items[index].getCenter() < this.getContainerCenter() + itemRect.width)
+        if(this._items[index].getCenter() > this.getContainerCenter() - itemRect.width &&
+           this._items[index].getCenter() < this.getContainerCenter() + itemRect.width)
         {
-            this.items[index]._element.querySelector('a').className = "hover";
+            this._items[index]._element.querySelector('a').className = "hover";
         }
         else
         {
-            this.items[index]._element.querySelector('a').className = "";
+            this._items[index]._element.querySelector('a').className = "";
         }
         
-        var finalTransformation = this.items[index].getCurrentXTranslation() + deltaTime * this._pxPerSecond;
+        var finalTransformation = this._items[index].getCurrentXTranslation() + deltaTime * this._pxPerSecond;
         
-        this.items[index].updateXPosition(finalTransformation);
+        this._items[index].updateXPosition(finalTransformation);
         
         return -1;
 
@@ -252,16 +251,16 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
     this.update = function(deltaTime)
     {
 
-        if(this.containerOrientationHasChanged())
+        if(this._containerOrientationHasChanged())
         {
             this.resetAllItemPositions();
         }
         
         var flexItemToBeLooped = -1;
         
-        for(var i = 0; i < this.items.length; i++)
+        for(var i = 0; i < this._items.length; i++)
         {
-            var itemShouldBeLooped = this.updateItem(i, deltaTime);
+            var itemShouldBeLooped = this._updateItem(i, deltaTime);
             
             if(itemShouldBeLooped !== -1)
             {
@@ -271,7 +270,7 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
 
         if(flexItemToBeLooped !== -1)
         {
-            this.loopItem(flexItemToBeLooped);
+            this._loopItem(flexItemToBeLooped);
         }
     };
     
