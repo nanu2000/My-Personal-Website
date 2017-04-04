@@ -8,29 +8,19 @@ function Animator(animation)
     this._animation = animation;
     this._stop = false;
     
-    this.requestAnimationFramePolyFill = 
-        window.requestAnimationFrame        || 
-        window.webkitRequestAnimationFrame  || 
-        window.mozRequestAnimationFrame     ||
-        function(callback)
-        {
-            window.setTimeout(callback, 1000 / 60);
-        };
-        
-        
-    this.requestNextFrame = function()
+    
+    this.stop = function()
     {
-        var that = this;
-        
-        this.requestAnimationFramePolyFill.call
-        (
-            window,
-            function(now)
-            {
-                that._step(now);
-            }
-        );  
-    };    
+        this._stop = true;
+    };
+    
+    
+    this.start = function()
+    {
+        this._stop = false;
+        this.requestNextFrame();
+   };
+   
         
     this._step = function(now) 
     {
@@ -54,16 +44,30 @@ function Animator(animation)
         this.requestNextFrame();
     };
     
-    this.stop = function()
-    {
-        this._stop = true;
-    };
     
-    this.start = function()
+    this.requestAnimationFramePolyFill = 
+        window.requestAnimationFrame        || 
+        window.webkitRequestAnimationFrame  || 
+        window.mozRequestAnimationFrame     ||
+        function(callback)
+        {
+            window.setTimeout(callback, 1000 / 60);
+        };
+        
+        
+    this.requestNextFrame = function()
     {
-        this._stop = false;
-        this.requestNextFrame();
-   };
+        var animatorObject = this;
+        
+        this.requestAnimationFramePolyFill.call
+        (
+            window,
+            function(now)
+            {
+                animatorObject._step(now);
+            }
+        );  
+    };    
     
 }
 
