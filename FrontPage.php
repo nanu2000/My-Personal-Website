@@ -32,5 +32,5 @@ My Projects
 <?php
 endContentContainer();
 echoPortfolio();
-endDefaultContent();
+endDefaultContent('', array("Javascript/FrontPage.min.js"));
 ?>
