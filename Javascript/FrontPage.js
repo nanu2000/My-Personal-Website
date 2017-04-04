@@ -1,6 +1,4 @@
 
-
-
 function Animator(animation) 
 {
     
@@ -72,142 +70,222 @@ function Animator(animation)
 }
 
 
-
-
-function resetFlexItemPositions()
-{
-        
-    var itemContainer = document.getElementById('flex_item_container');
-
-    var box = itemContainer.getBoundingClientRect();
-        
-    for(var i = 0; i < flexItems.length; i++)
-    {
-        
-        var lengthOfSlides          = flexItems[i].getBoundingClientRect().width * flexItems.length;
-
-        var startOfContainer         = (box.width - lengthOfSlides) / 2;
-        
- 
- 
- 
-        flexItems[i].centerAdditor = startOfContainer;
-        flexItems[i].updateXPosition(startOfContainer);
-        flexItems[i].startPosition = flexItems[i].getBoundingClientRect();
-        
-    }
-    
-    
-    
-}  
-    
-    
-var boxWidth = 0;
-var flexItems;
-var pxPerSecond = 30;
-function rotateFlexItems(deltaTime)
+function CarouselItem(element)
 {
     
-    var flexItemToBeLooped = -1;
+    this._element = element;
     
-    var itemContainer = document.getElementById('flex_item_container');
+    this._startPosition;
+    this._centerAdditor;
+    this._currentTranslateX;
+    
+    
+    this.getCurrentXTranslation = function()
+    {
+        return this._currentTranslateX;
+    };
+    
+    
+    this.updateXPosition = function(newXPosition)
+    {
+        this._currentTranslateX = newXPosition;
+        this._element.style.transform = "translateX(" + newXPosition + "px)";
+    };
+    
+    
+    this.getRect = function()
+    {
+        return this._element.getBoundingClientRect();
+    };
+    
+    
+    this.getCenter = function()
+    {
+        return this.getRect().left + this.getRect().width / 2;
+    };
+    
+    
+    this.getZeroPosition = function()
+    {
+        return -(this._startPosition.left - this._centerAdditor);  
+    };
+        
+        
+    this.getLoopPosition = function(containerOrientation, amountOfItemsInContainer)
+    {
+        
+        var lengthOfSlides      = this.getRect().width * amountOfItemsInContainer;
 
-    var box = itemContainer.getBoundingClientRect();
-        
-    if(boxWidth !== box.width)
+        var flexItemHalfWidth   = this.getRect().width / 2;
+
+        var sidePadding         = (containerOrientation.width - lengthOfSlides) / 2;
+
+        return containerOrientation.right - sidePadding - flexItemHalfWidth;
+
+    };
+    
+    
+    this.recalculateAndResetToNewPosition = function(containerWidth, amountOfItems)
     {
-        resetFlexItemPositions();
-        boxWidth = box.width;
-    }
+        
+        var lengthOfAllSlides   = this.getRect().width * amountOfItems;
+
+        var startOfContainer    = (containerWidth - lengthOfAllSlides) / 2;
+        
+        this._centerAdditor = startOfContainer;
+        this.updateXPosition(startOfContainer);
+        this._startPosition = this.getRect();
+    };
+    
+}
+
+function Caurousel(containerAlias, itemAlias, pxPerSecond)
+{
+    
+    this.container;
+    this.items = Array();
+
+    this.currentContainerOrientation;
+    
+    this._pxPerSecond = pxPerSecond;
     
     
-    for(var i = 0; i < flexItems.length; i++)
+    this.initialise = function()
     {
-       
-    
-        var lengthOfSlides = flexItems[i].getBoundingClientRect().width * flexItems.length;
-        
-        var flexItemHalfWidth = flexItems[i].getBoundingClientRect().width / 2;
-        
-        var sidePadding = (box.width - lengthOfSlides) / 2;
-        
-        
-        if(flexItems[i].getBoundingClientRect().left >= box.right - sidePadding - flexItemHalfWidth) 
+        var domItems    = document.getElementsByClassName(itemAlias);
+        this.container  = document.getElementById(containerAlias);
+
+
+        for(var i = 0; i < domItems.length; i++)
         {
-            flexItemToBeLooped = i; // we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them.
+            this.items.push(new CarouselItem(domItems[i]));
+        }
+
+        this.items.sort(function(a,b) 
+        {
+            return a.getRect().left > b.getRect().left;
+        });
+
+        this.currentContainerOrientation = this.container.getBoundingClientRect();
+
+        this.resetAllItemPositions();   
+    };
+    
+    
+    this.resetAllItemPositions = function()
+    {
+        for(var i = 0; i < this.items.length; i++)
+        {
+            this.items[i].recalculateAndResetToNewPosition(this.currentContainerOrientation.width, this.items.length);
+        }
+    };
+    
+    
+    this.containerOrientationHasChanged = function()
+    {
+        var newRect = this.container.getBoundingClientRect();
+        if
+        (
+            this.currentContainerOrientation.width  !== newRect.width || 
+            this.currentContainerOrientation.left   !== newRect.left || 
+            this.currentContainerOrientation.top    !== newRect.top 
+        )
+        {
+            this.currentContainerOrientation = newRect;
+            return true;
+        }
+        
+        return false;
+    };
+    
+    
+    this.getContainerCenter = function()
+    {
+        return this.currentContainerOrientation.left + this.currentContainerOrientation.width / 2;
+    };
+    
+    
+    this.loopItem = function(flexItemToBeLooped)
+    {
+        
+        var brother = this.items[(flexItemToBeLooped + 1) % this.items.length];
+
+        var positionBehindBrother   = 
+            this.items[flexItemToBeLooped].getZeroPosition()    + 
+            (brother.getRect().left - this.items[flexItemToBeLooped].getRect().width);
+        
+        this.items[flexItemToBeLooped].updateXPosition(positionBehindBrother);       
+        
+    };
+    
+    
+    this.updateItem = function(index, deltaTime)
+    {
+        var itemRect = this.items[index].getRect();
+
+        if(itemRect.left >= this.items[index].getLoopPosition(this.currentContainerOrientation, this.items.length)) 
+        {
+            // we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them. 
+            // We return the index to notify the caller that this item needs to be looped
+            return index;         
         }    
-        
-            
-        var finalTransformation = flexItems[i].lastTranslateX + deltaTime * pxPerSecond;
-        flexItems[i].updateXPosition(finalTransformation);
-        
-        
-        
-        
-        if(flexItems[i].getBoundingClientRect().left + flexItemHalfWidth > (box.left + box.width / 2) - flexItems[i].getBoundingClientRect().width &&
-           flexItems[i].getBoundingClientRect().left + flexItemHalfWidth < (box.left + box.width / 2) + flexItems[i].getBoundingClientRect().width)
+
+        if(this.items[index].getCenter() > this.getContainerCenter() - itemRect.width &&
+           this.items[index].getCenter() < this.getContainerCenter() + itemRect.width)
         {
-            flexItems[i].querySelector('a').className = "hover";
+            this.items[index]._element.querySelector('a').className = "hover";
         }
         else
         {
-            flexItems[i].querySelector('a').className = "";
+            this.items[index]._element.querySelector('a').className = "";
         }
         
+        var finalTransformation = this.items[index].getCurrentXTranslation() + deltaTime * this._pxPerSecond;
         
-    }
+        this.items[index].updateXPosition(finalTransformation);
+        
+        return -1;
+
+    };
     
     
-    
-    if(flexItemToBeLooped !== -1)
+    this.update = function(deltaTime)
     {
-        var brother = flexItems[(flexItemToBeLooped + 1) % flexItems.length];
 
-        var dist = -(flexItems[flexItemToBeLooped].startPosition.left - flexItems[flexItemToBeLooped].centerAdditor);
+        if(this.containerOrientationHasChanged())
+        {
+            this.resetAllItemPositions();
+        }
+        
+        var flexItemToBeLooped = -1;
+        
+        for(var i = 0; i < this.items.length; i++)
+        {
+            var itemShouldBeLooped = this.updateItem(i, deltaTime);
+            
+            if(itemShouldBeLooped !== -1)
+            {
+                flexItemToBeLooped = itemShouldBeLooped;
+            }
+        }
 
-        dist += brother.getBoundingClientRect().left;
-
-        dist -= brother.getBoundingClientRect().width;
-
-        flexItems[flexItemToBeLooped].updateXPosition(dist);
-
-    }
+        if(flexItemToBeLooped !== -1)
+        {
+            this.loopItem(flexItemToBeLooped);
+        }
+    };
     
 }
 
 
-
-
-var animator = new Animator(rotateFlexItems);
-
 function initFlexItems()
 { 
-    var items = document.getElementsByClassName("flex_item");
     
-    flexItems = Array.prototype.slice.call(items, 0);
+    var carousel = new Caurousel('flex_item_container', 'flex_item', 30);
     
-    flexItems.sort(function(a,b) 
-    {
-        return a.getBoundingClientRect().left > b.getBoundingClientRect().left;
-    });
+    carousel.initialise();
     
-    for(var i = 0; i < flexItems.length; i++)
-    {
-        flexItems[i].updateXPosition = function(newXPosition)
-        {
-            this.lastTranslateX = newXPosition;
-            this.style.transform = "translateX(" + newXPosition + "px)";
-        };
-    }
-
-        
-    var itemContainer = document.getElementById('flex_item_container');
-
-    var box = itemContainer.getBoundingClientRect();
-    
-    boxWidth = box.width;
-
-    resetFlexItemPositions();   
+    var animator = new Animator(carousel.update.bind(carousel));
 
     animator.start();
 }
