@@ -179,17 +179,27 @@ For really small windows, devices, and phones
     {
         padding-left: 20px;
     }
-    .generic_page_text
-    { 
-        padding: 15px 5% 0px 5%;
-    }
     .generic_page_text_end
     {
         padding-bottom: 15px;
     }
 }
 
+@media only screen and (min-width : 351px) and (max-width : 666px)
+{
+    .generic_page_text
+    { 
+        padding: 15px 10% 0px 10%;
+    }
+}
 
+@media only screen and (max-width : 350px)
+{
+    .generic_page_text
+    { 
+        padding: 15px 5% 0px 5%;
+    }
+}
 
 /*For mobile nav bar*/
 /********************/

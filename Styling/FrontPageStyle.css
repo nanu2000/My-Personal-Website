@@ -53,37 +53,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     opacity: 1.0;
 }
 
-@media only screen and (max-width : 1250px) and (min-width : 1000px) 
-{ 
-    .flex_text_wrapper .wrapper_description_text
-    {
-        font-size: .8rem;
-    }
-}
-@media only screen and (max-width : 400px)
-{ 
-    .flex_text_wrapper .wrapper_description_text
-    {
-        font-size: .9rem;
-    }
-}
-.front_page_text
-{
-    padding:40px 0 40px 0;
-}
-.flex_text_wrapper .wrapper_description_text
-{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.flex_item .flex_bg
-{
-    width:100%;
-    filter: alpha(opacity=100);
-    opacity: 1.0;
-}
-
 #flex_item_container
 {
   position: relative;
@@ -92,29 +61,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
   list-style: none;
   overflow:hidden;
   white-space: nowrap;
-}
-
-.flex_item_text_snippet
-{    
-    font-family: 'Raleway', sans-serif;
-    margin: 0px;
-    background-color: #f9f9f9;
-    padding:15px;
-}
-
-.flex_item_text_snippet .text_item_header
-{
-    padding:4px;
-    color : #1d2235;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-.flex_item_text_snippet .text_item_small_text
-{
-    padding:4px;
-    color:#444444;
-    font-size: 1rem;
-    font-weight: 700;
 }
 
 .flex_item
@@ -137,7 +83,10 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 .flex_item .flex_bg
 {
-    transition: opacity .5s  ease;
+    width:100%;
+    filter: alpha(opacity=100);
+    opacity: 1.0;
+    transition: opacity .75s  ease;
 }
 
 .flex_text_wrapper
@@ -148,6 +97,8 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 .flex_text_wrapper .wrapper_description_text
 {
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: 'Raleway', sans-serif;
     display: table-cell; 
     text-align: center;
@@ -175,8 +126,6 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     color: #fff;
     text-decoration: none; 
 }
-#carousel_overflow_left{}
-#carousel_overflow_right{}
 
 
 .carousel_overflow_buffer
