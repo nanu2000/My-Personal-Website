@@ -227,9 +227,9 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
             // We return the index to notify the caller that this item needs to be looped
             return index;         
         }    
-
+        
         if(this._items[index].getCenter() > this.getContainerCenter() - itemRect.width &&
-           this._items[index].getCenter() < this.getContainerCenter() + itemRect.width)
+           this._items[index].getCenter() < this.getContainerCenter() + itemRect.width) 
         {
             this._items[index]._element.querySelector('a').className = "hover";
         }
@@ -269,7 +269,6 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
         
         
         
-        console.log(sidePadding);
     };
     
     
@@ -279,9 +278,7 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
         if(this._containerOrientationHasChanged())
         {
             this.resetAllItemPositions();
-            this._updateOverflowHandlers();
-            
-           
+            this._updateOverflowHandlers();           
         }
         
         var flexItemToBeLooped = -1;
@@ -308,7 +305,7 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
 function initFlexItems()
 { 
     
-    var carousel = new Caurousel('flex_item_container', 'flex_item', 'carousel_overflow_buffer', 30);
+    var carousel = new Caurousel('flex_item_container', 'flex_item', 'carousel_overflow_buffer', 25);
     
     carousel.initialise();
     
@@ -326,7 +323,7 @@ function executeMobileJavascript()
 
     for (var i = 0; i < elements.length; i++) 
     {
-        elements[i].querySelector('a').className += " hover";
+        elements[i].querySelector('a').className += "hover";
     }
 }
 
