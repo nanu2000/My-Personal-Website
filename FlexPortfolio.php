@@ -21,7 +21,14 @@ function createFlexPageFromStringOfItems($items)
 {
     ?>
 
-    <ul id="flex_item_container"><?php echo($items); ?></ul>
+    <ul id="flex_item_container">  
+        
+        <li><div id = "carousel_overflow_left" class = "carousel_overflow_buffer"></div></li>
+        <li><div id = "carousel_overflow_right" class = "carousel_overflow_buffer"></div></li>
+        
+        <?php echo($items); ?>
+        
+    </ul>
 
     <?php
 }
