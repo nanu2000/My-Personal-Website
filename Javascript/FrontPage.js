@@ -4,11 +4,11 @@
 function Animator(animation) 
 {
     
-    var lastTime;
+    this._lastTime;
+    this._animation = animation;
+    this._stop = false;
     
-    var stop = false;
-    
-    var requestAnimationFrame = 
+    this.requestAnimationFramePolyFill = 
         window.requestAnimationFrame        || 
         window.webkitRequestAnimationFrame  || 
         window.mozRequestAnimationFrame     ||
@@ -18,14 +18,28 @@ function Animator(animation)
         };
         
         
-    var step = function(now) 
+    this.requestNextFrame = function()
     {
-        if(stop)
+        var that = this;
+        
+        this.requestAnimationFramePolyFill.call
+        (
+            window,
+            function(now)
+            {
+                that._step(now);
+            }
+        );  
+    };    
+        
+    this._step = function(now) 
+    {
+        if(this._stop)
         {
             return;
         }
         
-        var deltaTime  = (now - (lastTime || now)) / 1000;
+        var deltaTime  = (now - (this.lastTime || now)) / 1000;
         
         //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
         if(deltaTime > .03)
@@ -33,23 +47,23 @@ function Animator(animation)
             deltaTime = .016;
         }    
 
-        lastTime = now;
+        this.lastTime = now;
 
 
-        animation(deltaTime);
-        requestAnimationFrame.call(window, step);  
+        this._animation(deltaTime);
+        this.requestNextFrame();
     };
     
     this.stop = function()
     {
-        stop = true;
+        this._stop = true;
     };
     
-    this.run = function()
+    this.start = function()
     {
-        stop = false;
-        requestAnimationFrame.call(window, step);          
-    };
+        this._stop = false;
+        this.requestNextFrame();
+   };
     
 }
 
@@ -160,6 +174,8 @@ function rotateFlexItems(deltaTime)
 
 
 
+var animator = new Animator(rotateFlexItems);
+
 function initFlexItems()
 { 
     var items = document.getElementsByClassName("flex_item");
@@ -189,14 +205,8 @@ function initFlexItems()
 
     resetFlexItemPositions();   
 
-    
-    var animator = new Animator(rotateFlexItems);
-    animator.run();
+    animator.start();
 }
-
-
-
-
 
 
 
