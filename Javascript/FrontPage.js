@@ -3,40 +3,52 @@
 
 function Animator(animation) 
 {
-    this.requestAnimationFrame = 
-            window.requestAnimationFrame || 
-            window.webkitRequestAnimationFrame || 
-            window.mozRequestAnimationFrame ||
-            function( callback )
-            {
-                window.setTimeout(callback, 1000 / 60);
-            };
     
+    var lastTime;
     
-    this.lastTime;
+    var stop = false;
     
-    
+    var requestAnimationFrame = 
+        window.requestAnimationFrame        || 
+        window.webkitRequestAnimationFrame  || 
+        window.mozRequestAnimationFrame     ||
+        function(callback)
+        {
+            window.setTimeout(callback, 1000 / 60);
+        };
+        
+        
     var step = function(now) 
     {
-
-        var deltaTime  = (now - (this.lastTime || now)) / 1000;
-
+        if(stop)
+        {
+            return;
+        }
+        
+        var deltaTime  = (now - (lastTime || now)) / 1000;
+        
         //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
         if(deltaTime > .03)
         {
             deltaTime = .016;
         }    
 
-        this.lastTime = now;
+        lastTime = now;
 
 
         animation(deltaTime);
-        this.requestAnimationFrame.call(window, step);  
+        requestAnimationFrame.call(window, step);  
     };
-
+    
+    this.stop = function()
+    {
+        stop = true;
+    };
+    
     this.run = function()
     {
-        this.requestAnimationFrame.call(window, step);          
+        stop = false;
+        requestAnimationFrame.call(window, step);          
     };
     
 }
@@ -177,13 +189,10 @@ function initFlexItems()
 
     resetFlexItemPositions();   
 
-    var animator = new Animator(rotateFlexItems);
     
+    var animator = new Animator(rotateFlexItems);
     animator.run();
 }
-
-
-
 
 
 
