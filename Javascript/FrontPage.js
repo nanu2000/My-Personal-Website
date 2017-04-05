@@ -249,8 +249,7 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
 
         if(this._containerOrientationHasChanged())
         {
-            this.resetAllItemPositions();
-            this._updateOverflowHandlers();           
+            this.resetAllItemPositions();       
         }
         
         var flexItemToBeLooped = -1;
