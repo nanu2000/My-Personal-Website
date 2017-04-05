@@ -1,7 +1,5 @@
-
 function Animator(animation) 
 {
-    
     this._lastTime;
     this._animation = animation;
     this._stopped = true;
