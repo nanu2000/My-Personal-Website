@@ -34,6 +34,16 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 }
 */
 
+.game_page_title
+{
+    
+    color: #272727;
+    margin-top:0;
+    margin-bottom:0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+}
 
 .project_page_banner
 {

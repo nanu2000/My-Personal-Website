@@ -6,7 +6,7 @@ startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
 
 outputBlogNavbar();
 
-startBlogPost( "January 9th" , "A New Year? + Caught in the Moment");
+startBlogPost( "January 9th" , "A New Year + Caught in the Moment");
 
 ?>
 

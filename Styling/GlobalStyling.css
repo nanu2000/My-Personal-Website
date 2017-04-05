@@ -148,7 +148,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     {
         margin: 0px;
         text-indent: 0px;
-        padding: 15px 45px 15px 45px;
+        padding: 5px 20px 5px 20px;
     }
 }
 @media only screen and (min-width : 667px) and (max-width : 999px)
@@ -163,7 +163,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     {
         margin: 0px;
         text-indent: 0px;
-        padding: 15px 40px 15px 40px;
+        padding: 5px 20px 5px 20px;
     }
 }
 @media only screen and (min-width : 351px) and (max-width : 450px)
@@ -172,7 +172,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     {
         margin: 0px;
         text-indent: 0px;
-        padding: 15px 20px 15px 20px;
+        padding: 5px 20px 5px 20px;
     }
 }
 @media only screen and (max-width : 350px)
@@ -181,7 +181,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     {
         margin: 0px;
         text-indent: 0px;
-        padding: 15px 5px 5px 15px;
+        padding: 5px 5px 5px 5px;
     }
 }
 
@@ -371,7 +371,7 @@ Used to create Logo type text above nav bar
  */   #richie_text_subtitle
     {
         font-family: 'Raleway', sans-serif;
-        color: #444;
+        color: #333333;
         font-size: 1rem;
         letter-spacing: .5px;
         font-weight: bold;
@@ -382,7 +382,7 @@ Used to create Logo type text above nav bar
         
         font-weight: bold;
         font-family: 'Lobster', cursive;
-        color: #333; 
+        color: #272727;
         margin : 0px;
         padding : 0px;
         padding-bottom: 10px;
@@ -549,34 +549,74 @@ Used to create the navagation bar
 Additional CSS used for multiple pages
 *********************************/
 
+
+
+/***/
 .generic_header_wrapper
 {
-    padding:40px 10px 0px 10px;    
-    background-color:#f9f9f9;
+    padding:40px 10px 0px 10px;  
 }
 .generic_header_wrapper_end
 {
     padding-bottom: 40px;
 }
+
 .generic_header_title
 {    
-    color: #383838;
+    color: #333;
     margin-top:0;
     margin-bottom:0;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     font-weight: bold;
-    font-family: serif;
 }
+
 .generic_header_subtitle
 {
-    color: #444444;
+    color: #444;
     font-size: 1.4rem;
-    font-family: serif;
     margin-left: auto;
     margin-right: auto;
     text-align:center;
     padding-top:15px;
 }
+
+/***/
+
+.generic_title_sm, .generic_title_m, .generic_title_l
+{    
+    color: #272727;
+    margin-top:0;
+    margin-bottom:0;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;   
+}
+
+.generic_title_sm
+{    
+    padding:10px;  
+    font-size: 1.1rem;
+}
+
+.generic_title_m
+{    
+    padding:20px;   
+    font-size: 1.2rem;
+}
+
+.generic_title_l
+{    
+    padding:30px;    
+    font-size: 1.6rem;
+}
+.generic_title_xl
+{    
+    padding:30px;    
+    font-size: 2.0rem;
+}
+
+
+/***/
+
 
 .generic_page_text
 {
@@ -597,6 +637,7 @@ Additional CSS used for multiple pages
     text-indent: 0px;
 }
 
+/***/
 
 .text_center
 {    
