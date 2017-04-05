@@ -80,70 +80,48 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {
     .generic_page_text
     { 
-        padding: 30px 25% 0px 25%;
+        padding: 40px 25% 0px 25%;
     }
 }
-
 @media only screen and (min-width : 841px) and (max-width : 1800px)
 {         
     .generic_page_text
     { 
-        padding: 20px 20% 0px 20%;
+        padding: 40px 20% 0px 20%;
     }
 }
 @media only screen and (min-width : 751px) and (max-width : 840px)
 {         
     .generic_page_text
     { 
-        padding: 20px 15% 0px 15%;
+        padding: 40px 15% 0px 15%;
     }
 }
-
 @media only screen and (min-width : 667px) and (max-width : 750px)
 {         
     .generic_page_text
     { 
-        padding: 20px 12% 0px 12%;
+        padding: 40px 12% 0px 12%;
     }
 }
-
 @media only screen and (min-width : 451px) and (max-width : 666px)
 {
     .generic_page_text
     { 
-        padding: 5px 12% 5px 12%;
-    }
-    .generic_page_text_end
-    {
-        padding-bottom: 15px;
-    }
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
-        padding: 15px 25px 15px 25px;
+        padding: 40px 12% 5px 12%;
     }
 }
 @media only screen and (max-width : 450px)
 {
     .generic_page_text
     { 
-        padding: 5px 5% 5px 5%;
+        padding: 40px 5% 5px 5%;
     }
 }
 
 
-
-
-
-
 @media only screen and (min-width : 1000px) 
 {
-    .generic_page_text_end
-    {
-        padding-bottom: 30px;
-    }
-
     .generic_page_text p
     {
         margin: 0px;
@@ -153,17 +131,20 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 }
 @media only screen and (min-width : 667px) and (max-width : 999px)
 {         
-    .generic_page_text_end
-    {
-        padding-bottom: 20px;
-    }
-    
-    
     .generic_page_text p
     {
         margin: 0px;
         text-indent: 0px;
         padding: 5px 20px 5px 20px;
+    }
+}
+@media only screen and (min-width : 451px) and (max-width : 666px)
+{
+    .generic_page_text p
+    {
+        margin: 0px;
+        text-indent: 0px;
+        padding: 15px 25px 15px 25px;
     }
 }
 @media only screen and (min-width : 351px) and (max-width : 450px)
@@ -556,10 +537,11 @@ Additional CSS used for multiple pages
 {
     padding:40px 10px 0px 10px;  
 }
-.generic_header_wrapper_end
+.generic_header_wrapper_end, .generic_page_text_end
 {
     padding-bottom: 40px;
 }
+    
 
 .generic_header_title
 {    
