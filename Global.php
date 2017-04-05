@@ -81,14 +81,6 @@ function endBlogPost()
 }
 
 
-
-
-
-
-
-
-
-
 function outputStylesheets($styleSheets)
 {
     for($i = 0; $i < count($styleSheets); $i++)
@@ -96,6 +88,7 @@ function outputStylesheets($styleSheets)
         echo('<link rel="stylesheet" href="'.$styleSheets[$i].'">');
     }
 }
+
 function outputScripts($scripts)
 {
     for($i = 0; $i < count($scripts); $i++)
@@ -103,6 +96,7 @@ function outputScripts($scripts)
         echo('<script src="'.$scripts[$i].'"></script>');
     }
 }
+
 function outputNoScripts($noScripts)
 {
     echo("<noscript>");
@@ -122,13 +116,11 @@ function outputExternalFileIncludes($styleSheets, $noScripts, $scripts)
     outputScripts       ($scripts);
 }
 
-
-
 function startDefaultContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = 'Richie Sikra')
 {
     outputHeader($styleSheets, $scripts, $noScripts, $prefix, $pageTitle);
 
-    echo('<body><div class ="main_border"><div class = "gradient_background">');   
+    echo('<body><div id = "main_content_wrapper">');   
     
     outputLogo();
 
@@ -141,15 +133,16 @@ function endDefaultContent($prefix = '', $scripts = array())
     
     startContentContainer();
 ?>
-    <div class ="text_center copyright_footer">
+
+    <div class ="text_center" id="copyright_footer">
     Copyright 2015-<?php echo date("Y")?> Richard Sikra
     </div>
+
 <?php
 
     endContentContainer();
     
 ?>
-    </div>
     </div>
     <?php outputScripts($scripts); ?>
     </body>
