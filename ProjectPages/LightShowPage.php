@@ -28,7 +28,7 @@ startContentContainer();
 ?>
 
 
-<div class = "text_center generic_header_wrapper game_page_title">About the Lightshow Framework</div>  
+<div class = "text_center generic_header_wrapper generic_header_title">About the Lightshow Framework</div>  
 <div class="generic_page_text generic_page_text_end">
 
 <p>

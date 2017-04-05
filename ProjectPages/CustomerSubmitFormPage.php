@@ -19,7 +19,7 @@ endContentContainer();
 startContentContainer();
 ?>
 
-<div class = "text_center generic_header_wrapper game_page_title">About The Customer Support Form</div>
+<div class = "text_center generic_header_wrapper generic_header_title">About The Customer Support Form</div>
 <div class="generic_page_text generic_page_text_end">
 <p>
 This project was my first official project I have ever completed using PHP. This project is meant for a customer service department. The employees would recieve phone calls, 

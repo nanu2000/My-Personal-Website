@@ -28,7 +28,7 @@ endContentContainer();
 startContentContainer();
 ?>
 
-<div class = "text_center generic_header_wrapper game_page_title">About StarDive</div>
+<div class = "text_center generic_header_wrapper generic_header_title">About StarDive</div>
 <div class="generic_page_text generic_page_text_end">
 <p>
 StarDive was my first game that I created <b>completely by myself.</b> It took a total of <b>3 months</b> to complete. To me this game is a lot better than my very first game <a class ="TextLink" href= "AeroFlightPage.html">Aeroflight</a>, the development process went very well because I planned everything out 100% and made a prototype to make sure everything would work properly and be fun.</p>
