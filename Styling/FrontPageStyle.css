@@ -65,9 +65,12 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 .flex_item
 {
+    
+    width:20%;
+    min-width:270px;
+    
     display:inline-block;
   
-    width:270px;
     overflow:hidden;
     white-space:normal;
     
@@ -126,29 +129,4 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     transform: translateZ(0);  
     color: #fff;
     text-decoration: none; 
-}
-
-
-.carousel_overflow_buffer
-{
-    background: #f8f8f8;
-    position: absolute;
-    width: 0;
-    z-index: 2;
-    top:0px;
-    bottom:0px;
-    display:none;
-    
-    border-top: 3px solid #d2d6da;
-    border-bottom: 3px solid #d2d6da;
-}
-#carousel_overflow_right
-{
-    border-left: 6px solid #d2d6da;
-    right: 0px;
-}
-#carousel_overflow_left
-{
-    border-right: 6px solid #d2d6da;
-    left: 0px;
 }

@@ -139,7 +139,7 @@ function CarouselItem(element)
     
 }
 
-function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
+function Caurousel(containerAlias, itemAlias, pxPerSecond)
 {
     
     this._container;
@@ -147,13 +147,11 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
     this._currentContainerOrientation;
     this._pxPerSecond = pxPerSecond;
     
-    this._overflowBuffers;
     
     this.initialise = function()
     {
         var domItems            = document.getElementsByClassName   (itemAlias);
         this._container         = document.getElementById           (containerAlias);
-        this._overflowBuffers   = document.getElementsByClassName   (overflowBufferAlias);
 
         this._items = Array();
 
@@ -170,7 +168,6 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
         this._currentContainerOrientation = this._container.getBoundingClientRect();
 
         this.resetAllItemPositions();   
-        this._updateOverflowHandlers();
     };
     
     
@@ -247,31 +244,6 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
     };
     
     
-    this._updateOverflowHandlers = function()
-    {
-        var lengthOfSlides      = this._items[0].getRect().width * this._items.length;
-        var sidePadding         = (this._currentContainerOrientation.width - lengthOfSlides) / 2 + this._items[0].getRect().width / 2;
-        
-        
-        for(var i = 0; i < this._overflowBuffers.length; i++)
-        {
-            this._overflowBuffers[i].style.width = sidePadding + "px";
-        
-            if(sidePadding <= 0)
-            {
-                this._overflowBuffers[i].style.display = "none";
-            }
-            else
-            {
-                this._overflowBuffers[i].style.display = "block";
-            }
-        }
-        
-        
-        
-    };
-    
-    
     this.update = function(deltaTime)
     {
 
@@ -305,7 +277,7 @@ function Caurousel(containerAlias, itemAlias, overflowBufferAlias, pxPerSecond)
 function initFlexItems()
 { 
     
-    var carousel = new Caurousel('flex_item_container', 'flex_item', 'carousel_overflow_buffer', 25);
+    var carousel = new Caurousel('flex_item_container', 'flex_item', 25);
     
     carousel.initialise();
     
