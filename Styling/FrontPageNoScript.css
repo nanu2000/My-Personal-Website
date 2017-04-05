@@ -41,6 +41,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 .flex_item
 {
+    min-width:0px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
