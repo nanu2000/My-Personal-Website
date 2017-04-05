@@ -43,9 +43,8 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 */
 
-
-.flex_item:hover .flex_item_description,
-.flex_item .hover .flex_item_description
+.portfolio_item:hover  .portfolio_item_content_wrapper,
+.portfolio_item .hover .portfolio_item_content_wrapper
 {
     visibility: visible;
     display: inherit;
@@ -53,7 +52,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     opacity: 1.0;
 }
 
-#flex_item_container
+#portfolio_item_container
 {
   position: relative;
   padding: 0;
@@ -63,7 +62,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
   white-space: nowrap;
 }
 
-.flex_item
+.portfolio_item
 {
     
     width:20%;
@@ -83,7 +82,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     position:relative;
 }
 
-.flex_item .flex_bg
+.portfolio_item .portfolio_item_bg
 {
     width:100%;
     filter: alpha(opacity=100);
@@ -91,13 +90,13 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     transition: opacity .75s  ease;
 }
 
-.flex_text_wrapper
+.portfolio_item_text_wrapper
 {
     height:100%;
     display: table; 
 }
 
-.flex_text_wrapper .wrapper_description_text
+.portfolio_item_text_wrapper .portfolio_item_text
 {
     font-size:.9rem;
     padding-left: 5px;
@@ -110,7 +109,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     line-height: 1.4;
 }
 
-.flex_item_description
+.portfolio_item_content_wrapper
 {
     transition: opacity .5s  ease;
     color:white; /*Text Color*/   
@@ -122,7 +121,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     width:100%;
     z-index: 1;
 }
-.flex_item .flex_bg
+.portfolio_item .portfolio_item_bg
 {
     object-fit:cover;
     -webkit-transform: translateZ(0); /*used to fix any image displacement*/

@@ -310,11 +310,11 @@ function performOperationsOnIndividualItemUpdate()
 
 function initFlexItems()
 { 
-    
+
     var carousel = new Caurousel
     (
-        document.getElementById('flex_item_container'),
-        document.getElementsByClassName('flex_item'), 
+        document.getElementById('portfolio_item_container'),
+        document.getElementsByClassName('portfolio_item'), 
         25,
         performOperationsOnIndividualItemUpdate()
     );
@@ -337,7 +337,7 @@ function initFlexItems()
 
 function executeMobileJavascript()
 {
-    var elements    = document.getElementsByClassName("flex_item");
+    var elements    = document.getElementsByClassName("portfolio_item");
 
     for (var i = 0; i < elements.length; i++) 
     {

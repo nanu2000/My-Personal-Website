@@ -561,7 +561,7 @@ Additional CSS used for multiple pages
 
     /*used for simple text posts or other. (normally rests inside main_content_wrapper)*/
 
-    .non_flex_bg
+    .generic_content_wrapper
     {
         position: relative; 
         height: auto;

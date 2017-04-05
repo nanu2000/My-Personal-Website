@@ -40,11 +40,11 @@ function startContentType($contentType, $navbarID, $prefix = '', $styleSheets = 
 
 function startContentContainer()
 {
-    echo('<div class="non_flex_bg">');
+    echo('<div class="generic_content_wrapper">');
 }
 function startContentContainerHideSmallScreen()
 {
-    echo('<div class="non_flex_bg hide_mobile">');
+    echo('<div class="generic_content_wrapper hide_mobile">');
 }
 function endContentContainer()
 {
@@ -54,7 +54,7 @@ function endContentContainer()
 function startBlogPost($title, $subtitle)
 {
 ?>
-    <div class="non_flex_bg">
+    <div class="generic_content_wrapper">
     <div class = "text_center generic_header_wrapper">
     <div class ="generic_header_title">
 

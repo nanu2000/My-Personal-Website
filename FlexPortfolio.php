@@ -3,16 +3,16 @@
 function createFlexItem($image, $imgAlt, $link, $color, $text)
 {
     return 
-    '<li class="flex_item">
+    '<li class="portfolio_item">
     <a href ="'.$link.'">
-    <div class ="flex_item_description" style = "background-color:'.$color.';">
-    <div class="text_center flex_text_wrapper">
-    <span class="wrapper_description_text">
+    <div class ="portfolio_item_content_wrapper" style = "background-color:'.$color.';">
+    <div class="text_center portfolio_item_text_wrapper">
+    <span class="portfolio_item_text">
     '.$text.'
     </span>
     </div>
     </div>
-    <img class = "flex_bg" src ="'.$image.'" alt="'.$imgAlt.'"/>
+    <img class = "portfolio_item_bg" src ="'.$image.'" alt="'.$imgAlt.'"/>
     </a>
     </li>';
 }
@@ -21,7 +21,7 @@ function createFlexPageFromStringOfItems($items)
 {
     ?>
 
-    <ul id="flex_item_container">  
+    <ul id="portfolio_item_container">  
         
         <?php echo($items); ?>
         
