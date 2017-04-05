@@ -57,7 +57,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 {
   position: relative;
   padding: 0;
-  margin: 3px;
+  margin: 0px 3px 0px 3px;
   list-style: none;
   overflow:hidden;
   white-space: nowrap;
@@ -73,9 +73,8 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     
     left:0px;
     
-    border-left: 3px solid rgba(0,0,0,0);
-    border-right: 3px solid rgba(0,0,0,0);
-
+    border: 3px solid rgba(0,0,0,0);
+    
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */  
     position:relative;
@@ -116,6 +115,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     opacity: 0;
     position: absolute; 
     height:100%;
+    width:100%;
     z-index: 1;
 }
 .flex_item .flex_bg
