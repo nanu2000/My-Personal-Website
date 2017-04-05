@@ -1,10 +1,8 @@
 /*
 
-
 ************************************************
 USE lower_case_underline_naming FOR CSS STYLING!
 ************************************************
-
 
 FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
 FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
@@ -12,32 +10,21 @@ FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
 FOR IMPORTANT BLACK COLOR, USE #232323 or #040b25;
 FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
-
-/*********************************************
-*Media Queries That are in use.
-**********************************************
-
-@media only screen and (min-width : 1000px) 
-{    
-}
-
-@media only screen and (min-width : 667px) and (max-width : 999px)
-{            
-}
-
-@media only screen and (min-width : 450px) and (max-width : 666px) 
-{          
-}
-
-@media only screen and (max-width : 449px) 
-{    
-}
 */
 
 
-.copyright_footer
+#main_content_wrapper
 {
+    margin:0 auto;
+    padding:3px;
+    background-color:#d2d6da;
+    box-shadow: 1px 3px 20px 0px rgba(0, 0, 10, 0.5);
+    min-width: 275px;
     
+}
+
+#copyright_footer
+{
     color: #ebebeb;
     background-color:#3661a2;
     line-height: 1.7;
@@ -46,302 +33,107 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     padding-bottom: 15px;
 }
 
-@media only screen and (min-width : 1500px) 
-{
-    .gradient_background
-    {
-        width:70%;
-        max-width: 1500px;
-    }
-}
-
-@media only screen and (min-width : 1281px) and (max-width : 1499px) 
-{
-    .gradient_background
-    {
-        width:80%;
-    }    
-}
-
-
-
-
-
-
-@media only screen and (min-width : 1800px)
-{
-    .generic_page_text
-    { 
-        padding: 40px 25% 0px 25%;
-    }
-}
-@media only screen and (min-width : 841px) and (max-width : 1800px)
-{         
-    .generic_page_text
-    { 
-        padding: 40px 20% 0px 20%;
-    }
-}
-@media only screen and (min-width : 751px) and (max-width : 840px)
-{         
-    .generic_page_text
-    { 
-        padding: 40px 15% 0px 15%;
-    }
-}
-@media only screen and (min-width : 667px) and (max-width : 750px)
-{         
-    .generic_page_text
-    { 
-        padding: 40px 12% 0px 12%;
-    }
-}
-@media only screen and (min-width : 451px) and (max-width : 666px)
-{
-    .generic_page_text
-    { 
-        padding: 40px 12% 5px 12%;
-    }
-}
-@media only screen and (max-width : 450px)
-{
-    .generic_page_text
-    { 
-        padding: 40px 5% 5px 5%;
-    }
-}
-
-
-@media only screen and (min-width : 1000px) 
-{
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
-        padding: 5px 20px 5px 20px;
-    }
-}
-@media only screen and (min-width : 667px) and (max-width : 999px)
-{         
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
-        padding: 5px 20px 5px 20px;
-    }
-}
-@media only screen and (min-width : 451px) and (max-width : 666px)
-{
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
-        padding: 15px 25px 15px 25px;
-    }
-}
-@media only screen and (min-width : 351px) and (max-width : 450px)
-{    
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
-        padding: 5px 20px 5px 20px;
-    }
-}
-@media only screen and (max-width : 350px)
-{  
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
-        padding: 5px 5px 5px 5px;
-    }
-}
-
-
-
-
-
-
-@media only screen and (min-width : 667px)
-{ 
-    html 
-    {
-        font-size: 100%;
-    }
-    .feature_list
-    {
-        padding: auto; 
-    }
-    .navbar_icon_links
-    {
-        position: absolute;
-        right: 0;
-        top:0;
-        float:right;
-        margin: 0px 10px 0px 0px;    
-    }
-    
-    .navbar_text_links
-    {
-        float:left;
-    }
-    .navbar_text_links .text_link a
-    {    
-        display: block;
-        text-decoration: none;
-    }   
-        
-}
-
-
-/************************************************************************
-For really small windows, devices, and phones
-*************************************************************************/
-
-@media only screen and (max-width : 666px) 
-{
-    html 
-    {
-        font-size: 90%;
-    }
-    .navbar_icon_links
-    {
-        margin: 12px 0px 12px 0px;    
-        text-align: center;
-    }
-    
-    .navbar_text_links
-    {
-        text-align: center;
-    }
-       
-    
-    #navbar_more
-    {
-        text-align: center;
-    }
-    
-    .hide_mobile
-    {
-        display:none;
-    }
-    
-    .feature_list
-    {
-        padding-left: 10px;
-    }
-    
-    .feature_list .feature_list
-    {
-        padding-left: 20px;
-    }
-}
-
-
-/*For mobile nav bar*/
-/********************/
-@media only screen and (min-width : 450px) 
-{
-    .navbar_text_links .text_link a
-    {    
-        display: block;
-        padding: 12px 15px;
-        text-decoration: none;
-    }
-    .navbar_text_links .text_link
-    {
-        display: inline-block;
-        width:auto;
-    }
-}
-@media only screen and (max-width : 449px) 
-{
-    .navbar_text_links .text_link a
-    {    
-        display: block;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-decoration: none;
-    }
-    .navbar_text_links > .text_link
-    {
-        display: inline-block;
-        width:25%;
-        white-space: nowrap;
-    }
-    #navbar_more .text_link a
-    {
-        padding: 12px 12px;
-    }
-}
-/**************/
-
-
-
-
-
 
 /**************************************************
 CSS Resets
 ***************************************************/
-html 
-{
-    -webkit-text-size-adjust: 100%;
-    margin:0;
-    padding:0;
-}
-body
-{       
-    min-width: 275px;
-    margin: auto;
-    background-color: #eeeeee;
-}
-a
-{
-    text-decoration: none;
-}
-img
-{
-    display: block;
-}
-a img
-{
-    border-style: none;
-}
-ul, li, ol
-{ 
-    vertical-align: top;
-}
 
-/************************************************************************
+    html 
+    {
+        -webkit-text-size-adjust: 100%;
+        margin:0;
+        padding:0;
+    }
+    body
+    {           
+        margin: 0;
+        background-color: #eeeeee;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    img
+    {
+        display: block;
+    }
+    a img
+    {
+        border-style: none;
+    }
+    ul, li, ol
+    { 
+        vertical-align: top;
+    }
+
+/********************************/
+
+    @media only screen and (min-width : 1500px) 
+    {
+        #main_content_wrapper
+        {
+            width:70%;
+            max-width: 1500px;
+        }
+    }
+    @media only screen and (min-width : 1281px) and (max-width : 1499px) 
+    {
+        #main_content_wrapper
+        {
+            width:80%;
+        }    
+    }
+
+    @media only screen and (min-width : 667px)
+    { 
+        html 
+        {
+            font-size: 100%;
+        }
+    }
+
+    @media only screen and (max-width : 666px) 
+    {
+        html 
+        {
+            font-size: 90%;
+        }
+    }
+
+/********************************/
+
+/*******************************************
 Font Includes
-*************************************************************************/
-@font-face {
-  font-family: 'Passion One';
-  font-weight: 700;
-  src: url(../Fonts/Latin_Passion_One.ttf);
-}
+********************************************/
+    
+    @font-face 
+    {
+      font-family: 'Passion One';
+      font-weight: 700;
+      src: url(../Fonts/Latin_Passion_One.ttf);
+    }
 
-@font-face 
-{
-  font-family: 'Raleway';
-  font-weight: 500;
-  src: url(../Fonts/Latin_Raleway.ttf)
-}
+    @font-face 
+    {
+      font-family: 'Raleway';
+      font-weight: 500;
+      src: url(../Fonts/Latin_Raleway.ttf)
+    }
 
-@font-face 
-{
-  font-family: 'Lobster';
-  font-weight: 400;
-  src: url(../Fonts/Latin_Lobster.ttf);
-}
+    @font-face 
+    {
+      font-family: 'Lobster';
+      font-weight: 400;
+      src: url(../Fonts/Latin_Lobster.ttf);
+    }
+    
+/********************************/
 
-/**************************
+/******************************************
 Used to create Logo type text above nav bar
 *******************************************/
-/*FOR IMPORTANT BLACK COLOR, USE #232323 or #040b25;
- */   #richie_text_subtitle
+
+    #richie_text_subtitle
     {
         font-family: 'Raleway', sans-serif;
         color: #333333;
@@ -366,35 +158,86 @@ Used to create Logo type text above nav bar
 /********************************/
 
 
-
-
-/******************************
-Used to create gradient border. 
-*******************************/
-
-    .main_border
-    {      
-        display: block;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-
-    .gradient_background
-    {
-        margin:0 auto;
-        padding:3px;
-        background-color:#d2d6da;
-        box-shadow: 1px 3px 20px 0px rgba(0, 0, 10, 0.5);
-    }
-
-/******************************/
-
-
-
-
 /********************************
 Used to create the navagation bar
 *********************************/
+
+    @media only screen and (min-width : 667px)
+    { 
+        .navbar_icon_links
+        {
+            position: absolute;
+            right: 0;
+            top:0;
+            float:right;
+            margin: 0px 10px 0px 0px;    
+        }
+        .navbar_text_links
+        {
+            float:left;
+        }
+        .navbar_text_links .text_link a
+        {    
+            display: block;
+            text-decoration: none;
+        }   
+    }    
+    
+    @media only screen and (max-width : 666px) 
+    {
+        .navbar_icon_links
+        {
+            margin: 12px 0px 12px 0px;    
+            text-align: center;
+        }
+
+        .navbar_text_links
+        {
+            text-align: center;
+        }
+
+        #navbar_more
+        {
+            text-align: center;
+        }
+    }
+    
+    @media only screen and (min-width : 451px)
+    {
+        .navbar_text_links .text_link a
+        {    
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+        }
+        .navbar_text_links .text_link
+        {
+            display: inline-block;
+            width:auto;
+        }
+    }
+    
+    /*For mobile nav bar*/
+    @media only screen and (max-width : 450px) 
+    {
+        .navbar_text_links .text_link a
+        {    
+            display: block;
+            padding: 12px 12px;
+            text-decoration: none;
+        }
+        .navbar_text_links > .text_link
+        {
+            display: inline-block;
+            width:25%;
+            white-space: nowrap;
+        }
+        #navbar_more .text_link a
+        {
+            padding: 12px 12px;
+        }
+    }
+
     #nav_bar
     {
         background-color: #3661a2;
@@ -425,7 +268,7 @@ Used to create the navagation bar
         vertical-align: top;
     }
 
-/*Navbar Text Links*/
+    /*Navbar Text Links*/
 
     .active_nav_text_link
     {
@@ -448,7 +291,6 @@ Used to create the navagation bar
         text-decoration: none;
 
     }
-
     .navbar_text_links .text_link a 
     {
         font-weight: bolder;
@@ -489,12 +331,10 @@ Used to create the navagation bar
         font-weight: bolder;
         font-size: .75rem;
     }
-
     #navbar_more .text_link
     {
         display: inline-block;
     }
-
     #navbar_more 
     {
         display:none;
@@ -509,14 +349,11 @@ Used to create the navagation bar
     }
     #show_navbar:focus
     {
-      outline: none;
+        outline: none;
     }
 
 /******************************/
-
-
-
-
+/******************************/
 
 
 /********************************
@@ -524,104 +361,173 @@ Additional CSS used for multiple pages
 *********************************/
 
 
+    /*Media Queries For Generic Text*/
 
-/***/
-.generic_header_wrapper
-{
-    padding:40px 10px 0px 10px;  
-}
-.generic_header_wrapper_end, .generic_page_text_end
-{
-    padding-bottom: 40px;
-}
+    @media only screen and (min-width : 1800px)
+    {
+        .generic_page_text
+        { 
+            padding: 40px 25% 0px 25%;
+        }
+    }
     
+    @media only screen and (min-width : 841px) and (max-width : 1800px)
+    {         
+        .generic_page_text
+        { 
+            padding: 40px 20% 0px 20%;
+        }
+    }
+    
+    @media only screen and (min-width : 751px) and (max-width : 840px)
+    {         
+        .generic_page_text
+        { 
+            padding: 40px 15% 0px 15%;
+        }
+    }
+    
+    @media only screen and (min-width : 451px) and (max-width : 750px)
+    {
+        .generic_page_text
+        { 
+            padding: 40px 12% 5px 12%;
+        }
+    }
+    
+    @media only screen and (max-width : 450px) 
+    {
+        .generic_page_text
+        { 
+            padding: 40px 5% 5px 5%;
+        }
+    }
 
-.generic_header_title
-{    
-    color: #333;
-    margin-top:0;
-    margin-bottom:0;
-    font-size: 2.3rem;
-    font-weight: bold;
-}
+    @media only screen and (min-width : 667px)
+    {     
+        .generic_page_text p
+        {
+            padding: 5px 20px 5px 20px;
+        }
+    }
+    
+    @media only screen and (min-width : 451px) and (max-width : 666px)
+    {
+        .generic_page_text p
+        {
+            padding: 15px 25px 15px 25px;
+        }
+    }
+    
+    @media only screen and (min-width : 351px) and (max-width : 450px)
+    {    
+        .generic_page_text p
+        {
+            padding: 5px 20px 5px 20px;
+        }
+    }
+    
+    @media only screen and (max-width : 350px)
+    {  
+        .generic_page_text p
+        {
+            padding: 5px 5px 5px 5px;
+        }
+    }
 
-.generic_header_subtitle
-{
-    color: #444;
-    font-size: 1.4rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align:center;
-    padding-top:15px;
-}
+    /*Generic Title and Subtitle Header*/
 
-/***/
+    .generic_header_wrapper
+    {
+        padding:40px 10px 0px 10px;  
+    }
+    .generic_header_wrapper_end, .generic_page_text_end
+    {
+        padding-bottom: 40px;
+    }
 
-.generic_title_sm, .generic_title_m, .generic_title_l
-{    
-    color: #272727;
-    margin-top:0;
-    margin-bottom:0;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;   
-}
+    .generic_header_title
+    {    
+        color: #333;
+        margin-top:0;
+        margin-bottom:0;
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
 
-.generic_title_sm
-{    
-    padding:10px;  
-    font-size: 1.1rem;
-}
+    .generic_header_subtitle
+    {
+        color: #444;
+        font-size: 1.4rem;
+        padding-top:15px;
+    }
 
-.generic_title_m
-{    
-    padding:20px;   
-    font-size: 1.2rem;
-}
+    /*Generic Titles*/
 
-.generic_title_l
-{    
-    padding:30px;    
-    font-size: 1.6rem;
-}
-.generic_title_xl
-{    
-    padding:30px;    
-    font-size: 2.0rem;
-}
+    .generic_title_sm, .generic_title_m, .generic_title_l, .generic_title_xl
+    {    
+        color: #272727;
+        margin-top:0;
+        margin-bottom:0;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;   
+    }
+
+    .generic_title_sm
+    {    
+        padding:10px;  
+        font-size: 1.1rem;
+    }
+
+    .generic_title_m
+    {    
+        padding:20px;   
+        font-size: 1.2rem;
+    }
+
+    .generic_title_l
+    {    
+        padding:30px;    
+        font-size: 1.6rem;
+    }
+    .generic_title_xl
+    {    
+        padding:30px;    
+        font-size: 2.0rem;
+    }
+
+    /*Generic Text*/
+    
+    .generic_page_text
+    {
+        color:#333333;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        font-family: 'Raleway', sans-serif;   
+    }
+
+    .generic_page_text a
+    {
+        color: rgb(0,0,200);
+    }
+
+    .generic_page_text p
+    {
+        margin: 0px;
+        text-indent: 0px;
+    }
+
+    /*Centers text*/
+
+    .text_center
+    {    
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
 
 
-/***/
-
-
-.generic_page_text
-{
-    color:#333333;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    font-family: 'Raleway', sans-serif;   
-}
-
-.generic_page_text a
-{
-    color: rgb(0,0,200);
-}
-
-.generic_page_text p
-{
-    margin: 0px;
-    text-indent: 0px;
-}
-
-/***/
-
-.text_center
-{    
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
-/*Makes user not able to highlight text. Browser support isn't very good so dont rely on it.'*/
+    /*Makes user not able to highlight text. Browser support isn't very good so dont rely on it.'*/
 
     .no_select 
     {
@@ -633,7 +539,7 @@ Additional CSS used for multiple pages
         user-select:            none;
     }
 
-/*Used to wrap Youtube videos.*/
+    /*Used to wrap Youtube videos.*/
 
     .video_wrapper 
     {
@@ -653,8 +559,7 @@ Additional CSS used for multiple pages
         height: 100%;
     }
 
-/*used for simple text posts or other.*/
-
+    /*used for simple text posts or other. (normally rests inside main_content_wrapper)*/
 
     .non_flex_bg
     {
@@ -665,11 +570,30 @@ Additional CSS used for multiple pages
         border: 3px solid #d2d6da;
         border: 3px solid rgba(0,0,0,0);
 
-        -webkit-background-clip: padding-box; /* for Safari */
-        background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
+        -webkit-background-clip:    padding-box;
+        background-clip:            padding-box; 
     }
 
-/*For An OL.*/
+
+    @media only screen and (max-width : 666px) 
+    {
+        .hide_mobile
+        {
+            display:none;
+        }
+
+        .feature_list
+        {
+            padding-left: 10px;
+        }
+
+        .feature_list .feature_list
+        {
+            padding-left: 20px;
+        }
+    }
+    
+    /*For an OL.*/
 
     .feature_list
     {
@@ -705,4 +629,6 @@ Additional CSS used for multiple pages
     }
 
 
+/************************************/
+/************************************/
 /************************************/
