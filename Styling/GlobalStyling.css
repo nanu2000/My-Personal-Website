@@ -51,6 +51,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     body
     {
         width:70%;
+        max-width:1500px;
     }
 }
 
