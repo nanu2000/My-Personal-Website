@@ -4,44 +4,25 @@ function Animator(animation)
     
     this._lastTime;
     this._animation = animation;
-    this._stop = false;
-    
+    this._stopped = true;
+    this._deltaTimeResetBuffer = .1;
     
     this.stop = function()
     {
-        this._stop = true;
+        this._stopped = true;
     };
-    
     
     this.start = function()
     {
-        this._stop = false;
-        this.requestNextFrame();
-   };
-   
-        
-    this._step = function(now) 
-    {
-        if(this._stop)
-        {
-            return;
-        }
-        
-        var deltaTime  = (now - (this.lastTime || now)) / 1000;
-        
-        //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
-        if(deltaTime > .03)
-        {
-            deltaTime = .016;
-        }    
-
-        this.lastTime = now;
-
-
-        this._animation(deltaTime);
-        this.requestNextFrame();
+        this._stopped = false;
+        this._requestNextFrame();
     };
-    
+
+    this.isRunning = function()
+    {
+        return !this._stopped;
+    };
+   
     
     this.requestAnimationFramePolyFill = 
         window.requestAnimationFrame        || 
@@ -53,7 +34,29 @@ function Animator(animation)
         };
         
         
-    this.requestNextFrame = function()
+    this._step = function(now) 
+    {
+        if(this._stop)
+        {
+            return;
+        }
+        
+        var deltaTime  = (now - (this.lastTime || now)) / 1000;
+        
+        //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
+        if(deltaTime > this._deltaTimeResetBuffer)
+        {
+            deltaTime = .016;
+        }    
+
+        this.lastTime = now;
+
+
+        this._animation(deltaTime);
+        this._requestNextFrame();
+    };
+    
+    this._requestNextFrame = function()
     {
         var animatorObject = this;
         
@@ -69,134 +72,154 @@ function Animator(animation)
     
 }
 
+function getBoundingClientRectWithCenter(element)
+{
+    return function()
+    {
+        var rect        = element.getBoundingClientRect();
+        rect.center     = rect.left + rect.width / 2;
+        return rect;
+    };
+}  
 
 function CarouselItem(element)
 {
     
     this._element = element;
-    
     this._startPosition;
     this._centerAdditor;
     this._currentTranslateX;
+    this._currentLoopPosition;
+    this._element.getRectWithCenter     = getBoundingClientRectWithCenter(this._element);
+    this._currentOrientation            = this._element.getRectWithCenter();
     
+    this.initialiseBasedOnContainer = function(containerOrientation, amountOfItemsInContainer)
+    {
+        
+        //The containers width minus the width of all the carousel Items widths combined, divided by two.
+        //if we use this as the new translateX position, it will align all of the carousel items right next to eachother
+        //and center all of them as a group inside of the container.
+        var newLocationBasedOnContainerWidth = (containerOrientation.width - (this._currentOrientation.width * amountOfItemsInContainer)) / 2;
+        
+        this._centerAdditor = newLocationBasedOnContainerWidth;
+        this.setXPosition(newLocationBasedOnContainerWidth);
+        this._startPosition = this._currentOrientation;
+        
+        this._currentLoopPosition = this._getNewLoopPosition(containerOrientation, amountOfItemsInContainer);
+        
+    };
+    
+    //returns the absolute position at the end of the container bounds (the loop position) 
+    //
+    //right side of container - 
+    //(container width - (width of all items)) / 2 -
+    //half the width of an item    
+    this._getNewLoopPosition = function(containerOrientation, amountOfItemsInContainer)
+    {
+        return      containerOrientation.right  - 
+                    (containerOrientation.width - (this._currentOrientation.width * amountOfItemsInContainer)) / 2 - 
+                    this._currentOrientation.width / 2;
+    };    
     
     this.getCurrentXTranslation = function()
     {
         return this._currentTranslateX;
     };
     
-    
-    this.updateXPosition = function(newXPosition)
-    {
-        this._currentTranslateX = newXPosition;
-        this._element.style.transform = "translateX(" + newXPosition + "px)";
-    };
-    
-    
     this.getRect = function()
     {
-        return this._element.getBoundingClientRect();
+        return this._currentOrientation;
     };
     
-    
-    this.getCenter = function()
+    this.getElement = function()
     {
-        return this.getRect().left + this.getRect().width / 2;
+        return this._element;
     };
     
-    
+    //returns the relative position x needs to be to get an absolute position of zero (x).
     this.getZeroPosition = function()
     {
         return -(this._startPosition.left - this._centerAdditor);  
     };
         
-        
-    this.getLoopPosition = function(containerOrientation, amountOfItemsInContainer)
+    this.getCurrentLoopPosition = function()
     {
-        
-        var lengthOfSlides      = this.getRect().width * amountOfItemsInContainer;
-
-        var flexItemHalfWidth   = this.getRect().width / 2;
-
-        var sidePadding         = (containerOrientation.width - lengthOfSlides) / 2;
-
-        return containerOrientation.right - sidePadding - flexItemHalfWidth;
-
+        return this._currentLoopPosition;
     };
     
-    
-    this.recalculateAndResetToNewPosition = function(containerWidth, amountOfItems)
+    this.shouldLoop = function()
     {
-        
-        var lengthOfAllSlides   = this.getRect().width * amountOfItems;
-
-        var startOfContainer    = (containerWidth - lengthOfAllSlides) / 2;
-        
-        this._centerAdditor = startOfContainer;
-        this.updateXPosition(startOfContainer);
-        this._startPosition = this.getRect();
+        return this._currentOrientation.left >= this._currentLoopPosition;
+    };
+    
+    this.setXPosition = function(newXPosition)
+    {
+        this._currentTranslateX         = newXPosition;
+        this._element.style.transform   = "translateX(" + newXPosition + "px)";
+        this._currentOrientation        = this._element.getRectWithCenter();
+    };
+    
+    this.addToXPosition = function(additor)
+    {
+        this.setXPosition(this._currentTranslateX + additor);   
+    };
+    
+    this.isGreaterThan = function(other)
+    {
+        return this._element.getBoundingClientRect().left > other._element.getBoundingClientRect();
     };
     
 }
 
-function Caurousel(containerAlias, itemAlias, pxPerSecond)
+function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndividualUpdate)
 {
     
-    this._container;
-    this._items;
+    this._container         = containerElement;
+    this._items             = Array.from(itemElements);  
+    this._pxPerSecond       = pxPerSecond;
     this._currentContainerOrientation;
-    this._pxPerSecond = pxPerSecond;
     
-    
+    this._performOperationsOnIndividualUpdate    = operationsOnIndividualUpdate;
+    this._container.getRectWithCenter            = getBoundingClientRectWithCenter(this._container);
+
     this.initialise = function()
     {
-        var domItems            = document.getElementsByClassName   (itemAlias);
-        this._container         = document.getElementById           (containerAlias);
-
-        this._items = Array();
-
-        for(var i = 0; i < domItems.length; i++)
+        
+        for(var i = 0; i < this._items.length; i++)
         {
-            this._items.push(new CarouselItem(domItems[i]));
+            this._items[i] = new CarouselItem(this._items[i]);
         }
 
         this._items.sort(function(a,b) 
         {
-            return a.getRect().left > b.getRect().left;
+            return a.isGreaterThan(b);
         });
 
-        this._currentContainerOrientation = this._container.getBoundingClientRect();
-
-        this.resetAllItemPositions();   
+        this._currentContainerOrientation = this._container.getRectWithCenter();
+        
+        this._initialiseAllItemPositionsBasedOnContainer();   
+        
     };
     
-    
-    this.resetAllItemPositions = function()
+    this._initialiseAllItemPositionsBasedOnContainer = function()
     {
         for(var i = 0; i < this._items.length; i++)
         {
-            this._items[i].recalculateAndResetToNewPosition(this._currentContainerOrientation.width, this._items.length);
+            this._items[i].initialiseBasedOnContainer(this._currentContainerOrientation, this._items.length);
         }
     };
     
-    
     this._containerOrientationHasChanged = function()
     {
-        var newRect = this._container.getBoundingClientRect();
+        var newOrientation = this._container.getRectWithCenter();
         
-        if(this._currentContainerOrientation.width  !== newRect.width)
+        if(this._currentContainerOrientation.width !== newOrientation.width)
         {
-            this._currentContainerOrientation = newRect;
+            this._currentContainerOrientation = newOrientation;
             return true;
         }
         
         return false;
-    };
-    
-    
-    this.getContainerCenter = function()
-    {
-        return this._currentContainerOrientation.left + this._currentContainerOrientation.width / 2;
     };
     
     
@@ -209,35 +232,29 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
             this._items[flexItemToBeLooped].getZeroPosition()    + 
             (brother.getRect().left - this._items[flexItemToBeLooped].getRect().width);
         
-        this._items[flexItemToBeLooped].updateXPosition(positionBehindBrother);       
+        this._items[flexItemToBeLooped].setXPosition(positionBehindBrother);       
         
     };
     
     
     this._updateItem = function(index, deltaTime)
     {
-        var itemRect = this._items[index].getRect();
-
-        if(itemRect.left >= this._items[index].getLoopPosition(this._currentContainerOrientation, this._items.length)) 
+        var currentItem = this._items[index];
+        
+        if(currentItem.shouldLoop()) 
         {
-            // we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them. 
-            // We return the index to notify the caller that this item needs to be looped
+            // if true then we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them. 
+            // We return the index to notify the caller that this item needs to be looped and because we dont need to do anything else with this item.
             return index;         
         }    
         
-        if(this._items[index].getCenter() > this.getContainerCenter() - itemRect.width &&
-           this._items[index].getCenter() < this.getContainerCenter() + itemRect.width) 
+        
+        if(this._performOperationsOnIndividualUpdate(this._currentContainerOrientation, currentItem, deltaTime, this._pxPerSecond) === false)
         {
-            this._items[index]._element.querySelector('a').className = "hover";
-        }
-        else
-        {
-            this._items[index]._element.querySelector('a').className = "";
+            return -1;
         }
         
-        var finalTransformation = this._items[index].getCurrentXTranslation() + deltaTime * this._pxPerSecond;
-        
-        this._items[index].updateXPosition(finalTransformation);
+        currentItem.addToXPosition(deltaTime * this._pxPerSecond);
         
         return -1;
 
@@ -249,9 +266,9 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
 
         if(this._containerOrientationHasChanged())
         {
-            this.resetAllItemPositions();       
+            this._initialiseAllItemPositionsBasedOnContainer();     
         }
-        
+                
         var flexItemToBeLooped = -1;
         
         for(var i = 0; i < this._items.length; i++)
@@ -272,15 +289,47 @@ function Caurousel(containerAlias, itemAlias, pxPerSecond)
     
 }
 
+function performOperationsOnIndividualItemUpdate()
+{
+    return function(currentContainerOrientation, currentItem, deltaTime, pxPerSecond)
+    {
+
+        var itemRect = currentItem.getRect();
+
+        if(itemRect.center > currentContainerOrientation.center - itemRect.width &&
+           itemRect.center < currentContainerOrientation.center + itemRect.width) 
+        {
+            currentItem.getElement().querySelector('a').className = "hover";
+        }
+        else
+        {
+            currentItem.getElement().querySelector('a').className = "";
+        }
+    };
+}
+
+
 
 function initFlexItems()
 { 
     
-    var carousel = new Caurousel('flex_item_container', 'flex_item', 25);
+    var carousel = new Caurousel
+    (
+        document.getElementById('flex_item_container'),
+        document.getElementsByClassName('flex_item'), 
+        25,
+        performOperationsOnIndividualItemUpdate()
+    );
     
     carousel.initialise();
     
-    var animator = new Animator(carousel.update.bind(carousel));
+    var animator = new Animator
+    (
+        function(dt)
+        {
+            carousel.update(dt);
+        }
+    );
 
     animator.start();
 }
