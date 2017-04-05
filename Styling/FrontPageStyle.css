@@ -96,8 +96,9 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 .flex_text_wrapper .wrapper_description_text
 {
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size:.9rem;
+    padding-left: 5px;
+    padding-right: 5px;
     font-family: 'Raleway', sans-serif;
     display: table-cell; 
     text-align: center;
@@ -137,6 +138,9 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     top:0px;
     bottom:0px;
     display:none;
+    
+    border-top: 3px solid #d2d6da;
+    border-bottom: 3px solid #d2d6da;
 }
 #carousel_overflow_right
 {

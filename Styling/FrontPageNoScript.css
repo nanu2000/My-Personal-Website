@@ -1,0 +1,92 @@
+/*
+
+************************************************
+USE lower_case_underline_naming FOR CSS STYLING!
+************************************************
+
+
+FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
+FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
+
+FOR IMPORTANT BLACK COLOR, USE #1d2235 or #040b25;
+FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
+
+
+/*********************************************
+*Media Queries That are in use.
+**********************************************
+
+@media only screen and (min-width : 1000px) 
+{    
+}
+
+@media only screen and (min-width : 667px) and (max-width : 999px)
+{            
+}
+
+@media only screen and (min-width : 450px) and (max-width : 666px) 
+{          
+}
+
+@media only screen and (max-width : 449px) 
+{    
+}
+*/
+
+#flex_item_container
+{
+  white-space: normal;
+  margin:0;
+}
+
+.flex_item
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@media only screen and (min-width : 1000px)
+{ 
+    .flex_item
+    {
+        width:16.66666%;
+    }
+    .flex_text_wrapper .wrapper_description_text
+    {
+        font-size:.8rem;
+    }
+}
+@media only screen and (min-width : 550px) and (max-width : 999px) 
+{ 
+    .flex_item
+    {
+        width:33.33333%;
+    }
+    .flex_text_wrapper .wrapper_description_text
+    {
+        font-size:.9rem;
+    }
+}
+@media only screen and  (min-width : 450px) and (max-width : 549px) 
+{ 
+    .flex_item
+    {
+        width:50%;
+    }
+}
+@media only screen and (max-width : 449px) 
+{ 
+    .flex_item
+    {
+        width:100%;
+    }
+   
+    .flex_item .flex_item_description
+    {
+        visibility: visible;
+        display: inherit;
+        filter: alpha(opacity=100);
+        opacity: 1.0;
+    }
+}

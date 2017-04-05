@@ -54,7 +54,7 @@ endBlogPost();
 
 startBlogPost( "February 18th 2016", "Upcoming events");
 ?>
-
+<p>
 After completing the animation IO engine tool, I decided to clean it up a bit. I cleaned up all of the code and seperated the tool into multiple classes and functions. After I finished that, I modified my input system by adding on a function called "keyPressedOnce" that returns true if a key has been pressed once, but if the key is held it will return false.
 </p>
 <p>
