@@ -48,24 +48,24 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
 
 @media only screen and (min-width : 1500px) 
 {
-    body
+    .gradient_background
     {
         width:70%;
+        max-width: 1500px;
     }
 }
 
 @media only screen and (min-width : 1281px) and (max-width : 1499px) 
 {
-    body
+    .gradient_background
     {
         width:80%;
-    }
-    
+    }    
 }
 
 @media only screen and (max-width : 1280px) 
 {
-    body
+    .gradient_background
     {
         padding:3px;
     }
@@ -389,8 +389,8 @@ Used to create gradient border.
 
     .gradient_background
     {
+        margin:0 auto;
         background-color:#d2d6da;
-        padding:2px;
         box-shadow: 1px 3px 20px 0px rgba(0, 0, 10, 0.5);
     }
 
