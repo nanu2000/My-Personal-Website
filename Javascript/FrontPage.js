@@ -20,7 +20,6 @@ function Animator(animation)
     {
         return !this._stopped;
     };
-   
     
     this.requestAnimationFramePolyFill = 
         window.requestAnimationFrame        || 
@@ -30,7 +29,6 @@ function Animator(animation)
         {
             window.setTimeout(callback, 1000 / 60);
         };
-        
         
     this._step = function(now) 
     {
@@ -67,7 +65,6 @@ function Animator(animation)
             }
         );  
     };    
-    
 }
 
 function getBoundingClientRectWithCenter(element)
@@ -287,6 +284,8 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
     
 }
 
+/*******************************************************/
+
 function performOperationsOnIndividualItemUpdate()
 {
     return function(currentContainerOrientation, currentItem, deltaTime, pxPerSecond)
@@ -306,9 +305,7 @@ function performOperationsOnIndividualItemUpdate()
     };
 }
 
-
-
-function initFlexItems()
+function initCarouselItems()
 { 
 
     var carousel = new Caurousel
@@ -332,9 +329,6 @@ function initFlexItems()
     animator.start();
 }
 
-
-
-
 function executeMobileJavascript()
 {
     var elements    = document.getElementsByClassName("portfolio_item");
@@ -357,7 +351,7 @@ function runJavascript()
         executeMobileJavascript();
     }
     
-    initFlexItems();
+    initCarouselItems();
     
 }
 /*self explanatory*/

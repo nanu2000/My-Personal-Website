@@ -1,47 +1,19 @@
-/*
-
-
-************************************************
+/************************************************
 USE lower_case_underline_naming FOR CSS STYLING!
-************************************************
+*************************************************/
 
 
-FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
-FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
-
-FOR IMPORTANT BLACK COLOR, USE #1d2235 or #040b25;
-FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
-
-
-/*********************************************
-*Media Queries That are in use.
-**********************************************
-
-@media only screen and (max-width : 1250px) and (min-width : 1000px) 
-{ 
+#portfolio_item_container
+{
+    
+  position: relative;
+  padding: 0;
+  margin: 0px 3px 0px 3px;
+  list-style: none;
+  overflow:hidden;
+  white-space: nowrap;
+  
 }
-
-@media only screen and (min-width : 1000px) 
-{    
-}
-
-@media only screen and (min-width : 667px) and (max-width : 999px)
-{            
-}
-
-@media only screen and (min-width : 450px) and (max-width : 666px) 
-{          
-}
-
-@media only screen and (max-width : 449px) 
-{    
-}
-
-@media only screen and (max-width : 400px)
-{ 
-}
-
-*/
 
 .portfolio_item:hover  .portfolio_item_content_wrapper,
 .portfolio_item .hover .portfolio_item_content_wrapper
@@ -52,31 +24,16 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     opacity: 1.0;
 }
 
-#portfolio_item_container
-{
-  position: relative;
-  padding: 0;
-  margin: 0px 3px 0px 3px;
-  list-style: none;
-  overflow:hidden;
-  white-space: nowrap;
-}
-
 .portfolio_item
 {
     
     width:20%;
     min-width:270px;
-    
     display:inline-block;
-  
     overflow:hidden;
     white-space:normal;
-    
     left:0px;
-    
-    border: 3px solid rgba(0,0,0,0);
-    
+    border: 3px solid #d2d6da;
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */  
     position:relative;
@@ -121,6 +78,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     width:100%;
     z-index: 1;
 }
+
 .portfolio_item .portfolio_item_bg
 {
     object-fit:cover;

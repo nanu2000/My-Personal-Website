@@ -1,16 +1,6 @@
-/*
-
-************************************************
+/************************************************
 USE lower_case_underline_naming FOR CSS STYLING!
-************************************************
-
-FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
-FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
-
-FOR IMPORTANT BLACK COLOR, USE #232323 or #040b25;
-FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
-
-*/
+*************************************************/
 
 
 #main_content_wrapper
@@ -18,7 +8,7 @@ FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
     margin:0 auto;
     padding:3px;
     background-color:#d2d6da;
-    box-shadow: 1px 3px 20px 0px rgba(0, 0, 10, 0.5);
+    box-shadow: 1px 3px 20px 0px #808089;
     min-width: 275px;
     
 }
@@ -245,7 +235,6 @@ Used to create the navagation bar
         overflow: hidden;
         
         border: 3px solid #d2d6da;
-        border: 3px solid rgba(0,0,0,0);
 
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */   
@@ -551,7 +540,7 @@ Additional CSS used for multiple pages
     }
     .video_wrapper iframe 
     {
-        border: 2px solid rgb(148,0,108);
+        border: 6px solid #d2d6da;
         position: absolute;
         top: 0;
         left: 15%;
@@ -568,7 +557,6 @@ Additional CSS used for multiple pages
         background: #f9f9f9;
         
         border: 3px solid #d2d6da;
-        border: 3px solid rgba(0,0,0,0);
 
         -webkit-background-clip:    padding-box;
         background-clip:            padding-box; 

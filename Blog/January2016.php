@@ -24,7 +24,6 @@ To resolve the bug, it turns out that I also need to check the aiNodes for trans
 Here is an example of the bug.
 </p>
 <img class="SmallBlogImage"  src ="January2016Content/boneGlitch.png" />
-<br style = "clear: both;">
 <p>
 I spent a good week (2-8 hours a day) Banging my head against the wall and thinking about ditching skeletal animation,
 but even after that I cant say that I'm mad, because I feel like I really understand how skeletal animation works and how Assimp is set up as a library, 
@@ -92,9 +91,7 @@ So for the past week I have erased my old rendering code from my 2D engine, and 
 To elaborate on that, I have implemented GLSL shaders, changed from orthographic view to perspective view, added the <a class ="TextLink" href = "http://glm.g-truc.net/0.9.7/index.html">openGL math library</a> for matrix math and vector math, and made a simple textured cube class to demonstrate that everything works!
 </p>
 
-<h5 class = "text_center">A few textured cubes being rendered</h5>
-
-<br>
+<div class = "text_center generic_title_sm">A few textured cubes being rendered</div>
 
 <img class="BigBlogImage" src ="January2016Content/EngineCube.png" />
 

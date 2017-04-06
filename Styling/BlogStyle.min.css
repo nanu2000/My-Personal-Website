@@ -1,2 +1,1 @@
-
-#BlogNavbar{padding:12px;background-color:white}.BigBlogImage{margin-left:15%;width:70%;height:auto}.SmallBlogImage{margin-left:30%;width:35%;height:auto}
+#BlogNavbar{padding:17px;font-family:'Raleway',sans-serif;font-size:.9rem;background-color:#fbfbfb}.SmallBlogImage,.BigBlogImage{padding:20px;margin:0 auto;height:auto}.BigBlogImage{width:80%}.SmallBlogImage{width:50%}

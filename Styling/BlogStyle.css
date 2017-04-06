@@ -1,56 +1,27 @@
-/*
-
-
-************************************************
+/************************************************
 USE lower_case_underline_naming FOR CSS STYLING!
-************************************************
-
-
-FOR IMPORTANT WHITE COLOR, USE rgb(255,255,255);
-FOR LESS IMPORTANT WHITE COLOR USE rgb(235,235,235)
-
-FOR IMPORTANT BLACK COLOR, USE #1d2235 or #040b25;
-FOR LESS IMPORTANT BLACK COLOR USE rgb(70,70,70);
-
-
-/*********************************************
-*Media Queries That are in use.
-**********************************************
-
-@media only screen and (min-width : 1000px) 
-{    
-}
-
-@media only screen and (min-width : 667px) and (max-width : 999px)
-{            
-}
-
-@media only screen and (min-width : 450px) and (max-width : 666px) 
-{          
-}
-
-@media only screen and (max-width : 449px) 
-{    
-}
-*/
-
+*************************************************/
 
 #BlogNavbar
 {
-    padding:12px;
-    background-color: white;
+    padding:17px;
+    font-family: 'Raleway', sans-serif;
+    font-size:.9rem;
+    background-color:#fbfbfb ;
 }
 
+.SmallBlogImage, .BigBlogImage
+{
+    padding:20px;
+    margin: 0 auto;
+    height:auto;
+    
+}
 .BigBlogImage
 {
-/*formula = remainder / 2 ||| IE: 70 / 100 = R30 = R30/2 = 15*/
-    margin-left:15%;
-    width : 70%; 
-    height:auto;
+    width : 80%; 
 }
 .SmallBlogImage
 {
-    margin-left:30%;
-    width : 35%; 
-    height:auto;
+    width : 50%; 
 }
