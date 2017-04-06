@@ -9,7 +9,7 @@ startContentContainer();
 <div class = "text_center generic_header_wrapper generic_header_title"> 
 My Current Project 
 </div>
-<div class="generic_page_text generic_page_text_end">
+<div class="generic_page_text">
 <p> 
 You can follow my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::NEWEST_BLOG_POST_URL);?>">blog</a> (which will have weekly/monthly posts starting 12/30/15)
 for more information regarding the development of this project.

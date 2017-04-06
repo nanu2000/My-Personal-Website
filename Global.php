@@ -67,7 +67,7 @@ function startBlogPost($title, $subtitle)
 
     </div>
     </div>
-    <div class = "generic_page_text generic_page_text_end">
+    <div class = "generic_page_text">
     
 <?php
 }
@@ -173,7 +173,7 @@ function outputLogo()
     startContentContainer();
     
 ?>
-    <div class = "text_center generic_header_wrapper generic_header_wrapper_end">
+    <div class = "text_center generic_header_wrapper ">
     <div id ="richie_text">Richie Sikra</div>  
     <div id = "richie_text_subtitle">Developer | Designer | Creator</div>
     </div>

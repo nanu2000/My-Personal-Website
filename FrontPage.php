@@ -5,7 +5,7 @@ include('FlexPortfolio.php');
 startContentType(PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::HOME_NAV_ID, '', array("Styling/FrontPageStyle.min.css"), array(), array("Styling/FrontPageNoScript.min.css"));
 startContentContainer();
 ?>
-<div class ="generic_page_text generic_page_text_end">
+<div class ="generic_page_text">
     
     <div class = "text_center generic_title_sm" >
         The text below is meant to test the layout of this page. It is temporary and will be replaced soon.

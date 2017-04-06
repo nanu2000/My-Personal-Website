@@ -256,7 +256,6 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
 
     };
     
-    
     this.update = function(deltaTime)
     {
 
@@ -282,7 +281,6 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
             this._loopItem(flexItemToBeLooped);
         }
     };
-    
 }
 
 /*******************************************************/
