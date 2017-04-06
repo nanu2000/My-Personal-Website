@@ -19,8 +19,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
     background-color:#3661a2;
     line-height: 1.7;
     font-family: 'Raleway', sans-serif;    
-    padding-top:15px;
-    padding-bottom: 15px;
+    padding: 15px 0;
 }
 
 
@@ -130,6 +129,7 @@ Used to create Logo type text above nav bar
         font-size: 1rem;
         letter-spacing: .5px;
         font-weight: bold;
+        margin : .5rem 0;
     }
 
     #richie_text
@@ -138,9 +138,8 @@ Used to create Logo type text above nav bar
         font-weight: bold;
         font-family: 'Lobster', cursive;
         color: #272727;
-        margin : 0px;
+        margin : .5rem 0;
         padding : 0px;
-        padding-bottom: 10px;
         font-size: 2.7rem;
         letter-spacing: 2px;
     }
@@ -308,7 +307,7 @@ Used to create the navagation bar
     }
     .navbar_icon_links li img
     {
-        padding: 10px 5px 0px 5px;
+        margin: 10px 5px 0px 5px;
         width:32px;
         height:32px;
     }
@@ -356,7 +355,7 @@ Additional CSS used for multiple pages
     {
         .generic_page_text
         { 
-            padding: 40px 25% 0px 25%;
+            margin: 3rem 25%;
         }
     }
     
@@ -364,7 +363,7 @@ Additional CSS used for multiple pages
     {         
         .generic_page_text
         { 
-            padding: 40px 20% 0px 20%;
+            margin: 3rem 20%;
         }
     }
     
@@ -372,7 +371,7 @@ Additional CSS used for multiple pages
     {         
         .generic_page_text
         { 
-            padding: 40px 15% 0px 15%;
+            margin: 3rem 15%;
         }
     }
     
@@ -380,7 +379,7 @@ Additional CSS used for multiple pages
     {
         .generic_page_text
         { 
-            padding: 40px 12% 5px 12%;
+            margin: 3rem 12%;
         }
     }
     
@@ -388,7 +387,7 @@ Additional CSS used for multiple pages
     {
         .generic_page_text
         { 
-            padding: 40px 5% 5px 5%;
+            margin: 3rem 5%;
         }
     }
 
@@ -396,7 +395,7 @@ Additional CSS used for multiple pages
     {     
         .generic_page_text p
         {
-            padding: 5px 20px 5px 20px;
+            margin: 1.75rem 20px;
         }
     }
     
@@ -404,7 +403,7 @@ Additional CSS used for multiple pages
     {
         .generic_page_text p
         {
-            padding: 15px 25px 15px 25px;
+            margin: 1.75rem 25px;
         }
     }
     
@@ -412,7 +411,7 @@ Additional CSS used for multiple pages
     {    
         .generic_page_text p
         {
-            padding: 5px 20px 5px 20px;
+            margin: 1.75rem 20px;
         }
     }
     
@@ -420,7 +419,7 @@ Additional CSS used for multiple pages
     {  
         .generic_page_text p
         {
-            padding: 5px 5px 5px 5px;
+            margin: 1.75rem 5px;
         }
     }
 
@@ -428,18 +427,12 @@ Additional CSS used for multiple pages
 
     .generic_header_wrapper
     {
-        padding:40px 10px 0px 10px;  
-    }
-    .generic_header_wrapper_end, .generic_page_text_end
-    {
-        padding-bottom: 40px;
-    }
-
+        margin: 2.5rem 0;
+    }    
+    
     .generic_header_title
     {    
         color: #333;
-        margin-top:0;
-        margin-bottom:0;
         font-size: 2.3rem;
         font-weight: bold;
     }
@@ -448,7 +441,7 @@ Additional CSS used for multiple pages
     {
         color: #444;
         font-size: 1.4rem;
-        padding-top:15px;
+        margin-top:15px;
     }
 
     /*Generic Titles*/
@@ -456,32 +449,30 @@ Additional CSS used for multiple pages
     .generic_title_sm, .generic_title_m, .generic_title_l, .generic_title_xl
     {    
         color: #272727;
-        margin-top:0;
-        margin-bottom:0;
         font-weight: bold;
         font-family: 'Raleway', sans-serif;   
     }
 
     .generic_title_sm
     {    
-        padding:10px;  
+        margin: 1rem 0;
         font-size: 1.1rem;
     }
 
     .generic_title_m
     {    
-        padding:20px;   
+        margin: 1.25rem 0;
         font-size: 1.2rem;
     }
 
     .generic_title_l
-    {    
-        padding:30px;    
+    {      
+        margin: 1.5rem 0;
         font-size: 1.6rem;
     }
     .generic_title_xl
-    {    
-        padding:30px;    
+    {     
+        margin: 1.75rem 0;
         font-size: 2.0rem;
     }
 
@@ -498,12 +489,6 @@ Additional CSS used for multiple pages
     .generic_page_text a
     {
         color: rgb(0,0,200);
-    }
-
-    .generic_page_text p
-    {
-        margin: 0px;
-        text-indent: 0px;
     }
 
     /*Centers text*/
@@ -555,7 +540,6 @@ Additional CSS used for multiple pages
         position: relative; 
         height: auto;
         background: #f9f9f9;
-        
         border: 3px solid #d2d6da;
 
         -webkit-background-clip:    padding-box;
@@ -572,12 +556,12 @@ Additional CSS used for multiple pages
 
         .feature_list
         {
-            padding-left: 10px;
+            margin-left: 10px;
         }
 
         .feature_list .feature_list
         {
-            padding-left: 20px;
+            margin-left: 20px;
         }
     }
     
@@ -591,14 +575,13 @@ Additional CSS used for multiple pages
 
     .feature_list .feature_list
     {
-        padding-bottom: 5px;
-        padding-top: 5px;
+        margin: 5px 0;
     }
 
     .feature_list li 
     {
         counter-increment: item;
-        margin-bottom: 10px;
+        margin: 10px 0;
         font-family: 'Raleway', sans-serif;
         font-size: .9rem;
     }

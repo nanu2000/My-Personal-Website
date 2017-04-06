@@ -8,7 +8,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
     
   position: relative;
   padding: 0;
-  margin: 0px 3px 0px 3px;
+  margin: 0 3px;
   list-style: none;
   overflow:hidden;
   white-space: nowrap;
@@ -56,8 +56,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
 .portfolio_item_text_wrapper .portfolio_item_text
 {
     font-size:.9rem;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0 5px;
     font-family: 'Raleway', sans-serif;
     display: table-cell; 
     text-align: center;
