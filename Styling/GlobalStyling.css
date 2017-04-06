@@ -213,7 +213,7 @@ Used to create the navagation bar
         .navbar_text_links .text_link a
         {    
             display: block;
-            padding: 12px 12px;
+            padding: 12px 0px;
             text-decoration: none;
         }
         .navbar_text_links > .text_link
