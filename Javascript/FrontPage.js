@@ -1,86 +1,6 @@
 
-function Animator(animation) 
-{
-    this._lastTime;
-    this._animation = animation;
-    this._stopped = true;
-    this._deltaTimeResetBuffer = .1;
-    
-    this.stop = function()
-    {
-        this._stopped = true;
-    };
-    
-    this.start = function()
-    {
-        this._stopped = false;
-        this._requestNextFrame();
-    };
-
-    this.isRunning = function()
-    {
-        return !this._stopped;
-    };
-    
-    this.requestAnimationFramePolyFill = 
-        window.requestAnimationFrame        || 
-        window.webkitRequestAnimationFrame  || 
-        window.mozRequestAnimationFrame     ||
-        function(callback)
-        {
-            window.setTimeout(callback, 1000 / 60);
-        };
-        
-    this._step = function(now) 
-    {
-        if(this._stop)
-        {
-            return;
-        }
-        
-        var deltaTime  = (now - (this.lastTime || now)) / 1000;
-        
-        //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
-        if(deltaTime > this._deltaTimeResetBuffer)
-        {
-            deltaTime = .016;
-        }    
-
-        this.lastTime = now;
-
-
-        this._animation(deltaTime);
-        this._requestNextFrame();
-    };
-    
-    this._requestNextFrame = function()
-    {
-        var animatorObject = this;
-        
-        this.requestAnimationFramePolyFill.call
-        (
-            window,
-            function(now)
-            {
-                animatorObject._step(now);
-            }
-        );  
-    };    
-}
-
-function getBoundingClientRectWithCenter(element)
-{
-    return function()
-    {
-        var rect        = element.getBoundingClientRect();
-        rect.center     = rect.left + rect.width / 2;
-        return rect;
-    };
-}  
-
 function CarouselItem(element)
 {
-    
     this._element = element;
     this._startPosition;
     this._centerAdditor;
@@ -283,6 +203,86 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
     };
 }
 
+function Animator(animation) 
+{
+    this._lastTime;
+    this._animation = animation;
+    this._stopped = true;
+    this._deltaTimeResetBuffer = .1;
+    
+    this.stop = function()
+    {
+        this._stopped = true;
+    };
+    
+    this.start = function()
+    {
+        this._stopped = false;
+        this._requestNextFrame();
+    };
+
+    this.isRunning = function()
+    {
+        return !this._stopped;
+    };
+    
+    this.requestAnimationFramePolyFill = 
+        window.requestAnimationFrame        || 
+        window.webkitRequestAnimationFrame  || 
+        window.mozRequestAnimationFrame     ||
+        function(callback)
+        {
+            window.setTimeout(callback, 1000 / 60);
+        };
+        
+    this._step = function(now) 
+    {
+        if(this._stop)
+        {
+            return;
+        }
+        
+        var deltaTime  = (now - (this.lastTime || now)) / 1000;
+        
+        //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
+        if(deltaTime > this._deltaTimeResetBuffer)
+        {
+            deltaTime = .016;
+        }    
+
+        this.lastTime = now;
+
+
+        this._animation(deltaTime);
+        this._requestNextFrame();
+    };
+    
+    this._requestNextFrame = function()
+    {
+        var animatorObject = this;
+        
+        this.requestAnimationFramePolyFill.call
+        (
+            window,
+            function(now)
+            {
+                animatorObject._step(now);
+            }
+        );  
+    };    
+}
+
+function getBoundingClientRectWithCenter(element)
+{
+    return function()
+    {
+        var rect        = element.getBoundingClientRect();
+        rect.center     = rect.left + rect.width / 2;
+        return rect;
+    };
+}  
+
+
 /*******************************************************/
 
 function performOperationsOnIndividualItemUpdate()
@@ -362,7 +362,15 @@ runJavascript();
 
 
 
-//Used code from https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from
+/*---------------------------------------------------------------------------------------------------------|
+|**********************************************************************************************************|
+|**********************************************************************************************************|
+|**********************************************************************************************************|
+| Used code from https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from  |
+|**********************************************************************************************************|
+|**********************************************************************************************************|
+|**********************************************************************************************************|
+-----------------------------------------------------------------------------------------------------------*/
 function getArrayFromPolyfill() 
 {
     var toStr = Object.prototype.toString;
