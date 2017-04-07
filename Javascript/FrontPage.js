@@ -1,4 +1,17 @@
 
+/***************************************************************************
+ * The Carousel Items are moved by their local position, not absolute. This
+ * makes it hard to calculate new positions because the getBoundingClientRect Function
+ * returns an absolute position, and not a relative position. 
+ * The Carousel Object contains functions that convert local positions to absolute positions
+ * making it easier to compare positions with other Carousel Objects.
+ ***************************************************************************
+ 
+ *****************************************************************************
+ * This Object represents a single item on the carousel. 
+ * An array of these Items are created and updated in the carousel object.
+ ***************************************************************************/
+
 function CarouselItem(element)
 {
     this._element = element;
@@ -87,16 +100,23 @@ function CarouselItem(element)
     
 }
 
+ /***************************************************************************
+ * The Carousel Object Creates and Controls a group of Carousel Items.
+ * The update function will update the Carousel one tick. Because of that, it is best
+ * to pass the update function to an animator class and then run it. 
+ ***************************************************************************/
+
 function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndividualUpdate)
 {
-    
     this._container         = containerElement;
     this._items             = Array.from(itemElements);  
     this._pxPerSecond       = pxPerSecond;
-    this._currentContainerOrientation;
     
     this._performOperationsOnIndividualUpdate    = operationsOnIndividualUpdate;
     this._container.getRectWithCenter            = getBoundingClientRectWithCenter(this._container);
+    
+    this._currentContainerOrientation;
+    
 
     this.initialise = function()
     {
@@ -106,7 +126,7 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
             this._items[i] = new CarouselItem(this._items[i]);
         }
 
-        this._items.sort(function(a,b) 
+        this._items.sort(function(a, b) 
         {
             return a.isGreaterThan(b);
         });
@@ -141,39 +161,33 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
     
     this._loopItem = function(flexItemToBeLooped)
     {
-        
-        var brother = this._items[(flexItemToBeLooped + 1) % this._items.length];
+        //The Item that's in front of the flexItemToBeLooped
+        var brotherItem = this._items[(flexItemToBeLooped + 1) % this._items.length];
 
         var positionBehindBrother   = 
             this._items[flexItemToBeLooped].getZeroPosition()    + 
-            (brother.getRect().left - this._items[flexItemToBeLooped].getRect().width);
+            (brotherItem.getRect().left - this._items[flexItemToBeLooped].getRect().width);
         
         this._items[flexItemToBeLooped].setXPosition(positionBehindBrother);       
         
     };
     
     
-    this._updateItem = function(index, deltaTime)
+    this._updateItem = function(item, deltaTime)
     {
-        var currentItem = this._items[index];
         
-        if(currentItem.shouldLoop()) 
+        var operationInfo =
         {
-            // if true then we cant loop the item here because perhaps not all of the items had pxPerSecond * deltaTime added to them. 
-            // We return the index to notify the caller that this item needs to be looped and because we dont need to do anything else with this item.
-            return index;         
-        }    
+            carouselItemContainerOrientation    : this._currentContainerOrientation, 
+            currentItem                         : item, 
+            deltaTime                           : deltaTime, 
+            pxPerSecond                         : this._pxPerSecond
+        };
         
+        this._performOperationsOnIndividualUpdate(operationInfo);
         
-        if(this._performOperationsOnIndividualUpdate(this._currentContainerOrientation, currentItem, deltaTime, this._pxPerSecond) === false)
-        {
-            return -1;
-        }
+        item.addToXPosition(deltaTime * this._pxPerSecond);
         
-        currentItem.addToXPosition(deltaTime * this._pxPerSecond);
-        
-        return -1;
-
     };
     
     this.update = function(deltaTime)
@@ -183,32 +197,42 @@ function Caurousel(containerElement, itemElements, pxPerSecond, operationsOnIndi
         {
             this._initialiseAllItemPositionsBasedOnContainer();     
         }
-                
-        var flexItemToBeLooped = -1;
         
+        var flexItemToBeLooped = false;
+
         for(var i = 0; i < this._items.length; i++)
         {
-            var itemShouldBeLooped = this._updateItem(i, deltaTime);
             
-            if(itemShouldBeLooped !== -1)
+            if(this._items[i].shouldLoop())
             {
-                flexItemToBeLooped = itemShouldBeLooped;
+                flexItemToBeLooped = i;
+                continue;   //Since we are going to loop this item we don't need to update it.
             }
+            
+            this._updateItem(this._items[i], deltaTime);
         }
-
-        if(flexItemToBeLooped !== -1)
+        
+        if(flexItemToBeLooped !== false)
         {
             this._loopItem(flexItemToBeLooped);
         }
     };
 }
 
-function Animator(animation) 
+
+ /*********************************************************************************************
+ * The Animator Object will execute the animation function passed into it's constructor
+ * every ~~.016 seconds (60fps).
+ * if the deltaTime (normally valued at about .016) is greater than the deltaTimeResetBuffer
+ * then the deltaTime will set itself to .016.
+ **********************************************************************************************/
+
+function Animator(animation, deltaTimeResetBuffer) 
 {
     this._lastTime;
     this._animation = animation;
     this._stopped = true;
-    this._deltaTimeResetBuffer = .1;
+    this._deltaTimeResetBuffer = deltaTimeResetBuffer || .1;
     
     this.stop = function()
     {
@@ -226,13 +250,13 @@ function Animator(animation)
         return !this._stopped;
     };
     
-    this.requestAnimationFramePolyFill = 
+    this._requestAnimationFramePolyFill = 
         window.requestAnimationFrame        || 
         window.webkitRequestAnimationFrame  || 
         window.mozRequestAnimationFrame     ||
         function(callback)
         {
-            window.setTimeout(callback, 1000 / 60);
+            window.setTimeout(callback, .016);
         };
         
     this._step = function(now) 
@@ -242,6 +266,7 @@ function Animator(animation)
             return;
         }
         
+        //Simple deltaTime Calculation
         var deltaTime  = (now - (this.lastTime || now)) / 1000;
         
         //A simple fix so that the time scale isn't messed up when the user changes windows or tabs
@@ -251,8 +276,6 @@ function Animator(animation)
         }    
 
         this.lastTime = now;
-
-
         this._animation(deltaTime);
         this._requestNextFrame();
     };
@@ -261,7 +284,7 @@ function Animator(animation)
     {
         var animatorObject = this;
         
-        this.requestAnimationFramePolyFill.call
+        this._requestAnimationFramePolyFill.call
         (
             window,
             function(now)
@@ -282,35 +305,35 @@ function getBoundingClientRectWithCenter(element)
     };
 }  
 
-
+/*******************************************************/
 /*******************************************************/
 
 function performOperationsOnIndividualItemUpdate()
 {
-    return function(currentContainerOrientation, currentItem, deltaTime, pxPerSecond)
+    return function(operationInfo)
     {
 
-        var itemRect = currentItem.getRect();
+        var itemRect = operationInfo.currentItem.getRect();
 
-        if(itemRect.center > currentContainerOrientation.center - itemRect.width &&
-           itemRect.center < currentContainerOrientation.center + itemRect.width) 
+        if(itemRect.center > operationInfo.carouselItemContainerOrientation.center - itemRect.width &&
+           itemRect.center < operationInfo.carouselItemContainerOrientation.center + itemRect.width) 
         {
-            currentItem.getElement().querySelector('a').className = "hover";
+            operationInfo.currentItem.getElement().querySelector('a').className = "hover";
         }
         else
         {
-            currentItem.getElement().querySelector('a').className = "";
+            operationInfo.currentItem.getElement().querySelector('a').className = "";
         }
     };
 }
 
-function initCarouselItems()
+function runCarousel()
 { 
 
     var carousel = new Caurousel
     (
-        document.getElementById('portfolio_item_container'),
-        document.getElementsByClassName('portfolio_item'), 
+        document.getElementById         ('portfolio_item_container'),
+        document.getElementsByClassName ('portfolio_item'), 
         25,
         performOperationsOnIndividualItemUpdate()
     );
@@ -328,16 +351,6 @@ function initCarouselItems()
     animator.start();
 }
 
-function executeMobileJavascript()
-{
-    var elements    = document.getElementsByClassName("portfolio_item");
-
-    for (var i = 0; i < elements.length; i++) 
-    {
-        elements[i].querySelector('a').className += "hover";
-    }
-}
-
 /**************************
  *Runs when file is loaded.
  *This is the entry function.
@@ -349,12 +362,8 @@ function runJavascript()
     {
         Array.from = getArrayFromPolyfill() ;
     }
-    if ('ontouchstart' in window) 
-    {     
-        executeMobileJavascript();
-    }
     
-    initCarouselItems();
+    runCarousel();
     
 }
 /*self explanatory*/
@@ -365,9 +374,7 @@ runJavascript();
 /*---------------------------------------------------------------------------------------------------------|
 |**********************************************************************************************************|
 |**********************************************************************************************************|
-|**********************************************************************************************************|
 | Used code from https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from  |
-|**********************************************************************************************************|
 |**********************************************************************************************************|
 |**********************************************************************************************************|
 -----------------------------------------------------------------------------------------------------------*/
@@ -387,38 +394,29 @@ function getArrayFromPolyfill()
         { 
             return 0; 
         }
-
         if (number === 0 || !isFinite(number)) 
         { 
             return number; 
         }
-
         return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
-
     };
-
     var maxSafeInteger = Math.pow(2, 53) - 1;
-
     var toLength = function (value) 
     {
         var len = toInteger(value);
         return Math.min(Math.max(len, 0), maxSafeInteger);
     };
-
+    /*Used code from https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from*/
     return function from(arrayLike) 
     {
         var C = this;
         var items = Object(arrayLike);
-
         if (arrayLike === null) 
         {
           throw new TypeError("Array.from requires an array-like object - not null or undefined");
         }
-
         var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
-
         var T;
-
         if (typeof mapFn !== 'undefined') 
         {
             if (!isCallable(mapFn)) 
@@ -431,12 +429,10 @@ function getArrayFromPolyfill()
                 T = arguments[2];
             }
         }
-
         var len = toLength(items.length);
         var A = isCallable(C) ? Object(new C(len)) : new Array(len);
         var k = 0;
         var kValue;
-
         while (k < len) 
         {
           kValue = items[k];
@@ -453,4 +449,6 @@ function getArrayFromPolyfill()
         A.length = len;
         return A;
     };
+    
 }
+/*End of used code from https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from*/
