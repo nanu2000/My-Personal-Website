@@ -223,7 +223,7 @@ Used to create the navagation bar
         }
         #navbar_more .text_link a
         {
-            padding: 12px 0;
+            padding: 12px 14px;
         }
     }
 
