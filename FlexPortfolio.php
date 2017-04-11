@@ -31,7 +31,7 @@ function createFlexPageFromStringOfItems($items)
 }
 
 
-function echoPortfolio()
+function outputPortfolio()
 {
     
     
