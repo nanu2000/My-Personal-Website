@@ -182,6 +182,30 @@ function outputLogo()
     endContentContainer(); 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Content
 {
     private $content;
@@ -217,45 +241,97 @@ class GenericContent extends Content
     }
 }
 
-class Page
+
+
+
+
+
+
+
+
+
+
+class PageInfo
 {
     
-    private $relativePath;
-    private $content = array();
-
-    function __construct($relPath = '')
+    public $relativePath;
+    public $navbarSelectionID;
+    public $pageTitle;
+    private $styleSheets    = array();
+    private $javascripts    = array();
+    private $noScripts      = array();
+    
+    function __construct
+    (
+        $navbarSelectionID,
+        $relativePath = '',
+        $styleSheets    = array(),
+        $javascripts    = array(),
+        $noScripts      = array(),
+        $pageTitle = "-Richie Sikra-"
+    )
     {
-        $this->relativePath = $relPath;
-    }
-
-    function addContent($contentItem)
-    {
-        array_push($this->content, $contentItem);
+        $this->relativePath         = $relativePath;
+        $this->navbarSelectionID    = $navbarSelectionID;
+        $this->pageTitle            = $pageTitle;
+        $this->styleSheets          = $styleSheets;
+        $this->javascripts          = $javascripts;
+        $this->noScripts            = $noScripts;
     }
     
-    function showContent()
+    function addToStyleSheets($item)
     {
-        for($i = 0; $i < count($this->content); $i++)
+        array_push($this->styleSheets, $item);
+    }
+    function addToScripts($item)
+    {
+        array_push($this->javascripts, $item);
+    }
+    function addToNoScripts($item)
+    {
+        array_push($this->noScripts, $item);
+    }
+    
+    function outputStylesheets()
+    {
+        for($i = 0; $i < count($this->styleSheets); $i++)
         {
-            $this->content[$i]->display();
+            echo('<link rel="stylesheet" href="'.$this->styleSheets[$i].'">');
         }
     }
 
-    function startContent()
+    function outputScripts()
     {
-        $this->startContentType
-        (
-            PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::HOME_NAV_ID, 
-            '', 
-            array("Styling/FrontPageStyle.min.css"), 
-            array(), 
-            array("Styling/FrontPageNoScript.min.css")
-        );
+        for($i = 0; $i < count($this->javascripts); $i++)
+        {
+            echo('<script src="'.$this->javascripts[$i].'"></script>');
+        }
     }
-    
-    function endContent()
+
+    function outputNoScripts()
     {
-        $this->endDefaultContent('', array("Javascript/FrontPage.min.js"));
+        echo("<noscript>");
+        for($i = 0; $i < count($this->noScripts); $i++)
+        {
+            echo('<link rel="stylesheet" href="'.$this->noScripts[$i].'">');
+        }
+        echo("</noscript>");
+    }
+}
+
+
+
+
+
+class Page
+{
+    
+    protected $pageInfo;
+    protected $content        = array();
+    
+    function __construct($pageInfo)
+    {
+        $this->pageInfo = $pageInfo;
     }
 
     function displayPage()
@@ -264,107 +340,36 @@ class Page
         $this->showContent();
         $this->endContent();
     }
-
-
-    function startContentType($contentType, $navbarID, $prefix = '', $styleSheets = array(), $scripts = array(), $noScripts = array(), $pageTitle = '-Richie Sikra-')
+    
+    function addContent($contentItem)
     {
-        /*every page will have these files*/
-        array_push($styleSheets, $prefix . "Styling/GlobalStyling.min.css"   );
-        array_push($noScripts,   $prefix . "Styling/GlobalNoScript.min.css"  );
-
-        switch($contentType)
-        {
-            case PAGE_CONTENT_TYPE::BLOG_PAGE:
-
-                array_push($styleSheets, $prefix .  "Styling/BlogStyle.min.css");      
-
-            break;
-
-            case PAGE_CONTENT_TYPE::PROJECT_PAGE:
-
-                array_push($styleSheets, $prefix .  "Styling/GamePageStyle.min.css");            
-
-            break;
-        }
-
-
-        $this->startDefaultContent ($styleSheets, $scripts, $noScripts, $prefix, $pageTitle);     
-        displayNavbar       ($navbarID, $prefix);
-
+        array_push($this->content, $contentItem);
     }
-
-    function outputStylesheets($styleSheets)
+        
+    function showContent()
     {
-        for($i = 0; $i < count($styleSheets); $i++)
+        for($i = 0; $i < count($this->content); $i++)
         {
-            echo('<link rel="stylesheet" href="'.$styleSheets[$i].'">');
+            $this->content[$i]->display();
         }
     }
-
-    function outputScripts($scripts)
-    {
-        for($i = 0; $i < count($scripts); $i++)
-        {
-            echo('<script src="'.$scripts[$i].'"></script>');
-        }
+        
+    function startContent()
+    {   
+        $this->outputHead();
+        ?><body><?php
     }
 
-    function outputNoScripts($noScripts)
+    function endContent()
     {
-        echo("<noscript>");
-
-        for($i = 0; $i < count($noScripts); $i++)
-        {
-            echo('<link rel="stylesheet" href="'.$noScripts[$i].'">');
-        }
-
-        echo("</noscript>");
-    }
-
-    function outputExternalFileIncludes($styleSheets, $noScripts, $scripts)
-    {
-        $this->outputStylesheets   ($styleSheets);
-        $this->outputNoScripts     ($noScripts);
-        $this->outputScripts       ($scripts);
-    }
-
-    function startDefaultContent($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = 'Richie Sikra')
-    {
-        $this->outputHeader($styleSheets, $scripts, $noScripts, $prefix, $pageTitle);
-
-        echo('<body><div id = "main_content_wrapper">');   
-            
-        $this->outputLogo();
-
-    }
-
-    function endDefaultContent($prefix = '', $scripts = array())
-    {
-
-        array_push($scripts,    $prefix . "Javascript/Global.min.js");
-
-        startContentContainer();
-    ?>
-
-        <div class ="text_center" id="copyright_footer">
-        Copyright 2015-<?php echo date("Y")?> Richard Sikra
-        </div>
-
-    <?php
-
-        endContentContainer();
-
-    ?>
-        </div>
-        <?php $this->outputScripts($scripts); ?>
+        $this->pageInfo->outputScripts();
+        ?>
         </body>
         </html>
-
-    <?php
-
+        <?php
     }
-
-    function outputHeader($styleSheets, $scripts, $noScripts, $prefix = '', $pageTitle = 'Richie Sikra')
+    
+    function outputHead()
     {
         ?>
         <!DOCTYPE html>
@@ -373,44 +378,84 @@ class Page
         <meta name="viewport" content="width=device-width">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-        <link rel = "shortcut icon" href = "<?php echo($prefix)?>Images/Favicon.ico" type="image/x-icon">
-        <?php $this->outputExternalFileIncludes($styleSheets, $noScripts, $scripts); ?>
-        <title><?php echo($pageTitle); ?></title>
+        <link rel = "shortcut icon" href = "<?php echo($this->pageInfo->relativePath);?>Images/Favicon.ico" type="image/x-icon">
+        <?php         
+        $this->pageInfo->outputStylesheets   ();
+        $this->pageInfo->outputNoScripts     ();
+        ?>
+        <title><?php echo($this->pageInfo->pageTitle);?></title>
         </head>
         <?php
-    }
-
-    function outputLogo()
-    {
-        startContentContainer();
-
-    ?>
-        <div class = "text_center generic_header_wrapper ">
-        <div id ="richie_text">Richie Sikra</div>  
-        <div id = "richie_text_subtitle">Developer | Designer | Creator</div>
-        </div>
-    <?php
-
-        endContentContainer(); 
     }
 
 }
 
 
 
+class GenericPage extends Page
+{
+    
+    function startContent()
+    {
+        /*every page will have these files*/
+        $this->pageInfo->addToStyleSheets   ($this->pageInfo->relativePath . "Styling/GlobalStyling.min.css");
+        $this->pageInfo->addToNoScripts     ($this->pageInfo->relativePath . "Styling/GlobalNoScript.min.css");
+        
+        $this->outputHead();
+        $this->startBody();
+        
+        $logo = new GenericContent(array($this, "outputLogo"));
+        $logo->display();
+        
+        displayNavbar($this->pageInfo->navbarSelectionID, $this->pageInfo->relativePath);
+    }
 
+    function endContent() 
+    {
+        $this->pageInfo->addToScripts     ($this->pageInfo->relativePath . "Javascript/Global.min.js");
+                        
+        $footer = new GenericContent(array($this, "outputFooter"));
+        $footer->display();
+        $this->endBody();
+    }
+    
+    function startBody()
+    {
+        ?>
+        <body>
+        <div id = "main_content_wrapper">
+        <?php
+    }
+    
+    function endBody()
+    {
+        ?> 
+        </div>
+        <?php $this->pageInfo->outputScripts(); ?>
+        </body>
+        </html>
+        <?php
+    }
+    
+    function outputLogo()
+    {
+        ?>
+        <div class = "text_center generic_header_wrapper ">
+        <div id ="richie_text">Richie Sikra</div>  
+        <div id = "richie_text_subtitle">Developer | Designer | Creator</div>
+        </div>
+        <?php    
+    }
+    function outputFooter()
+    {
+        ?>
+        <div class ="text_center" id="copyright_footer">
+        Copyright 2015-<?php echo date("Y")?> Richard Sikra
+        </div>
+        <?php
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+}
 ?>
 
     
