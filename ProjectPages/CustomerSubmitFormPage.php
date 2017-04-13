@@ -1,22 +1,22 @@
 <?php
 include('../Global.php');
 
-startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_ID, '../');
+$projectPageInfo = new PageInfo
+(
+    NAV_OPTIONS::NOT_DEFINED_NAV_ID,
+    '../',
+    array('../Styling/GamePageStyle.min.css')
+);
 
+$projectPage       = new ProjectPage($projectPageInfo); 
 
-startContentContainer();
+$projectPage->addAppStoreImage  
+("GamePageImages/GithubImage.png", 
+"https://github.com/nanu2000/Customer-Support-Form", 
+"Github Page");
 
-?>
-
-<div class="app_store_images">                              
-<a href="https://github.com/nanu2000/Customer-Support-Form">
-<img width="64" alt="Android app store" src = "GamePageImages/GithubImage.png"/>
-</a>
-</div>
-
-<?php
-endContentContainer();
-startContentContainer();
+$projectPageContent    = new GenericContent(function()
+{
 ?>
 
 <div class = "text_center generic_header_wrapper generic_header_title">About The Customer Support Form</div>
@@ -31,8 +31,12 @@ reports of damaged parts.
 </p>
 </div>
 
+<?php    
+});
 
-<?php
-endContentContainer();  
-endDefaultContent('../');
+
+$projectPage->addContent($projectPageContent);
+$projectPage->displayPage();
+
+
 ?>

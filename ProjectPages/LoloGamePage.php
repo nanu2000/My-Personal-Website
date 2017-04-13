@@ -1,31 +1,37 @@
 <?php
 include('../Global.php');
 
-startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_ID, '../');
+$projectPageInfo = new PageInfo
+(
+    NAV_OPTIONS::NOT_DEFINED_NAV_ID,
+    '../',
+    array('../Styling/GamePageStyle.min.css')
+);
+
+$projectPage       = new ProjectPage($projectPageInfo); 
+
+$projectPage->setBannerImage    
+("GamePageImages/lolobigBanner.png", 
+"project page banner");
 
 
-startContentContainerHideSmallScreen();
-
+$itchIoLink    = new GenericContent(function()
+{
 ?>
 
-<img src = "GamePageImages/lolobigBanner.png" class ="project_page_banner" />
-
+    <div class="app_store_images">
+    <div class="itch_io_wrapper">
+    <iframe src="https://itch.io/embed/45347" width="552" height="167" frameborder="0"></iframe>
+    </div>
+    </div>
 
 <?php
-endContentContainer();
-startContentContainer();
+});
+
+$projectPageContent    = new GenericContent(function()
+{
 ?>
 
-<div class="app_store_images">
-<div class="itch_io_wrapper">
-<iframe src="https://itch.io/embed/45347" width="552" height="167" frameborder="0"></iframe>
-</div>
-</div>
-
-<?php
-endContentContainer();
-startContentContainer();
-?>
 
 <div class = "text_center generic_header_wrapper generic_header_title">About The Adventures Lolo Recreated</div>
 <div class="generic_page_text">
@@ -43,6 +49,11 @@ It was a lot of work and dedication, and I really had a great time making it, so
 </div>
 
 <?php
-endContentContainer();
-endDefaultContent('../');
+
+});
+
+$projectPage->addContent($itchIoLink);
+$projectPage->addContent($projectPageContent);
+$projectPage->displayPage();
+
 ?>

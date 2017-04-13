@@ -1,9 +1,17 @@
 <?php
 include('../Global.php');
 
-startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_ID, '../');
+$projectPageInfo = new PageInfo
+(
+    NAV_OPTIONS::NOT_DEFINED_NAV_ID,
+    '../',
+    array('../Styling/GamePageStyle.min.css')
+);
 
-startContentContainer();
+$projectPage       = new ProjectPage($projectPageInfo); 
+
+$projectPageContent    = new GenericContent(function()
+{
 ?>
 
 <div class = "text_center generic_header_wrapper generic_header_title"> 
@@ -16,8 +24,12 @@ for more information regarding the development of this project.
 </p>
 </div>
 
+<?php    
+});
 
-<?php
-endContentContainer();
-endDefaultContent('../');
+
+$projectPage->addContent($projectPageContent);
+$projectPage->displayPage();
+
+
 ?>

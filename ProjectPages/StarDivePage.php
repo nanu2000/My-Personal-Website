@@ -1,31 +1,31 @@
 <?php
 include('../Global.php');
 
-startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_ID, '../');
+$projectPageInfo = new PageInfo
+(
+    NAV_OPTIONS::NOT_DEFINED_NAV_ID,
+    '../',
+    array('../Styling/GamePageStyle.min.css')
+);
 
-startContentContainerHideSmallScreen();
+$projectPage       = new ProjectPage($projectPageInfo); 
 
-?>
+$projectPage->setBannerImage    
+("GamePageImages/StarDiveBigBanner.png", 
+"project page banner");
 
-<img src = "GamePageImages/StarDiveBigBanner.png" class ="project_page_banner" />
+$projectPage->addAppStoreImage  
+("GamePageImages/AndroidAppStore.png", 
+"https://play.google.com/store/apps/details?id=com.AlphaCollab.StarDive&hl=en", 
+"Android app store");
 
-<?php
-endContentContainer();
-startContentContainer();
-?>
+$projectPage->addAppStoreImage  
+("GamePageImages/ItunesAppStore.png", 
+"https://itunes.apple.com/us/app/stardive/id991590335?mt=8", 
+"Itunes app store");
 
-<div class="app_store_images">                              
-<a href="https://play.google.com/store/apps/details?id=com.AlphaCollab.StarDive&hl=en">
-<img width="64" alt="Android app store" src = "GamePageImages/AndroidAppStore.png"/>
-</a> 
-<a href="https://itunes.apple.com/us/app/stardive/id991590335?mt=8">
-<img width="64" alt="Itunes app store"  src = "GamePageImages/ItunesAppStore.png"/>
-</a>
-</div>
-
-<?php
-endContentContainer();
-startContentContainer();
+$projectPageContent    = new GenericContent(function()
+{
 ?>
 
 <div class = "text_center generic_header_wrapper generic_header_title">About StarDive</div>
@@ -48,6 +48,10 @@ By playing this game you are supporting my hobby and my future.
 </div>
 
 <?php
-endContentContainer();
-endDefaultContent('../');
+
+});
+
+$projectPage->addContent($projectPageContent);
+$projectPage->displayPage();
+
 ?>

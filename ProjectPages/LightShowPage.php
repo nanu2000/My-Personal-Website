@@ -1,31 +1,28 @@
 <?php
 include('../Global.php');
 
-startContentType(PAGE_CONTENT_TYPE::PROJECT_PAGE, NAV_OPTIONS::NOT_DEFINED_NAV_ID, '../');
+$projectPageInfo = new PageInfo
+(
+    NAV_OPTIONS::NOT_DEFINED_NAV_ID,
+    '../',
+    array('../Styling/GamePageStyle.min.css')
+);
 
-startContentContainerHideSmallScreen();
+$projectPage       = new ProjectPage($projectPageInfo); 
 
+$projectPage->setBannerImage    
+("GamePageImages/LightShowBanner.png", 
+"project page banner");
+
+$projectPage->addAppStoreImage  
+("GamePageImages/GithubImage.png", 
+"https://github.com/nanu2000/Light-Show-Engine", 
+"Light Show Engine Github Page");
+
+$projectPageContent    = new GenericContent(function()
+{
 ?>
 
-<img src = "GamePageImages/LightShowBanner.png" class ="project_page_banner" />
-
-<?php
-endContentContainer();
-startContentContainer();
-?>
-
-
-<div class="app_store_images">                              
-<a href="https://github.com/nanu2000/Light-Show-Engine">
-    <img width="64" alt="Android app store" src = "GamePageImages/GithubImage.png"/>
-</a>
-</div>
-
-
-<?php
-endContentContainer();
-startContentContainer();
-?>
 
 
 <div class = "text_center generic_header_wrapper generic_header_title">About the Lightshow Framework</div>  
@@ -66,9 +63,12 @@ Make sure to check out my <a class ="TextLink" href="../<?php echo(NAV_OPTIONS::
 
 </div>
 
-
-
 <?php
-endContentContainer();
-endDefaultContent('../');
+
+});
+
+
+$projectPage->addContent($projectPageContent);
+$projectPage->displayPage();
+
 ?>
