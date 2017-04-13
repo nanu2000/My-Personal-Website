@@ -210,8 +210,8 @@ class Content
 {
     private $content;
     
-    function startContentContainer  (){}
-    function endContentContainer    (){}
+    protected function startContentContainer(){}
+    protected function endContentContainer(){}
     
     function __construct($content)
     {
@@ -241,7 +241,59 @@ class GenericContent extends Content
     }
 }
 
+class BlogContent extends Content
+{
+    private $title      = "Blog Title";
+    private $subtitle   = "Blog Subtitle";
+    
+    function giveBlogInformation($title, $subtitle)
+    {
+        $this->setTitle($title);
+        $this->setSubtitle($subtitle);
+    }
+    
+    function setTitle($title)
+    {
+        $this->title = $title;
+    }
+    
+    function setSubtitle($subtitle)
+    {
+        $this->subtitle = $subtitle;
+    }
+    
+    
+    
+    function startContentContainer()
+    {
 
+    ?>
+    <div class = "generic_content_wrapper">
+        
+        <div class = "text_center generic_header_wrapper">
+            
+            <div class = "generic_header_title">
+            <?php echo($this->title); ?>
+            </div>
+            
+            <div class ="generic_header_subtitle">
+                <?php echo($this->subtitle); ?>
+            </div>
+            
+        </div>
+        
+        <div class = "generic_page_text">
+    <?php
+    }
+    
+    function endContentContainer()
+    {
+    ?>
+        </div>
+        </div>
+    <?php
+    }
+}
 
 
 
@@ -456,6 +508,24 @@ class GenericPage extends Page
     }
 
 }
+
+include ('Blog/blogNavbar.php');
+
+class BlogPage extends GenericPage
+{
+    function startContent()
+    {
+        //call GenericPage startContent function
+        parent::startContent();
+        
+        $blogNavbar = new GenericContent('outputBlogNavbar');
+        
+        $blogNavbar->display();
+        
+    }
+}
+
+
 ?>
 
     
