@@ -1,15 +1,17 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-
-
-startBlogPost( "June 17th, 2016", "-Before the Prototype-" );
-
+$blogContent    = new BlogContent(function()
+{
 ?>
 
 <p>
@@ -35,7 +37,15 @@ Thank you very much for reading, hopefully I will get another blog post out soon
 -Richie
 </p>     
 
-<?php
-endBlogPost();
-endDefaultContent('../');
+<?php    
+});
+
+
+$blogContent->giveBlogInformation("June 17th, 2016", "-Before the Prototype-");
+
+$blogPage->addContent($blogContent);
+
+$blogPage->displayPage();
+
+
 ?>

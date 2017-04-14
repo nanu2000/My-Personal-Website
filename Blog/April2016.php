@@ -13,6 +13,7 @@ $blogPage       = new BlogPage($blogPageInfo);
 $blogContent    = new BlogContent(function()
 {
 ?>
+
     <p>
     Today I realized that I haven't posted at all during March. I would first like to declare that my absense of posts was not an accident. I have worked very hard over the past month, and I am finally ready to announce the completion of my engine (as far as preperation for my next game goes). In short form: I am now ready to create my next game.
     </p>
@@ -60,4 +61,4 @@ $blogPage->addContent($blogContent);
 $blogPage->displayPage();
 
 
-                               
+?>

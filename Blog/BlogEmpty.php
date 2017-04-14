@@ -1,20 +1,28 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-
-
-
-startBlogPost( "post" , "subtitle");
-
+$blogContent    = new BlogContent(function()
+{
 ?>
+content
+<?php    
+});
 
 
-<?php
-endBlogPost();
-endDefaultContent('../');
+$blogContent->giveBlogInformation( "title", "subtitle");
+
+$blogPage->addContent($blogContent);
+
+$blogPage->displayPage();
+
+
 ?>

@@ -1,13 +1,17 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-startBlogPost( "January 9th" , "A New Year + Caught in the Moment");
-
+$blogContent    = new BlogContent(function()
+{
 ?>
 
 <p>
@@ -71,7 +75,15 @@ Science degree.</p>
 -Richie
 </p>
 
-<?php
-endBlogPost();
-endDefaultContent('../');
+<?php    
+});
+
+
+$blogContent->giveBlogInformation("January 9th" , "A New Year + Caught in the Moment");
+
+$blogPage->addContent($blogContent);
+
+$blogPage->displayPage();
+
+
 ?>

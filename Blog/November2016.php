@@ -1,15 +1,19 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-
-
-startBlogPost( "November 8th, 2016", "Side Projects" );
+$blogContent    = new BlogContent(function()
+{
 ?>
+
 <p>
 Currently I am working on two side projects in addition to my main project. My main project (which is described thoroughly in previous blog posts) is still in it's idea phase.
 I plan to continue programming my main project within the next few months once school settles down a little.
@@ -55,7 +59,15 @@ to complete all of my current side projects.
 -Richie
 </p>
 
-<?php
-endBlogPost();
-endDefaultContent('../');
+<?php    
+});
+
+
+$blogContent->giveBlogInformation("November 8th, 2016", "Side Projects");
+
+$blogPage->addContent($blogContent);
+
+$blogPage->displayPage();
+
+
 ?>

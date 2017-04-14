@@ -1,18 +1,19 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
 
-
-
-startBlogPost( "February 25th, 2016", "Physics Physics Physics!" );
-
+$firstPost    = new BlogContent(function()
+{
 ?>
-
 <p>
 In the last week, I have successfully implemented <a href="http://www.bulletphysics.org" class = "TextLink">Bullet Physics!</a>
 I created a simple wrapper that accepts a shape on initialization, and will create a collidable object according to whatever shape you specify! Along with that, I made sure to add on triangle mesh capabilities! (Triangle mesh and convex hull) 
@@ -48,11 +49,12 @@ Stay tuned!
 <br>
 -Richie
 </p>
+<?php    
+});
 
-<?php 
-endBlogPost();
 
-startBlogPost( "February 18th 2016", "Upcoming events");
+$secondPost    = new BlogContent(function()
+{
 ?>
 <p>
 After completing the animation IO engine tool, I decided to clean it up a bit. I cleaned up all of the code and seperated the tool into multiple classes and functions. After I finished that, I modified my input system by adding on a function called "keyPressedOnce" that returns true if a key has been pressed once, but if the key is held it will return false.
@@ -79,6 +81,17 @@ Finally, once I am finished with all of that, I will start designing the engine 
 Overall, I have a few things I need before I can start working on the game, but once they are complete I shall have a good template for the next game in question.</p>
 
 <?php
-endBlogPost();
-endDefaultContent('../');
+});
+
+
+
+$firstPost->giveBlogInformation("February 25th, 2016", "Physics Physics Physics!");
+$secondPost->giveBlogInformation("February 18th 2016", "Upcoming events");
+
+$blogPage->addContent($firstPost);
+$blogPage->addContent($secondPost);
+
+$blogPage->displayPage();
+
+
 ?>

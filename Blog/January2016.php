@@ -1,16 +1,17 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-
-
-
-startBlogPost( "January 29th, 2016", "A Bug" );
-
+$firstPost    = new BlogContent(function()
+{
 ?>
 
 <p>
@@ -38,13 +39,14 @@ a function to hide or show a mesh in a scene, and then do some cleaning of the e
 Lets make this a productive week :D
 </p>
 
-<?php
+<?php    
+});
 
-endBlogPost();
 
-startBlogPost( "January 20th 2016", "Skeletal Animation" );
-
+$secondPost    = new BlogContent(function()
+{
 ?>
+
 
 <div class ="text_center">
 <p>
@@ -78,13 +80,11 @@ Anyways, for next week, I plan on touching up my skeletal animation and creating
 See you then!
 </p>
 
-<?php
+<?php    
+});
 
-endBlogPost();
-
-startBlogPost( "January 7th 2016", "3D rendering and cleaning up some code!" );
-
-?>
+$thirdPost    = new BlogContent(function()
+{?>
 
 <p>
 So for the past week I have erased my old rendering code from my 2D engine, and started working on my new rendering code for my 3D engine :D
@@ -110,13 +110,11 @@ coming together really well and is nicely built so far. For next weeks post I pl
 </p>
 
 <?php
+});
 
-endBlogPost();
+$fourthPost    = new BlogContent(function()
+{?>
 
-startBlogPost( "January 1st 2016", "A Fresh New Beginning" );
-
-?>
-    
 <p>
 On <a class ="TextLink" href ="December2015.html">December 30th (2015)</a>, I mentioned using the
 <a class ="TextLink" href="http://gameprogrammingpatterns.com/service-locator.html">service locator pattern</a>
@@ -139,6 +137,21 @@ I am planning on adding more images and possibly videos(?) in the future, it's p
 </p>
 
 <?php
-endBlogPost();
-endDefaultContent('../');
+});
+
+
+$firstPost->giveBlogInformation( "January 29th, 2016", "A Bug");
+$secondPost->giveBlogInformation("January 20th 2016", "Skeletal Animation");
+$thirdPost->giveBlogInformation("January 7th 2016", "3D rendering and cleaning up some code!");
+$fourthPost->giveBlogInformation("January 1st 2016", "A Fresh New Beginning");
+
+
+$blogPage->addContent($firstPost);
+$blogPage->addContent($secondPost);
+$blogPage->addContent($thirdPost);
+$blogPage->addContent($fourthPost);
+
+$blogPage->displayPage();
+
+
 ?>

@@ -1,13 +1,17 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-startBlogPost( "December 30th, 2015", "The end of the year and the start of a new blog.");
-
+$blogContent    = new BlogContent(function()
+{
 ?>
 
 <p>
@@ -25,7 +29,15 @@ The year 2015 is coming to an end, and I have completed my new years goal of cre
 
 <img class="NoFade BigBlogImage" src ="December2015Content/LightShowEngineRevision_1.png" alt ="LightShowEngineRevision_1" />
 
-<?php
-endBlogPost();
-endDefaultContent('../');
+<?php    
+});
+
+
+$blogContent->giveBlogInformation("December 30th, 2015", "The end of the year and the start of a new blog.");
+
+$blogPage->addContent($blogContent);
+
+$blogPage->displayPage();
+
+
 ?>

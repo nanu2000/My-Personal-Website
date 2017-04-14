@@ -1,16 +1,19 @@
 <?php
 include('../Global.php');
-include ('blogNavbar.php');
 
-startContentType(PAGE_CONTENT_TYPE::BLOG_PAGE, NAV_OPTIONS::BLOG_NAV_ID, '../');
+$blogPageInfo = new PageInfo
+(
+    NAV_OPTIONS::BLOG_NAV_ID,
+    '../',
+    array('../Styling/BlogStyle.min.css')
+);
 
-outputBlogNavbar();
+$blogPage       = new BlogPage($blogPageInfo); 
 
-
-
-startBlogPost( "September 17th, 2016", "Web Development - Design theory - and my current plans" );
-
+$blogContent    = new BlogContent(function()
+{
 ?>
+
 <p>
 Let's see, so the last blog post I have submitted was 2 months ago... Welp, sorry guys, but I'm not doing this for anyone but myself. If I decide I don't feel like writing, that is totally fine with me! 
 To be honest though, I would love to write at least once a month. No promises, but that is what I'm aiming for at this moment.
@@ -42,7 +45,15 @@ Anyway, I hope you enjoyed reading this! (if you did lol, it's quite a bit of te
 -Richie
 </p>
 
-<?php
-endBlogPost();
-endDefaultContent('../');
+<?php    
+});
+
+
+$blogContent->giveBlogInformation("September 17th, 2016", "Web Development - Design theory - and my current plans");
+
+$blogPage->addContent($blogContent);
+
+$blogPage->displayPage();
+
+
 ?>
