@@ -1,10 +1,13 @@
 <?php
 include('Global.php');
 
-startContentType(PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::CONTACT_NAV_ID, '');
+$contactPageInfo  = new PageInfo(NAV_OPTIONS::CONTACT_NAV_ID, '');
+$contactPage      = new GenericPage($contactPageInfo); 
+
+$contactPage->addContent(new GenericContent(function()
+{
 ?>
 
-<div class= "generic_content_wrapper">
 <div class = "text_center generic_header_wrapper generic_header_title" >Contact</div>
 <div class = "generic_page_text">
 <p>The best way to contact me is through email, but if you message me on Youtube or any other social media outlet I am still likey to answer, just not at a reasonable time.</p>
@@ -12,8 +15,10 @@ startContentType(PAGE_CONTENT_TYPE::DEFAULT_PAGE, NAV_OPTIONS::CONTACT_NAV_ID, '
 <br>
 <b>Email</b>: richie@devrichie.com</p>
 </div>
-</div>
 
 <?php
-endDefaultContent();
+}));
+
+$contactPage->displayPage();
+
 ?>

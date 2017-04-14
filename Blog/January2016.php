@@ -10,7 +10,7 @@ $blogPageInfo = new PageInfo
 
 $blogPage       = new BlogPage($blogPageInfo); 
 
-$firstPost    = new BlogContent(function()
+$post = new BlogContent(function()
 {
 ?>
 
@@ -42,12 +42,17 @@ Lets make this a productive week :D
 <?php    
 });
 
+$post->giveBlogInformation( "January 29th, 2016", "A Bug");
 
-$secondPost    = new BlogContent(function()
+$blogPage->addContent($post);
+
+
+
+
+
+$post = new BlogContent(function()
 {
 ?>
-
-
 <div class ="text_center">
 <p>
 Remember that chest from January 7th? Well I was able to successfully load the model as a dae file into my engine, and animate it! 
@@ -83,7 +88,15 @@ See you then!
 <?php    
 });
 
-$thirdPost    = new BlogContent(function()
+$post->giveBlogInformation("January 20th 2016", "Skeletal Animation");
+
+$blogPage->addContent($post);
+
+
+
+
+
+$post = new BlogContent(function()
 {?>
 
 <p>
@@ -112,7 +125,15 @@ coming together really well and is nicely built so far. For next weeks post I pl
 <?php
 });
 
-$fourthPost    = new BlogContent(function()
+$post->giveBlogInformation("January 7th 2016", "3D rendering and cleaning up some code!");
+
+$blogPage->addContent($post);
+
+
+
+
+
+$post = new BlogContent(function()
 {?>
 
 <p>
@@ -140,18 +161,14 @@ I am planning on adding more images and possibly videos(?) in the future, it's p
 });
 
 
-$firstPost->giveBlogInformation( "January 29th, 2016", "A Bug");
-$secondPost->giveBlogInformation("January 20th 2016", "Skeletal Animation");
-$thirdPost->giveBlogInformation("January 7th 2016", "3D rendering and cleaning up some code!");
-$fourthPost->giveBlogInformation("January 1st 2016", "A Fresh New Beginning");
+$post->giveBlogInformation("January 1st 2016", "A Fresh New Beginning");
+
+$blogPage->addContent($post);
 
 
-$blogPage->addContent($firstPost);
-$blogPage->addContent($secondPost);
-$blogPage->addContent($thirdPost);
-$blogPage->addContent($fourthPost);
+
+
 
 $blogPage->displayPage();
-
 
 ?>

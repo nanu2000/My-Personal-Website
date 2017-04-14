@@ -24,6 +24,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
     margin-left: 5px;
     margin-right: 5px;
     opacity: 1.0; 
+    width:64px;
 }  
 
 .app_store_images img:hover 

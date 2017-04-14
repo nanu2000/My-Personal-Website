@@ -45,3 +45,5 @@ $frontPage->addContent(new Content(function(){outputPortfolio();}));
 
 
 $frontPage->displayPage();
+
+?>
