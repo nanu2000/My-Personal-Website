@@ -1,6 +1,6 @@
 <?php 
 
-function createFlexItem($image, $imgAlt, $link, $color, $text)
+function createCarouselItem($image, $imgAlt, $link, $color, $text)
 {
     return 
     '<li class="portfolio_item">
@@ -17,7 +17,7 @@ function createFlexItem($image, $imgAlt, $link, $color, $text)
     </li>';
 }
 
-function createFlexPageFromStringOfItems($items)
+function createCarouselFromStringOfItems($items)
 {
     ?>
 
@@ -31,18 +31,18 @@ function createFlexPageFromStringOfItems($items)
 }
 
 
-function outputPortfolio()
+function outputCarousel()
 {
     
     
-    $flexItems = "";
+    $carouselItems = "";
     
     
     //$flexItems .=
     //desktopFlexHeader("Games That I Have Developed");
          
-    $flexItems .=
-    createFlexItem
+    $carouselItems .=
+    createCarouselItem
     (
         "Images/LightShowBanner.png", "Lightshow Graphics Engine", 
         "ProjectPages/LightShowPage.php", 
@@ -50,9 +50,8 @@ function outputPortfolio()
         "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++."
     );
     
-    
-    $flexItems .=
-    createFlexItem
+    $carouselItems .=
+    createCarouselItem
     (
         "Images/StarDiveWebBanner.png", "Link to StarDive game page", 
         "ProjectPages/StarDivePage.php", 
@@ -60,8 +59,8 @@ function outputPortfolio()
         "Stardive is my favorite out of all the games I have made..<br>So far."
     );
     
-    $flexItems .=
-    createFlexItem
+    $carouselItems .=
+    createCarouselItem
     (
         "Images/lolo.png", "Link to adventures of lolo game page", 
         "ProjectPages/LoloGamePage.php", 
@@ -69,8 +68,8 @@ function outputPortfolio()
         "LoLo is a game that I made for the NES Box art jam in 2015!"
     );
     
-    $flexItems .=
-    createFlexItem
+    $carouselItems .=
+    createCarouselItem
     (
         "Images/AeroFlightBanner.png", "Link to Aeroflight game page", 
         "ProjectPages/AeroFlightPage.php", 
@@ -81,8 +80,8 @@ function outputPortfolio()
    // $flexItems .=
     //desktopFlexHeader("Miscellaneous Projects");
 
-    $flexItems .=
-    createFlexItem
+    $carouselItems .=
+    createCarouselItem
     (
         "Images/BlogBanner.png", "Link to Coming Blog Page", 
         "ProjectPages/ComingSoonPage.php",
@@ -90,15 +89,15 @@ function outputPortfolio()
         "My blog contains consistent updates regarding the current project I'm developing."
     );           
        
-    $flexItems .=
-    createFlexItem
+    $carouselItems .=
+    createCarouselItem
     (
         "Images/PhpProjBanner.png", "Link to Customer Submit Form Page", 
         "ProjectPages/CustomerSubmitFormPage.php", 
         "#656565", 
         "A Customer submission form made in PHP!"
     );
-    echo createFlexPageFromStringOfItems($flexItems);
+    echo createCarouselFromStringOfItems($carouselItems);
 
 }
 ?>

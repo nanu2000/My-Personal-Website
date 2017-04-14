@@ -1,114 +1,0 @@
-{G} Green: unmatched selectors
-{B} Black: matched selectors that are defined with non-matched selectors
-{R} Red: a malformed selector. ** Note: not all malformed selectors are bad. Chrome won't parse -moz extensions for example.
-{BL} Blue: a selector with a pseudo-class. You must test these manually.
-
-Stylesheet: http://localhost:/Portfolio/ProjectPages/../Styling/GamePageStyle.min.css
-
-{G}.app_item_text
-{BL}.app_store_images .app_item_text:hover
-{BL}.app_store_images img:hover
-{G}.itch_io_wrapper
-{G}.itch_io_wrapper iframe
-
-Stylesheet: http://localhost:/Portfolio/ProjectPages/../Styling/GlobalStyling.css
-
-{R}@media only screen and (min-width : 1200px) {    .generic_page_text
-{R}@media only screen and (min-width : 1500px) {    .gradient_background
-{R}@media only screen and (min-width : 1281px) and (max-width : 1499px) {    .gradient_background
-{R}@media only screen and (max-width : 1280px) {    .gradient_background
-{R}@media only screen and (min-width : 667px) and (max-width : 999px){             .generic_page_text
-{R}@media only screen and (min-width : 667px){     html
-{R}@media only screen and (max-width : 666px) {    html
-{G}.feature_list .feature_list
-{R}@media only screen and (min-width : 450px) {    .navbar_text_links .text_link a
-{R}@media only screen and (max-width : 449px) {    .navbar_text_links .text_link a
-{R}@font-face
-{R}@font-face
-{R}@font-face
-{G}.active_nav_text_link
-{BL}.navbar_text_links .text_link:hover:not(.mobile) a:not(.active_nav_text_link)
-{BL}.navbar_icon_links li img:hover
-{BL}#show_navbar:hover
-{BL}#show_navbar:focus
-{G}.generic_header_subtitle
-{G}.video_wrapper
-{G}.video_wrapper iframe
-{G}.feature_list .feature_list
-{BL}.feature_list li:before
-
-Stylesheet: http://localhost:/Portfolio/Styling/FrontPageStyle.min.css
-
-{R}@media only screen and (min-width :450px){.flex_item:hover .flex_item_description, {G}.flex_item .hover .flex_item_description
-{R}@media only screen and (max-width :449px){.flex_item .flex_item_description
-{R}@media only screen and (min-width :1500px){.flex_item
-{R}@media only screen and (min-width :700px) and (max-width :1499px){.flex_item
-{R}@media only screen and (min-width :450px) and (max-width :699px){.flex_item
-{R}@media only screen and (max-width :449px){.flex_item
-{R}@media only screen and (max-width :1250px) and (min-width :1000px){.flex_text_wrapper .wrapper_description_text
-{R}@media only screen and (max-width :400px){.flex_text_wrapper .wrapper_description_text
-{G}.flex_item_text_snippet .text_item_small_text
-
-Stylesheet: http://localhost:/Portfolio/Styling/GlobalStyling.css
-
-{R}@media only screen and (min-width : 1200px) {    .generic_page_text
-{R}@media only screen and (min-width : 1500px) {    .gradient_background
-{R}@media only screen and (min-width : 1281px) and (max-width : 1499px) {    .gradient_background
-{R}@media only screen and (max-width : 1280px) {    .gradient_background
-{R}@media only screen and (min-width : 667px) and (max-width : 999px){             .generic_page_text
-{R}@media only screen and (min-width : 667px){     html
-{G}.feature_list
-{R}@media only screen and (max-width : 666px) {    html
-{G}.hide_mobile
-{R}@media only screen and (min-width : 450px) {    .navbar_text_links .text_link a
-{R}@media only screen and (max-width : 449px) {    .navbar_text_links .text_link a
-{B}ul, {B}li, {G}ol
-{R}@font-face
-{R}@font-face
-{R}@font-face
-{BL}.navbar_text_links .text_link:hover:not(.mobile) a:not(.active_nav_text_link)
-{BL}.navbar_icon_links li img:hover
-{BL}#show_navbar:hover
-{BL}#show_navbar:focus
-{G}.generic_header_subtitle
-{G}.generic_page_text a
-{G}.video_wrapper
-{G}.video_wrapper iframe
-{G}.feature_list
-{G}.feature_list .feature_list
-{G}.feature_list li
-{BL}.feature_list li:before
-
-Stylesheet: http://localhost:/Portfolio/blog/../Styling/BlogStyle.min.css
-
-{G}.SmallBlogImage
-
-Stylesheet: http://localhost:/Portfolio/blog/../Styling/GlobalStyling.css
-
-{R}@media only screen and (min-width : 1200px) {    .generic_page_text
-{R}@media only screen and (min-width : 1500px) {    .gradient_background
-{R}@media only screen and (min-width : 1281px) and (max-width : 1499px) {    .gradient_background
-{R}@media only screen and (max-width : 1280px) {    .gradient_background
-{R}@media only screen and (min-width : 667px) and (max-width : 999px){             .generic_page_text
-{R}@media only screen and (min-width : 667px){     html
-{G}.feature_list
-{R}@media only screen and (max-width : 666px) {    html
-{G}.hide_mobile
-{G}.feature_list
-{G}.feature_list .feature_list
-{R}@media only screen and (min-width : 450px) {    .navbar_text_links .text_link a
-{R}@media only screen and (max-width : 449px) {    .navbar_text_links .text_link a
-{B}ul, {B}li, {G}ol
-{R}@font-face
-{R}@font-face
-{R}@font-face
-{BL}.navbar_text_links .text_link:hover:not(.mobile) a:not(.active_nav_text_link)
-{BL}.navbar_icon_links li img:hover
-{BL}#show_navbar:hover
-{BL}#show_navbar:focus
-{G}.video_wrapper
-{G}.video_wrapper iframe
-{G}.feature_list
-{G}.feature_list .feature_list
-{G}.feature_list li
-{BL}.feature_list li:before

@@ -1,6 +1,6 @@
 <?php
 include('Pages/GenericPage.php');
-include('FlexPortfolio.php');
+include('Carousel.php');
 
 $frontPageInfo = new PageInfo
 (
@@ -41,7 +41,7 @@ $frontPage->addContent(new GenericContent(function()
     echo'<div class ="text_center generic_title_m">My Projects</div>';
 }));
 
-$frontPage->addContent(new Content(function(){outputPortfolio();}));
+$frontPage->addContent(new Content(function(){outputCarousel();}));
 
 
 $frontPage->displayPage();
