@@ -25,6 +25,7 @@ function parseNavArray($navItems, $currentSelectionID, $path)
     foreach ($navItems as $key => $value) 
     {
         $href = getPathForNavItem($value[0], $path);
+        
         if($key === $currentSelectionID && $key !== NAV_OPTIONS::NOT_DEFINED_NAV_ID)
         {
             $navStr .= '<li class = "text_link"><a class = "active_nav_text_link no_select" href="'. $href .'">'. $value[1] .'</a></li>';
@@ -43,7 +44,7 @@ function displayNavbar($currentSelectionID, $path)
 {    
     writeMarkup
     (
-        parseNavArray(NAV_OPTIONS::NAV_ITEMS,        $currentSelectionID, $path),
+        parseNavArray(NAV_OPTIONS::NAV_ITEMS,         $currentSelectionID, $path),
         parseNavArray(NAV_OPTIONS::MORE_NAV_ITEMS,    $currentSelectionID, $path),
         $path
     );

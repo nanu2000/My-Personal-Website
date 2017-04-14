@@ -1,5 +1,5 @@
 <?php
-include('Global.php');
+include('Pages/GenericPage.php');
 include('FlexPortfolio.php');
 
 $frontPageInfo = new PageInfo

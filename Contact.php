@@ -1,5 +1,5 @@
 <?php
-include('Global.php');
+include('Pages/GenericPage.php');
 
 $contactPageInfo  = new PageInfo(NAV_OPTIONS::CONTACT_NAV_ID, '');
 $contactPage      = new GenericPage($contactPageInfo); 

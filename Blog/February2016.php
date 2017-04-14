@@ -1,5 +1,5 @@
 <?php
-include('../Global.php');
+include('../Pages/BlogPage.php');
 
 $blogPageInfo = new PageInfo
 (

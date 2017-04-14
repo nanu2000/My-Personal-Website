@@ -1,5 +1,5 @@
 <?php
-include('../Global.php');
+include('../Pages/ProjectPage.php');
 
 $projectPageInfo = new PageInfo
 (

@@ -2,6 +2,20 @@
 
 class NAV_OPTIONS
 {
+    
+    /*Relative Paths are used for Blog_Nav_Items*/
+    const BLOG_NAV_ITEMS = array
+    (
+       array('December2015.php',    'December 2015 | '  ),
+       array('January2016.php',     'January 2016 | '   ),
+       array('February2016.php',    'February 2016 | '  ),
+       array('April2016.php',       'April 2016 | '     ),
+       array('June2016.php',        'June 2016 | '      ),
+       array('September2016.php',   'September 2016 | ' ),
+       array('November2016.php',    'November 2016 | '  ),
+       array('January2017.php',     'January 2017'      )
+    );
+    
     /*The URL containing the most recent blog post.*/
     const NEWEST_BLOG_POST_URL  = "Blog/January2017.php";
     
@@ -30,8 +44,8 @@ class NAV_OPTIONS
     
     const MORE_NAV_ITEMS = array
     (
-      self::ITCH_NAV_ID         => array('!https://-nanu-.itch.io/','Itch.io'),     //Add ! in front of external URLs
-      self::NOT_DEFINED_NAV_ID  => array('ChangeLog.txt',           'Change Log')
+      self::ITCH_NAV_ID         => array('!https://-nanu-.itch.io/', 'Itch.io'),     //Add ! in front of external URLs
+      self::NOT_DEFINED_NAV_ID  => array('ChangeLog.txt',            'Change Log')
     );
     
     /************************************************************************************************************/
