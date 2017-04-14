@@ -1,6 +1,7 @@
 <?php
 include('Options.php');
 include('NavBar.php');
+include ('Blog/blogNavbar.php');
 
 class Content
 {
@@ -99,8 +100,6 @@ class BlogContent extends Content
     }
 }
 
-
-
 class PageInfo
 {
     
@@ -168,10 +167,6 @@ class PageInfo
         echo("</noscript>");
     }
 }
-
-
-
-
 
 class Page
 {
@@ -244,8 +239,6 @@ class Page
 
 }
 
-
-
 class GenericPage extends Page
 {
     
@@ -311,8 +304,6 @@ class GenericPage extends Page
 
 }
 
-include ('Blog/blogNavbar.php');
-
 class BlogPage extends GenericPage
 {
     function startContent()
@@ -326,7 +317,6 @@ class BlogPage extends GenericPage
         
     }
 }
-
 
 class ProjectPage extends GenericPage
 {
@@ -399,7 +389,6 @@ class ProjectPage extends GenericPage
         
     }
 }
-
 
 
 ?>
