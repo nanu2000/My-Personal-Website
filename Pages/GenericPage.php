@@ -45,26 +45,26 @@ class PageInfo
     
     function outputStylesheets()
     {
-        for($i = 0; $i < count($this->styleSheets); $i++)
+        foreach($this->styleSheets as $style)
         {
-            echo('<link rel="stylesheet" href="'.$this->styleSheets[$i].'">');
+            echo('<link rel="stylesheet" href="'.$style.'">');
         }
     }
 
     function outputScripts()
     {
-        for($i = 0; $i < count($this->javascripts); $i++)
+        foreach($this->javascripts as $script)
         {
-            echo('<script src="'.$this->javascripts[$i].'"></script>');
+            echo('<script src="'.$script.'"></script>');
         }
     }
 
     function outputNoScripts()
     {
         echo("<noscript>");
-        for($i = 0; $i < count($this->noScripts); $i++)
+        foreach($this->noScripts as $noScript)
         {
-            echo('<link rel="stylesheet" href="'.$this->noScripts[$i].'">');
+            echo('<link rel="stylesheet" href="'.$noScript.'">');
         }
         echo("</noscript>");
     }
@@ -121,9 +121,9 @@ class Page
     
     function showContent()
     {
-        for($i = 0; $i < count($this->content); $i++)
+        foreach($this->content as $content)
         {
-            $this->content[$i]->display();
+            $content->display();
         }
     }
         

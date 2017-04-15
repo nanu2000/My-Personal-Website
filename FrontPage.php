@@ -1,6 +1,5 @@
 <?php
 include('Pages/GenericPage.php');
-include('Carousel.php');
 
 $frontPageInfo = new PageInfo
 (
@@ -11,8 +10,10 @@ $frontPageInfo = new PageInfo
     array('Styling/FrontPageNoScript.min.css')
 );
 
+/*create the page*/
 $frontPage = new GenericPage($frontPageInfo); 
 
+/*Add the main content to the page*/
 $frontPage->addContent(new GenericContent(function()
 {
 ?>
@@ -36,14 +37,57 @@ $frontPage->addContent(new GenericContent(function()
 <?php
 }));
 
+/*Add a header for the carousel to the page*/
 $frontPage->addContent(new GenericContent(function()
 {
     echo'<div class ="text_center generic_title_m">My Projects</div>';
 }));
 
-$frontPage->addContent(new Content(function(){outputCarousel();}));
+/********************************************************************
+ * outputs a single carousel list item **Needs to be wrapped in UL***
+ ********************************************************************/
+function outputCarouselListItem($item)
+{
+    ?><li class="portfolio_item">
+        <a href ="<?php echo($item["projectURL"]); ?>">
+        <div class ="portfolio_item_content_wrapper" style = "background-color:<?php echo($item["carouselItemColor"]); ?>">
+        <div class="text_center portfolio_item_text_wrapper">
+        <span class="portfolio_item_text">
+        <?php echo($item["carouselItemDescription"]); ?>
+        </span>
+        </div>
+        </div>
+        <img class = "portfolio_item_bg" src ="<?php echo($item["imageURL"]);?>" alt="<?php echo($item["imageAlt"]); ?>"/>
+        </a>
+    </li><?php
+}
+
+/*Add the carousel to the page*/
+$frontPage->addContent(new Content(function()
+{
+
+    /********************************************************************
+     * Reads CarouselItems from json file and outputs all items as a UL.*
+     ********************************************************************/
+    
+    ?><ul id="portfolio_item_container"><?php
+
+    //Get carousel item array from the carousel item json file
+    $carouselItems = json_decode(file_get_contents("CarouselItems.json"), true)['carouselItems'];
+
+    //output each item inside of the item_container UL
+    foreach ($carouselItems as $value)
+    {
+        outputCarouselListItem($value);   
+    }
+
+    ?></ul><?php
+
+}));
 
 
+/*Display the page*/
 $frontPage->displayPage();
+
 
 ?>

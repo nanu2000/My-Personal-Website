@@ -1,0 +1,51 @@
+{
+    "carouselItems" : 
+    [
+        {
+            "imageURL"                  : "Images/LightShowBanner.png", 
+            "imageAlt"                  : "Lightshow Graphics Engine", 
+            "projectURL"                : "ProjectPages/LightShowPage.php", 
+            "carouselItemColor"         : "#0C216E",
+            "carouselItemDescription"   : "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++."
+        },
+        {
+            "imageURL"                  : "Images/StarDiveWebBanner.png", 
+            "imageAlt"                  : "Link to StarDive game page", 
+            "projectURL"                : "ProjectPages/StarDivePage.php", 
+            "carouselItemColor"         : "#490261",
+            "carouselItemDescription"   : "Stardive is my favorite out of all the games I have made..<br>So far."
+        },
+        {
+            "imageURL"                  : "Images/lolo.png", 
+            "imageAlt"                  : "Link to adventures of lolo game page", 
+            "projectURL"                : "ProjectPages/LoloGamePage.php", 
+            "carouselItemColor"         : "#570A01",
+            "carouselItemDescription"   : "LoLo is a game that I made for the NES Box art jam in 2015!"
+        },
+        {
+            "imageURL"                  : "Images/AeroFlightBanner.png", 
+            "imageAlt"                  : "Link to Aeroflight game page", 
+            "projectURL"                : "ProjectPages/AeroFlightPage.php", 
+            "carouselItemColor"         : "#02614D",
+            "carouselItemDescription"   : "Aeroflight is the first game that I have published."
+
+        },
+        {
+            "imageURL"                  : "Images/BlogBanner.png", 
+            "imageAlt"                  : "Link to Coming Blog Page", 
+            "projectURL"                : "ProjectPages/ComingSoonPage.php",
+            "carouselItemColor"         : "#1D358A",
+            "carouselItemDescription"   : "My blog contains consistent updates regarding the current project I'm developing."
+
+        },
+        {
+            "imageURL"                  : "Images/PhpProjBanner.png", 
+            "imageAlt"                  : "Link to Customer Submit Form Page", 
+            "projectURL"                : "ProjectPages/CustomerSubmitFormPage.php", 
+            "carouselItemColor"         : "#656565", 
+            "carouselItemDescription"   : "A Customer submission form made in PHP!"
+
+        }
+    ]
+   
+}
