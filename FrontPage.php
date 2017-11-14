@@ -44,7 +44,7 @@ $frontPage->addContent(new GenericContent(function()
             <p>Currently I am not accepting any requests for work, as I have been booked recently.</p>
             <p>The majority
                 of my projects are open source and hosted
-                on <a href="#">my github account</a>,
+                on <a href="https://github.com/nanu2000">my github account</a>,
                 where I post daily commits for my newest
                 projects. 
                 
