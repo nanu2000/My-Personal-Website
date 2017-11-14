@@ -182,6 +182,7 @@ USE lower_case_underline_naming FOR CSS STYLING!
     .carousel_list .image img 
     {
         width:100%;
+        min-height: 0;
     }
     
     .carousel_list .description .view_more
