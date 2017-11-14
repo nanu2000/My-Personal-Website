@@ -2,6 +2,8 @@
     "carouselItems" : 
     [
         {
+            "languages"                 : "C++, OpenGL",
+            "projectGithubURL"          : "https://github.com/nanu2000/Light-Show-Engine",
             "imageURL"                  : "Images/LightShowBanner.png", 
             "imageAlt"                  : "Lightshow Graphics Engine", 
             "projectURL"                : "ProjectPages/LightShowPage.php", 
@@ -9,6 +11,7 @@
             "carouselItemDescription"   : "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++."
         },
         {
+            "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/StarDiveWebBanner.png", 
             "imageAlt"                  : "Link to StarDive game page", 
             "projectURL"                : "ProjectPages/StarDivePage.php", 
@@ -16,6 +19,7 @@
             "carouselItemDescription"   : "Stardive is my favorite out of all the games I have made..<br>So far."
         },
         {
+            "languages"                 : "C++, OpenGL",
             "imageURL"                  : "Images/lolo.png", 
             "imageAlt"                  : "Link to adventures of lolo game page", 
             "projectURL"                : "ProjectPages/LoloGamePage.php", 
@@ -23,6 +27,7 @@
             "carouselItemDescription"   : "LoLo is a game that I made for the NES Box art jam in 2015!"
         },
         {
+            "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/AeroFlightBanner.png", 
             "imageAlt"                  : "Link to Aeroflight game page", 
             "projectURL"                : "ProjectPages/AeroFlightPage.php", 
@@ -39,6 +44,8 @@
 
         },
         {
+            "languages"                 : "PHP, JavaScript",
+            "projectGithubURL"          : "https://github.com/nanu2000/Customer-Support-Form",
             "imageURL"                  : "Images/PhpProjBanner.png", 
             "imageAlt"                  : "Link to Customer Submit Form Page", 
             "projectURL"                : "ProjectPages/CustomerSubmitFormPage.php", 

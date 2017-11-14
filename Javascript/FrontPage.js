@@ -334,7 +334,7 @@ function runCarousel()
     (
         document.getElementById         ('portfolio_item_container'),
         document.getElementsByClassName ('portfolio_item'), 
-        25,
+        20,
         performOperationsOnIndividualItemUpdate()
     );
     

@@ -355,7 +355,7 @@ Additional CSS used for multiple pages
     {
         .generic_page_text
         { 
-            margin: 3rem 25%;
+            margin: 6rem 25% 6rem 3rem;
         }
     }
     
@@ -363,7 +363,7 @@ Additional CSS used for multiple pages
     {         
         .generic_page_text
         { 
-            margin: 3rem 20%;
+            margin: 6rem 20% 6rem 3rem;
         }
     }
     
@@ -371,7 +371,7 @@ Additional CSS used for multiple pages
     {         
         .generic_page_text
         { 
-            margin: 3rem 15%;
+            margin: 4rem;
         }
     }
     
@@ -379,15 +379,15 @@ Additional CSS used for multiple pages
     {
         .generic_page_text
         { 
-            margin: 3rem 12%;
+            margin: 1.5rem;
         }
     }
     
     @media only screen and (max-width : 450px) 
     {
         .generic_page_text
-        { 
-            margin: 3rem 5%;
+        {             
+            margin: 1.75rem 25px;
         }
     }
 

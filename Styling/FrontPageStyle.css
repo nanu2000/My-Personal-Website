@@ -85,3 +85,149 @@ USE lower_case_underline_naming FOR CSS STYLING!
     color: #fff;
     text-decoration: none; 
 }
+
+.carousel_list_complete
+{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0 3rem 6rem 3rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carousel_list 
+{
+    display: flex;
+    margin: .75vw;
+    background: #d2d6da;
+    display: flex;
+    width:50%;
+    max-width: 47%;
+    border-radius: 6px 0 0 0;
+}
+
+.carousel_list .image 
+{
+    margin: 0px 0 0px 0px;
+    overflow: hidden;
+    border-radius: 6px 0 0 0;
+    min-width: 200px;
+}
+
+.carousel_list .description 
+{
+    flex-grow: 1;
+    padding: 10px;
+    background: white;
+    border: solid 6px #d2d6da;
+    font-size: .9rem;
+    font-family: 'Raleway',sans-serif;
+    vertical-align: middle;
+    font-weight: 600;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.carousel_list .image img 
+{
+   width: 200px;
+   min-height: 100%;
+}
+
+.carousel_list .description .text 
+{
+    flex-grow: 1;
+}
+
+.carousel_list .description .view_more
+{
+    font-size: .7rem;
+    margin: 12px 0 0 0;
+    padding: 12px 12px 0 12px;
+}
+.carousel_list .description .view_more .languages
+{   
+    float: left;
+    color: #555;
+    font-size: .65rem;
+    line-height: 1.7;
+    float: left;    
+}
+
+.carousel_list .description .view_more .links
+{
+    float: right;
+}
+
+.carousel_list .description .view_more .links a
+{
+    color: #4b4bd7;
+}
+@media only screen and (max-width : 1280px)
+{ 
+    .carousel_list .description 
+    {
+        width:auto;
+    }
+    .carousel_list 
+    {
+        flex-direction: column;
+        width: 30%;
+        max-width: 30%;
+        min-width: 250px;
+    }
+
+    .carousel_list .image img 
+    {
+        width:100%;
+    }
+    
+    .carousel_list .description .view_more
+    {
+        border-top: 3px solid #d2d6da;
+    }
+}
+
+@media only screen and (max-width : 950px)
+{ 
+    .carousel_list 
+    {
+        flex-direction: column;
+        width: 47%;
+        max-width: 47%;
+        min-width: 250px;
+    }
+
+    .carousel_list .image img 
+    {
+        width:100%;
+    }
+}
+
+
+@media only screen and (max-width : 666px)
+{ 
+    .carousel_list_complete
+    {
+        padding: 1.5rem;
+    }
+    
+    .carousel_list 
+    {
+        flex-direction: column;
+        width: 97%;
+        max-width: 97%;
+        min-width: 250px;
+        margin-bottom: 3rem;
+    }
+
+    .carousel_list .image img 
+    {
+        width:100%;
+    }
+}
+
+
+
