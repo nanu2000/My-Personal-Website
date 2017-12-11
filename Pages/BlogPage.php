@@ -72,9 +72,21 @@ class BlogPage      extends GenericPage
         
         foreach (NAV_OPTIONS::BLOG_NAV_ITEMS as $index => $value) 
         {
+            //animation speed
+            $transitionIndex = intval(($index + 1) / 2);
+
+            if($transitionIndex < 1)
+            {
+                $transitionIndex = 1;
+            }
+            else if($transitionIndex > 10)
+            {
+                $transitionIndex = 10;
+            }
+            
             ?>
             
-            <a href = "<?php echo($value[0]);?>" class = "TextLink fade_in speed_6"><?php echo($value[1]); ?> </a>
+            <a href = "<?php echo($value[0]);?>" class = "TextLink fade_in speed_<?= $transitionIndex + 1; ?>"><?php echo($value[1]); ?> </a>
                 
             <?php
         }

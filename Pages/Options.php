@@ -38,7 +38,6 @@ class NAV_OPTIONS
     const NAV_ITEMS = array
     (
        self::HOME_NAV_ID     => array('FrontPage.php',             'Home'),
-       self::BLOG_NAV_ID     => array('Blog/FrontPage.php',        'Blog'),
        self::CONTACT_NAV_ID  => array('Contact.php',               'Contact')
     );
     
