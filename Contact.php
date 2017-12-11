@@ -8,12 +8,13 @@ $contactPage->addContent(new GenericContent(function()
 {
 ?>
 
-<div class = "text_center generic_header_wrapper generic_header_title" >Contact</div>
-<div class = "generic_page_text">
-<p>The best way to contact me is through email, but if you message me on Youtube or any other social media outlet I am still likey to answer, just not at a reasonable time.</p>
-<p><b>Name</b>: Richie Sikra
-<br>
-<b>Email</b>: richie@devrichie.com</p>
+<div class = "text_center generic_header_wrapper generic_header_title fade_in speed_5">Contact</div>
+<div class = "generic_page_text text_center">
+    <span class="generic_title_m fade_in speed_6">Richie Sikra</span>
+    <div class = "fade_in speed_7">
+        Email : <a href="mailto:richie@devrichie.com">richie@devrichie.com</a>
+            
+    </div>
 </div>
 
 <?php

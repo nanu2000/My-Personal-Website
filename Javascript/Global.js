@@ -58,6 +58,24 @@ function executeMobileJavascript()
     }
 }
 
+
+/***************************************
+*Appends the .fading_in class to all 
+*elements that have the .fade_in class. 
+****************************************/
+function triggerFadeIn()
+{
+    
+    var itemsFadingIn = document.getElementsByClassName("fade_in");
+
+    for (var i = 0; i < itemsFadingIn.length; i++) 
+    {
+         itemsFadingIn[i].className += " fading_in";
+    }
+}
+
+
+
 /**************************
  *Runs when file is loaded.
  *This is the entry function.
@@ -71,6 +89,8 @@ function runJavascript()
     }
     
     setupMoreMenu();  
+    
+    window.onload = function(){ triggerFadeIn(); };
     
 }
 /*self explanatory*/

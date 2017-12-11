@@ -27,19 +27,19 @@ class BlogContent   extends Content
     ?>
     <div class = "generic_content_wrapper">
         
-        <div class = "text_center generic_header_wrapper">
+        <div class = "text_center generic_header_wrapper fade_in speed_1">
             
-            <div class = "generic_header_title">
+            <div class = "generic_header_title fade_in speed_2">
             <?php echo($this->title); ?>
             </div>
             
-            <div class ="generic_header_subtitle">
+            <div class ="generic_header_subtitle fade_in speed_3">
                 <?php echo($this->subtitle); ?>
             </div>
             
         </div>
         
-        <div class = "generic_page_text">
+        <div class = "generic_page_text fade_in speed_4">
     <?php
     }
     
@@ -70,11 +70,11 @@ class BlogPage      extends GenericPage
         
         ?><div class="text_center" id="BlogNavbar"><?php
         
-        foreach (NAV_OPTIONS::BLOG_NAV_ITEMS as $value) 
+        foreach (NAV_OPTIONS::BLOG_NAV_ITEMS as $index => $value) 
         {
             ?>
             
-            <a href = "<?php echo($value[0]);?>" class = "TextLink"><?php echo($value[1]); ?> </a>
+            <a href = "<?php echo($value[0]);?>" class = "TextLink fade_in speed_6"><?php echo($value[1]); ?> </a>
                 
             <?php
         }

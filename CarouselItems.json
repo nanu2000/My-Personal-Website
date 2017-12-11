@@ -8,12 +8,25 @@
             "imageAlt"                  : "Lightshow Graphics Engine", 
             "projectURL"                : "ProjectPages/LightShowPage.php", 
             "carouselItemColor"         : "#0C216E",
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_4",
+                "text"      : "fade_in speed_5",
+                "links"     : "fade_in speed_5",
+                "image"     : ""
+            },
             "carouselItemDescription"   : "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++."
         },
         {
             "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/StarDiveWebBanner.png", 
             "imageAlt"                  : "Link to StarDive game page", 
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_6",
+                "text"      : "fade_in speed_7",
+                "links"     : "fade_in speed_7"
+            },
             "projectURL"                : "ProjectPages/StarDivePage.php", 
             "carouselItemColor"         : "#490261",
             "carouselItemDescription"   : "Stardive is my favorite out of all the games I have made..<br>So far."
@@ -21,7 +34,13 @@
         {
             "languages"                 : "C++, OpenGL",
             "imageURL"                  : "Images/lolo.png", 
-            "imageAlt"                  : "Link to adventures of lolo game page", 
+            "imageAlt"                  : "Link to adventures of lolo game page",
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_3",
+                "text"      : "fade_in speed_4",
+                "links"     : "fade_in speed_5"
+            },
             "projectURL"                : "ProjectPages/LoloGamePage.php", 
             "carouselItemColor"         : "#570A01",
             "carouselItemDescription"   : "LoLo is a game that I made for the NES Box art jam in 2015!"
@@ -29,7 +48,13 @@
         {
             "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/AeroFlightBanner.png", 
-            "imageAlt"                  : "Link to Aeroflight game page", 
+            "imageAlt"                  : "Link to Aeroflight game page",
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_3",
+                "text"      : "fade_in speed_4",
+                "links"     : "fade_in speed_5"
+            },
             "projectURL"                : "ProjectPages/AeroFlightPage.php", 
             "carouselItemColor"         : "#02614D",
             "carouselItemDescription"   : "Aeroflight is the first game that I have published."
@@ -37,7 +62,13 @@
         },
         {
             "imageURL"                  : "Images/BlogBanner.png", 
-            "imageAlt"                  : "Link to Coming Blog Page", 
+            "imageAlt"                  : "Link to Coming Blog Page",
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_3",
+                "text"      : "fade_in speed_4",
+                "links"     : "fade_in speed_5"
+            },
             "projectURL"                : "ProjectPages/ComingSoonPage.php",
             "carouselItemColor"         : "#1D358A",
             "carouselItemDescription"   : "My blog contains consistent updates regarding the current project I'm developing."
@@ -47,7 +78,13 @@
             "languages"                 : "PHP, JavaScript",
             "projectGithubURL"          : "https://github.com/nanu2000/Customer-Support-Form",
             "imageURL"                  : "Images/PhpProjBanner.png", 
-            "imageAlt"                  : "Link to Customer Submit Form Page", 
+            "imageAlt"                  : "Link to Customer Submit Form Page",
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_3",
+                "text"      : "fade_in speed_4",
+                "links"     : "fade_in speed_5"
+            },
             "projectURL"                : "ProjectPages/CustomerSubmitFormPage.php", 
             "carouselItemColor"         : "#656565", 
             "carouselItemDescription"   : "A Customer submission form made in PHP!"

@@ -348,6 +348,59 @@ Used to create the navagation bar
 Additional CSS used for multiple pages
 *********************************/
 
+    /*For fading in divs using Javascript and css transitions*/
+    .fade_in
+    {
+        opacity:0;
+    }
+    .fade_in.speed_1
+    {
+        transition: .1s opacity ease-in-out;
+    }
+    .fade_in.speed_2
+    {
+        transition: .2s opacity ease-in-out;
+    }
+    .fade_in.speed_3
+    {
+        transition: .4s opacity ease-in-out;
+    }
+    .fade_in.speed_4
+    {
+        transition: .8s opacity ease-in-out;
+    }
+    .fade_in.speed_5
+    {
+        transition: 1.0s opacity ease-in-out;
+    }
+    .fade_in.speed_6
+    {
+        transition: 1.5s opacity ease-in-out;
+    }
+    .fade_in.speed_7
+    {
+        transition: 2.0s opacity ease-in-out;
+    }
+    .fade_in.speed_8
+    {
+        transition: 3.0s opacity ease-in-out;
+    }
+    .fade_in.speed_9
+    {
+        transition: 4.0s opacity ease-in-out;
+    }
+    .fade_in.speed_10
+    {
+        transition: 5.0s opacity ease-in-out;
+    }
+    
+    /*Added with Javascript to .fade_in elements*/
+    .fading_in
+    {
+        opacity:1;
+    }
+
+
 
     /*Media Queries For Generic Text*/
 

@@ -18,3 +18,8 @@ USE lower_case_underline_naming FOR CSS STYLING!
     background-color: white;
     color:#040b25;
 }
+
+.fade_in
+{
+    opacity:initial;
+}

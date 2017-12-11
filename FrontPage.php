@@ -18,37 +18,39 @@ $frontPage->addContent(new GenericContent(function()
 {
 ?>
 
-    <div class ="generic_page_text">
+    <div class ="generic_page_text fade_in speed_4">
         
         
-        <div style="
+        <div class="fade_in speed_5" style="
             font-size: 1.6rem;
             margin-bottom: 20px;
             font-weight: 700;
-            "><p>Hi, I'm Richie,</p></div>
-                <p>
-                    A programmer 
-                    with a passion for 
-                    <b>art</b>,
-                    <b>graphics</b>,
-                    and 
-                    <b>design</b>.
-                </p>
-            <p>
+            ">
+            <p>Hi, I'm Richie,</p>
+        </div>
+            <p class="fade_in speed_6">
+                A programmer 
+                with a passion for 
+                <b>art</b>,
+                <b>graphics</b>,
+                and 
+                <b>design</b>.
+            </p>
+            <p class="fade_in speed_6">
                 Throughout my career I've successfully 
                 developed and published three games, 
                 multiple web apps, and numerous tools
                 that I use to help improve my productivity
                 and development time.
             </p>
-            <p>
+            <p class="fade_in speed_7">
                 The majority
                 of my projects are open source and hosted
                 on <a href="https://github.com/nanu2000">my GitHub account</a>,
                 where I post daily commits for my newest
                 projects.
             </p>
-            <p>
+            <p class="fade_in speed_7">
                 Additionally, any recently
                 published projects will be added to the
                 carousel and list below.
@@ -66,14 +68,14 @@ function outputCarouselListItem($item)
 {
     ?><li class="portfolio_item">
         <a href ="<?php echo($item["projectURL"]); ?>">
-        <div class ="portfolio_item_content_wrapper" style = "background-color:<?php echo($item["carouselItemColor"]); ?>">
-        <div class="text_center portfolio_item_text_wrapper">
-        <span class="portfolio_item_text">
-        <?php echo($item["carouselItemDescription"]); ?>
-        </span>
-        </div>
-        </div>
-        <img class = "portfolio_item_bg" src ="<?php echo($item["imageURL"]);?>" alt="<?php echo($item["imageAlt"]); ?>"/>
+            <div class ="portfolio_item_content_wrapper" style = "background-color:<?php echo($item["carouselItemColor"]); ?>">
+                <div class="text_center portfolio_item_text_wrapper">
+                    <span class="portfolio_item_text">
+                    <?php echo($item["carouselItemDescription"]); ?>
+                    </span>
+                </div>
+            </div>
+            <img class = "portfolio_item_bg" src ="<?php echo($item["imageURL"]);?>" alt="<?php echo($item["imageAlt"]); ?>"/>
         </a>
     </li><?php
 }
@@ -114,19 +116,23 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     //output each item inside of the item_container UL
     foreach ($carouselItems as $value)
     {
+        $classes = (array)$value['listClasses'] ?? array();
+        
         ?>
-        <div class="carousel_list">
+        <div class="carousel_list <?= $classes['list'] ?? '' ?>">
             
-            <div class="item image">
+            <div class="item image <?= $classes['image'] ?? '' ?>">
+                
                 <img src="<?php echo($value["imageURL"]);?>" alt="<?php echo($value["imageAlt"]); ?>">
+                
             </div>
             
             <div class="item description" style = "border-right: solid <?php echo($value["carouselItemColor"]); ?> 6px;">
                 
-                <div class="text">
+                <div class="text <?= $classes['text'] ?? '' ?>">
                     <?php echo($value["carouselItemDescription"]); ?>
                 </div>
-                <div class ="view_more">
+                <div class ="view_more <?= $classes['links'] ?? '' ?>">
                     
                     <span class = "languages">
                         

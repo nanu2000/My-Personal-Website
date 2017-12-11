@@ -24,11 +24,11 @@ class ProjectPage   extends GenericPage
         <div class="app_store_images">
             
             <?php 
-            foreach($this->images as $appImage)
+            foreach($this->images as $index => $appImage)
             {
             ?>
 
-                <a href = "<?php echo($appImage[0]);?>">
+                <a href = "<?php echo($appImage[0]);?>" class="fade_in speed_6" >
 
                     <img alt = "<?php echo($appImage[1]); ?>"
                          src = "<?php echo($appImage[2]); ?>"/>

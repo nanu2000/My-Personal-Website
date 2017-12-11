@@ -19,7 +19,7 @@ class PageInfo
         $styleSheets    = array(),
         $javascripts    = array(),
         $noScripts      = array(),
-        $pageTitle = "-Richie Sikra-"
+        $pageTitle = "Richie Sikra"
     )
     {
         $this->relativePath         = $relativePath;
@@ -233,9 +233,13 @@ class GenericPage extends Page
     function outputLogo()
     {
         ?>
-        <div class = "text_center generic_header_wrapper ">
+        <div class = "text_center generic_header_wrapper fade_in speed_4">
         <div id ="richie_text">Richie Sikra</div>  
-        <div id = "richie_text_subtitle">Developer | Designer | Creator</div>
+        <div id = "richie_text_subtitle">
+            <span class="fade_in speed_5">Developer | </span>
+            <span class="fade_in speed_6">Designer | </span>
+            <span class="fade_in speed_7">Creator</span>
+        </div>
         </div>
         <?php    
     }
