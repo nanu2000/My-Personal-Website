@@ -74,7 +74,21 @@ function triggerFadeIn()
     }
 }
 
+/*********************
+ * Lazy Loads Images
+ *********************/
+function lazyLoadImages()
+{
+    var images = document.getElementsByTagName('img');
 
+    for (var i = 0; i < images.length; i++) 
+    {
+        if (images[i].getAttribute('data-src') && images[i].getAttribute('data-src') !== '') 
+        {
+            images[i].setAttribute('src', images[i].getAttribute('data-src'));
+        }
+    }
+}
 
 /**************************
  *Runs when file is loaded.
@@ -90,7 +104,11 @@ function runJavascript()
     
     setupMoreMenu();  
     
-    window.onload = function(){ triggerFadeIn(); };
+    window.onload = function()
+    { 
+        triggerFadeIn(); 
+        lazyLoadImages();
+    };    
     
 }
 /*self explanatory*/

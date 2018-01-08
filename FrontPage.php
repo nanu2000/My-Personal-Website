@@ -6,7 +6,6 @@ $frontPageInfo = new PageInfo
     NAV_OPTIONS::HOME_NAV_ID,
     '',
     array('Styling/FrontPageStyle.min.css'),
-    array('Javascript/FrontPage.min.js'),
     array('Styling/FrontPageNoScript.min.css')
 );
 
@@ -67,12 +66,6 @@ $frontPage->addContent(new GenericContent(function()
 function outputCarouselListItem($item)
 {   
     
-    $imageURL = $item["imageURL"];
-    if($item["gifURL"] != '')
-    {
-        $imageURL = $item["gifURL"];
-    }
-    
     ?><li class="portfolio_item">
         <a href ="<?php echo($item["projectURL"]); ?>">
             <div class ="portfolio_item_content_wrapper" style = "background-color:<?php echo($item["carouselItemColor"]); ?>">
@@ -82,7 +75,10 @@ function outputCarouselListItem($item)
                     </span>
                 </div>
             </div>
-            <img class = "portfolio_item_bg" src ="<?php echo($imageURL);?>" alt="<?php echo($item["imageAlt"]); ?>"/>
+            <img class      ="portfolio_item_bg"  
+                 src        ="<?= $item['imageURL'] ?? ''; ?>" 
+                 data-src   ="<?= $item['gifURL']   ?? ''; ?>"  
+                 alt        ="<?php echo($item["imageAlt"]); ?>"/>
         </a>
     </li><?php
 }
@@ -125,18 +121,14 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     {
         $classes = (array)$value['listClasses'] ?? array();
         
-        $imageURL = $value["imageURL"];
-        if($value["gifURL"] != '')
-        {
-            $imageURL = $value["gifURL"];
-        }
-        
         ?>
         <div class="carousel_list <?= $classes['list'] ?? '' ?>">
             
             <div class="item image <?= $classes['image'] ?? '' ?>">
                 
-                <img src="<?php echo($imageURL);?>" alt="<?php echo($value["imageAlt"]); ?>">
+                <img src        ="<?= $value['imageURL']    ?? ''; ?>" 
+                     data-src   ="<?= $value['gifURL']      ?? ''; ?>" 
+                     alt        ="<?= $value["imageAlt"]; ?>">
                 
             </div>
             
