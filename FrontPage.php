@@ -65,7 +65,14 @@ $frontPage->addContent(new GenericContent(function()
  * outputs a single carousel list item **Needs to be wrapped in UL***
  ********************************************************************/
 function outputCarouselListItem($item)
-{
+{   
+    
+    $imageURL = $item["imageURL"];
+    if($item["gifURL"] != '')
+    {
+        $imageURL = $item["gifURL"];
+    }
+    
     ?><li class="portfolio_item">
         <a href ="<?php echo($item["projectURL"]); ?>">
             <div class ="portfolio_item_content_wrapper" style = "background-color:<?php echo($item["carouselItemColor"]); ?>">
@@ -75,7 +82,7 @@ function outputCarouselListItem($item)
                     </span>
                 </div>
             </div>
-            <img class = "portfolio_item_bg" src ="<?php echo($item["imageURL"]);?>" alt="<?php echo($item["imageAlt"]); ?>"/>
+            <img class = "portfolio_item_bg" src ="<?php echo($imageURL);?>" alt="<?php echo($item["imageAlt"]); ?>"/>
         </a>
     </li><?php
 }
@@ -105,7 +112,7 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     ?>
     <div class="generic_content_wrapper">
         
-        <div class = "generic_header_wrapper">
+        <div class = "generic_header_wrapper fade_in speed_6">
             <div class ="text_center generic_title_m">My Projects</div>
         </div>
         <div class="carousel_list_complete">
@@ -118,12 +125,18 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     {
         $classes = (array)$value['listClasses'] ?? array();
         
+        $imageURL = $value["imageURL"];
+        if($value["gifURL"] != '')
+        {
+            $imageURL = $value["gifURL"];
+        }
+        
         ?>
         <div class="carousel_list <?= $classes['list'] ?? '' ?>">
             
             <div class="item image <?= $classes['image'] ?? '' ?>">
                 
-                <img src="<?php echo($value["imageURL"]);?>" alt="<?php echo($value["imageAlt"]); ?>">
+                <img src="<?php echo($imageURL);?>" alt="<?php echo($value["imageAlt"]); ?>">
                 
             </div>
             
@@ -168,32 +181,6 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     ?></div></div><?php
     
 }));
-
-
-
-/*Add the carousel to the page*/
-$frontPage->addContent(new Content(function() use ($carouselItems)
-{
-
-    /********************************************************************
-     * Reads CarouselItems from json file and outputs all items as a UL.*
-     ********************************************************************/
-    
-    ?><ul id="portfolio_item_container"><?php
-
-
-    //output each item inside of the item_container UL
-    foreach ($carouselItems as $value)
-    {
-        outputCarouselListItem($value);   
-    }
-
-    ?></ul><?php
-
-}));
-
-
-
 
 
 /*Display the page*/
