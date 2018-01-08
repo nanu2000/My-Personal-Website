@@ -79,15 +79,37 @@ function triggerFadeIn()
  *********************/
 function lazyLoadImages()
 {
-    var images = document.getElementsByTagName('img');
-
+    var images = document.getElementsByClassName('lazy_load_image');
+    
     for (var i = 0; i < images.length; i++) 
     {
-        if (images[i].getAttribute('data-src') && images[i].getAttribute('data-src') !== '') 
-        {
-            images[i].setAttribute('src', images[i].getAttribute('data-src'));
+        
+        var image_wrapper               = images[i];
+
+        for (var j = 0; j < image_wrapper.childNodes.length; j++) {
+            
+            if (image_wrapper.childNodes[j].className == "img") 
+            {
+                
+                var image = image_wrapper.childNodes[j];
+
+                image.setAttribute('src', image_wrapper.getAttribute('data-src'));
+        
+                image.onload = function(){
+
+                    for (var j = 0; j < this.parentNode.childNodes.length; j++) {
+                        if (this.parentNode.childNodes[j].className == "loading_text") 
+                        {
+                          this.parentNode.childNodes[j].style.display = "none";  
+                        }        
+                    }
+
+                };              
+            }    
         }
+        
     }
+    
 }
 
 /**************************

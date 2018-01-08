@@ -79,6 +79,9 @@ function outputCarouselListItem($item)
                  src        ="<?= $item['imageURL'] ?? ''; ?>" 
                  data-src   ="<?= $item['gifURL']   ?? ''; ?>"  
                  alt        ="<?php echo($item["imageAlt"]); ?>"/>
+            
+            <div class="img_loading_text">Loading Gif</div>
+            
         </a>
     </li><?php
 }
@@ -125,10 +128,32 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
         <div class="carousel_list <?= $classes['list'] ?? '' ?>">
             
             <div class="item image <?= $classes['image'] ?? '' ?>">
+                    
+                <?php 
                 
-                <img src        ="<?= $value['imageURL']    ?? ''; ?>" 
-                     data-src   ="<?= $value['gifURL']      ?? ''; ?>" 
-                     alt        ="<?= $value["imageAlt"]; ?>">
+                if($value['lazyImageURL'] == '')
+                {
+                    ?>
+                    <img src ="<?= $value['imageURL'] ?? ''; ?>" 
+                         alt ="<?= $value["imageAlt"]; ?>">
+                    <?php
+                }
+                else
+                {
+                    ?>
+                    <div class      ="lazy_load_image" 
+                         data-src   ="<?= $value['lazyImageURL']; ?>">
+
+                        <img class = "img" src ="<?= $value['imageURL'] ?? ''; ?>" 
+                             alt ="<?= $value["imageAlt"]; ?>">
+
+                        <div class="loading_text"><div class="loader"></div></div>
+                        
+                    </div>
+                    <?php
+                }
+
+                ?>
                 
             </div>
             

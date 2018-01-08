@@ -5,7 +5,7 @@
             "languages"                 : "C++, OpenGL",
             "projectGithubURL"          : "https://github.com/nanu2000/Light-Show-Engine",
             "imageURL"                  : "Images/LightShowBanner.png", 
-            "gifURL"                    : "Images/LightShowBanner.gif", 
+            "lazyImageURL"              : "Images/LightShowBanner.gif",
             "imageAlt"                  : "Lightshow Graphics Engine", 
             "projectURL"                : "ProjectPages/LightShowPage.php", 
             "carouselItemColor"         : "#0C216E",
@@ -21,7 +21,7 @@
         {
             "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/StarDiveWebBanner.png", 
-            "gifURL"                    : "Images/StarDiveWebBanner.gif", 
+            "lazyImageURL"              : "Images/StarDiveWebBanner.gif",
             "imageAlt"                  : "Link to StarDive game page", 
             "listClasses" : 
             {
@@ -36,7 +36,7 @@
         {
             "languages"                 : "C++, OpenGL",
             "imageURL"                  : "Images/lolo.png", 
-            "gifURL"                    : "Images/lolo.gif", 
+            "lazyImageURL"              : "Images/lolo.gif",
             "imageAlt"                  : "Link to adventures of lolo game page",
             "listClasses" : 
             {
