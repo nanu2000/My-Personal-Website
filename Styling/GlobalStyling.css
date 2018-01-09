@@ -651,40 +651,49 @@ Additional CSS used for multiple pages
         text-align: center;
         display: inline-block;
     }
-
     
-    .lazy_load_image .loading_text 
+    .loading_text 
     {
         position: absolute;
-        top: -1px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background: white;
         text-align: center;
-        padding: 5px 0;
-        height: 100%;
-        background: transparent;
-    }
-    
-    .lazy_load_image .loader 
-    {
-        border: 6px solid #ffffff;
+        left: 10px;
+        bottom: 10px;
+        height: 33px;
+        width: 33px;
+        background: rgba(255, 255, 255, 0.4);
         border-radius: 50%;
-        border-top: 6px solid #3661a2;
-        width: 30px;
-        height: 30px;
-        -webkit-animation: spin 2s linear infinite; /* Safari */
-        animation: spin 2s linear infinite;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.2)
     }
 
+    .lazy_load_image .loader {
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        z-index:1;
+    }
+
+    .loader_shape, .lazy_load_image .loader
+    {
+        left:0;
+        bottom:0;
+        right:  0;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        border-top: 3px solid #3661a2;
+        position: absolute;
+        margin: auto;
+
+    }
+
+    .loader_shape
+    {
+        border-color:transparent;
+        z-index:0;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+    
+    
     /* Safari */
     @-webkit-keyframes spin 
     {

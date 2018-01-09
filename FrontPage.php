@@ -76,9 +76,8 @@ function outputCarouselListItem($item)
                 </div>
             </div>
             <img class      ="portfolio_item_bg"  
-                 src        ="<?= $item['imageURL'] ?? ''; ?>" 
-                 data-src   ="<?= $item['gifURL']   ?? ''; ?>"  
-                 alt        ="<?php echo($item["imageAlt"]); ?>"/>
+                 src        ="<?= $item['imageURL'] ?? '';  ?>"
+                 alt        ="<?= $item["imageAlt"];        ?>"/>
             
             <div class="img_loading_text">Loading Gif</div>
             
@@ -147,7 +146,7 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
                         <img class = "img" src ="<?= $value['imageURL'] ?? ''; ?>" 
                              alt ="<?= $value["imageAlt"]; ?>">
 
-                        <div class="loading_text"><div class="loader"></div></div>
+                        <div class="loading_text"><div class="loader_shape"></div><div class="loader"></div></div>
                         
                     </div>
                     <?php
