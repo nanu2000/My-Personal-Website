@@ -100,7 +100,7 @@ function lazyLoadImages()
                     for (var j = 0; j < this.parentNode.childNodes.length; j++) {
                         if (this.parentNode.childNodes[j].className == "loading_text") 
                         {
-                          this.parentNode.childNodes[j].style.display = "none";  
+                            this.parentNode.childNodes[j].className += " loaded";
                         }        
                     }
 
