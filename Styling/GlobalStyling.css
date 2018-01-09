@@ -663,10 +663,9 @@ Additional CSS used for multiple pages
         background: rgba(255, 255, 255, 0.4);
         border-radius: 50%;
     }
-
+    
     .lazy_load_image .loader {
-        -webkit-animation: spin 2s linear infinite;
-        animation: spin 2s linear infinite;
+        animation: spin 1.5s linear infinite;
         z-index:1;
     }
 
@@ -683,7 +682,6 @@ Additional CSS used for multiple pages
         border-top: 3px solid #3661a2;
         position: absolute;
         margin: auto;
-
     }
 
     .loader_shape
@@ -694,28 +692,24 @@ Additional CSS used for multiple pages
     }
     
     
-    /* Safari */
-    @-webkit-keyframes spin 
-    {
-        0% 
-        { 
-            -webkit-transform: rotate(0deg); 
-        }
-        100%
-        { 
-            -webkit-transform: rotate(360deg); 
-        }
-    }
 
     @keyframes spin 
-    {
+    {        
         0% 
         { 
             transform: rotate(0deg); 
         }
-        100% 
+        40%
         { 
-            transform: rotate(360deg);
+            transform: rotate(160deg); 
+        }
+        60%
+        { 
+            transform: rotate(240deg); 
+        }
+        100%
+        { 
+            transform: rotate(360deg); 
         }
     }
     
