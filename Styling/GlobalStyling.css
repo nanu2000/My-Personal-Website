@@ -672,7 +672,7 @@ Additional CSS used for multiple pages
     .lazy_load_image .loader {
         transform-style: preserve-3d;
         backface-visibility:hidden;
-        animation: spin 1.5s linear infinite;
+        animation: spin 1.75s linear infinite;
         z-index:1;
     }
 
