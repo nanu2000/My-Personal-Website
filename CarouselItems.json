@@ -64,20 +64,22 @@
 
         },
         {
-            "imageURL"                  : "Images/BlogBanner.png", 
-            "imageAlt"                  : "Link to Coming Blog Page",
+            "imageURL"                  : "Images/DrumChannelBanner.png", 
+            "imageAlt"                  : "Link to Drum Channel Page",
+            "languages"                 : "PHP, JavaScript",
             "listClasses" : 
             {
                 "list"      : "fade_in speed_3",
                 "text"      : "fade_in speed_4",
                 "links"     : "fade_in speed_5"
             },
-            "projectURL"                : "ProjectPages/ComingSoonPage.php",
+            "projectURL"                : "https://www.drumchannel.com",
             "carouselItemColor"         : "#1D358A",
-            "carouselItemDescription"   : "My blog contains consistent updates regarding the current project I'm developing."
+            "carouselItemDescription"   : "Drum Channel is an e-commerce website that I helped create"
 
         },
         {
+            "active"                    : false,
             "languages"                 : "PHP, JavaScript",
             "projectGithubURL"          : "https://github.com/nanu2000/Customer-Support-Form",
             "imageURL"                  : "Images/PhpProjBanner.png", 

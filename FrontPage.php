@@ -121,6 +121,11 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     //output each item inside of the item_container UL
     foreach ($carouselItems as $value)
     {
+        if(array_key_exists('active', $value) && $value['active'] === false)
+        {
+            continue;
+        }
+                
         $classes = (array)$value['listClasses'] ?? array();
         
         ?>
@@ -201,6 +206,3 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
 
 /*Display the page*/
 $frontPage->displayPage();
-
-
-?>
