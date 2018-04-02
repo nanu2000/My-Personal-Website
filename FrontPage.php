@@ -17,43 +17,36 @@ $frontPage->addContent(new GenericContent(function()
 {
 ?>
 
-    <div class ="generic_page_text fade_in speed_4">
+    <div class="generic_page_text fade_in speed_4 fading_in">
         
         
-        <div class="fade_in speed_5" style="
+        <div class="fade_in speed_5 fading_in" style="
             font-size: 1.6rem;
             margin-bottom: 20px;
             font-weight: 700;
             ">
             <p>Hi, I'm Richie,</p>
         </div>
-            <p class="fade_in speed_6">
-                A programmer 
-                with a passion for 
-                <b>art</b>,
-                <b>graphics</b>,
-                and 
-                <b>design</b>.
-            </p>
-            <p class="fade_in speed_6">
-                Throughout my career I've successfully 
-                developed and published three games, 
-                multiple web apps, and numerous tools
-                that I use to help improve my productivity
-                and development time.
-            </p>
-            <p class="fade_in speed_7">
-                The majority
-                of my projects are open source and hosted
-                on <a href="https://github.com/nanu2000">my GitHub account</a>,
-                where I post daily commits for my newest
-                projects.
-            </p>
-            <p class="fade_in speed_7">
-                Additionally, any recently
-                published projects will be added to the
-                carousel and list below.
-            </p>
+       
+        <p class="fade_in speed_6 fading_in">
+            Throughout my career I've successfully 
+            developed and published three games, 
+            multiple web apps, and numerous tools
+            that I use to help improve my productivity
+            and development time.
+        </p>
+        <p class="fade_in speed_7 fading_in">
+            The majority
+            of my projects are open source and hosted
+            on <a href="https://github.com/nanu2000">my GitHub account</a>.
+        </p> 
+        
+        
+        <p class="fade_in speed_7 fading_in">
+            Additionally, any recently
+            published projects will be added to the
+            list below.
+        </p>
 
     </div>
 
