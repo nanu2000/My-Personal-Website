@@ -6,6 +6,7 @@ $frontPageInfo = new PageInfo
     NAV_OPTIONS::HOME_NAV_ID,
     '',
     array('Styling/FrontPageStyle.min.css'),
+    array(),
     array('Styling/FrontPageNoScript.min.css')
 );
 
@@ -104,7 +105,7 @@ $frontPage->addContent(new Content(function() use ($carouselItems)
     <div class="generic_content_wrapper">
         
         <div class = "generic_header_wrapper fade_in speed_6">
-            <div class ="text_center generic_title_m">My Projects</div>
+            <div class ="text_center generic_title_m">Projects</div>
         </div>
         <div class="carousel_list_complete">
         

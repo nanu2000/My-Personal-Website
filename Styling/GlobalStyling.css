@@ -443,39 +443,7 @@ Additional CSS used for multiple pages
             margin: 1.75rem 25px;
         }
     }
-
-    @media only screen and (min-width : 667px)
-    {     
-        .generic_page_text p
-        {
-            margin: 1.75rem 20px;
-        }
-    }
     
-    @media only screen and (min-width : 451px) and (max-width : 666px)
-    {
-        .generic_page_text p
-        {
-            margin: 1.75rem 25px;
-        }
-    }
-    
-    @media only screen and (min-width : 351px) and (max-width : 450px)
-    {    
-        .generic_page_text p
-        {
-            margin: 1.75rem 20px;
-        }
-    }
-    
-    @media only screen and (max-width : 350px)
-    {  
-        .generic_page_text p
-        {
-            margin: 1.75rem 5px;
-        }
-    }
-
     /*Generic Title and Subtitle Header*/
 
     .generic_header_wrapper
