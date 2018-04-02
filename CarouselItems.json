@@ -2,6 +2,7 @@
     "carouselItems" : 
     [
         {
+            "active"                    : true,
             "languages"                 : "C++, OpenGL",
             "projectGithubURL"          : "https://github.com/nanu2000/Light-Show-Engine",
             "imageURL"                  : "Images/LightShowBanner.png", 
@@ -19,6 +20,7 @@
             "carouselItemDescription"   : "Lightshow is a custom handmade game/graphics framework that I created with OpenGL and C++."
         },
         {
+            "active"                    : true,
             "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/StarDiveWebBanner.png", 
             "lazyImageURL"              : "Images/StarDiveWebBanner.gif",
@@ -34,6 +36,7 @@
             "carouselItemDescription"   : "Stardive is my favorite out of all the games I have made..<br>So far."
         },
         {
+            "active"                    : true,
             "languages"                 : "C++, OpenGL",
             "imageURL"                  : "Images/lolo.png", 
             "lazyImageURL"              : "Images/lolo.gif",
@@ -49,6 +52,7 @@
             "carouselItemDescription"   : "LoLo is a game that I made for the NES Box art jam in 2015!"
         },
         {
+            "active"                    : true,
             "languages"                 : "C#, Unity3D",
             "imageURL"                  : "Images/AeroFlightBanner.png", 
             "imageAlt"                  : "Link to Aeroflight game page",
@@ -64,6 +68,7 @@
 
         },
         {
+            "active"                    : true,
             "imageURL"                  : "Images/DrumChannelBanner.png", 
             "imageAlt"                  : "Link to Drum Channel Page",
             "languages"                 : "PHP, JavaScript",
@@ -75,7 +80,7 @@
             },
             "projectURL"                : "https://www.drumchannel.com",
             "carouselItemColor"         : "#1D358A",
-            "carouselItemDescription"   : "Drum Channel is an e-commerce website that I helped create."
+            "carouselItemDescription"   : "Drum Channel is a e-commerce/e-learning website that I helped make possible."
 
         },
         {
@@ -93,6 +98,22 @@
             "projectURL"                : "ProjectPages/CustomerSubmitFormPage.php", 
             "carouselItemColor"         : "#656565", 
             "carouselItemDescription"   : "A Customer submission form made in PHP!"
+
+        },
+        {
+            "active"                    : true,
+            "languages"                 : "PHP, CSS, Wordpress",
+            "imageURL"                  : "Images/RichSikraBanner.png", 
+            "imageAlt"                  : "Link to https://richsikra.com",
+            "listClasses" : 
+            {
+                "list"      : "fade_in speed_3",
+                "text"      : "fade_in speed_4",
+                "links"     : "fade_in speed_5"
+            },
+            "projectURL"                : "https://richsikra.com", 
+            "carouselItemColor"         : "#656565", 
+            "carouselItemDescription"   : "RichSikra.com is a simple website built for my Dad."
 
         }
     ]
