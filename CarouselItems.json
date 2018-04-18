@@ -22,8 +22,9 @@
         {
             "active"                    : true,
             "languages"                 : "C#, Unity3D",
-            "imageURL"                  : "Images/StarDiveWebBanner.png", 
-            "lazyImageURL"              : "Images/StarDiveWebBanner.gif",
+            "imageURL"                  : "Images/StarDiveWebBanner.png",
+            "lazyImageURL"              : "Images/StarDiveWebBanner.gif", 
+            "htmlVideoURL"              : "Images/StarDiveWebBanner.mp4",
             "imageAlt"                  : "Link to StarDive game page", 
             "listClasses" : 
             {
